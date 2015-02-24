@@ -1,7 +1,7 @@
 #Release 14.7 - par P.20131013 (lin64)
 #Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-#Tue Feb 24 01:00:40 2015
+#Tue Feb 24 02:45:06 2015
 
 #
 ## NOTE: This file is designed to be imported into a spreadsheet program
@@ -203,9 +203,9 @@ N13,vga_red<0>,IOB,IO_L1P_CCLK_2,OUTPUT,LVCMOS33,2,12,SLOW,,,,UNLOCATED,NO,NONE,
 N14,,,DONE_2,,,,,,,,,,,,
 P1,,,GND,,,,,,,,,,,,
 P2,,IOBS,IO_L65N_CSO_B_2,UNUSED,,2,,,,,,,,,
-P3,,IOBS,IO_L64N_D9_2,UNUSED,,2,,,,,,,,,
+P3,vga_vsync,IOB,IO_L64N_D9_2,OUTPUT,LVCMOS33,2,12,SLOW,,,,LOCATED,NO,NONE,
 P4,,IOBS,IO_L63N_2,UNUSED,,2,,,,,,,,,
-P5,vga_vsync,IOB,IO_L49N_D4_2,OUTPUT,LVCMOS33,2,12,SLOW,,,,LOCATED,NO,NONE,
+P5,,IOBS,IO_L49N_D4_2,UNUSED,,2,,,,,,,,,
 P6,,IOBS,IO_L48N_RDWR_B_VREF_2,UNUSED,,2,,,,,,,,,
 P7,,IOBS,IO_L31N_GCLK30_D15_2,UNUSED,,2,,,,,,,,,
 P8,vga_blue<6>,IOB,IO_L30N_GCLK0_USERCCLK_2,OUTPUT,LVCMOS33,2,12,SLOW,,,,UNLOCATED,NO,NONE,

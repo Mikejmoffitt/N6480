@@ -57,7 +57,7 @@ begin
 	-- Values are valid on the rising edge of the first clock out of four.
 		
 	vga_red <= "0000000";
-	vga_green <= n64_green;
+	vga_green <= n64_red(6 downto 0);
 	vga_blue <= "0000000";
 	
 	rgb_decoder: entity work.n64_pixel(behavioral) port map (
@@ -67,7 +67,7 @@ begin
 	-- Increments the clock counter, resetting to 00 if the dsync line is low.
 	n64_clock_count: process(n64_clock)
 	begin
-		if (rising_edge(n64_clock)) then
+		if (falling_edge(n64_clock)) then
 			if (n64_dsync_n = '0') then
 				clock_count <= "00";
 			else
@@ -78,7 +78,7 @@ begin
 	
 	vga_pixel_counter: process(n64_clock)
 	begin
-		if (rising_edge(n64_clock)) then
+		if (falling_edge(n64_clock)) then
 			if (vga_px_count = VGA_LINE_LEN) then
 				vga_px_count <= U16_ZERO;
 				if (line_count = NUM_LINES) then
@@ -94,7 +94,7 @@ begin
 	
 	n64_pixel_counter: process(n64_clock)
 	begin
-		if (rising_edge(n64_clock)) then
+		if (falling_edge(n64_clock)) then
 			--if (n64_vsync_n = '0') then
 			--	px_count <= U16_ZERO;
 			--	line_count <= U16_ZERO;
@@ -108,19 +108,20 @@ begin
 	
 	vga_vsync_proc: process(n64_clock)
 	begin
-		if (rising_edge(n64_clock)) then
-			if (line_count >= VGA_VSYNC_START and line_count < VGA_VSYNC_END) then
-				vga_vsync <= '0';
-			else
-				vga_vsync <= '1';
-			end if;
-		end if;
+		vga_vsync <= not n64_vsync_n;
+--		if (falling_edge(n64_clock)) then
+--			if (line_count >= VGA_VSYNC_START and line_count < VGA_VSYNC_END) then
+--				vga_vsync <= '0';
+--			else
+--				vga_vsync <= '1';
+--			end if;
+--		end if;
 	end process;
 	
 	vga_hsync_proc: process(n64_clock)
 	begin	
 		vga_hsync <= n64_csync_n;
---		if (rising_edge(n64_clock)) then
+--		if (falling_edge(n64_clock)) then
 --			if (vga_px_count >= VGA_HSYNC_START and vga_px_count < VGA_HSYNC_END) then
 --				vga_hsync <= '0';
 --			else

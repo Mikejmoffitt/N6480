@@ -31,20 +31,35 @@ Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
+Setup/Hold to clock n64_clock
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+n64_data<0> |    3.028(F)|      SLOW  |   -0.991(F)|      FAST  |n64_clock_BUFGP   |   0.000|
+n64_data<1> |    1.747(F)|      SLOW  |   -0.299(F)|      SLOW  |n64_clock_BUFGP   |   0.000|
+n64_data<2> |    1.843(F)|      SLOW  |   -0.362(F)|      FAST  |n64_clock_BUFGP   |   0.000|
+n64_data<3> |    2.225(F)|      SLOW  |   -0.368(F)|      SLOW  |n64_clock_BUFGP   |   0.000|
+n64_data<4> |    2.291(F)|      SLOW  |   -0.621(F)|      FAST  |n64_clock_BUFGP   |   0.000|
+n64_data<5> |    1.860(F)|      SLOW  |   -0.394(F)|      SLOW  |n64_clock_BUFGP   |   0.000|
+n64_data<6> |    2.215(F)|      SLOW  |   -0.532(F)|      FAST  |n64_clock_BUFGP   |   0.000|
+n64_dsync_n |    1.203(F)|      SLOW  |    0.626(F)|      SLOW  |n64_clock_BUFGP   |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
 Clock n64_clock to Pad
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
-vga_green<0>|        10.203(R)|      SLOW  |         4.629(R)|      FAST  |n64_clock_BUFGP   |   0.000|
-vga_green<1>|        10.364(R)|      SLOW  |         4.675(R)|      FAST  |n64_clock_BUFGP   |   0.000|
-vga_green<2>|        10.051(R)|      SLOW  |         4.506(R)|      FAST  |n64_clock_BUFGP   |   0.000|
-vga_green<3>|         9.943(R)|      SLOW  |         4.463(R)|      FAST  |n64_clock_BUFGP   |   0.000|
-vga_green<4>|         9.686(R)|      SLOW  |         4.304(R)|      FAST  |n64_clock_BUFGP   |   0.000|
-vga_green<5>|         9.712(R)|      SLOW  |         4.330(R)|      FAST  |n64_clock_BUFGP   |   0.000|
-vga_green<6>|        10.947(R)|      SLOW  |         5.030(R)|      FAST  |n64_clock_BUFGP   |   0.000|
-vga_hsync   |        10.498(R)|      SLOW  |         4.823(R)|      FAST  |n64_clock_BUFGP   |   0.000|
-vga_vsync   |        10.494(R)|      SLOW  |         4.871(R)|      FAST  |n64_clock_BUFGP   |   0.000|
+vga_green<0>|        11.041(F)|      SLOW  |         5.227(F)|      FAST  |n64_clock_BUFGP   |   0.000|
+vga_green<1>|        11.018(F)|      SLOW  |         5.186(F)|      FAST  |n64_clock_BUFGP   |   0.000|
+vga_green<2>|        11.047(F)|      SLOW  |         5.245(F)|      FAST  |n64_clock_BUFGP   |   0.000|
+vga_green<3>|        11.218(F)|      SLOW  |         5.343(F)|      FAST  |n64_clock_BUFGP   |   0.000|
+vga_green<4>|        11.273(F)|      SLOW  |         5.292(F)|      FAST  |n64_clock_BUFGP   |   0.000|
+vga_green<5>|        11.241(F)|      SLOW  |         5.278(F)|      FAST  |n64_clock_BUFGP   |   0.000|
+vga_green<6>|        12.214(F)|      SLOW  |         5.848(F)|      FAST  |n64_clock_BUFGP   |   0.000|
+vga_hsync   |        10.787(F)|      SLOW  |         5.009(F)|      FAST  |n64_clock_BUFGP   |   0.000|
+vga_vsync   |        11.217(F)|      SLOW  |         5.133(F)|      FAST  |n64_clock_BUFGP   |   0.000|
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock n64_clock
@@ -52,11 +67,11 @@ Clock to Setup on destination clock n64_clock
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-n64_clock      |    4.176|         |         |         |
+n64_clock      |         |         |         |    2.304|
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Tue Feb 24 01:00:43 2015 
+Analysis completed Tue Feb 24 02:45:10 2015 
 --------------------------------------------------------------------------------
 
 Trace Settings:

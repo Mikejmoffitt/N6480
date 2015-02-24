@@ -54,9 +54,8 @@ NET "vga_hsync" IOSTANDARD = LVCMOS33;
 NET "vga_vsync" IOSTANDARD = LVCMOS33;
 
 
-NET "vga_vsync" LOC = P5;
+NET "vga_vsync" LOC = P3;
 NET "vga_hsync" LOC = N5;
 
-# PlanAhead Generated physical constraints 
 
 NET "n64_clock" LOC = J2;

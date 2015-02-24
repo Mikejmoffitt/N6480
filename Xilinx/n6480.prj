@@ -1,1 +1,2 @@
+vhdl work "../Source/n64_pixel.vhd"
 vhdl work "../Source/n6480.vhd"

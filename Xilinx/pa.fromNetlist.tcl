@@ -1,7 +1,7 @@
 
 # PlanAhead Launch Script for Post-Synthesis floorplanning, created by Project Navigator
 
-create_project -name N6480 -dir "/home/moffitt/Development/N6480/Xilinx/planAhead_run_4" -part xc6slx4cpg196-2
+create_project -name N6480 -dir "/home/moffitt/Development/N6480/Xilinx/planAhead_run_5" -part xc6slx4cpg196-2
 set_property design_mode GateLvl [get_property srcset [current_run -impl]]
 set_property edif_top_file "/home/moffitt/Development/N6480/Xilinx/n6480.ngc" [ get_property srcset [ current_run ] ]
 add_files -norecurse { {/home/moffitt/Development/N6480/Xilinx} }

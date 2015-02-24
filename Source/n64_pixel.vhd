@@ -3,8 +3,9 @@
 -- Michael Moffitt 2015                                                      --
 -- https://github.com/Mikejmoffitt/N6480                                     --
 -------------------------------------------------------------------------------
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
 
 entity n64_pixel is
 port (
@@ -32,12 +33,12 @@ signal hsync_n_cap: std_logic;
 signal clamp_n_cap: std_logic;
 signal vsync_n_cap: std_logic;
 
-signal cycle_count: std_logic_vector(2 downto 0);
+signal cycle_count: std_logic_vector(1 downto 0);
 
 begin
 	cycle_step: process(n64_clock)
 	begin
-		if (rising_edge(n64_clock)) then
+		if (falling_edge(n64_clock)) then
 			if (n64_dsync_n = '0') then
 				cycle_count <= "00";
 			else
@@ -48,7 +49,7 @@ begin
 	
 	cap_data: process(n64_clock)
 	begin
-		if (rising_edge(n64_clock)) then
+		if (falling_edge(n64_clock)) then
 			if (cycle_count = "00") then
 				red_cap <= n64_data;
 			elsif (cycle_count = "01") then
@@ -66,7 +67,7 @@ begin
 	
 	set_outputs: process(n64_clock)
 	begin
-		if (rising_edge(n64_clock)) then
+		if (falling_edge(n64_clock)) then
 			red_out <= red_cap;
 			green_out <= green_cap;
 			blue_out <= blue_cap;
