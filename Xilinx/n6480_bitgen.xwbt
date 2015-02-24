@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/moffitt/Development/N6480/Xilinx/n6480.ncd
+OUTFILE=/home/moffitt/Development/N6480/Xilinx/n6480.bit
+FAMILY=Spartan6
+PART=xc6slx4-2cpg196
+WORKINGDIR=/home/moffitt/Development/N6480/Xilinx
+LICENSE=WebPack
+USER_INFO=210836052_0_0_553

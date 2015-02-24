@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=/home/moffitt/Development/N6480/Xilinx/impact.xsl
+OUTFILE=/home/moffitt/Development/N6480/Xilinx/impact.xsl
+FAMILY=Single
+PART=Single
+WORKINGDIR=/home/moffitt/Development/N6480/Xilinx
+LICENSE=iMPACT
+USER_INFO=iMPACT

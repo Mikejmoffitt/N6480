@@ -1,0 +1,49 @@
+LIBRARY ieee;
+LIBRARY UNISIM;
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.ALL;
+USE UNISIM.Vcomponents.ALL;
+
+ENTITY FD4_MXILINX_rgbdac IS
+   PORT ( C	:	IN	STD_LOGIC; 
+          D0	:	IN	STD_LOGIC; 
+          D1	:	IN	STD_LOGIC; 
+          D2	:	IN	STD_LOGIC; 
+          D3	:	IN	STD_LOGIC; 
+          Q0	:	OUT	STD_LOGIC; 
+          Q1	:	OUT	STD_LOGIC; 
+          Q2	:	OUT	STD_LOGIC; 
+          Q3	:	OUT	STD_LOGIC);
+
+end FD4_MXILINX_rgbdac;
+
+ARCHITECTURE SCHEMATIC OF FD4_MXILINX_rgbdac IS
+
+   ATTRIBUTE fpga_dont_touch : STRING ;
+   ATTRIBUTE KEEP_HIERARCHY : STRING ;
+   ATTRIBUTE KEEP_HIERARCHY OF U3 : LABEL IS "TRUE";
+   ATTRIBUTE KEEP_HIERARCHY OF U1 : LABEL IS "TRUE";
+   ATTRIBUTE KEEP_HIERARCHY OF U0 : LABEL IS "TRUE";
+   ATTRIBUTE KEEP_HIERARCHY OF U2 : LABEL IS "TRUE";
+
+   COMPONENT FD_MXILINX_rgbdac
+      PORT ( C	:	IN	STD_LOGIC; 
+             D	:	IN	STD_LOGIC; 
+             Q	:	OUT	STD_LOGIC);
+   END COMPONENT;
+
+BEGIN
+
+   U3 : FD_MXILINX_rgbdac
+      PORT MAP (C=>C, D=>D3, Q=>Q3);
+
+   U1 : FD_MXILINX_rgbdac
+      PORT MAP (C=>C, D=>D1, Q=>Q1);
+
+   U0 : FD_MXILINX_rgbdac
+      PORT MAP (C=>C, D=>D0, Q=>Q0);
+
+   U2 : FD_MXILINX_rgbdac
+      PORT MAP (C=>C, D=>D2, Q=>Q2);
+
+END SCHEMATIC;

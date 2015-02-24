@@ -1,0 +1,217 @@
+Release 14.7 Map P.20131013 (lin64)
+Xilinx Mapping Report File for Design 'rgbdac'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx4-cpg196-3 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
+-pr off -lc off -power off -o rgbdac_map.ncd rgbdac.ngd rgbdac.pcf 
+Target Device  : xc6slx4
+Target Package : cpg196
+Target Speed   : -3
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Mon Feb 23 23:27:32 2015
+
+Interim Summary
+---------------
+Slice Logic Utilization:
+  Number of Slice Registers:                    29 out of   4,800    1%
+    Number used as Flip Flops:                  29
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                          1 out of   2,400    1%
+    Number used as logic:                        1 out of   2,400    1%
+      Number using O6 output only:               1
+      Number using O5 output only:               0
+      Number using O5 and O6:                    0
+      Number used as ROM:                        0
+    Number used as Memory:                       0 out of   1,200    0%
+
+Slice Logic Distribution:
+  Number of MUXCYs used:                         0 out of   1,200    0%
+  Number of LUT Flip Flop pairs used:           30
+    Number with an unused Flip Flop:             1 out of      30    3%
+    Number with an unused LUT:                  29 out of      30   96%
+    Number of fully used LUT-FF pairs:           0 out of      30    0%
+    Number of unique control sets:               5
+    Number of slice register sites lost
+      to control set restrictions:              11 out of   4,800    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        34 out of     106   32%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         0 out of      12    0%
+  Number of RAMB8BWERs:                          0 out of      24    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       1 out of      16    6%
+    Number used as BUFGs:                        1
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     200    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     200    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     200    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of       8    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       2    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+
+Design Summary
+--------------
+Number of errors   :   2
+Number of warnings :   0
+
+Section 1 - Errors
+------------------
+ERROR:Place:1136 - This design contains a global buffer instance,
+   <clock_BUFGP/BUFG>, driving the net, <clock_BUFGP>, that is driving the
+   following (first 30) non-clock load pins.
+   < PIN: XLXI_74.A6; >
+   This is not a recommended design practice in Spartan-6 due to limitations in
+   the global routing that may cause excessive delay, skew or unroutable
+   situations.  It is recommended to only use a BUFG resource to drive clock
+   loads. If you wish to override this recommendation, you may use the
+   CLOCK_DEDICATED_ROUTE constraint (given below) in the .ucf file to demote
+   this message to a WARNING and allow your design to continue.
+   < PIN "clock_BUFGP/BUFG.O" CLOCK_DEDICATED_ROUTE = FALSE; >
+
+ERROR:Pack:1654 - The timing-driven placement phase encountered an error.
+
+Section 2 - Warnings
+--------------------
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network XLXI_33/Q3 has no load.
+INFO:LIT:395 - The above info message is repeated 30 more times for the
+   following (max. 5 shown):
+   XLXI_33/U2/XLXN_4,
+   XLXI_33/U0/XLXN_4,
+   XLXI_33/U1/XLXN_4,
+   XLXI_33/U3/XLXN_4,
+   XLXI_32/Q3
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+
+Section 4 - Removed Logic Summary
+---------------------------------
+  31 block(s) removed
+   2 block(s) optimized away
+  31 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "XLXI_33/Q3" is sourceless and has been removed.
+The signal "XLXI_33/U2/XLXN_4" is sourceless and has been removed.
+The signal "XLXI_33/U0/XLXN_4" is sourceless and has been removed.
+The signal "XLXI_33/U1/XLXN_4" is sourceless and has been removed.
+The signal "XLXI_33/U3/XLXN_4" is sourceless and has been removed.
+The signal "XLXI_32/Q3" is sourceless and has been removed.
+The signal "XLXI_32/U2/XLXN_4" is sourceless and has been removed.
+The signal "XLXI_32/U0/XLXN_4" is sourceless and has been removed.
+The signal "XLXI_32/U1/XLXN_4" is sourceless and has been removed.
+The signal "XLXI_32/U3/XLXN_4" is sourceless and has been removed.
+The signal "XLXI_31/Q3" is sourceless and has been removed.
+The signal "XLXI_31/U2/XLXN_4" is sourceless and has been removed.
+The signal "XLXI_31/U0/XLXN_4" is sourceless and has been removed.
+The signal "XLXI_31/U1/XLXN_4" is sourceless and has been removed.
+The signal "XLXI_31/U3/XLXN_4" is sourceless and has been removed.
+The signal "XLXI_30/U2/XLXN_4" is sourceless and has been removed.
+The signal "XLXI_30/U0/XLXN_4" is sourceless and has been removed.
+The signal "XLXI_30/U1/XLXN_4" is sourceless and has been removed.
+The signal "XLXI_30/U3/XLXN_4" is sourceless and has been removed.
+The signal "XLXI_29/U2/XLXN_4" is sourceless and has been removed.
+The signal "XLXI_29/U0/XLXN_4" is sourceless and has been removed.
+The signal "XLXI_29/U1/XLXN_4" is sourceless and has been removed.
+The signal "XLXI_29/U3/XLXN_4" is sourceless and has been removed.
+The signal "XLXI_28/U2/XLXN_4" is sourceless and has been removed.
+The signal "XLXI_28/U0/XLXN_4" is sourceless and has been removed.
+The signal "XLXI_28/U1/XLXN_4" is sourceless and has been removed.
+The signal "XLXI_28/U3/XLXN_4" is sourceless and has been removed.
+The signal "XLXI_27/U2/XLXN_4" is sourceless and has been removed.
+The signal "XLXI_27/U0/XLXN_4" is sourceless and has been removed.
+The signal "XLXI_27/U1/XLXN_4" is sourceless and has been removed.
+The signal "XLXI_27/U3/XLXN_4" is sourceless and has been removed.
+Unused block "XLXI_27/U0/I_36_43" (ZERO) removed.
+Unused block "XLXI_27/U1/I_36_43" (ZERO) removed.
+Unused block "XLXI_27/U2/I_36_43" (ZERO) removed.
+Unused block "XLXI_27/U3/I_36_43" (ZERO) removed.
+Unused block "XLXI_28/U0/I_36_43" (ZERO) removed.
+Unused block "XLXI_28/U1/I_36_43" (ZERO) removed.
+Unused block "XLXI_28/U2/I_36_43" (ZERO) removed.
+Unused block "XLXI_28/U3/I_36_43" (ZERO) removed.
+Unused block "XLXI_29/U0/I_36_43" (ZERO) removed.
+Unused block "XLXI_29/U1/I_36_43" (ZERO) removed.
+Unused block "XLXI_29/U2/I_36_43" (ZERO) removed.
+Unused block "XLXI_29/U3/I_36_43" (ZERO) removed.
+Unused block "XLXI_30/U0/I_36_43" (ZERO) removed.
+Unused block "XLXI_30/U1/I_36_43" (ZERO) removed.
+Unused block "XLXI_30/U2/I_36_43" (ZERO) removed.
+Unused block "XLXI_30/U3/I_36_43" (ZERO) removed.
+Unused block "XLXI_31/U0/I_36_43" (ZERO) removed.
+Unused block "XLXI_31/U1/I_36_43" (ZERO) removed.
+Unused block "XLXI_31/U2/I_36_43" (ZERO) removed.
+Unused block "XLXI_31/U3/I_36_43" (ZERO) removed.
+Unused block "XLXI_31/U3/U0" (FF) removed.
+Unused block "XLXI_32/U0/I_36_43" (ZERO) removed.
+Unused block "XLXI_32/U1/I_36_43" (ZERO) removed.
+Unused block "XLXI_32/U2/I_36_43" (ZERO) removed.
+Unused block "XLXI_32/U3/I_36_43" (ZERO) removed.
+Unused block "XLXI_32/U3/U0" (FF) removed.
+Unused block "XLXI_33/U0/I_36_43" (ZERO) removed.
+Unused block "XLXI_33/U1/I_36_43" (ZERO) removed.
+Unused block "XLXI_33/U2/I_36_43" (ZERO) removed.
+Unused block "XLXI_33/U3/I_36_43" (ZERO) removed.
+Unused block "XLXI_33/U3/U0" (FF) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XLXI_76
+VCC 		XLXI_77
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 12 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 13 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.

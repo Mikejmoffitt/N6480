@@ -1,0 +1,69 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 2 -n
+3 -fastpaths -xml n6480.twx n6480.ncd -o n6480.twr n6480.pcf -ucf n6480.ucf
+
+Design file:              n6480.ncd
+Physical constraint file: n6480.pcf
+Device,package,speed:     xc6slx4,cpg196,C,-2 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock n64_clock to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+vga_green<0>|        10.203(R)|      SLOW  |         4.629(R)|      FAST  |n64_clock_BUFGP   |   0.000|
+vga_green<1>|        10.364(R)|      SLOW  |         4.675(R)|      FAST  |n64_clock_BUFGP   |   0.000|
+vga_green<2>|        10.051(R)|      SLOW  |         4.506(R)|      FAST  |n64_clock_BUFGP   |   0.000|
+vga_green<3>|         9.943(R)|      SLOW  |         4.463(R)|      FAST  |n64_clock_BUFGP   |   0.000|
+vga_green<4>|         9.686(R)|      SLOW  |         4.304(R)|      FAST  |n64_clock_BUFGP   |   0.000|
+vga_green<5>|         9.712(R)|      SLOW  |         4.330(R)|      FAST  |n64_clock_BUFGP   |   0.000|
+vga_green<6>|        10.947(R)|      SLOW  |         5.030(R)|      FAST  |n64_clock_BUFGP   |   0.000|
+vga_hsync   |        10.498(R)|      SLOW  |         4.823(R)|      FAST  |n64_clock_BUFGP   |   0.000|
+vga_vsync   |        10.494(R)|      SLOW  |         4.871(R)|      FAST  |n64_clock_BUFGP   |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock n64_clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+n64_clock      |    4.176|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Tue Feb 24 01:00:43 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 376 MB
+
+
+

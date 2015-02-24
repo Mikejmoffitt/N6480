@@ -1,0 +1,106 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Mon Feb 23 23:31:55 2015
+# Process ID: 8706
+# Log file: /home/moffitt/Development/N6480/Xilinx/planAhead_run_1/planAhead.log
+# Journal file: /home/moffitt/Development/N6480/Xilinx/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /home/moffitt/Development/N6480/Xilinx/pa.fromNetlist.tcl
+startgroup
+set_property package_pin J2 [get_ports n64_clock]
+endgroup
+startgroup
+set_property package_pin J1 [get_ports n64_dsync_n]
+endgroup
+set_property package_pin "" [get_ports [list  vga_blank]]
+startgroup
+set_property package_pin J1 [get_ports n64_dsync_n]
+endgroup
+startgroup
+set_property package_pin J2 [get_ports n64_clock]
+endgroup
+startgroup
+set_property package_pin J1 [get_ports n64_dsync_n]
+endgroup
+startgroup
+set_property package_pin G2 [get_ports {n64_data[6]}]
+endgroup
+startgroup
+set_property package_pin G1 [get_ports {n64_data[5]}]
+endgroup
+startgroup
+set_property package_pin H2 [get_ports {n64_data[4]}]
+endgroup
+startgroup
+set_property package_pin H1 [get_ports {n64_data[3]}]
+endgroup
+startgroup
+set_property package_pin F2 [get_ports {n64_data[2]}]
+endgroup
+startgroup
+set_property package_pin F1 [get_ports {n64_data[1]}]
+endgroup
+startgroup
+set_property package_pin F4 [get_ports {n64_data[0]}]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list {n64_data[6]}]]
+set_property iostandard LVCMOS33 [get_ports [list n64_clock]]
+save_constraints
+set_property iostandard LVCMOS33 [get_ports [list n64_dsync_n]]
+startgroup
+set_property package_pin L13 [get_ports {vga_green[6]}]
+endgroup
+startgroup
+set_property package_pin K14 [get_ports {vga_green[5]}]
+endgroup
+save_constraints
+startgroup
+set_property package_pin K14 [get_ports {vga_green[5]}]
+endgroup
+set_property package_pin "" [get_ports [list  {vga_green[6]}]]
+set_property package_pin "" [get_ports [list  {vga_green[5]}]]
+save_constraints
+set_property package_pin "" [get_ports [list  {vga_green[6]}]]
+set_property package_pin "" [get_ports [list  {vga_green[6]}]]
+startgroup
+set_property package_pin K13 [get_ports {vga_green[6]}]
+endgroup
+startgroup
+set_property package_pin L13 [get_ports {vga_green[6]}]
+endgroup
+startgroup
+set_property package_pin K14 [get_ports {vga_green[5]}]
+endgroup
+startgroup
+set_property package_pin K13 [get_ports {vga_green[4]}]
+endgroup
+startgroup
+set_property package_pin J14 [get_ports {vga_green[3]}]
+endgroup
+startgroup
+set_property package_pin J13 [get_ports {vga_green[2]}]
+endgroup
+startgroup
+set_property package_pin H14 [get_ports {vga_green[1]}]
+endgroup
+startgroup
+set_property package_pin H13 [get_ports {vga_green[0]}]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list {vga_green[6]} {vga_green[5]} {vga_green[4]} {vga_green[3]} {vga_green[2]} {vga_green[1]} {vga_green[0]}]]
+save_constraints
+set_property iostandard LVCMOS33 [get_ports [list {vga_blue[6]} {vga_blue[5]} {vga_blue[4]} {vga_blue[3]} {vga_blue[2]} {vga_blue[1]} {vga_blue[0]}]]
+save_constraints
+set_property iostandard LVCMOS33 [get_ports [list {vga_red[6]} {vga_red[5]} {vga_red[4]} {vga_red[3]} {vga_red[2]} {vga_red[1]} {vga_red[0]}]]
+set_property iostandard LVCMOS33 [get_ports [list vga_blank]]
+set_property iostandard LVCMOS33 [get_ports [list vga_hsync]]
+save_constraints
+set_property iostandard LVCMOS33 [get_ports [list vga_vsync]]
+startgroup
+set_property package_pin P5 [get_ports vga_vsync]
+endgroup
+startgroup
+set_property package_pin N5 [get_ports vga_hsync]
+endgroup
+save_constraints

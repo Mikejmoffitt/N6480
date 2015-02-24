@@ -1,0 +1,62 @@
+NET "n64_dsync_n" LOC = J1;
+NET "n64_data[6]" LOC = G2;
+NET "n64_data[5]" LOC = G1;
+NET "n64_data[4]" LOC = H2;
+NET "n64_data[3]" LOC = H1;
+NET "n64_data[2]" LOC = F2;
+NET "n64_data[1]" LOC = F1;
+NET "n64_data[0]" LOC = F4;
+
+
+NET "n64_data[6]" IOSTANDARD = LVCMOS33;
+NET "n64_data[5]" IOSTANDARD = LVCMOS33;
+NET "n64_data[4]" IOSTANDARD = LVCMOS33;
+NET "n64_data[3]" IOSTANDARD = LVCMOS33;
+NET "n64_data[2]" IOSTANDARD = LVCMOS33;
+NET "n64_data[1]" IOSTANDARD = LVCMOS33;
+NET "n64_data[0]" IOSTANDARD = LVCMOS33;
+NET "n64_clock" IOSTANDARD = LVCMOS33;
+NET "n64_dsync_n" IOSTANDARD = LVCMOS33;
+
+
+NET "vga_green[6]" LOC = L13;
+NET "vga_green[5]" LOC = K14;
+NET "vga_green[4]" LOC = K13;
+NET "vga_green[3]" LOC = J14;
+NET "vga_green[2]" LOC = J13;
+NET "vga_green[1]" LOC = H14;
+NET "vga_green[0]" LOC = H13;
+
+
+NET "vga_green[6]" IOSTANDARD = LVCMOS33;
+NET "vga_green[5]" IOSTANDARD = LVCMOS33;
+NET "vga_green[4]" IOSTANDARD = LVCMOS33;
+NET "vga_green[3]" IOSTANDARD = LVCMOS33;
+NET "vga_green[2]" IOSTANDARD = LVCMOS33;
+NET "vga_green[1]" IOSTANDARD = LVCMOS33;
+NET "vga_green[0]" IOSTANDARD = LVCMOS33;
+NET "vga_blue[6]" IOSTANDARD = LVCMOS33;
+NET "vga_blue[5]" IOSTANDARD = LVCMOS33;
+NET "vga_blue[4]" IOSTANDARD = LVCMOS33;
+NET "vga_blue[3]" IOSTANDARD = LVCMOS33;
+NET "vga_blue[2]" IOSTANDARD = LVCMOS33;
+NET "vga_blue[1]" IOSTANDARD = LVCMOS33;
+NET "vga_blue[0]" IOSTANDARD = LVCMOS33;
+NET "vga_red[6]" IOSTANDARD = LVCMOS33;
+NET "vga_red[5]" IOSTANDARD = LVCMOS33;
+NET "vga_red[4]" IOSTANDARD = LVCMOS33;
+NET "vga_red[3]" IOSTANDARD = LVCMOS33;
+NET "vga_red[2]" IOSTANDARD = LVCMOS33;
+NET "vga_red[1]" IOSTANDARD = LVCMOS33;
+NET "vga_red[0]" IOSTANDARD = LVCMOS33;
+NET "vga_blank" IOSTANDARD = LVCMOS33;
+NET "vga_hsync" IOSTANDARD = LVCMOS33;
+NET "vga_vsync" IOSTANDARD = LVCMOS33;
+
+
+NET "vga_vsync" LOC = P5;
+NET "vga_hsync" LOC = N5;
+
+# PlanAhead Generated physical constraints 
+
+NET "n64_clock" LOC = J2;

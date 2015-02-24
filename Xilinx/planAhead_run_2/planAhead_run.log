@@ -1,0 +1,62 @@
+
+****** PlanAhead v14.7 (64-bit)
+  **** Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+    ** Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source /home/moffitt/Development/N6480/Xilinx/pa.fromNetlist.tcl
+# create_project -name N6480 -dir "/home/moffitt/Development/N6480/Xilinx/planAhead_run_2" -part xc6slx4cpg196-2
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "/home/moffitt/Development/N6480/Xilinx/n6480.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {/home/moffitt/Development/N6480/Xilinx} }
+# set_property target_constrs_file "n6480.ucf" [current_fileset -constrset]
+Adding file '/home/moffitt/Development/N6480/Xilinx/n6480.ucf' to fileset 'constrs_1'
+# add_files [list {n6480.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc6slx4cpg196-2
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design n6480.ngc ...
+WARNING:NetListWriters:298 - No output is written to n6480.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file n6480.edif ...
+ngc2edif: Total memory usage is 103720 kilobytes
+
+Parsing EDIF File [./planAhead_run_2/N6480.data/cache/n6480_ngc_ad5c95e5.edif]
+Finished Parsing EDIF File [./planAhead_run_2/N6480.data/cache/n6480_ngc_ad5c95e5.edif]
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Loading clock regions from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/spartan6lx/xc6slx4/ClockRegion.xml
+Loading clock buffers from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/spartan6lx/xc6slx4/ClockBuffers.xml
+Loading package pin functions from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/PinFunctions.xml...
+Loading package from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/spartan6lx/xc6slx4/cpg196/Package.xml
+Loading io standards from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan6/IOStandards.xml
+Loading device configuration modes from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/ConfigModes.xml
+Loading list of drcs for the architecture : /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan6/drc.xml
+Parsing UCF File [/home/moffitt/Development/N6480/Xilinx/n6480.ucf]
+CRITICAL WARNING: [Constraints 18-5] Cannot loc instance 'n64_clock_BUFGP/BUFG' at site J2, Illegal to place instance n64_clock_BUFGP/BUFG on site J2 [/home/moffitt/Development/N6480/Xilinx/n6480.ucf:4]
+Finished Parsing UCF File [/home/moffitt/Development/N6480/Xilinx/n6480.ucf]
+INFO: [Designutils 20-20] Invalid constraints found, use command 'write_ucf -constraints invalid <file>' to save all the invalid constraints to a file
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  BUFGP => BUFGP (IBUF, BUFG): 1 instances
+
+Phase 0 | Netlist Checksum: 06d9b6d3
+link_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 2827.520 ; gain = 176.176
+startgroup
+set_property package_pin P7 [get_ports n64_clock]
+endgroup
+save_constraints
