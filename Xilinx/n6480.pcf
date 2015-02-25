@@ -1,11 +1,38 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue Feb 24 02:45:01 2015
+// Written by: Map P.20131013 on Wed Feb 25 02:02:02 2015
 //! **************************************************************************
 
 SCHEMATIC START;
-COMP "vga_green<4>" LOCATE = SITE "K13" LEVEL 1;
-COMP "vga_green<5>" LOCATE = SITE "K14" LEVEL 1;
-COMP "vga_green<6>" LOCATE = SITE "L13" LEVEL 1;
+COMP "vga_vsync" LOCATE = SITE "N5" LEVEL 1;
+COMP "vga_red<0>" LOCATE = SITE "K14" LEVEL 1;
+COMP "vga_red<1>" LOCATE = SITE "L13" LEVEL 1;
+COMP "vga_red<2>" LOCATE = SITE "L14" LEVEL 1;
+COMP "vga_red<3>" LOCATE = SITE "N12" LEVEL 1;
+COMP "vga_red<4>" LOCATE = SITE "P12" LEVEL 1;
+COMP "vga_red<5>" LOCATE = SITE "P7" LEVEL 1;
+COMP "vga_red<6>" LOCATE = SITE "N6" LEVEL 1;
+COMP "vga_blue<0>" LOCATE = SITE "C13" LEVEL 1;
+COMP "vga_blue<1>" LOCATE = SITE "D13" LEVEL 1;
+COMP "vga_blue<2>" LOCATE = SITE "D14" LEVEL 1;
+COMP "vga_blue<3>" LOCATE = SITE "E13" LEVEL 1;
+COMP "vga_blue<4>" LOCATE = SITE "E14" LEVEL 1;
+COMP "vga_blue<5>" LOCATE = SITE "G13" LEVEL 1;
+COMP "vga_blue<6>" LOCATE = SITE "G14" LEVEL 1;
+COMP "button<0>" LOCATE = SITE "P8" LEVEL 1;
+COMP "button<1>" LOCATE = SITE "P9" LEVEL 1;
+COMP "n64_clock" LOCATE = SITE "J2" LEVEL 1;
+COMP "led<0>" LOCATE = SITE "N3" LEVEL 1;
+COMP "led<1>" LOCATE = SITE "P3" LEVEL 1;
+COMP "led<2>" LOCATE = SITE "N4" LEVEL 1;
+COMP "led<3>" LOCATE = SITE "P4" LEVEL 1;
+COMP "vga_hsync" LOCATE = SITE "P5" LEVEL 1;
+COMP "vga_green<0>" LOCATE = SITE "F13" LEVEL 1;
+COMP "vga_green<1>" LOCATE = SITE "F14" LEVEL 1;
+COMP "vga_green<2>" LOCATE = SITE "H13" LEVEL 1;
+COMP "vga_green<3>" LOCATE = SITE "H14" LEVEL 1;
+COMP "vga_green<4>" LOCATE = SITE "J13" LEVEL 1;
+COMP "vga_green<5>" LOCATE = SITE "J14" LEVEL 1;
+COMP "vga_green<6>" LOCATE = SITE "K13" LEVEL 1;
 COMP "n64_data<0>" LOCATE = SITE "F4" LEVEL 1;
 COMP "n64_data<1>" LOCATE = SITE "F1" LEVEL 1;
 COMP "n64_data<2>" LOCATE = SITE "F2" LEVEL 1;
@@ -13,13 +40,6 @@ COMP "n64_data<3>" LOCATE = SITE "H1" LEVEL 1;
 COMP "n64_data<4>" LOCATE = SITE "H2" LEVEL 1;
 COMP "n64_data<5>" LOCATE = SITE "G1" LEVEL 1;
 COMP "n64_data<6>" LOCATE = SITE "G2" LEVEL 1;
-COMP "vga_hsync" LOCATE = SITE "N5" LEVEL 1;
 COMP "n64_dsync_n" LOCATE = SITE "J1" LEVEL 1;
-COMP "vga_green<0>" LOCATE = SITE "H13" LEVEL 1;
-COMP "vga_vsync" LOCATE = SITE "P3" LEVEL 1;
-COMP "vga_green<1>" LOCATE = SITE "H14" LEVEL 1;
-COMP "n64_clock" LOCATE = SITE "J2" LEVEL 1;
-COMP "vga_green<2>" LOCATE = SITE "J13" LEVEL 1;
-COMP "vga_green<3>" LOCATE = SITE "J14" LEVEL 1;
 SCHEMATIC END;
 

@@ -1,3 +1,4 @@
+NET "n64_clock" LOC = J2;
 NET "n64_dsync_n" LOC = J1;
 NET "n64_data[6]" LOC = G2;
 NET "n64_data[5]" LOC = G1;
@@ -8,25 +9,42 @@ NET "n64_data[1]" LOC = F1;
 NET "n64_data[0]" LOC = F4;
 
 
-NET "n64_data[6]" IOSTANDARD = LVCMOS33;
-NET "n64_data[5]" IOSTANDARD = LVCMOS33;
-NET "n64_data[4]" IOSTANDARD = LVCMOS33;
-NET "n64_data[3]" IOSTANDARD = LVCMOS33;
-NET "n64_data[2]" IOSTANDARD = LVCMOS33;
-NET "n64_data[1]" IOSTANDARD = LVCMOS33;
-NET "n64_data[0]" IOSTANDARD = LVCMOS33;
-NET "n64_clock" IOSTANDARD = LVCMOS33;
-NET "n64_dsync_n" IOSTANDARD = LVCMOS33;
+# VGA outputs starting at pin 23
+NET "vga_blue[0]" LOC = C13;
+NET "vga_blue[1]" LOC = D13;
+NET "vga_blue[2]" LOC = D14;
+NET "vga_blue[3]" LOC = E13;
+NET "vga_blue[4]" LOC = E14;
+NET "vga_blue[5]" LOC = G13;
+NET "vga_blue[6]" LOC = G14;
+# start at pin 16
+NET "vga_green[0]" LOC = F13;
+NET "vga_green[1]" LOC = F14;
+NET "vga_green[2]" LOC = H13;
+NET "vga_green[3]" LOC = H14;
+NET "vga_green[4]" LOC = J13;
+NET "vga_green[5]" LOC = J14;
+NET "vga_green[6]" LOC = K13;
+# start at pin 9
+NET "vga_red[0]" LOC = K14;
+NET "vga_red[1]" LOC = L13;
+NET "vga_red[2]" LOC = L14;
+NET "vga_red[3]" LOC = N12;
+NET "vga_red[4]" LOC = P12;
+NET "vga_red[5]" LOC = P7;
+NET "vga_red[6]" LOC = N6;
 
+# start at pin 2
+NET "vga_vsync" LOC = N5;
+NET "vga_hsync" LOC = P5;
 
-NET "vga_green[6]" LOC = L13;
-NET "vga_green[5]" LOC = K14;
-NET "vga_green[4]" LOC = K13;
-NET "vga_green[3]" LOC = J14;
-NET "vga_green[2]" LOC = J13;
-NET "vga_green[1]" LOC = H14;
-NET "vga_green[0]" LOC = H13;
+NET "led[0]" LOC = N3 | IOSTANDARD = LVCMOS33;
+NET "led[1]" LOC = P3 | IOSTANDARD = LVCMOS33;
+NET "led[2]" LOC = N4 | IOSTANDARD = LVCMOS33;
+NET "led[3]" LOC = P4 | IOSTANDARD = LVCMOS33;
 
+NET "button[0]" LOC = P8 | IOSTANDARD = LVCMOS33;
+NET "button[1]" LOC = P9 | IOSTANDARD = LVCMOS33;
 
 NET "vga_green[6]" IOSTANDARD = LVCMOS33;
 NET "vga_green[5]" IOSTANDARD = LVCMOS33;
@@ -53,9 +71,13 @@ NET "vga_blank" IOSTANDARD = LVCMOS33;
 NET "vga_hsync" IOSTANDARD = LVCMOS33;
 NET "vga_vsync" IOSTANDARD = LVCMOS33;
 
+NET "n64_data[6]" IOSTANDARD = LVCMOS33;
+NET "n64_data[5]" IOSTANDARD = LVCMOS33;
+NET "n64_data[4]" IOSTANDARD = LVCMOS33;
+NET "n64_data[3]" IOSTANDARD = LVCMOS33;
+NET "n64_data[2]" IOSTANDARD = LVCMOS33;
+NET "n64_data[1]" IOSTANDARD = LVCMOS33;
+NET "n64_data[0]" IOSTANDARD = LVCMOS33;
+NET "n64_clock" IOSTANDARD = LVCMOS33;
+NET "n64_dsync_n" IOSTANDARD = LVCMOS33;
 
-NET "vga_vsync" LOC = P3;
-NET "vga_hsync" LOC = N5;
-
-
-NET "n64_clock" LOC = J2;

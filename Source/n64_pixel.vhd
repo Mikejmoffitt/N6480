@@ -19,7 +19,8 @@ port (
 	csync_n_out: out std_logic;
 	hsync_n_out: out std_logic;
 	clamp_n_out: out std_logic;
-	vsync_n_out: out std_logic
+	vsync_n_out: out std_logic;
+	clock_count: out std_logic_vector(1 downto 0)
 );
 end n64_pixel;
 
@@ -32,6 +33,10 @@ signal csync_n_cap: std_logic;
 signal hsync_n_cap: std_logic;
 signal clamp_n_cap: std_logic;
 signal vsync_n_cap: std_logic;
+
+signal red_final: std_logic_vector(6 downto 0);
+signal green_final: std_logic_vector(6 downto 0);
+signal blue_final: std_logic_vector(6 downto 0);
 
 signal cycle_count: std_logic_vector(1 downto 0);
 
@@ -57,6 +62,9 @@ begin
 			elsif (cycle_count = "10") then
 				blue_cap <= n64_data;
 			else
+				red_final <= red_cap;
+				green_final <= green_cap;
+				blue_final <= blue_cap;
 				csync_n_cap <= n64_data(0);
 				hsync_n_cap <= n64_data(1);
 				clamp_n_cap <= n64_data(2);
@@ -68,13 +76,14 @@ begin
 	set_outputs: process(n64_clock)
 	begin
 		if (falling_edge(n64_clock)) then
-			red_out <= red_cap;
-			green_out <= green_cap;
-			blue_out <= blue_cap;
+			red_out <= red_final;
+			green_out <= green_final;
+			blue_out <= blue_final;
 			csync_n_out <= csync_n_cap;
 			hsync_n_out <= hsync_n_cap;
 			clamp_n_out <= clamp_n_cap;
 			vsync_n_out <= vsync_n_cap;
+			clock_count <= cycle_count;
 		end if;
 	end process;
 end behavioral;
