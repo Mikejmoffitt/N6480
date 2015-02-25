@@ -36,12 +36,12 @@ Setup/Hold to clock n64_clock
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-n64_data<1> |    1.952(F)|      SLOW  |    0.415(F)|      SLOW  |n64_clock_BUFGP   |   0.000|
-n64_data<2> |    1.865(F)|      SLOW  |    0.117(F)|      SLOW  |n64_clock_BUFGP   |   0.000|
-n64_data<3> |    1.779(F)|      SLOW  |    0.236(F)|      SLOW  |n64_clock_BUFGP   |   0.000|
-n64_data<4> |    1.799(F)|      SLOW  |    0.082(F)|      SLOW  |n64_clock_BUFGP   |   0.000|
-n64_data<5> |    1.283(F)|      SLOW  |    0.392(F)|      SLOW  |n64_clock_BUFGP   |   0.000|
-n64_data<6> |    1.821(F)|      SLOW  |    0.478(F)|      SLOW  |n64_clock_BUFGP   |   0.000|
+n64_data<1> |    1.689(F)|      SLOW  |    0.415(F)|      SLOW  |n64_clock_BUFGP   |   0.000|
+n64_data<2> |    2.078(F)|      SLOW  |    0.115(F)|      SLOW  |n64_clock_BUFGP   |   0.000|
+n64_data<3> |    2.104(F)|      SLOW  |    0.239(F)|      SLOW  |n64_clock_BUFGP   |   0.000|
+n64_data<4> |    1.778(F)|      SLOW  |    0.080(F)|      SLOW  |n64_clock_BUFGP   |   0.000|
+n64_data<5> |    1.186(F)|      SLOW  |    0.555(F)|      SLOW  |n64_clock_BUFGP   |   0.000|
+n64_data<6> |    1.622(F)|      SLOW  |    0.258(F)|      SLOW  |n64_clock_BUFGP   |   0.000|
 n64_dsync_n |    1.200(F)|      SLOW  |    0.629(F)|      SLOW  |n64_clock_BUFGP   |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
@@ -50,29 +50,29 @@ Clock n64_clock to Pad
             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
-led<0>      |        11.534(F)|      SLOW  |         5.448(F)|      FAST  |n64_clock_BUFGP   |   0.000|
-led<2>      |        11.455(F)|      SLOW  |         5.412(F)|      FAST  |n64_clock_BUFGP   |   0.000|
-led<3>      |        11.309(F)|      SLOW  |         5.369(F)|      FAST  |n64_clock_BUFGP   |   0.000|
-vga_blue<1> |         9.760(F)|      SLOW  |         4.438(F)|      FAST  |n64_clock_BUFGP   |   0.000|
-vga_blue<2> |         9.558(F)|      SLOW  |         4.276(F)|      FAST  |n64_clock_BUFGP   |   0.000|
-vga_blue<3> |         9.618(F)|      SLOW  |         4.320(F)|      FAST  |n64_clock_BUFGP   |   0.000|
-vga_blue<4> |         9.618(F)|      SLOW  |         4.320(F)|      FAST  |n64_clock_BUFGP   |   0.000|
-vga_blue<5> |         9.937(F)|      SLOW  |         4.456(F)|      FAST  |n64_clock_BUFGP   |   0.000|
-vga_blue<6> |         9.747(F)|      SLOW  |         4.353(F)|      FAST  |n64_clock_BUFGP   |   0.000|
-vga_green<1>|         9.651(F)|      SLOW  |         4.313(F)|      FAST  |n64_clock_BUFGP   |   0.000|
-vga_green<2>|         9.845(F)|      SLOW  |         4.436(F)|      FAST  |n64_clock_BUFGP   |   0.000|
-vga_green<3>|         9.541(F)|      SLOW  |         4.254(F)|      FAST  |n64_clock_BUFGP   |   0.000|
-vga_green<4>|         9.565(F)|      SLOW  |         4.266(F)|      FAST  |n64_clock_BUFGP   |   0.000|
-vga_green<5>|         9.550(F)|      SLOW  |         4.251(F)|      FAST  |n64_clock_BUFGP   |   0.000|
-vga_green<6>|         9.995(F)|      SLOW  |         4.512(F)|      FAST  |n64_clock_BUFGP   |   0.000|
-vga_hsync   |         9.715(F)|      SLOW  |         4.438(F)|      FAST  |n64_clock_BUFGP   |   0.000|
+led<0>      |        11.494(F)|      SLOW  |         5.427(F)|      FAST  |n64_clock_BUFGP   |   0.000|
+led<2>      |        11.185(F)|      SLOW  |         5.239(F)|      FAST  |n64_clock_BUFGP   |   0.000|
+led<3>      |        11.185(F)|      SLOW  |         5.239(F)|      FAST  |n64_clock_BUFGP   |   0.000|
+vga_blue<1> |         9.767(F)|      SLOW  |         4.409(F)|      FAST  |n64_clock_BUFGP   |   0.000|
+vga_blue<2> |         9.737(F)|      SLOW  |         4.379(F)|      FAST  |n64_clock_BUFGP   |   0.000|
+vga_blue<3> |         9.876(F)|      SLOW  |         4.444(F)|      FAST  |n64_clock_BUFGP   |   0.000|
+vga_blue<4> |         9.876(F)|      SLOW  |         4.444(F)|      FAST  |n64_clock_BUFGP   |   0.000|
+vga_blue<5> |         9.639(F)|      SLOW  |         4.341(F)|      FAST  |n64_clock_BUFGP   |   0.000|
+vga_blue<6> |         9.639(F)|      SLOW  |         4.341(F)|      FAST  |n64_clock_BUFGP   |   0.000|
+vga_green<1>|         9.586(F)|      SLOW  |         4.263(F)|      FAST  |n64_clock_BUFGP   |   0.000|
+vga_green<2>|         9.608(F)|      SLOW  |         4.310(F)|      FAST  |n64_clock_BUFGP   |   0.000|
+vga_green<3>|         9.777(F)|      SLOW  |         4.393(F)|      FAST  |n64_clock_BUFGP   |   0.000|
+vga_green<4>|         9.833(F)|      SLOW  |         4.426(F)|      FAST  |n64_clock_BUFGP   |   0.000|
+vga_green<5>|         9.676(F)|      SLOW  |         4.318(F)|      FAST  |n64_clock_BUFGP   |   0.000|
+vga_green<6>|        10.070(F)|      SLOW  |         4.518(F)|      FAST  |n64_clock_BUFGP   |   0.000|
+vga_hsync   |        10.141(F)|      SLOW  |         4.724(F)|      FAST  |n64_clock_BUFGP   |   0.000|
 vga_red<1>  |         9.594(F)|      SLOW  |         4.307(F)|      FAST  |n64_clock_BUFGP   |   0.000|
 vga_red<2>  |         9.594(F)|      SLOW  |         4.307(F)|      FAST  |n64_clock_BUFGP   |   0.000|
 vga_red<3>  |         9.739(F)|      SLOW  |         4.441(F)|      FAST  |n64_clock_BUFGP   |   0.000|
 vga_red<4>  |         9.739(F)|      SLOW  |         4.441(F)|      FAST  |n64_clock_BUFGP   |   0.000|
-vga_red<5>  |         9.897(F)|      SLOW  |         4.620(F)|      FAST  |n64_clock_BUFGP   |   0.000|
-vga_red<6>  |        10.278(F)|      SLOW  |         4.791(F)|      FAST  |n64_clock_BUFGP   |   0.000|
-vga_vsync   |        10.701(F)|      SLOW  |         5.002(F)|      FAST  |n64_clock_BUFGP   |   0.000|
+vga_red<5>  |         9.862(F)|      SLOW  |         4.563(F)|      FAST  |n64_clock_BUFGP   |   0.000|
+vga_red<6>  |        10.164(F)|      SLOW  |         4.740(F)|      FAST  |n64_clock_BUFGP   |   0.000|
+vga_vsync   |        10.893(F)|      SLOW  |         5.115(F)|      FAST  |n64_clock_BUFGP   |   0.000|
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock n64_clock
@@ -80,18 +80,18 @@ Clock to Setup on destination clock n64_clock
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-n64_clock      |    2.952|    5.010|    2.559|    6.446|
+n64_clock      |    2.643|    4.731|    3.193|    5.893|
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Wed Feb 25 12:29:53 2015 
+Analysis completed Wed Feb 25 16:51:36 2015 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 385 MB
+Peak Memory Usage: 386 MB
 
 
 

@@ -27,6 +27,7 @@ end n6480;
 
 architecture behavioral of n6480 is
 
+-- For now I am truncating the 7th color bit on the N64. None of the games I've tested so far actually use it. 
 constant N64_PIXEL_LEN: integer := 18;
 
 -- What a weird number!
@@ -37,10 +38,14 @@ constant N64_LINE_LEN: integer := N64_PIXELS_PER_LINE * 4;
 constant VGA_LINE_LEN: integer := (N64_PIXELS_PER_LINE * 2) - 1;
 constant NUM_LINES: integer := 262;
 
-constant VGA_HSYNC_START: integer := 0;
-constant VGA_HSYNC_END: integer := 160;
-constant VGA_VSYNC_START: integer := 0;
-constant VGA_VSYNC_END: integer := 2;
+
+-- Mode 0 is for when Hsync goes beyond one line
+constant VGA_HSYNC_LEN: integer := 160;
+constant VGA_HSYNC_MODE: std_logic := '0'; 
+constant VGA_HSYNC_START: integer := VGA_LINE_LEN - 30;
+constant VGA_HSYNC_END: integer := 162;
+constant VGA_VSYNC_START: integer := 248;
+constant VGA_VSYNC_END: integer := 250;
 constant U16_ZERO: std_logic_vector(15 downto 0) := "0000000000000000";
 
 -- Deserialized pixel data, ready to read
@@ -68,6 +73,8 @@ signal clock_count: std_logic_vector(1 downto 0) := "00";
 signal vsync_time: std_logic_vector(15 downto 0) := U16_ZERO;
 signal hsync_time: std_logic_vector(15 downto 0) := U16_ZERO;
 
+signal enable_delay: std_logic := '0'; -- When 1, delay the line by 8 clocks for interlace mode
+
 -- For assigning from the buffers
 signal out_red: std_logic_vector(6 downto 0);
 signal out_green: std_logic_vector(6 downto 0);
@@ -80,7 +87,7 @@ begin
 		n64_data, n64_clock, n64_dsync_n, n64_red, n64_green, n64_blue,
 		n64_csync_n, n64_hsync_n, n64_clamp_n, n64_vsync_n, clock_count);
 		
-	led <= clock_count & '0' & n64_vsync_n;
+	led <= clock_count & '0' & enable_delay;
 	
 	-- Both alternating line buffers
 	buffer_a: entity work.linebuffer(behavioral) 
@@ -146,12 +153,18 @@ begin
 					when others => buffer_en_a <= '0';
 				end case;
 				
-				buffer_in_b <= "000000000000000000";
-				--buffer_in_b <= buffer_out_b;
+				buffer_in_b <= buffer_out_b;
 				
 				-- Have it shift out data twice for every one N64 pixel 
 				-- (or once per VGA pixel)
-				buffer_en_b <= not clock_count(0);
+				if ((n64_px_count > 4 and enable_delay = '1') or (enable_delay = '0'))
+				then
+					if (n64_px_count >= VGA_LINE_LEN) then
+						buffer_en_b <= not clock_count(0);
+					else
+						buffer_en_b <= clock_count(0);
+					end if;
+				end if;
 			else
 				-- Feed pixel data as a vector into the buffer
 				buffer_in_b <= n64_red(6 downto 1) & n64_green(6 downto 1) & n64_blue(6 downto 1);
@@ -162,12 +175,18 @@ begin
 					when others => buffer_en_b <= '0';
 				end case;
 				
-				buffer_in_a <= "000000000000000000";
-				---buffer_in_a <= buffer_out_a;
+				buffer_in_a <= buffer_out_a;
 				
 				-- Have it shift out data twice for every one N64 pixel 
 				-- (or once per VGA pixel)
-				buffer_en_a <= not clock_count(0);
+				if ((n64_px_count > 4 and enable_delay = '1') or (enable_delay = '0'))
+				then
+					if (n64_px_count >= VGA_LINE_LEN) then
+						buffer_en_a <= not clock_count(0);
+					else
+						buffer_en_a <= clock_count(0);
+					end if;
+				end if;
 			end if;
 		end if;
 	end process;
@@ -190,21 +209,31 @@ begin
 	n64_pixel_counter: process(n64_clock)
 	begin
 		if (falling_edge(n64_clock)) then
-			if (n64_vsync_n = '0') then
-				n64_px_count <= U16_ZERO;
-				line_count <= U16_ZERO;
 			-- End of N64 line - swap buffers, increment line count
+			if (vsync_time = 1) then
+				n64_px_count <= U16_ZERO;
+				if (n64_px_count < N64_LINE_LEN - 8) then
+					enable_delay <= '1';
+				else
+					enable_delay <= '0';
+				end if;
 			elsif (hsync_time = 1) then
 				buffer_sel <= not buffer_sel;
 				n64_px_count <= U16_ZERO;
+			else
+				n64_px_count <= n64_px_count + 1;
+			end if;
+			
+			if (n64_vsync_n = '0') then
+				line_count <= U16_ZERO;
+			elsif (hsync_time = 1) then
 				if (line_count = NUM_LINES) then
 					line_count <= U16_ZERO;
 				else
 					line_count <= line_count + 1;
 				end if;
-			else
-				n64_px_count <= n64_px_count + 1;
 			end if;
+				
 		end if;
 	end process;
 	
@@ -224,10 +253,18 @@ begin
 	vga_hsync_proc: process(n64_clock)
 	begin	
 		if (falling_edge(n64_clock)) then
-			if (vga_px_count >= VGA_HSYNC_START and vga_px_count < VGA_HSYNC_END) then
-				vga_hsync <= '0';
+			if (VGA_HSYNC_MODE = '1') then
+				if (vga_px_count >= VGA_HSYNC_START and vga_px_count < VGA_HSYNC_END) then
+					vga_hsync <= '0';
+				else
+					vga_hsync <= '1';
+				end if;
 			else
-				vga_hsync <= '1';
+				if (vga_px_count >= VGA_HSYNC_START or vga_px_count < VGA_HSYNC_END) then
+					vga_hsync <= '0';
+				else
+					vga_hsync <= '1';
+				end if;
 			end if;
 		end if;
 	end process;

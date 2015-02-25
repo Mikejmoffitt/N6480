@@ -135,8 +135,8 @@ Elaborating entity <linebuffer> (architecture <behavioral>) with generics from l
 Synthesizing Unit <n6480>.
     Related source file is "/home/moffitt/Development/N6480/Source/n6480.vhd".
 WARNING:Xst:647 - Input <button> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "/home/moffitt/Development/N6480/Source/n6480.vhd" line 79: Output port <csync_n_out> of the instance <rgb_decoder> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/moffitt/Development/N6480/Source/n6480.vhd" line 79: Output port <clamp_n_out> of the instance <rgb_decoder> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/moffitt/Development/N6480/Source/n6480.vhd" line 86: Output port <csync_n_out> of the instance <rgb_decoder> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/moffitt/Development/N6480/Source/n6480.vhd" line 86: Output port <clamp_n_out> of the instance <rgb_decoder> is unconnected or connected to loadless signal.
     Found 16-bit register for signal <hsync_time>.
     Found 7-bit register for signal <out_red>.
     Found 7-bit register for signal <out_green>.
@@ -149,22 +149,32 @@ INFO:Xst:3210 - "/home/moffitt/Development/N6480/Source/n6480.vhd" line 79: Outp
     Found 18-bit register for signal <buffer_in_b>.
     Found 1-bit register for signal <buffer_en_b>.
     Found 16-bit register for signal <vga_px_count>.
-    Found 16-bit register for signal <line_count>.
+    Found 16-bit register for signal <n64_px_count>.
+    Found 1-bit register for signal <enable_delay>.
     Found 1-bit register for signal <buffer_sel>.
+    Found 16-bit register for signal <line_count>.
     Found 1-bit register for signal <vga_vsync>.
     Found 1-bit register for signal <vga_hsync>.
-    Found 16-bit adder for signal <hsync_time[15]_GND_5_o_add_3_OUT> created at line 104.
-    Found 16-bit adder for signal <vga_px_count[15]_GND_5_o_add_23_OUT> created at line 184.
-    Found 16-bit adder for signal <line_count[15]_GND_5_o_add_29_OUT> created at line 203.
-    Found 4x1-bit Read Only RAM for signal <clock_count[1]_GND_5_o_Mux_16_o>
-    Found 16-bit comparator lessequal for signal <line_count[15]_GND_5_o_LessThan_39_o> created at line 215
-    Found 16-bit comparator lessequal for signal <vga_px_count[15]_GND_5_o_LessThan_40_o> created at line 227
+    Found 16-bit register for signal <vsync_time>.
+    Found 16-bit adder for signal <vsync_time[15]_GND_5_o_add_1_OUT> created at line 105.
+    Found 16-bit adder for signal <hsync_time[15]_GND_5_o_add_3_OUT> created at line 111.
+    Found 16-bit adder for signal <vga_px_count[15]_GND_5_o_add_30_OUT> created at line 205.
+    Found 16-bit adder for signal <n64_px_count[15]_GND_5_o_add_37_OUT> created at line 226.
+    Found 16-bit adder for signal <line_count[15]_GND_5_o_add_42_OUT> created at line 235.
+    Found 4x1-bit Read Only RAM for signal <clock_count[1]_GND_5_o_Mux_19_o>
+    Found 16-bit comparator greater for signal <GND_5_o_n64_px_count[15]_LessThan_24_o> created at line 184
+    Found 16-bit comparator lessequal for signal <n0029> created at line 186
+    Found 16-bit comparator greater for signal <n64_px_count[15]_GND_5_o_LessThan_36_o> created at line 217
+    Found 16-bit comparator lessequal for signal <n0066> created at line 246
+    Found 16-bit comparator greater for signal <line_count[15]_GND_5_o_LessThan_50_o> created at line 246
+    Found 16-bit comparator lessequal for signal <n0072> created at line 265
+    Found 16-bit comparator greater for signal <vga_px_count[15]_GND_5_o_LessThan_52_o> created at line 265
     Summary:
 	inferred   1 RAM(s).
-	inferred   3 Adder/Subtractor(s).
-	inferred 131 D-type flip-flop(s).
-	inferred   2 Comparator(s).
-	inferred   5 Multiplexer(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred 164 D-type flip-flop(s).
+	inferred   7 Comparator(s).
+	inferred   8 Multiplexer(s).
 Unit <n6480> synthesized.
 
 Synthesizing Unit <n64_pixel>.
@@ -981,19 +991,21 @@ HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 1
  4x1-bit single-port Read Only RAM                     : 1
-# Adders/Subtractors                                   : 4
- 16-bit adder                                          : 3
+# Adders/Subtractors                                   : 6
+ 16-bit adder                                          : 5
  2-bit adder                                           : 1
-# Registers                                            : 1581
- 1-bit register                                        : 13
- 16-bit register                                       : 3
+# Registers                                            : 1584
+ 1-bit register                                        : 14
+ 16-bit register                                       : 5
  18-bit register                                       : 1548
  2-bit register                                        : 2
  7-bit register                                        : 15
-# Comparators                                          : 2
- 16-bit comparator lessequal                           : 2
-# Multiplexers                                         : 5
- 1-bit 2-to-1 multiplexer                              : 2
+# Comparators                                          : 7
+ 16-bit comparator greater                             : 4
+ 16-bit comparator lessequal                           : 3
+# Multiplexers                                         : 8
+ 1-bit 2-to-1 multiplexer                              : 3
+ 18-bit 2-to-1 multiplexer                             : 2
  7-bit 2-to-1 multiplexer                              : 3
 
 =========================================================================
@@ -1013,10 +1025,12 @@ WARNING:Xst:2677 - Node <green_out_0> of sequential type is unconnected in block
 WARNING:Xst:2677 - Node <blue_out_0> of sequential type is unconnected in block <rgb_decoder>.
 
 Synthesizing (advanced) Unit <n6480>.
+The following registers are absorbed into counter <vsync_time>: 1 register on signal <vsync_time>.
 The following registers are absorbed into counter <hsync_time>: 1 register on signal <hsync_time>.
 The following registers are absorbed into counter <vga_px_count>: 1 register on signal <vga_px_count>.
+The following registers are absorbed into counter <n64_px_count>: 1 register on signal <n64_px_count>.
 The following registers are absorbed into counter <line_count>: 1 register on signal <line_count>.
-INFO:Xst:3231 - The small RAM <Mram_clock_count[1]_GND_5_o_Mux_16_o> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+INFO:Xst:3231 - The small RAM <Mram_clock_count[1]_GND_5_o_Mux_19_o> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -1039,15 +1053,17 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 1
  4x1-bit single-port distributed Read Only RAM         : 1
-# Counters                                             : 4
- 16-bit up counter                                     : 3
+# Counters                                             : 6
+ 16-bit up counter                                     : 5
  2-bit up counter                                      : 1
-# Registers                                            : 27984
- Flip-Flops                                            : 27984
-# Comparators                                          : 2
- 16-bit comparator lessequal                           : 2
-# Multiplexers                                         : 5
- 1-bit 2-to-1 multiplexer                              : 2
+# Registers                                            : 27985
+ Flip-Flops                                            : 27985
+# Comparators                                          : 7
+ 16-bit comparator greater                             : 4
+ 16-bit comparator lessequal                           : 3
+# Multiplexers                                         : 8
+ 1-bit 2-to-1 multiplexer                              : 3
+ 18-bit 2-to-1 multiplexer                             : 2
  7-bit 2-to-1 multiplexer                              : 3
 
 =========================================================================
@@ -1083,9 +1099,9 @@ WARNING:Xst:2677 - Node <rgb_decoder/blue_cap_0> of sequential type is unconnect
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block n6480, actual ratio is 1645.
+Found area constraint ratio of 100 (+ 5) on block n6480, actual ratio is 1647.
 Optimizing block <n6480> to meet ratio 100 (+ 5) of 600 slices :
-WARNING:Xst:2254 - Area constraint could not be met for block <n6480>, final ratio is 1645.
+WARNING:Xst:2254 - Area constraint could not be met for block <n6480>, final ratio is 1647.
 FlipFlop buffer_en_a has been replicated 16 time(s)
 FlipFlop buffer_en_b has been replicated 16 time(s)
 
@@ -1134,44 +1150,44 @@ Unit <n6480> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 219
- Flip-Flops                                            : 219
+# Registers                                            : 252
+ Flip-Flops                                            : 252
 # Shift Registers                                      : 36
  773-bit shift register                                : 36
 
 =========================================================================
-WARNING:Xst:2677 - Node <buffer_en_a_1> of sequential type is unconnected in block <n6480>.
 WARNING:Xst:2677 - Node <buffer_en_b_1> of sequential type is unconnected in block <n6480>.
-WARNING:Xst:2677 - Node <buffer_en_a_2> of sequential type is unconnected in block <n6480>.
+WARNING:Xst:2677 - Node <buffer_en_a_1> of sequential type is unconnected in block <n6480>.
 WARNING:Xst:2677 - Node <buffer_en_b_2> of sequential type is unconnected in block <n6480>.
-WARNING:Xst:2677 - Node <buffer_en_a_3> of sequential type is unconnected in block <n6480>.
+WARNING:Xst:2677 - Node <buffer_en_a_2> of sequential type is unconnected in block <n6480>.
 WARNING:Xst:2677 - Node <buffer_en_b_3> of sequential type is unconnected in block <n6480>.
-WARNING:Xst:2677 - Node <buffer_en_a_4> of sequential type is unconnected in block <n6480>.
+WARNING:Xst:2677 - Node <buffer_en_a_3> of sequential type is unconnected in block <n6480>.
 WARNING:Xst:2677 - Node <buffer_en_b_4> of sequential type is unconnected in block <n6480>.
-WARNING:Xst:2677 - Node <buffer_en_a_5> of sequential type is unconnected in block <n6480>.
+WARNING:Xst:2677 - Node <buffer_en_a_4> of sequential type is unconnected in block <n6480>.
 WARNING:Xst:2677 - Node <buffer_en_b_5> of sequential type is unconnected in block <n6480>.
-WARNING:Xst:2677 - Node <buffer_en_a_6> of sequential type is unconnected in block <n6480>.
+WARNING:Xst:2677 - Node <buffer_en_a_5> of sequential type is unconnected in block <n6480>.
 WARNING:Xst:2677 - Node <buffer_en_b_6> of sequential type is unconnected in block <n6480>.
-WARNING:Xst:2677 - Node <buffer_en_a_7> of sequential type is unconnected in block <n6480>.
+WARNING:Xst:2677 - Node <buffer_en_a_6> of sequential type is unconnected in block <n6480>.
 WARNING:Xst:2677 - Node <buffer_en_b_7> of sequential type is unconnected in block <n6480>.
-WARNING:Xst:2677 - Node <buffer_en_a_8> of sequential type is unconnected in block <n6480>.
+WARNING:Xst:2677 - Node <buffer_en_a_7> of sequential type is unconnected in block <n6480>.
 WARNING:Xst:2677 - Node <buffer_en_b_8> of sequential type is unconnected in block <n6480>.
-WARNING:Xst:2677 - Node <buffer_en_a_9> of sequential type is unconnected in block <n6480>.
+WARNING:Xst:2677 - Node <buffer_en_a_8> of sequential type is unconnected in block <n6480>.
 WARNING:Xst:2677 - Node <buffer_en_b_9> of sequential type is unconnected in block <n6480>.
-WARNING:Xst:2677 - Node <buffer_en_a_10> of sequential type is unconnected in block <n6480>.
+WARNING:Xst:2677 - Node <buffer_en_a_9> of sequential type is unconnected in block <n6480>.
 WARNING:Xst:2677 - Node <buffer_en_b_10> of sequential type is unconnected in block <n6480>.
-WARNING:Xst:2677 - Node <buffer_en_a_11> of sequential type is unconnected in block <n6480>.
+WARNING:Xst:2677 - Node <buffer_en_a_10> of sequential type is unconnected in block <n6480>.
 WARNING:Xst:2677 - Node <buffer_en_b_11> of sequential type is unconnected in block <n6480>.
-WARNING:Xst:2677 - Node <buffer_en_a_12> of sequential type is unconnected in block <n6480>.
+WARNING:Xst:2677 - Node <buffer_en_a_11> of sequential type is unconnected in block <n6480>.
 WARNING:Xst:2677 - Node <buffer_en_b_12> of sequential type is unconnected in block <n6480>.
-WARNING:Xst:2677 - Node <buffer_en_a_13> of sequential type is unconnected in block <n6480>.
+WARNING:Xst:2677 - Node <buffer_en_a_12> of sequential type is unconnected in block <n6480>.
 WARNING:Xst:2677 - Node <buffer_en_b_13> of sequential type is unconnected in block <n6480>.
-WARNING:Xst:2677 - Node <buffer_en_a_14> of sequential type is unconnected in block <n6480>.
+WARNING:Xst:2677 - Node <buffer_en_a_13> of sequential type is unconnected in block <n6480>.
 WARNING:Xst:2677 - Node <buffer_en_b_14> of sequential type is unconnected in block <n6480>.
-WARNING:Xst:2677 - Node <buffer_en_a_15> of sequential type is unconnected in block <n6480>.
+WARNING:Xst:2677 - Node <buffer_en_a_14> of sequential type is unconnected in block <n6480>.
 WARNING:Xst:2677 - Node <buffer_en_b_15> of sequential type is unconnected in block <n6480>.
-WARNING:Xst:2677 - Node <buffer_en_a_16> of sequential type is unconnected in block <n6480>.
+WARNING:Xst:2677 - Node <buffer_en_a_15> of sequential type is unconnected in block <n6480>.
 WARNING:Xst:2677 - Node <buffer_en_b_16> of sequential type is unconnected in block <n6480>.
+WARNING:Xst:2677 - Node <buffer_en_a_16> of sequential type is unconnected in block <n6480>.
 
 =========================================================================
 *                           Partition Report                            *
@@ -1192,25 +1208,24 @@ Top Level Output File Name         : n6480.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 190
+# BELS                             : 341
 #      GND                         : 1
-#      INV                         : 7
-#      LUT1                        : 45
-#      LUT2                        : 5
-#      LUT3                        : 22
-#      LUT4                        : 2
-#      LUT5                        : 2
-#      LUT6                        : 12
-#      MUXCY                       : 45
+#      INV                         : 9
+#      LUT1                        : 75
+#      LUT2                        : 7
+#      LUT3                        : 58
+#      LUT4                        : 3
+#      LUT5                        : 8
+#      LUT6                        : 24
+#      MUXCY                       : 75
 #      VCC                         : 1
-#      XORCY                       : 48
-# FlipFlops/Latches                : 223
-#      FD                          : 1
-#      FD_1                        : 63
+#      XORCY                       : 80
+# FlipFlops/Latches                : 256
+#      FD                          : 2
+#      FD_1                        : 82
 #      FDE                         : 36
-#      FDE_1                       : 38
-#      FDR                         : 34
-#      FDR_1                       : 36
+#      FDE_1                       : 56
+#      FDR                         : 65
 #      FDRE                        : 15
 # Shift Registers                  : 900
 #      SRLC32E                     : 900
@@ -1227,18 +1242,18 @@ Selected Device : 6slx4cpg196-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             223  out of   4800     4%  
- Number of Slice LUTs:                  995  out of   2400    41%  
-    Number used as Logic:                95  out of   2400     3%  
+ Number of Slice Registers:             256  out of   4800     5%  
+ Number of Slice LUTs:                 1084  out of   2400    45%  
+    Number used as Logic:               184  out of   2400     7%  
     Number used as Memory:              900  out of   1200    75%  
        Number used as SRL:              900
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1142
-   Number with an unused Flip Flop:     919  out of   1142    80%  
-   Number with an unused LUT:           147  out of   1142    12%  
-   Number of fully used LUT-FF pairs:    76  out of   1142     6%  
-   Number of unique control sets:        14
+ Number of LUT Flip Flop pairs used:   1194
+   Number with an unused Flip Flop:     938  out of   1194    78%  
+   Number with an unused LUT:           110  out of   1194     9%  
+   Number of fully used LUT-FF pairs:   146  out of   1194    12%  
+   Number of unique control sets:        15
 
 IO Utilization: 
  Number of IOs:                          39
@@ -1268,7 +1283,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-n64_clock                          | BUFGP                  | 1123  |
+n64_clock                          | BUFGP                  | 1156  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1279,9 +1294,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 6.560ns (Maximum Frequency: 152.435MHz)
+   Minimum period: 6.560ns (Maximum Frequency: 152.433MHz)
    Minimum input arrival time before clock: 3.448ns
-   Maximum output required time after clock: 4.277ns
+   Maximum output required time after clock: 4.240ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -1290,8 +1305,8 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'n64_clock'
-  Clock period: 6.560ns (frequency: 152.435MHz)
-  Total number of paths / destination ports: 2750 / 1275
+  Clock period: 6.560ns (frequency: 152.433MHz)
+  Total number of paths / destination ports: 3732 / 1321
 -------------------------------------------------------------------------
 Delay:               3.280ns (Levels of Logic = 0)
   Source:            buffer_en_b (FF)
@@ -1303,7 +1318,7 @@ Delay:               3.280ns (Levels of Logic = 0)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD_1:C->Q           468   0.525   2.453  buffer_en_b (buffer_en_b)
+     FD_1:C->Q           469   0.525   2.453  buffer_en_b (buffer_en_b)
      FDE:CE                    0.302          buffer_b/line_buffer_772_15
     ----------------------------------------
     Total                      3.280ns (0.827ns logic, 2.453ns route)
@@ -1333,20 +1348,20 @@ Offset:              3.448ns (Levels of Logic = 2)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'n64_clock'
   Total number of paths / destination ports: 23 / 23
 -------------------------------------------------------------------------
-Offset:              4.277ns (Levels of Logic = 1)
-  Source:            rgb_decoder/vsync_n_out (FF)
-  Destination:       led<0> (PAD)
+Offset:              4.240ns (Levels of Logic = 1)
+  Source:            rgb_decoder/clock_count_1 (FF)
+  Destination:       led<3> (PAD)
   Source Clock:      n64_clock falling
 
-  Data Path: rgb_decoder/vsync_n_out to led<0>
+  Data Path: rgb_decoder/clock_count_1 to led<3>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD_1:C->Q             5   0.525   0.840  rgb_decoder/vsync_n_out (rgb_decoder/vsync_n_out)
-     OBUF:I->O                 2.912          led_0_OBUF (led<0>)
+     FD_1:C->Q             4   0.525   0.803  rgb_decoder/clock_count_1 (rgb_decoder/clock_count_1)
+     OBUF:I->O                 2.912          led_3_OBUF (led<3>)
     ----------------------------------------
-    Total                      4.277ns (3.437ns logic, 0.840ns route)
-                                       (80.4% logic, 19.6% route)
+    Total                      4.240ns (3.437ns logic, 0.803ns route)
+                                       (81.1% logic, 18.9% route)
 
 =========================================================================
 
@@ -1358,19 +1373,19 @@ Clock to Setup on destination clock n64_clock
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-n64_clock      |         |    3.280|    6.102|         |
+n64_clock      |         |    3.280|    6.153|         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 26.00 secs
-Total CPU time to Xst completion: 25.51 secs
+Total CPU time to Xst completion: 26.55 secs
  
 --> 
 
 
-Total memory usage is 520744 kilobytes
+Total memory usage is 538408 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   62 (   0 filtered)

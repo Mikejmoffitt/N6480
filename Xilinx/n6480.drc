@@ -1,7 +1,7 @@
 Release 14.7 Drc P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Wed Feb 25 12:29:56 2015
+Wed Feb 25 16:51:39 2015
 
 drc -z n6480.ncd n6480.pcf
 
