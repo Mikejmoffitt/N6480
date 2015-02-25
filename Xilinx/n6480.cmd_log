@@ -398,3 +398,134 @@ map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -reg
 par -w -intstyle ise -ol high -mt off n6480_map.ncd n6480.ncd n6480.pcf 
 trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml n6480.twx n6480.ncd -o n6480.twr n6480.pcf -ucf n6480.ucf 
 bitgen -intstyle ise -f n6480.ut n6480.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/N6480/Xilinx/n6480.xst" -ofn "/home/moffitt/Development/N6480/Xilinx/n6480.syr" 
+xst -intstyle ise -ifn "/home/moffitt/Development/N6480/Xilinx/n6480.xst" -ofn "/home/moffitt/Development/N6480/Xilinx/n6480.syr" 
+xst -intstyle ise -ifn "/home/moffitt/Development/N6480/Xilinx/n6480.xst" -ofn "/home/moffitt/Development/N6480/Xilinx/n6480.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc n6480.ucf -p xc6slx4-cpg196-2 n6480.ngc n6480.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o n6480_map.ncd n6480.ngd n6480.pcf 
+par -w -intstyle ise -ol high -mt off n6480_map.ncd n6480.ncd n6480.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml n6480.twx n6480.ncd -o n6480.twr n6480.pcf -ucf n6480.ucf 
+bitgen -intstyle ise -f n6480.ut n6480.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/N6480/Xilinx/n6480.xst" -ofn "/home/moffitt/Development/N6480/Xilinx/n6480.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc n6480.ucf -p xc6slx4-cpg196-2 n6480.ngc n6480.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o n6480_map.ncd n6480.ngd n6480.pcf 
+par -w -intstyle ise -ol high -mt off n6480_map.ncd n6480.ncd n6480.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml n6480.twx n6480.ncd -o n6480.twr n6480.pcf -ucf n6480.ucf 
+bitgen -intstyle ise -f n6480.ut n6480.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/N6480/Xilinx/n6480.xst" -ofn "/home/moffitt/Development/N6480/Xilinx/n6480.syr" 
+xst -intstyle ise -ifn "/home/moffitt/Development/N6480/Xilinx/n6480.xst" -ofn "/home/moffitt/Development/N6480/Xilinx/n6480.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc n6480.ucf -p xc6slx4-cpg196-2 n6480.ngc n6480.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o n6480_map.ncd n6480.ngd n6480.pcf 
+par -w -intstyle ise -ol high -mt off n6480_map.ncd n6480.ncd n6480.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml n6480.twx n6480.ncd -o n6480.twr n6480.pcf -ucf n6480.ucf 
+bitgen -intstyle ise -f n6480.ut n6480.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/N6480/Xilinx/n6480.xst" -ofn "/home/moffitt/Development/N6480/Xilinx/n6480.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc n6480.ucf -p xc6slx4-cpg196-2 n6480.ngc n6480.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o n6480_map.ncd n6480.ngd n6480.pcf 
+par -w -intstyle ise -ol high -mt off n6480_map.ncd n6480.ncd n6480.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml n6480.twx n6480.ncd -o n6480.twr n6480.pcf -ucf n6480.ucf 
+bitgen -intstyle ise -f n6480.ut n6480.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/N6480/Xilinx/n6480.xst" -ofn "/home/moffitt/Development/N6480/Xilinx/n6480.syr" 
+xst -intstyle ise -ifn "/home/moffitt/Development/N6480/Xilinx/n6480.xst" -ofn "/home/moffitt/Development/N6480/Xilinx/n6480.syr" 
+xst -intstyle ise -ifn "/home/moffitt/Development/N6480/Xilinx/n6480.xst" -ofn "/home/moffitt/Development/N6480/Xilinx/n6480.syr" 
+xst -intstyle ise -ifn "/home/moffitt/Development/N6480/Xilinx/n6480.xst" -ofn "/home/moffitt/Development/N6480/Xilinx/n6480.syr" 
+xst -intstyle ise -ifn "/home/moffitt/Development/N6480/Xilinx/n6480.xst" -ofn "/home/moffitt/Development/N6480/Xilinx/n6480.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc n6480.ucf -p xc6slx4-cpg196-2 n6480.ngc n6480.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o n6480_map.ncd n6480.ngd n6480.pcf 
+par -w -intstyle ise -ol high -mt off n6480_map.ncd n6480.ncd n6480.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml n6480.twx n6480.ncd -o n6480.twr n6480.pcf -ucf n6480.ucf 
+bitgen -intstyle ise -f n6480.ut n6480.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/N6480/Xilinx/n6480.xst" -ofn "/home/moffitt/Development/N6480/Xilinx/n6480.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc n6480.ucf -p xc6slx4-cpg196-2 n6480.ngc n6480.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o n6480_map.ncd n6480.ngd n6480.pcf 
+par -w -intstyle ise -ol high -mt off n6480_map.ncd n6480.ncd n6480.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml n6480.twx n6480.ncd -o n6480.twr n6480.pcf -ucf n6480.ucf 
+bitgen -intstyle ise -f n6480.ut n6480.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/N6480/Xilinx/n6480.xst" -ofn "/home/moffitt/Development/N6480/Xilinx/n6480.syr" 
+xst -intstyle ise -ifn "/home/moffitt/Development/N6480/Xilinx/n6480.xst" -ofn "/home/moffitt/Development/N6480/Xilinx/n6480.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc n6480.ucf -p xc6slx4-cpg196-2 n6480.ngc n6480.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o n6480_map.ncd n6480.ngd n6480.pcf 
+par -w -intstyle ise -ol high -mt off n6480_map.ncd n6480.ncd n6480.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml n6480.twx n6480.ncd -o n6480.twr n6480.pcf -ucf n6480.ucf 
+bitgen -intstyle ise -f n6480.ut n6480.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/N6480/Xilinx/n6480.xst" -ofn "/home/moffitt/Development/N6480/Xilinx/n6480.syr" 
+xst -intstyle ise -ifn "/home/moffitt/Development/N6480/Xilinx/n6480.xst" -ofn "/home/moffitt/Development/N6480/Xilinx/n6480.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc n6480.ucf -p xc6slx4-cpg196-2 n6480.ngc n6480.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o n6480_map.ncd n6480.ngd n6480.pcf 
+par -w -intstyle ise -ol high -mt off n6480_map.ncd n6480.ncd n6480.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml n6480.twx n6480.ncd -o n6480.twr n6480.pcf -ucf n6480.ucf 
+bitgen -intstyle ise -f n6480.ut n6480.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/N6480/Xilinx/n6480.xst" -ofn "/home/moffitt/Development/N6480/Xilinx/n6480.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc n6480.ucf -p xc6slx4-cpg196-2 n6480.ngc n6480.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o n6480_map.ncd n6480.ngd n6480.pcf 
+par -w -intstyle ise -ol high -mt off n6480_map.ncd n6480.ncd n6480.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml n6480.twx n6480.ncd -o n6480.twr n6480.pcf -ucf n6480.ucf 
+bitgen -intstyle ise -f n6480.ut n6480.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/N6480/Xilinx/n6480.xst" -ofn "/home/moffitt/Development/N6480/Xilinx/n6480.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc n6480.ucf -p xc6slx4-cpg196-2 n6480.ngc n6480.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o n6480_map.ncd n6480.ngd n6480.pcf 
+par -w -intstyle ise -ol high -mt off n6480_map.ncd n6480.ncd n6480.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml n6480.twx n6480.ncd -o n6480.twr n6480.pcf -ucf n6480.ucf 
+bitgen -intstyle ise -f n6480.ut n6480.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/N6480/Xilinx/n6480.xst" -ofn "/home/moffitt/Development/N6480/Xilinx/n6480.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc n6480.ucf -p xc6slx4-cpg196-2 n6480.ngc n6480.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o n6480_map.ncd n6480.ngd n6480.pcf 
+par -w -intstyle ise -ol high -mt off n6480_map.ncd n6480.ncd n6480.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml n6480.twx n6480.ncd -o n6480.twr n6480.pcf -ucf n6480.ucf 
+bitgen -intstyle ise -f n6480.ut n6480.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/N6480/Xilinx/n6480.xst" -ofn "/home/moffitt/Development/N6480/Xilinx/n6480.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc n6480.ucf -p xc6slx4-cpg196-2 n6480.ngc n6480.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o n6480_map.ncd n6480.ngd n6480.pcf 
+par -w -intstyle ise -ol high -mt off n6480_map.ncd n6480.ncd n6480.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml n6480.twx n6480.ncd -o n6480.twr n6480.pcf -ucf n6480.ucf 
+bitgen -intstyle ise -f n6480.ut n6480.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/N6480/Xilinx/n6480.xst" -ofn "/home/moffitt/Development/N6480/Xilinx/n6480.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc n6480.ucf -p xc6slx4-cpg196-2 n6480.ngc n6480.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o n6480_map.ncd n6480.ngd n6480.pcf 
+par -w -intstyle ise -ol high -mt off n6480_map.ncd n6480.ncd n6480.pcf 
+bitgen -intstyle ise -f n6480.ut n6480.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/N6480/Xilinx/n6480.xst" -ofn "/home/moffitt/Development/N6480/Xilinx/n6480.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc n6480.ucf -p xc6slx4-cpg196-2 n6480.ngc n6480.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o n6480_map.ncd n6480.ngd n6480.pcf 
+par -w -intstyle ise -ol high -mt off n6480_map.ncd n6480.ncd n6480.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml n6480.twx n6480.ncd -o n6480.twr n6480.pcf -ucf n6480.ucf 
+bitgen -intstyle ise -f n6480.ut n6480.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/N6480/Xilinx/n6480.xst" -ofn "/home/moffitt/Development/N6480/Xilinx/n6480.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc n6480.ucf -p xc6slx4-cpg196-2 n6480.ngc n6480.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o n6480_map.ncd n6480.ngd n6480.pcf 
+par -w -intstyle ise -ol high -mt off n6480_map.ncd n6480.ncd n6480.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml n6480.twx n6480.ncd -o n6480.twr n6480.pcf -ucf n6480.ucf 
+bitgen -intstyle ise -f n6480.ut n6480.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/N6480/Xilinx/n6480.xst" -ofn "/home/moffitt/Development/N6480/Xilinx/n6480.syr" 
+xst -intstyle ise -ifn "/home/moffitt/Development/N6480/Xilinx/n6480.xst" -ofn "/home/moffitt/Development/N6480/Xilinx/n6480.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc n6480.ucf -p xc6slx4-cpg196-2 n6480.ngc n6480.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o n6480_map.ncd n6480.ngd n6480.pcf 
+par -w -intstyle ise -ol high -mt off n6480_map.ncd n6480.ncd n6480.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml n6480.twx n6480.ncd -o n6480.twr n6480.pcf -ucf n6480.ucf 
+bitgen -intstyle ise -f n6480.ut n6480.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/N6480/Xilinx/n6480.xst" -ofn "/home/moffitt/Development/N6480/Xilinx/n6480.syr" 
+xst -intstyle ise -ifn "/home/moffitt/Development/N6480/Xilinx/n6480.xst" -ofn "/home/moffitt/Development/N6480/Xilinx/n6480.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc n6480.ucf -p xc6slx4-cpg196-2 n6480.ngc n6480.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o n6480_map.ncd n6480.ngd n6480.pcf 
+par -w -intstyle ise -ol high -mt off n6480_map.ncd n6480.ncd n6480.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml n6480.twx n6480.ncd -o n6480.twr n6480.pcf -ucf n6480.ucf 
+bitgen -intstyle ise -f n6480.ut n6480.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/N6480/Xilinx/n6480.xst" -ofn "/home/moffitt/Development/N6480/Xilinx/n6480.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc n6480.ucf -p xc6slx4-cpg196-2 n6480.ngc n6480.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o n6480_map.ncd n6480.ngd n6480.pcf 
+par -w -intstyle ise -ol high -mt off n6480_map.ncd n6480.ncd n6480.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml n6480.twx n6480.ncd -o n6480.twr n6480.pcf -ucf n6480.ucf 
+bitgen -intstyle ise -f n6480.ut n6480.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/N6480/Xilinx/n6480.xst" -ofn "/home/moffitt/Development/N6480/Xilinx/n6480.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc n6480.ucf -p xc6slx4-cpg196-2 n6480.ngc n6480.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o n6480_map.ncd n6480.ngd n6480.pcf 
+par -w -intstyle ise -ol high -mt off n6480_map.ncd n6480.ncd n6480.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml n6480.twx n6480.ncd -o n6480.twr n6480.pcf -ucf n6480.ucf 
+bitgen -intstyle ise -f n6480.ut n6480.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/N6480/Xilinx/n6480.xst" -ofn "/home/moffitt/Development/N6480/Xilinx/n6480.syr" 
+xst -intstyle ise -ifn "/home/moffitt/Development/N6480/Xilinx/n6480.xst" -ofn "/home/moffitt/Development/N6480/Xilinx/n6480.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc n6480.ucf -p xc6slx4-cpg196-2 n6480.ngc n6480.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o n6480_map.ncd n6480.ngd n6480.pcf 
+par -w -intstyle ise -ol high -mt off n6480_map.ncd n6480.ncd n6480.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml n6480.twx n6480.ncd -o n6480.twr n6480.pcf -ucf n6480.ucf 
+bitgen -intstyle ise -f n6480.ut n6480.ncd 

@@ -27,7 +27,6 @@ end n6480;
 
 architecture behavioral of n6480 is
 
-
 constant N64_PIXEL_LEN: integer := 18;
 
 -- What a weird number!
@@ -35,11 +34,11 @@ constant N64_PIXELS_PER_LINE: integer := 774;
 
 -- Line length in clocks (50Mhz clock means 4 N64 pixels/clock, or 2 on VGA
 constant N64_LINE_LEN: integer := N64_PIXELS_PER_LINE * 4;
-constant VGA_LINE_LEN: integer := N64_PIXELS_PER_LINE * 2;
+constant VGA_LINE_LEN: integer := (N64_PIXELS_PER_LINE * 2) - 1;
 constant NUM_LINES: integer := 262;
 
 constant VGA_HSYNC_START: integer := 0;
-constant VGA_HSYNC_END: integer := 192;
+constant VGA_HSYNC_END: integer := 160;
 constant VGA_VSYNC_START: integer := 0;
 constant VGA_VSYNC_END: integer := 2;
 constant U16_ZERO: std_logic_vector(15 downto 0) := "0000000000000000";
@@ -66,6 +65,8 @@ signal n64_px_count: std_logic_vector(15 downto 0) := U16_ZERO;
 signal vga_px_count: std_logic_vector(15 downto 0) := U16_ZERO;
 signal line_count: std_logic_vector(15 downto 0) := U16_ZERO;
 signal clock_count: std_logic_vector(1 downto 0) := "00";
+signal vsync_time: std_logic_vector(15 downto 0) := U16_ZERO;
+signal hsync_time: std_logic_vector(15 downto 0) := U16_ZERO;
 
 -- For assigning from the buffers
 signal out_red: std_logic_vector(6 downto 0);
@@ -89,6 +90,23 @@ begin
 	buffer_b: entity work.linebuffer(behavioral) 
 		generic map (line_len => N64_PIXELS_PER_LINE - 1, pixel_depth => N64_PIXEL_LEN)
 		port map (n64_clock, buffer_en_b, buffer_in_b, buffer_out_b);
+		
+	sync_counters: process(n64_clock)
+	begin
+		if (falling_edge(n64_clock)) then
+			if (n64_vsync_n = '0') then
+				vsync_time <= vsync_time + 1;
+			else
+				vsync_time <= U16_ZERO;
+			end if;
+			
+			if (n64_hsync_n = '0') then
+				hsync_time <= hsync_time + 1;
+			else
+				hsync_time <= U16_ZERO;
+			end if;
+		end if;
+	end process;
 	
 	select_buffer_output: process(n64_clock)
 	begin
@@ -128,7 +146,8 @@ begin
 					when others => buffer_en_a <= '0';
 				end case;
 				
-				buffer_in_b <= buffer_out_b;
+				buffer_in_b <= "000000000000000000";
+				--buffer_in_b <= buffer_out_b;
 				
 				-- Have it shift out data twice for every one N64 pixel 
 				-- (or once per VGA pixel)
@@ -143,7 +162,8 @@ begin
 					when others => buffer_en_b <= '0';
 				end case;
 				
-				buffer_in_a <= buffer_out_a;
+				buffer_in_a <= "000000000000000000";
+				---buffer_in_a <= buffer_out_a;
 				
 				-- Have it shift out data twice for every one N64 pixel 
 				-- (or once per VGA pixel)
@@ -174,7 +194,7 @@ begin
 				n64_px_count <= U16_ZERO;
 				line_count <= U16_ZERO;
 			-- End of N64 line - swap buffers, increment line count
-			elsif (n64_px_count = N64_LINE_LEN - 1) then
+			elsif (hsync_time = 1) then
 				buffer_sel <= not buffer_sel;
 				n64_px_count <= U16_ZERO;
 				if (line_count = NUM_LINES) then
