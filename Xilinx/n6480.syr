@@ -158,17 +158,17 @@ INFO:Xst:3210 - "/home/moffitt/Development/N6480/Source/n6480.vhd" line 86: Outp
     Found 16-bit register for signal <vsync_time>.
     Found 16-bit adder for signal <vsync_time[15]_GND_5_o_add_1_OUT> created at line 105.
     Found 16-bit adder for signal <hsync_time[15]_GND_5_o_add_3_OUT> created at line 111.
-    Found 16-bit adder for signal <vga_px_count[15]_GND_5_o_add_30_OUT> created at line 205.
-    Found 16-bit adder for signal <n64_px_count[15]_GND_5_o_add_37_OUT> created at line 226.
-    Found 16-bit adder for signal <line_count[15]_GND_5_o_add_42_OUT> created at line 235.
-    Found 4x1-bit Read Only RAM for signal <clock_count[1]_GND_5_o_Mux_19_o>
-    Found 16-bit comparator greater for signal <GND_5_o_n64_px_count[15]_LessThan_24_o> created at line 184
-    Found 16-bit comparator lessequal for signal <n0029> created at line 186
-    Found 16-bit comparator greater for signal <n64_px_count[15]_GND_5_o_LessThan_36_o> created at line 217
-    Found 16-bit comparator lessequal for signal <n0066> created at line 246
-    Found 16-bit comparator greater for signal <line_count[15]_GND_5_o_LessThan_50_o> created at line 246
-    Found 16-bit comparator lessequal for signal <n0072> created at line 265
-    Found 16-bit comparator greater for signal <vga_px_count[15]_GND_5_o_LessThan_52_o> created at line 265
+    Found 16-bit adder for signal <vga_px_count[15]_GND_5_o_add_27_OUT> created at line 203.
+    Found 16-bit adder for signal <n64_px_count[15]_GND_5_o_add_34_OUT> created at line 224.
+    Found 16-bit adder for signal <line_count[15]_GND_5_o_add_39_OUT> created at line 233.
+    Found 4x1-bit Read Only RAM for signal <clock_count[1]_GND_5_o_Mux_16_o>
+    Found 16-bit comparator greater for signal <GND_5_o_n64_px_count[15]_LessThan_21_o> created at line 182
+    Found 16-bit comparator lessequal for signal <n0025> created at line 184
+    Found 16-bit comparator greater for signal <n64_px_count[15]_GND_5_o_LessThan_33_o> created at line 215
+    Found 16-bit comparator lessequal for signal <n0062> created at line 244
+    Found 16-bit comparator greater for signal <line_count[15]_GND_5_o_LessThan_47_o> created at line 244
+    Found 16-bit comparator lessequal for signal <n0068> created at line 263
+    Found 16-bit comparator greater for signal <vga_px_count[15]_GND_5_o_LessThan_49_o> created at line 263
     Summary:
 	inferred   1 RAM(s).
 	inferred   5 Adder/Subtractor(s).
@@ -1030,7 +1030,7 @@ The following registers are absorbed into counter <hsync_time>: 1 register on si
 The following registers are absorbed into counter <vga_px_count>: 1 register on signal <vga_px_count>.
 The following registers are absorbed into counter <n64_px_count>: 1 register on signal <n64_px_count>.
 The following registers are absorbed into counter <line_count>: 1 register on signal <line_count>.
-INFO:Xst:3231 - The small RAM <Mram_clock_count[1]_GND_5_o_Mux_19_o> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+INFO:Xst:3231 - The small RAM <Mram_clock_count[1]_GND_5_o_Mux_16_o> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -1074,8 +1074,8 @@ Macro Statistics
 WARNING:Xst:1710 - FF/Latch <out_red_0> (without init value) has a constant value of 0 in block <n6480>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_green_0> (without init value) has a constant value of 0 in block <n6480>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out_blue_0> (without init value) has a constant value of 0 in block <n6480>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vga_red_0> (without init value) has a constant value of 0 in block <n6480>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vga_green_0> (without init value) has a constant value of 0 in block <n6480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vga_red_0> (without init value) has a constant value of 0 in block <n6480>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vga_blue_0> (without init value) has a constant value of 0 in block <n6480>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <linebuffer> ...
@@ -1208,9 +1208,9 @@ Top Level Output File Name         : n6480.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 341
+# BELS                             : 340
 #      GND                         : 1
-#      INV                         : 9
+#      INV                         : 8
 #      LUT1                        : 75
 #      LUT2                        : 7
 #      LUT3                        : 58
@@ -1222,9 +1222,9 @@ Primitive and Black Box Usage:
 #      XORCY                       : 80
 # FlipFlops/Latches                : 256
 #      FD                          : 2
-#      FD_1                        : 82
+#      FD_1                        : 100
 #      FDE                         : 36
-#      FDE_1                       : 56
+#      FDE_1                       : 38
 #      FDR                         : 65
 #      FDRE                        : 15
 # Shift Registers                  : 900
@@ -1243,17 +1243,17 @@ Selected Device : 6slx4cpg196-2
 
 Slice Logic Utilization: 
  Number of Slice Registers:             256  out of   4800     5%  
- Number of Slice LUTs:                 1084  out of   2400    45%  
-    Number used as Logic:               184  out of   2400     7%  
+ Number of Slice LUTs:                 1083  out of   2400    45%  
+    Number used as Logic:               183  out of   2400     7%  
     Number used as Memory:              900  out of   1200    75%  
        Number used as SRL:              900
 
 Slice Logic Distribution: 
  Number of LUT Flip Flop pairs used:   1194
    Number with an unused Flip Flop:     938  out of   1194    78%  
-   Number with an unused LUT:           110  out of   1194     9%  
-   Number of fully used LUT-FF pairs:   146  out of   1194    12%  
-   Number of unique control sets:        15
+   Number with an unused LUT:           111  out of   1194     9%  
+   Number of fully used LUT-FF pairs:   145  out of   1194    12%  
+   Number of unique control sets:        14
 
 IO Utilization: 
  Number of IOs:                          39
@@ -1306,7 +1306,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'n64_clock'
   Clock period: 6.560ns (frequency: 152.433MHz)
-  Total number of paths / destination ports: 3732 / 1321
+  Total number of paths / destination ports: 3714 / 1303
 -------------------------------------------------------------------------
 Delay:               3.280ns (Levels of Logic = 0)
   Source:            buffer_en_b (FF)
@@ -1349,16 +1349,16 @@ Timing constraint: Default OFFSET OUT AFTER for Clock 'n64_clock'
   Total number of paths / destination ports: 23 / 23
 -------------------------------------------------------------------------
 Offset:              4.240ns (Levels of Logic = 1)
-  Source:            rgb_decoder/clock_count_1 (FF)
-  Destination:       led<3> (PAD)
+  Source:            enable_delay (FF)
+  Destination:       led<0> (PAD)
   Source Clock:      n64_clock falling
 
-  Data Path: rgb_decoder/clock_count_1 to led<3>
+  Data Path: enable_delay to led<0>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD_1:C->Q             4   0.525   0.803  rgb_decoder/clock_count_1 (rgb_decoder/clock_count_1)
-     OBUF:I->O                 2.912          led_3_OBUF (led<3>)
+     FD_1:C->Q             4   0.525   0.803  enable_delay (enable_delay)
+     OBUF:I->O                 2.912          led_0_OBUF (led<0>)
     ----------------------------------------
     Total                      4.240ns (3.437ns logic, 0.803ns route)
                                        (81.1% logic, 18.9% route)
@@ -1379,13 +1379,13 @@ n64_clock      |         |    3.280|    6.153|         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 26.00 secs
-Total CPU time to Xst completion: 26.55 secs
+Total REAL time to Xst completion: 27.00 secs
+Total CPU time to Xst completion: 26.60 secs
  
 --> 
 
 
-Total memory usage is 538408 kilobytes
+Total memory usage is 538304 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   62 (   0 filtered)

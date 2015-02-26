@@ -1,0 +1,235 @@
+iMPACT Version: 14.7
+
+iMPACT log file Started on Wed Feb 25 18:18:23 2015
+
+Welcome to iMPACT
+iMPACT Version: 14.7
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addConfigDevice  -name "cmods6-n6480" -path"/home/moffitt/Development/N6480/Xilinx/"
+// *** BATCH CMD : setSubmode -pffspi
+// *** BATCH CMD : setAttribute -configdevice -attr multibootBpiType -value ""
+// *** BATCH CMD : addDesign -version 0 -name "0"
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addDeviceChain -index 0
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addDeviceChain -index 0
+Override chain at index 0.
+Overriding chain at index 0.
+// *** BATCH CMD : setAttribute -configdevice -attr compressed -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr autoSize -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr fileFormat -value "mcs"
+// *** BATCH CMD : setAttribute -configdevice -attr fillValue -value "FF"
+// *** BATCH CMD : setAttribute -configdevice -attr swapBit -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr dir -value "UP"
+// *** BATCH CMD : setAttribute -configdevice -attr multiboot -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr spiSelected -value "TRUE"
+// *** BATCH CMD : addPromDevice -p 1 -size 128 -name 128K
+'1': Added Device 128K successfully.
+----------------------------------------------------------------------
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addDeviceChain -index 0
+Override chain at index 0.
+Overriding chain at index 0.
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addDeviceChain -index 0
+Override chain at index 0.
+Overriding chain at index 0.
+// *** BATCH CMD : setSubmode -pffspi
+// *** BATCH CMD : setMode -pff
+------------------------  GUI: Wizard Data Report  ---------------------------
+      Compression : false
+      Fill Value : FF
+      Output Format : mcs
+      Swap Bits : false
+      LoadDirection : UP
+      PROM Basename : cmods6-n6480
+      File Location : /home/moffitt/Development/N6480/Xilinx/
+      Auto Select : false
+      Number of Revisions : 1
+      Number of PROMs : 1
+      PROM Name : 128K   PROM Size : 131072 bits
+-------------------------- END of Report ----------------------------
+// *** BATCH CMD : setAttribute -design -attr name -value "0000"
+// *** BATCH CMD : addDevice -p 1 -file"/home/moffitt/Development/N6480/Xilinx/n6480.bit"
+'1': Loading file '/home/moffitt/Development/N6480/Xilinx/n6480.bit' ...
+INFO:iMPACT - Elapsed time =      1 sec.
+done.
+INFO:iMPACT:501 - '1': Added Device xc6slx4 successfully.
+----------------------------------------------------------------------
+Add one device.532c1// *** BATCH CMD : deletePromDevice -position 1
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addConfigDevice  -name "cmods6_n64" -path"/home/moffitt/Development/N6480/Xilinx/"
+// *** BATCH CMD : setSubmode -pffspi
+// *** BATCH CMD : setAttribute -configdevice -attr multibootBpiType -value ""
+// *** BATCH CMD : addDesign -version 0 -name "0"
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addDeviceChain -index 0
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addDeviceChain -index 0
+Override chain at index 0.
+Overriding chain at index 0.
+// *** BATCH CMD : setAttribute -configdevice -attr compressed -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr autoSize -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr fileFormat -value "mcs"
+// *** BATCH CMD : setAttribute -configdevice -attr fillValue -value "FF"
+// *** BATCH CMD : setAttribute -configdevice -attr swapBit -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr dir -value "UP"
+// *** BATCH CMD : setAttribute -configdevice -attr multiboot -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr spiSelected -value "TRUE"
+// *** BATCH CMD : addPromDevice -p 1 -size 2048 -name 2M
+'1': Added Device 2M successfully.
+----------------------------------------------------------------------
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addDeviceChain -index 0
+Override chain at index 0.
+Overriding chain at index 0.
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addDeviceChain -index 0
+Override chain at index 0.
+Overriding chain at index 0.
+// *** BATCH CMD : setSubmode -pffspi
+// *** BATCH CMD : setMode -pff
+------------------------  GUI: Wizard Data Report  ---------------------------
+      Compression : false
+      Fill Value : FF
+      Output Format : mcs
+      Swap Bits : false
+      LoadDirection : UP
+      PROM Basename : cmods6_n64
+      File Location : /home/moffitt/Development/N6480/Xilinx/
+      Auto Select : false
+      Number of Revisions : 1
+      Number of PROMs : 1
+      PROM Name : 2M   PROM Size : 2097152 bits
+-------------------------- END of Report ----------------------------
+// *** BATCH CMD : setAttribute -design -attr name -value "0000"
+// *** BATCH CMD : addDevice -p 1 -file"/home/moffitt/Development/N6480/Xilinx/n6480.bit"
+'1': Loading file '/home/moffitt/Development/N6480/Xilinx/n6480.bit' ...
+INFO:iMPACT - Elapsed time =      0 sec.
+done.
+INFO:iMPACT:501 - '1': Added Device xc6slx4 successfully.
+----------------------------------------------------------------------
+Add one device.532c1INFO:iMPACT - Current time: 25 Feb 2015 18:19:43
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setSubmode -pffspi
+Total configuration bit size = 2724832  bits.
+Total configuration byte size = 340604 bytes.
+// *** BATCH CMD : generate
+0x5327c (340604) bytes loaded up from 0x0
+Using user-specified prom size of 2048K
+Writing file "/home/moffitt/Development/N6480/Xilinx/cmods6_n64.mcs".
+Writing file "/home/moffitt/Development/N6480/Xilinx/cmods6_n64.prm".
+Writing file "/home/moffitt/Development/N6480/Xilinx/cmods6_n64.cfi".
+// *** BATCH CMD : setCurrentDesign -version 0
+// *** BATCH CMD : setMode -bs
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+INFO:iMPACT - Digilent Plugin: Plugin Version: 2.4.4
+INFO:iMPACT - Digilent Plugin: found 1 device(s).
+INFO:iMPACT - Digilent Plugin: opening device: "CmodS6", SN:210282544141
+INFO:iMPACT - Digilent Plugin: User Name: CmodS6
+INFO:iMPACT - Digilent Plugin: Product Name: Digilent CmodS6
+INFO:iMPACT - Digilent Plugin: Serial Number: 210282544141
+INFO:iMPACT - Digilent Plugin: Product ID: 0140012F
+INFO:iMPACT - Digilent Plugin: Firmware Version: 011D
+INFO:iMPACT - Digilent Plugin: JTAG Port Number: 0
+INFO:iMPACT - Digilent Plugin: JTAG Clock Frequency: 4000000 Hz
+Attempting to identify devices in the boundary-scan chain configuration...
+INFO:iMPACT - Current time: 25 Feb 2015 18:19:48
+// *** BATCH CMD : Identify -inferir 
+PROGRESS_START - Starting Operation.
+Identifying chain contents...'0': : Manufacturer's ID = Xilinx xc6slx4, Version : 2
+INFO:iMPACT:1777 - 
+   Reading /opt/Xilinx/14.7/ISE_DS/ISE/spartan6/data/xc6slx4.bsd...
+INFO:iMPACT:501 - '1': Added Device xc6slx4 successfully.
+----------------------------------------------------------------------
+done.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+// *** BATCH CMD : identifyMPM 
+// *** BATCH CMD : assignFile -p 1 -file"/home/moffitt/Development/N6480/Xilinx/n6480.bit"
+'1': Loading file '/home/moffitt/Development/N6480/Xilinx/n6480.bit' ...
+done.
+INFO:iMPACT:2257 - Startup Clock has been changed to 'JtagClk' in the bitstream   stored in memory,
+   but the original bitstream file remains unchanged.
+UserID read from the bitstream file = 0xFFFFFFFF.
+Data width read from the bitstream file = 1.
+INFO:iMPACT:501 - '1': Added Device xc6slx4 successfully.
+----------------------------------------------------------------------
+Selected part: S25FL128S
+// *** BATCH CMD : attachflash -position 1 -spi "S25FL128S"
+Unprotect sectors: FALSE
+// *** BATCH CMD : assignfiletoattachedflash -position 1 -file"/home/moffitt/Development/N6480/Xilinx/cmods6_n64.mcs"
+// *** BATCH CMD : attachflash -position 1 -spi "S25FL128S"
+INFO:iMPACT - Current time: 25 Feb 2015 18:20:12
+// *** BATCH CMD : Program -p 1 -dataWidth 1 -spionly -e -v -loadfpga 
+PROGRESS_START - Starting Operation.
+Maximum TCK operating frequency for this device chain: 25000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': SPI access core not detected. SPI access core will be downloaded to thedevice to enable operations.
+INFO:iMPACT - Downloading core file   /opt/Xilinx/14.7/ISE_DS/ISE/spartan6/data/xc6slx4_spi.cor.
+'1': Downloading core...
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1100 1110 1100 
+INFO:iMPACT:2492 - '1': Completed downloading core to device.
+'1': IDCODE is '012018' (in hex).
+'1': ID Check passed.
+'1': IDCODE is '012018' (in hex).
+'1': ID Check passed.
+'1': Erasing Device.
+'1': Using Sector Erase.
+'1': Erasing non-volatile quad-enable bit...
+'1': Programming Flash.
+'1': Reading device contents...
+done.
+'1': Verification completed.
+'1':Programming in x1 mode.
+S25FL128S Status Register Contents = 0x0000.
+QUAD                                              :         0
+BP2                                               :         0
+BP1                                               :         0
+BP0                                               :         0
+'1': Programmed successfully.
+INFO:iMPACT - '1': Flash was programmed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =    136 sec.
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : saveProjectFile -file"/home/moffitt/Development/N6480/Xilinx/default.ipf"
+INFO:iMPACT - User_EnvOsname: 'Debian'
+INFO:iMPACT - User_EnvOsrelease: 'Debian GNU/Linux 8.0 (jessie)'
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -pff
+INFO:iMPACT - Launching WebTalk, please refer to the webtalk log at   /home/moffitt/Development/N6480/Xilinx/webtalk.log for details.
+INFO:iMPACT - Running wbtc successfully.
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : deleteDevice -position 1
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : deletePromDevice -position 1
+// *** BATCH CMD : setCurrentDesign -version 0
+// *** BATCH CMD : deleteDevice -position 1
+// *** BATCH CMD : deleteDesign -version 0
+// *** BATCH CMD : setCurrentDesign -version -1

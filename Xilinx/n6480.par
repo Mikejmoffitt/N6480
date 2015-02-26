@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-suzu::  Wed Feb 25 16:51:26 2015
+suzu::  Wed Feb 25 19:52:05 2015
 
 par -w -intstyle ise -ol high -mt off n6480_map.ncd n6480.ncd n6480.pcf 
 
@@ -32,8 +32,8 @@ Slice Logic Utilization:
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
   Number of Slice LUTs:                      1,050 out of   2,400   43%
-    Number used as logic:                      144 out of   2,400    6%
-      Number using O6 output only:              36
+    Number used as logic:                      143 out of   2,400    5%
+      Number using O6 output only:              35
       Number using O5 output only:              70
       Number using O5 and O6:                   38
       Number used as ROM:                        0
@@ -44,18 +44,18 @@ Slice Logic Utilization:
         Number using O6 output only:           900
         Number using O5 output only:             0
         Number using O5 and O6:                  0
-    Number used exclusively as route-thrus:      6
-      Number with same-slice register load:      1
+    Number used exclusively as route-thrus:      7
+      Number with same-slice register load:      2
       Number with same-slice carry load:         5
       Number with other load:                    0
 
 Slice Logic Distribution:
   Number of occupied Slices:                   324 out of     600   54%
   Number of MUXCYs used:                        80 out of   1,200    6%
-  Number of LUT Flip Flop pairs used:        1,124
-    Number with an unused Flip Flop:           897 out of   1,124   79%
-    Number with an unused LUT:                  74 out of   1,124    6%
-    Number of fully used LUT-FF pairs:         153 out of   1,124   13%
+  Number of LUT Flip Flop pairs used:        1,121
+    Number with an unused Flip Flop:           895 out of   1,121   79%
+    Number with an unused LUT:                  71 out of   1,121    6%
+    Number of fully used LUT-FF pairs:         155 out of   1,121   13%
     Number of slice register sites lost
       to control set restrictions:               0 out of   4,800    0%
 
@@ -106,13 +106,13 @@ WARNING:Par:288 - The signal n64_data<0>_IBUF has no load.  PAR will not attempt
 Starting Router
 
 
-Phase  1  : 6893 unrouted;      REAL time: 2 secs 
+Phase  1  : 6888 unrouted;      REAL time: 2 secs 
 
-Phase  2  : 1068 unrouted;      REAL time: 3 secs 
+Phase  2  : 1064 unrouted;      REAL time: 3 secs 
 
-Phase  3  : 201 unrouted;      REAL time: 5 secs 
+Phase  3  : 173 unrouted;      REAL time: 5 secs 
 
-Phase  4  : 201 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
+Phase  4  : 173 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
 
 Updating file: n6480.ncd with current fully routed design.
 
@@ -144,7 +144,7 @@ Partition Implementation Status
 
 Generating "PAR" statistics.
 INFO:Par:459 - The Clock Report is not displayed in the non timing-driven mode.
-Timing Score: 109551 (Setup: 109551, Hold: 0)
+Timing Score: 436 (Setup: 436, Hold: 0)
 
 Asterisk (*) preceding a constraint indicates it was not met.
    This may be due to a setup or hold violation.
@@ -153,8 +153,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net n64 | SETUP       |         N/A|    60.538ns|     N/A|      109551
-  _clock_BUFGP                              | HOLD        |     0.446ns|            |       0|           0
+  Autotimespec constraint for clock net n64 | SETUP       |         N/A|    11.770ns|     N/A|         436
+  _clock_BUFGP                              | HOLD        |     0.431ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -175,7 +175,7 @@ WARNING:Par:283 - There are 3 loadless signals in this design. This design will 
 Total REAL time to PAR completion: 6 secs 
 Total CPU time to PAR completion: 6 secs 
 
-Peak Memory Usage:  613 MB
+Peak Memory Usage:  612 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

@@ -28,7 +28,13 @@ end n6480;
 architecture behavioral of n6480 is
 
 -- For now I am truncating the 7th color bit on the N64. None of the games I've tested so far actually use it. 
-constant N64_PIXEL_LEN: integer := 18;
+constant N64_PIXEL_LEN: integer := 21;
+constant N64_R_H: integer := (N64_PIXEL_LEN) - 1;
+constant N64_R_L: integer := 2 * (N64_PIXEL_LEN / 3);
+constant N64_G_H: integer := (2 * (N64_PIXEL_LEN / 3)) - 1;
+constant N64_G_L: integer := (N64_PIXEL_LEN / 3);
+constant N64_B_H: integer := (N64_PIXEL_LEN / 3) - 1;
+constant N64_B_L: integer := 0;
 
 -- What a weird number!
 constant N64_PIXELS_PER_LINE: integer := 774;
@@ -119,13 +125,13 @@ begin
 	begin
 		if (falling_edge(n64_clock)) then
 			if (buffer_sel = '1') then
-				out_red <= buffer_out_a(17 downto 12) & '0';
-				out_green <= buffer_out_a(11 downto 6) & '0';
-				out_blue <= buffer_out_a(5 downto 0) & '0';
+				out_red <= buffer_out_a(N64_R_H downto N64_R_L);
+				out_green <= buffer_out_a(N64_G_H downto N64_G_L);
+				out_blue <= buffer_out_a(N64_B_H downto N64_B_L);
 			else
-				out_red <= buffer_out_b(17 downto 12) & '0';
-				out_green <= buffer_out_b(11 downto 6) & '0';
-				out_blue <= buffer_out_b(5 downto 0) & '0';
+				out_red <= buffer_out_b(N64_R_H downto N64_R_L);
+				out_green <= buffer_out_b(N64_G_H downto N64_G_L);
+				out_blue <= buffer_out_b(N64_B_H downto N64_B_L);
 			end if;
 		end if;
 	end process;
@@ -145,7 +151,7 @@ begin
 		if (falling_edge(n64_clock)) then
 			if (buffer_sel = '0') then
 				-- Feed pixel data as a vector into the buffer
-				buffer_in_a <= n64_red(6 downto 1) & n64_green(6 downto 1) & n64_blue(6 downto 1);
+				buffer_in_a <= n64_red(6 downto 0) & n64_green(6 downto 0) & n64_blue(6 downto 0);
 				
 				-- Capture only when a new N64 pixel is ready
 				case clock_count is
@@ -167,7 +173,7 @@ begin
 				end if;
 			else
 				-- Feed pixel data as a vector into the buffer
-				buffer_in_b <= n64_red(6 downto 1) & n64_green(6 downto 1) & n64_blue(6 downto 1);
+				buffer_in_b <= n64_red(6 downto 0) & n64_green(6 downto 0) & n64_blue(6 downto 0);
 				
 				-- Capture only when a new N64 pixel is ready
 				case clock_count is
