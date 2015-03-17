@@ -1,5 +1,5 @@
 Flow report for n6480
-Thu Feb 26 13:15:16 2015
+Thu Feb 26 18:36:39 2015
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,14 +40,14 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Thu Feb 26 13:15:13 2015           ;
+; Flow Status                        ; Successful - Thu Feb 26 18:36:37 2015           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; n6480                                           ;
 ; Top-level Entity Name              ; n6480                                           ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 324 / 33,216 ( < 1 % )                          ;
+; Total logic elements               ; 321 / 33,216 ( < 1 % )                          ;
 ;     Total combinational functions  ; 232 / 33,216 ( < 1 % )                          ;
 ;     Dedicated logic registers      ; 261 / 33,216 ( < 1 % )                          ;
 ; Total registers                    ; 261                                             ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/26/2015 13:14:46 ;
+; Start date & time ; 02/26/2015 18:36:11 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; n6480               ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+---------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 106258777060274.142497448606002 ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 106258777060274.142499377112438 ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                               ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; 16764057                        ; --            ; --          ; Top        ;
@@ -90,11 +90,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:16     ; 1.0                     ; 422 MB              ; 00:00:15                           ;
+; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 405 MB              ; 00:00:13                           ;
 ; Fitter                    ; 00:00:07     ; 1.0                     ; 468 MB              ; 00:00:07                           ;
 ; Assembler                 ; 00:00:02     ; 1.0                     ; 345 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 301 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:26     ; --                      ; --                  ; 00:00:25                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 299 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:23     ; --                      ; --                  ; 00:00:23                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

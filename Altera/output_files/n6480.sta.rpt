@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for n6480
-Thu Feb 26 13:15:16 2015
+Thu Feb 26 18:36:39 2015
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -106,7 +106,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------+-----------------+------------+-------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                  ;
 +------------+-----------------+------------+-------------------------------------------------------+
-; 239.92 MHz ; 235.07 MHz      ; n64_clock  ; limit due to high minimum pulse width violation (tch) ;
+; 249.88 MHz ; 235.07 MHz      ; n64_clock  ; limit due to high minimum pulse width violation (tch) ;
 +------------+-----------------+------------+-------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -116,7 +116,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------+--------+---------------+
 ; Clock     ; Slack  ; End Point TNS ;
 +-----------+--------+---------------+
-; n64_clock ; -3.168 ; -946.476      ;
+; n64_clock ; -2.760 ; -888.818      ;
 +-----------+--------+---------------+
 
 
@@ -150,112 +150,112 @@ No paths to report.
 +-----------+--------+-------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Slow Model Setup: 'n64_clock'                                                                                      ;
-+--------+------------------+------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node        ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+------------------+------------------+--------------+-------------+--------------+------------+------------+
-; -3.168 ; n64_px_count[9]  ; buffer_en_b      ; n64_clock    ; n64_clock   ; 1.000        ; 0.009      ; 4.213      ;
-; -3.129 ; hsync_time[13]   ; line_count[0]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.185      ;
-; -3.129 ; hsync_time[13]   ; line_count[2]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.185      ;
-; -3.129 ; hsync_time[13]   ; line_count[3]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.185      ;
-; -3.129 ; hsync_time[13]   ; line_count[4]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.185      ;
-; -3.129 ; hsync_time[13]   ; line_count[5]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.185      ;
-; -3.129 ; hsync_time[13]   ; line_count[6]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.185      ;
-; -3.129 ; hsync_time[13]   ; line_count[7]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.185      ;
-; -3.129 ; hsync_time[13]   ; line_count[8]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.185      ;
-; -3.129 ; hsync_time[13]   ; line_count[9]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.185      ;
-; -3.129 ; hsync_time[13]   ; line_count[10]   ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.185      ;
-; -3.129 ; hsync_time[13]   ; line_count[11]   ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.185      ;
-; -3.129 ; hsync_time[13]   ; line_count[12]   ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.185      ;
-; -3.129 ; hsync_time[13]   ; line_count[13]   ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.185      ;
-; -3.129 ; hsync_time[13]   ; line_count[14]   ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.185      ;
-; -3.129 ; hsync_time[13]   ; line_count[15]   ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.185      ;
-; -3.129 ; hsync_time[13]   ; line_count[1]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.185      ;
-; -3.115 ; n64_px_count[10] ; buffer_en_b      ; n64_clock    ; n64_clock   ; 1.000        ; 0.009      ; 4.160      ;
-; -3.100 ; n64_px_count[14] ; buffer_en_b      ; n64_clock    ; n64_clock   ; 1.000        ; 0.009      ; 4.145      ;
-; -3.063 ; n64_px_count[7]  ; buffer_en_b      ; n64_clock    ; n64_clock   ; 1.000        ; 0.009      ; 4.108      ;
-; -3.060 ; hsync_time[12]   ; line_count[0]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.116      ;
-; -3.060 ; hsync_time[12]   ; line_count[2]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.116      ;
-; -3.060 ; hsync_time[12]   ; line_count[3]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.116      ;
-; -3.060 ; hsync_time[12]   ; line_count[4]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.116      ;
-; -3.060 ; hsync_time[12]   ; line_count[5]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.116      ;
-; -3.060 ; hsync_time[12]   ; line_count[6]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.116      ;
-; -3.060 ; hsync_time[12]   ; line_count[7]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.116      ;
-; -3.060 ; hsync_time[12]   ; line_count[8]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.116      ;
-; -3.060 ; hsync_time[12]   ; line_count[9]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.116      ;
-; -3.060 ; hsync_time[12]   ; line_count[10]   ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.116      ;
-; -3.060 ; hsync_time[12]   ; line_count[11]   ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.116      ;
-; -3.060 ; hsync_time[12]   ; line_count[12]   ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.116      ;
-; -3.060 ; hsync_time[12]   ; line_count[13]   ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.116      ;
-; -3.060 ; hsync_time[12]   ; line_count[14]   ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.116      ;
-; -3.060 ; hsync_time[12]   ; line_count[15]   ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.116      ;
-; -3.060 ; hsync_time[12]   ; line_count[1]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.116      ;
-; -3.055 ; hsync_time[15]   ; line_count[0]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.111      ;
-; -3.055 ; hsync_time[15]   ; line_count[2]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.111      ;
-; -3.055 ; hsync_time[15]   ; line_count[3]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.111      ;
-; -3.055 ; hsync_time[15]   ; line_count[4]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.111      ;
-; -3.055 ; hsync_time[15]   ; line_count[5]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.111      ;
-; -3.055 ; hsync_time[15]   ; line_count[6]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.111      ;
-; -3.055 ; hsync_time[15]   ; line_count[7]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.111      ;
-; -3.055 ; hsync_time[15]   ; line_count[8]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.111      ;
-; -3.055 ; hsync_time[15]   ; line_count[9]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.111      ;
-; -3.055 ; hsync_time[15]   ; line_count[10]   ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.111      ;
-; -3.055 ; hsync_time[15]   ; line_count[11]   ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.111      ;
-; -3.055 ; hsync_time[15]   ; line_count[12]   ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.111      ;
-; -3.055 ; hsync_time[15]   ; line_count[13]   ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.111      ;
-; -3.055 ; hsync_time[15]   ; line_count[14]   ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.111      ;
-; -3.055 ; hsync_time[15]   ; line_count[15]   ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.111      ;
-; -3.055 ; hsync_time[15]   ; line_count[1]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.111      ;
-; -3.025 ; n64_px_count[15] ; buffer_en_b      ; n64_clock    ; n64_clock   ; 1.000        ; 0.009      ; 4.070      ;
-; -3.016 ; hsync_time[3]    ; line_count[0]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.072      ;
-; -3.016 ; hsync_time[3]    ; line_count[2]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.072      ;
-; -3.016 ; hsync_time[3]    ; line_count[3]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.072      ;
-; -3.016 ; hsync_time[3]    ; line_count[4]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.072      ;
-; -3.016 ; hsync_time[3]    ; line_count[5]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.072      ;
-; -3.016 ; hsync_time[3]    ; line_count[6]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.072      ;
-; -3.016 ; hsync_time[3]    ; line_count[7]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.072      ;
-; -3.016 ; hsync_time[3]    ; line_count[8]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.072      ;
-; -3.016 ; hsync_time[3]    ; line_count[9]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.072      ;
-; -3.016 ; hsync_time[3]    ; line_count[10]   ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.072      ;
-; -3.016 ; hsync_time[3]    ; line_count[11]   ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.072      ;
-; -3.016 ; hsync_time[3]    ; line_count[12]   ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.072      ;
-; -3.016 ; hsync_time[3]    ; line_count[13]   ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.072      ;
-; -3.016 ; hsync_time[3]    ; line_count[14]   ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.072      ;
-; -3.016 ; hsync_time[3]    ; line_count[15]   ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.072      ;
-; -3.016 ; hsync_time[3]    ; line_count[1]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.072      ;
-; -3.012 ; n64_px_count[3]  ; buffer_en_b      ; n64_clock    ; n64_clock   ; 1.000        ; 0.008      ; 4.056      ;
-; -2.991 ; hsync_time[5]    ; line_count[0]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.047      ;
-; -2.991 ; hsync_time[5]    ; line_count[2]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.047      ;
-; -2.991 ; hsync_time[5]    ; line_count[3]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.047      ;
-; -2.991 ; hsync_time[5]    ; line_count[4]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.047      ;
-; -2.991 ; hsync_time[5]    ; line_count[5]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.047      ;
-; -2.991 ; hsync_time[5]    ; line_count[6]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.047      ;
-; -2.991 ; hsync_time[5]    ; line_count[7]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.047      ;
-; -2.991 ; hsync_time[5]    ; line_count[8]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.047      ;
-; -2.991 ; hsync_time[5]    ; line_count[9]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.047      ;
-; -2.991 ; hsync_time[5]    ; line_count[10]   ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.047      ;
-; -2.991 ; hsync_time[5]    ; line_count[11]   ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.047      ;
-; -2.991 ; hsync_time[5]    ; line_count[12]   ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.047      ;
-; -2.991 ; hsync_time[5]    ; line_count[13]   ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.047      ;
-; -2.991 ; hsync_time[5]    ; line_count[14]   ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.047      ;
-; -2.991 ; hsync_time[5]    ; line_count[15]   ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.047      ;
-; -2.991 ; hsync_time[5]    ; line_count[1]    ; n64_clock    ; n64_clock   ; 1.000        ; 0.020      ; 4.047      ;
-; -2.990 ; vsync_time[2]    ; n64_px_count[1]  ; n64_clock    ; n64_clock   ; 1.000        ; -0.012     ; 4.014      ;
-; -2.990 ; vsync_time[2]    ; n64_px_count[4]  ; n64_clock    ; n64_clock   ; 1.000        ; -0.012     ; 4.014      ;
-; -2.990 ; vsync_time[2]    ; n64_px_count[5]  ; n64_clock    ; n64_clock   ; 1.000        ; -0.012     ; 4.014      ;
-; -2.990 ; vsync_time[2]    ; n64_px_count[6]  ; n64_clock    ; n64_clock   ; 1.000        ; -0.012     ; 4.014      ;
-; -2.990 ; vsync_time[2]    ; n64_px_count[7]  ; n64_clock    ; n64_clock   ; 1.000        ; -0.012     ; 4.014      ;
-; -2.990 ; vsync_time[2]    ; n64_px_count[8]  ; n64_clock    ; n64_clock   ; 1.000        ; -0.012     ; 4.014      ;
-; -2.990 ; vsync_time[2]    ; n64_px_count[9]  ; n64_clock    ; n64_clock   ; 1.000        ; -0.012     ; 4.014      ;
-; -2.990 ; vsync_time[2]    ; n64_px_count[10] ; n64_clock    ; n64_clock   ; 1.000        ; -0.012     ; 4.014      ;
-; -2.990 ; vsync_time[2]    ; n64_px_count[11] ; n64_clock    ; n64_clock   ; 1.000        ; -0.012     ; 4.014      ;
-; -2.990 ; vsync_time[2]    ; n64_px_count[12] ; n64_clock    ; n64_clock   ; 1.000        ; -0.012     ; 4.014      ;
-; -2.990 ; vsync_time[2]    ; n64_px_count[13] ; n64_clock    ; n64_clock   ; 1.000        ; -0.012     ; 4.014      ;
-; -2.990 ; vsync_time[2]    ; n64_px_count[14] ; n64_clock    ; n64_clock   ; 1.000        ; -0.012     ; 4.014      ;
-; -2.990 ; vsync_time[2]    ; n64_px_count[15] ; n64_clock    ; n64_clock   ; 1.000        ; -0.012     ; 4.014      ;
-; -2.984 ; vsync_time[15]   ; n64_px_count[1]  ; n64_clock    ; n64_clock   ; 1.000        ; -0.012     ; 4.008      ;
-+--------+------------------+------------------+--------------+-------------+--------------+------------+------------+
++-------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'n64_clock'                                                                                     ;
++--------+-----------------+------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node       ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------+------------------+--------------+-------------+--------------+------------+------------+
+; -2.760 ; hsync_time[4]   ; n64_px_count[1]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.801      ;
+; -2.760 ; hsync_time[4]   ; n64_px_count[2]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.801      ;
+; -2.760 ; hsync_time[4]   ; n64_px_count[3]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.801      ;
+; -2.760 ; hsync_time[4]   ; n64_px_count[4]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.801      ;
+; -2.760 ; hsync_time[4]   ; n64_px_count[5]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.801      ;
+; -2.760 ; hsync_time[4]   ; n64_px_count[6]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.801      ;
+; -2.760 ; hsync_time[4]   ; n64_px_count[7]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.801      ;
+; -2.760 ; hsync_time[4]   ; n64_px_count[8]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.801      ;
+; -2.760 ; hsync_time[4]   ; n64_px_count[9]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.801      ;
+; -2.760 ; hsync_time[4]   ; n64_px_count[10] ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.801      ;
+; -2.760 ; hsync_time[4]   ; n64_px_count[11] ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.801      ;
+; -2.760 ; hsync_time[4]   ; n64_px_count[12] ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.801      ;
+; -2.760 ; hsync_time[4]   ; n64_px_count[13] ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.801      ;
+; -2.760 ; hsync_time[4]   ; n64_px_count[14] ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.801      ;
+; -2.760 ; hsync_time[4]   ; n64_px_count[15] ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.801      ;
+; -2.744 ; hsync_time[12]  ; n64_px_count[1]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.785      ;
+; -2.744 ; hsync_time[12]  ; n64_px_count[2]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.785      ;
+; -2.744 ; hsync_time[12]  ; n64_px_count[3]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.785      ;
+; -2.744 ; hsync_time[12]  ; n64_px_count[4]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.785      ;
+; -2.744 ; hsync_time[12]  ; n64_px_count[5]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.785      ;
+; -2.744 ; hsync_time[12]  ; n64_px_count[6]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.785      ;
+; -2.744 ; hsync_time[12]  ; n64_px_count[7]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.785      ;
+; -2.744 ; hsync_time[12]  ; n64_px_count[8]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.785      ;
+; -2.744 ; hsync_time[12]  ; n64_px_count[9]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.785      ;
+; -2.744 ; hsync_time[12]  ; n64_px_count[10] ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.785      ;
+; -2.744 ; hsync_time[12]  ; n64_px_count[11] ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.785      ;
+; -2.744 ; hsync_time[12]  ; n64_px_count[12] ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.785      ;
+; -2.744 ; hsync_time[12]  ; n64_px_count[13] ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.785      ;
+; -2.744 ; hsync_time[12]  ; n64_px_count[14] ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.785      ;
+; -2.744 ; hsync_time[12]  ; n64_px_count[15] ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.785      ;
+; -2.713 ; hsync_time[2]   ; n64_px_count[1]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.754      ;
+; -2.713 ; hsync_time[2]   ; n64_px_count[2]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.754      ;
+; -2.713 ; hsync_time[2]   ; n64_px_count[3]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.754      ;
+; -2.713 ; hsync_time[2]   ; n64_px_count[4]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.754      ;
+; -2.713 ; hsync_time[2]   ; n64_px_count[5]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.754      ;
+; -2.713 ; hsync_time[2]   ; n64_px_count[6]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.754      ;
+; -2.713 ; hsync_time[2]   ; n64_px_count[7]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.754      ;
+; -2.713 ; hsync_time[2]   ; n64_px_count[8]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.754      ;
+; -2.713 ; hsync_time[2]   ; n64_px_count[9]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.754      ;
+; -2.713 ; hsync_time[2]   ; n64_px_count[10] ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.754      ;
+; -2.713 ; hsync_time[2]   ; n64_px_count[11] ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.754      ;
+; -2.713 ; hsync_time[2]   ; n64_px_count[12] ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.754      ;
+; -2.713 ; hsync_time[2]   ; n64_px_count[13] ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.754      ;
+; -2.713 ; hsync_time[2]   ; n64_px_count[14] ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.754      ;
+; -2.713 ; hsync_time[2]   ; n64_px_count[15] ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.754      ;
+; -2.712 ; hsync_time[13]  ; n64_px_count[1]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.753      ;
+; -2.712 ; hsync_time[13]  ; n64_px_count[2]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.753      ;
+; -2.712 ; hsync_time[13]  ; n64_px_count[3]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.753      ;
+; -2.712 ; hsync_time[13]  ; n64_px_count[4]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.753      ;
+; -2.712 ; hsync_time[13]  ; n64_px_count[5]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.753      ;
+; -2.712 ; hsync_time[13]  ; n64_px_count[6]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.753      ;
+; -2.712 ; hsync_time[13]  ; n64_px_count[7]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.753      ;
+; -2.712 ; hsync_time[13]  ; n64_px_count[8]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.753      ;
+; -2.712 ; hsync_time[13]  ; n64_px_count[9]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.753      ;
+; -2.712 ; hsync_time[13]  ; n64_px_count[10] ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.753      ;
+; -2.712 ; hsync_time[13]  ; n64_px_count[11] ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.753      ;
+; -2.712 ; hsync_time[13]  ; n64_px_count[12] ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.753      ;
+; -2.712 ; hsync_time[13]  ; n64_px_count[13] ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.753      ;
+; -2.712 ; hsync_time[13]  ; n64_px_count[14] ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.753      ;
+; -2.712 ; hsync_time[13]  ; n64_px_count[15] ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.753      ;
+; -2.687 ; hsync_time[3]   ; n64_px_count[1]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.728      ;
+; -2.687 ; hsync_time[3]   ; n64_px_count[2]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.728      ;
+; -2.687 ; hsync_time[3]   ; n64_px_count[3]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.728      ;
+; -2.687 ; hsync_time[3]   ; n64_px_count[4]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.728      ;
+; -2.687 ; hsync_time[3]   ; n64_px_count[5]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.728      ;
+; -2.687 ; hsync_time[3]   ; n64_px_count[6]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.728      ;
+; -2.687 ; hsync_time[3]   ; n64_px_count[7]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.728      ;
+; -2.687 ; hsync_time[3]   ; n64_px_count[8]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.728      ;
+; -2.687 ; hsync_time[3]   ; n64_px_count[9]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.728      ;
+; -2.687 ; hsync_time[3]   ; n64_px_count[10] ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.728      ;
+; -2.687 ; hsync_time[3]   ; n64_px_count[11] ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.728      ;
+; -2.687 ; hsync_time[3]   ; n64_px_count[12] ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.728      ;
+; -2.687 ; hsync_time[3]   ; n64_px_count[13] ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.728      ;
+; -2.687 ; hsync_time[3]   ; n64_px_count[14] ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.728      ;
+; -2.687 ; hsync_time[3]   ; n64_px_count[15] ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.728      ;
+; -2.662 ; vsync_time[9]   ; n64_px_count[1]  ; n64_clock    ; n64_clock   ; 1.000        ; -0.008     ; 3.690      ;
+; -2.662 ; vsync_time[9]   ; n64_px_count[2]  ; n64_clock    ; n64_clock   ; 1.000        ; -0.008     ; 3.690      ;
+; -2.662 ; vsync_time[9]   ; n64_px_count[3]  ; n64_clock    ; n64_clock   ; 1.000        ; -0.008     ; 3.690      ;
+; -2.662 ; vsync_time[9]   ; n64_px_count[4]  ; n64_clock    ; n64_clock   ; 1.000        ; -0.008     ; 3.690      ;
+; -2.662 ; vsync_time[9]   ; n64_px_count[5]  ; n64_clock    ; n64_clock   ; 1.000        ; -0.008     ; 3.690      ;
+; -2.662 ; vsync_time[9]   ; n64_px_count[6]  ; n64_clock    ; n64_clock   ; 1.000        ; -0.008     ; 3.690      ;
+; -2.662 ; vsync_time[9]   ; n64_px_count[7]  ; n64_clock    ; n64_clock   ; 1.000        ; -0.008     ; 3.690      ;
+; -2.662 ; vsync_time[9]   ; n64_px_count[8]  ; n64_clock    ; n64_clock   ; 1.000        ; -0.008     ; 3.690      ;
+; -2.662 ; vsync_time[9]   ; n64_px_count[9]  ; n64_clock    ; n64_clock   ; 1.000        ; -0.008     ; 3.690      ;
+; -2.662 ; vsync_time[9]   ; n64_px_count[10] ; n64_clock    ; n64_clock   ; 1.000        ; -0.008     ; 3.690      ;
+; -2.662 ; vsync_time[9]   ; n64_px_count[11] ; n64_clock    ; n64_clock   ; 1.000        ; -0.008     ; 3.690      ;
+; -2.662 ; vsync_time[9]   ; n64_px_count[12] ; n64_clock    ; n64_clock   ; 1.000        ; -0.008     ; 3.690      ;
+; -2.662 ; vsync_time[9]   ; n64_px_count[13] ; n64_clock    ; n64_clock   ; 1.000        ; -0.008     ; 3.690      ;
+; -2.662 ; vsync_time[9]   ; n64_px_count[14] ; n64_clock    ; n64_clock   ; 1.000        ; -0.008     ; 3.690      ;
+; -2.662 ; vsync_time[9]   ; n64_px_count[15] ; n64_clock    ; n64_clock   ; 1.000        ; -0.008     ; 3.690      ;
+; -2.660 ; n64_px_count[4] ; buffer_en_b      ; n64_clock    ; n64_clock   ; 1.000        ; 0.007      ; 3.703      ;
+; -2.645 ; hsync_time[15]  ; n64_px_count[1]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.686      ;
+; -2.645 ; hsync_time[15]  ; n64_px_count[2]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.686      ;
+; -2.645 ; hsync_time[15]  ; n64_px_count[3]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.686      ;
+; -2.645 ; hsync_time[15]  ; n64_px_count[4]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.686      ;
+; -2.645 ; hsync_time[15]  ; n64_px_count[5]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.686      ;
+; -2.645 ; hsync_time[15]  ; n64_px_count[6]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.686      ;
+; -2.645 ; hsync_time[15]  ; n64_px_count[7]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.686      ;
+; -2.645 ; hsync_time[15]  ; n64_px_count[8]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.686      ;
+; -2.645 ; hsync_time[15]  ; n64_px_count[9]  ; n64_clock    ; n64_clock   ; 1.000        ; 0.005      ; 3.686      ;
++--------+-----------------+------------------+--------------+-------------+--------------+------------+------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -269,68 +269,71 @@ No paths to report.
 ; 0.391 ; enable_delay                                                                                               ; enable_delay                                                                                                                                   ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.657      ;
 ; 0.391 ; buffer_en_a                                                                                                ; buffer_en_a                                                                                                                                    ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.657      ;
 ; 0.391 ; buffer_en_b                                                                                                ; buffer_en_b                                                                                                                                    ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.657      ;
-; 0.516 ; n64_pixel:rgb_decoder|red_final[0]                                                                         ; n64_pixel:rgb_decoder|red_out[0]                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.782      ;
-; 0.516 ; out_green[5]                                                                                               ; vga_green[5]~reg0                                                                                                                              ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.782      ;
-; 0.517 ; n64_pixel:rgb_decoder|red_final[3]                                                                         ; n64_pixel:rgb_decoder|red_out[3]                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.783      ;
-; 0.517 ; n64_pixel:rgb_decoder|green_final[4]                                                                       ; n64_pixel:rgb_decoder|green_out[4]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.783      ;
-; 0.517 ; n64_pixel:rgb_decoder|green_final[6]                                                                       ; n64_pixel:rgb_decoder|green_out[6]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.783      ;
-; 0.518 ; n64_pixel:rgb_decoder|blue_cap[0]                                                                          ; n64_pixel:rgb_decoder|blue_final[0]                                                                                                            ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.784      ;
-; 0.518 ; n64_pixel:rgb_decoder|green_final[5]                                                                       ; n64_pixel:rgb_decoder|green_out[5]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.784      ;
-; 0.518 ; n64_pixel:rgb_decoder|blue_cap[2]                                                                          ; n64_pixel:rgb_decoder|blue_final[2]                                                                                                            ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.784      ;
-; 0.519 ; n64_pixel:rgb_decoder|green_final[3]                                                                       ; n64_pixel:rgb_decoder|green_out[3]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.785      ;
-; 0.519 ; n64_pixel:rgb_decoder|blue_cap[1]                                                                          ; n64_pixel:rgb_decoder|blue_final[1]                                                                                                            ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.785      ;
-; 0.519 ; n64_pixel:rgb_decoder|blue_cap[5]                                                                          ; n64_pixel:rgb_decoder|blue_final[5]                                                                                                            ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.785      ;
-; 0.519 ; n64_pixel:rgb_decoder|blue_cap[4]                                                                          ; n64_pixel:rgb_decoder|blue_final[4]                                                                                                            ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.785      ;
+; 0.512 ; out_red[0]                                                                                                 ; vga_red[0]~reg0                                                                                                                                ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.778      ;
+; 0.512 ; out_red[6]                                                                                                 ; vga_red[6]~reg0                                                                                                                                ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.778      ;
+; 0.515 ; n64_pixel:rgb_decoder|blue_cap[4]                                                                          ; n64_pixel:rgb_decoder|blue_final[4]                                                                                                            ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.781      ;
+; 0.516 ; n64_pixel:rgb_decoder|red_final[1]                                                                         ; n64_pixel:rgb_decoder|red_out[1]                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.782      ;
+; 0.516 ; n64_pixel:rgb_decoder|green_final[3]                                                                       ; n64_pixel:rgb_decoder|green_out[3]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.782      ;
+; 0.516 ; n64_pixel:rgb_decoder|green_final[2]                                                                       ; n64_pixel:rgb_decoder|green_out[2]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.782      ;
+; 0.516 ; out_blue[5]                                                                                                ; vga_blue[5]~reg0                                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.782      ;
+; 0.516 ; out_blue[6]                                                                                                ; vga_blue[6]~reg0                                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.782      ;
+; 0.517 ; out_green[2]                                                                                               ; vga_green[2]~reg0                                                                                                                              ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.783      ;
+; 0.517 ; out_green[4]                                                                                               ; vga_green[4]~reg0                                                                                                                              ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.783      ;
+; 0.518 ; n64_pixel:rgb_decoder|blue_cap[5]                                                                          ; n64_pixel:rgb_decoder|blue_final[5]                                                                                                            ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.784      ;
+; 0.518 ; out_blue[1]                                                                                                ; vga_blue[1]~reg0                                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.784      ;
 ; 0.519 ; n64_pixel:rgb_decoder|blue_cap[3]                                                                          ; n64_pixel:rgb_decoder|blue_final[3]                                                                                                            ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.785      ;
-; 0.519 ; n64_pixel:rgb_decoder|blue_cap[6]                                                                          ; n64_pixel:rgb_decoder|blue_final[6]                                                                                                            ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.785      ;
-; 0.519 ; out_green[0]                                                                                               ; vga_green[0]~reg0                                                                                                                              ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.785      ;
-; 0.523 ; out_green[4]                                                                                               ; vga_green[4]~reg0                                                                                                                              ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.789      ;
+; 0.519 ; n64_pixel:rgb_decoder|blue_cap[2]                                                                          ; n64_pixel:rgb_decoder|blue_final[2]                                                                                                            ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.785      ;
+; 0.520 ; n64_pixel:rgb_decoder|red_final[2]                                                                         ; n64_pixel:rgb_decoder|red_out[2]                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.786      ;
+; 0.522 ; out_blue[3]                                                                                                ; vga_blue[3]~reg0                                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.788      ;
 ; 0.531 ; vga_px_count[15]                                                                                           ; vga_px_count[15]                                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.797      ;
 ; 0.531 ; hsync_time[15]                                                                                             ; hsync_time[15]                                                                                                                                 ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.797      ;
 ; 0.531 ; line_count[15]                                                                                             ; line_count[15]                                                                                                                                 ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.797      ;
 ; 0.531 ; vsync_time[15]                                                                                             ; vsync_time[15]                                                                                                                                 ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.797      ;
 ; 0.531 ; n64_px_count[15]                                                                                           ; n64_px_count[15]                                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.797      ;
-; 0.653 ; n64_pixel:rgb_decoder|green_final[2]                                                                       ; n64_pixel:rgb_decoder|green_out[2]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; 0.001      ; 0.920      ;
-; 0.658 ; n64_pixel:rgb_decoder|red_cap[1]                                                                           ; n64_pixel:rgb_decoder|red_final[1]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; 0.002      ; 0.926      ;
-; 0.658 ; n64_pixel:rgb_decoder|green_final[1]                                                                       ; n64_pixel:rgb_decoder|green_out[1]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.924      ;
-; 0.663 ; out_red[5]                                                                                                 ; vga_red[5]~reg0                                                                                                                                ; n64_clock    ; n64_clock   ; 0.000        ; -0.001     ; 0.928      ;
-; 0.663 ; out_blue[0]                                                                                                ; vga_blue[0]~reg0                                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; -0.001     ; 0.928      ;
-; 0.664 ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[0] ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a4~portb_address_reg0  ; n64_clock    ; n64_clock   ; 0.000        ; 0.088      ; 0.986      ;
-; 0.664 ; n64_pixel:rgb_decoder|blue_final[1]                                                                        ; n64_pixel:rgb_decoder|blue_out[1]                                                                                                              ; n64_clock    ; n64_clock   ; 0.000        ; -0.001     ; 0.929      ;
-; 0.672 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[9] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~portb_address_reg9 ; n64_clock    ; n64_clock   ; 0.000        ; 0.084      ; 0.990      ;
-; 0.677 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[5] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~portb_address_reg5 ; n64_clock    ; n64_clock   ; 0.000        ; 0.084      ; 0.995      ;
-; 0.690 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[3] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~portb_address_reg3 ; n64_clock    ; n64_clock   ; 0.000        ; 0.084      ; 1.008      ;
-; 0.692 ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[0] ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a4~porta_address_reg0  ; n64_clock    ; n64_clock   ; 0.000        ; 0.060      ; 0.986      ;
-; 0.693 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[4] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~portb_address_reg4 ; n64_clock    ; n64_clock   ; 0.000        ; 0.084      ; 1.011      ;
-; 0.694 ; n64_pixel:rgb_decoder|red_cap[6]                                                                           ; n64_pixel:rgb_decoder|red_final[6]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; 0.002      ; 0.962      ;
-; 0.694 ; out_green[6]                                                                                               ; vga_green[6]~reg0                                                                                                                              ; n64_clock    ; n64_clock   ; 0.000        ; 0.002      ; 0.962      ;
-; 0.697 ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[2] ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a4~porta_address_reg2  ; n64_clock    ; n64_clock   ; 0.000        ; 0.060      ; 0.991      ;
-; 0.697 ; out_blue[1]                                                                                                ; vga_blue[1]~reg0                                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; -0.001     ; 0.962      ;
-; 0.699 ; n64_pixel:rgb_decoder|blue_final[0]                                                                        ; n64_pixel:rgb_decoder|blue_out[0]                                                                                                              ; n64_clock    ; n64_clock   ; 0.000        ; -0.001     ; 0.964      ;
-; 0.699 ; out_blue[4]                                                                                                ; vga_blue[4]~reg0                                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; 0.004      ; 0.969      ;
-; 0.700 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[9] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~porta_address_reg9 ; n64_clock    ; n64_clock   ; 0.000        ; 0.056      ; 0.990      ;
-; 0.700 ; n64_pixel:rgb_decoder|red_cap[0]                                                                           ; n64_pixel:rgb_decoder|red_final[0]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; 0.002      ; 0.968      ;
-; 0.700 ; n64_pixel:rgb_decoder|red_cap[5]                                                                           ; n64_pixel:rgb_decoder|red_final[5]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; 0.002      ; 0.968      ;
-; 0.700 ; n64_pixel:rgb_decoder|red_cap[4]                                                                           ; n64_pixel:rgb_decoder|red_final[4]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; 0.002      ; 0.968      ;
-; 0.701 ; out_blue[5]                                                                                                ; vga_blue[5]~reg0                                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; -0.002     ; 0.965      ;
-; 0.705 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[5] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~porta_address_reg5 ; n64_clock    ; n64_clock   ; 0.000        ; 0.056      ; 0.995      ;
-; 0.706 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[8] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~portb_address_reg8 ; n64_clock    ; n64_clock   ; 0.000        ; 0.084      ; 1.024      ;
-; 0.707 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[7] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~portb_address_reg7 ; n64_clock    ; n64_clock   ; 0.000        ; 0.084      ; 1.025      ;
-; 0.708 ; n64_pixel:rgb_decoder|red_cap[2]                                                                           ; n64_pixel:rgb_decoder|red_final[2]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; -0.001     ; 0.973      ;
-; 0.708 ; n64_pixel:rgb_decoder|green_cap[0]                                                                         ; n64_pixel:rgb_decoder|green_final[0]                                                                                                           ; n64_clock    ; n64_clock   ; 0.000        ; 0.002      ; 0.976      ;
-; 0.709 ; n64_pixel:rgb_decoder|red_cap[3]                                                                           ; n64_pixel:rgb_decoder|red_final[3]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; 0.002      ; 0.977      ;
-; 0.714 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[6] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~portb_address_reg6 ; n64_clock    ; n64_clock   ; 0.000        ; 0.084      ; 1.032      ;
-; 0.718 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[3] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~porta_address_reg3 ; n64_clock    ; n64_clock   ; 0.000        ; 0.056      ; 1.008      ;
-; 0.721 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[4] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~porta_address_reg4 ; n64_clock    ; n64_clock   ; 0.000        ; 0.056      ; 1.011      ;
-; 0.734 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[8] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~porta_address_reg8 ; n64_clock    ; n64_clock   ; 0.000        ; 0.056      ; 1.024      ;
-; 0.735 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[7] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~porta_address_reg7 ; n64_clock    ; n64_clock   ; 0.000        ; 0.056      ; 1.025      ;
-; 0.742 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[6] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~porta_address_reg6 ; n64_clock    ; n64_clock   ; 0.000        ; 0.056      ; 1.032      ;
-; 0.790 ; n64_pixel:rgb_decoder|hsync_n_out                                                                          ; hsync_time[0]                                                                                                                                  ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 1.056      ;
-; 0.795 ; vga_px_count[0]                                                                                            ; vga_px_count[0]                                                                                                                                ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 1.061      ;
+; 0.536 ; n64_pixel:rgb_decoder|cycle_count[1]                                                                       ; n64_pixel:rgb_decoder|clock_count[1]                                                                                                           ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.802      ;
+; 0.622 ; out_green[5]                                                                                               ; vga_green[5]~reg0                                                                                                                              ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.888      ;
+; 0.653 ; out_green[1]                                                                                               ; vga_green[1]~reg0                                                                                                                              ; n64_clock    ; n64_clock   ; 0.000        ; 0.002      ; 0.921      ;
+; 0.653 ; out_blue[4]                                                                                                ; vga_blue[4]~reg0                                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; 0.001      ; 0.920      ;
+; 0.654 ; out_green[3]                                                                                               ; vga_green[3]~reg0                                                                                                                              ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.920      ;
+; 0.659 ; n64_pixel:rgb_decoder|green_out[5]                                                                         ; buffer_in_b[12]                                                                                                                                ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.925      ;
+; 0.662 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[2] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~portb_address_reg2 ; n64_clock    ; n64_clock   ; 0.000        ; 0.087      ; 0.983      ;
+; 0.662 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[0] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~portb_address_reg0 ; n64_clock    ; n64_clock   ; 0.000        ; 0.087      ; 0.983      ;
+; 0.663 ; out_blue[0]                                                                                                ; vga_blue[0]~reg0                                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.929      ;
+; 0.664 ; out_red[3]                                                                                                 ; vga_red[3]~reg0                                                                                                                                ; n64_clock    ; n64_clock   ; 0.000        ; -0.002     ; 0.928      ;
+; 0.673 ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[3] ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~portb_address_reg3 ; n64_clock    ; n64_clock   ; 0.000        ; 0.083      ; 0.990      ;
+; 0.674 ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[9] ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~portb_address_reg9 ; n64_clock    ; n64_clock   ; 0.000        ; 0.083      ; 0.991      ;
+; 0.676 ; n64_pixel:rgb_decoder|green_final[6]                                                                       ; n64_pixel:rgb_decoder|green_out[6]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; -0.001     ; 0.941      ;
+; 0.678 ; out_red[4]                                                                                                 ; vga_red[4]~reg0                                                                                                                                ; n64_clock    ; n64_clock   ; 0.000        ; -0.002     ; 0.942      ;
+; 0.680 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[1] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~portb_address_reg1 ; n64_clock    ; n64_clock   ; 0.000        ; 0.087      ; 1.001      ;
+; 0.680 ; n64_pixel:rgb_decoder|cycle_count[0]                                                                       ; n64_pixel:rgb_decoder|clock_count[0]                                                                                                           ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.946      ;
+; 0.690 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[2] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~porta_address_reg2 ; n64_clock    ; n64_clock   ; 0.000        ; 0.059      ; 0.983      ;
+; 0.690 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[0] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~porta_address_reg0 ; n64_clock    ; n64_clock   ; 0.000        ; 0.059      ; 0.983      ;
+; 0.693 ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[5] ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~portb_address_reg5 ; n64_clock    ; n64_clock   ; 0.000        ; 0.083      ; 1.010      ;
+; 0.695 ; n64_pixel:rgb_decoder|green_final[4]                                                                       ; n64_pixel:rgb_decoder|green_out[4]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; 0.005      ; 0.966      ;
+; 0.697 ; out_green[0]                                                                                               ; vga_green[0]~reg0                                                                                                                              ; n64_clock    ; n64_clock   ; 0.000        ; 0.002      ; 0.965      ;
+; 0.697 ; out_green[6]                                                                                               ; vga_green[6]~reg0                                                                                                                              ; n64_clock    ; n64_clock   ; 0.000        ; 0.002      ; 0.965      ;
+; 0.697 ; out_blue[2]                                                                                                ; vga_blue[2]~reg0                                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; 0.002      ; 0.965      ;
+; 0.698 ; n64_pixel:rgb_decoder|blue_cap[0]                                                                          ; n64_pixel:rgb_decoder|blue_final[0]                                                                                                            ; n64_clock    ; n64_clock   ; 0.000        ; -0.001     ; 0.963      ;
+; 0.700 ; out_red[2]                                                                                                 ; vga_red[2]~reg0                                                                                                                                ; n64_clock    ; n64_clock   ; 0.000        ; -0.002     ; 0.964      ;
+; 0.701 ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[3] ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~porta_address_reg3 ; n64_clock    ; n64_clock   ; 0.000        ; 0.055      ; 0.990      ;
+; 0.702 ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[9] ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~porta_address_reg9 ; n64_clock    ; n64_clock   ; 0.000        ; 0.055      ; 0.991      ;
+; 0.707 ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[8] ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~portb_address_reg8 ; n64_clock    ; n64_clock   ; 0.000        ; 0.083      ; 1.024      ;
+; 0.707 ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[7] ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~portb_address_reg7 ; n64_clock    ; n64_clock   ; 0.000        ; 0.083      ; 1.024      ;
+; 0.707 ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[6] ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~portb_address_reg6 ; n64_clock    ; n64_clock   ; 0.000        ; 0.083      ; 1.024      ;
+; 0.707 ; out_red[5]                                                                                                 ; vga_red[5]~reg0                                                                                                                                ; n64_clock    ; n64_clock   ; 0.000        ; -0.002     ; 0.971      ;
+; 0.708 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[1] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~porta_address_reg1 ; n64_clock    ; n64_clock   ; 0.000        ; 0.059      ; 1.001      ;
+; 0.711 ; n64_pixel:rgb_decoder|green_final[5]                                                                       ; n64_pixel:rgb_decoder|green_out[5]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; -0.001     ; 0.976      ;
+; 0.712 ; n64_pixel:rgb_decoder|blue_final[1]                                                                        ; n64_pixel:rgb_decoder|blue_out[1]                                                                                                              ; n64_clock    ; n64_clock   ; 0.000        ; -0.001     ; 0.977      ;
+; 0.712 ; n64_pixel:rgb_decoder|blue_cap[6]                                                                          ; n64_pixel:rgb_decoder|blue_final[6]                                                                                                            ; n64_clock    ; n64_clock   ; 0.000        ; -0.001     ; 0.977      ;
+; 0.721 ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[5] ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~porta_address_reg5 ; n64_clock    ; n64_clock   ; 0.000        ; 0.055      ; 1.010      ;
+; 0.735 ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[8] ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~porta_address_reg8 ; n64_clock    ; n64_clock   ; 0.000        ; 0.055      ; 1.024      ;
+; 0.735 ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[7] ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~porta_address_reg7 ; n64_clock    ; n64_clock   ; 0.000        ; 0.055      ; 1.024      ;
+; 0.735 ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[6] ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~porta_address_reg6 ; n64_clock    ; n64_clock   ; 0.000        ; 0.055      ; 1.024      ;
+; 0.781 ; n64_pixel:rgb_decoder|cycle_count[0]                                                                       ; n64_pixel:rgb_decoder|cycle_count[1]                                                                                                           ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 1.047      ;
 ; 0.795 ; line_count[0]                                                                                              ; line_count[0]                                                                                                                                  ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 1.061      ;
-; 0.798 ; n64_pixel:rgb_decoder|green_out[0]                                                                         ; buffer_in_a[7]                                                                                                                                 ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 1.064      ;
-; 0.802 ; n64_px_count[4]                                                                                            ; n64_px_count[4]                                                                                                                                ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 1.068      ;
-; 0.802 ; n64_px_count[7]                                                                                            ; n64_px_count[7]                                                                                                                                ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 1.068      ;
+; 0.795 ; n64_pixel:rgb_decoder|red_out[6]                                                                           ; buffer_in_b[20]                                                                                                                                ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 1.061      ;
+; 0.797 ; n64_pixel:rgb_decoder|blue_out[5]                                                                          ; buffer_in_b[5]                                                                                                                                 ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 1.063      ;
+; 0.799 ; n64_pixel:rgb_decoder|green_out[4]                                                                         ; buffer_in_b[11]                                                                                                                                ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 1.065      ;
 ; 0.805 ; vga_px_count[1]                                                                                            ; vga_px_count[1]                                                                                                                                ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 1.071      ;
 ; 0.805 ; hsync_time[1]                                                                                              ; hsync_time[1]                                                                                                                                  ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 1.071      ;
 ; 0.805 ; line_count[1]                                                                                              ; line_count[1]                                                                                                                                  ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 1.071      ;
@@ -360,9 +363,6 @@ No paths to report.
 ; 0.806 ; vsync_time[2]                                                                                              ; vsync_time[2]                                                                                                                                  ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 1.072      ;
 ; 0.806 ; vsync_time[4]                                                                                              ; vsync_time[4]                                                                                                                                  ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 1.072      ;
 ; 0.806 ; vsync_time[7]                                                                                              ; vsync_time[7]                                                                                                                                  ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 1.072      ;
-; 0.806 ; vsync_time[9]                                                                                              ; vsync_time[9]                                                                                                                                  ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 1.072      ;
-; 0.806 ; vsync_time[11]                                                                                             ; vsync_time[11]                                                                                                                                 ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 1.072      ;
-; 0.806 ; vsync_time[13]                                                                                             ; vsync_time[13]                                                                                                                                 ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 1.072      ;
 +-------+------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -479,15 +479,15 @@ No paths to report.
 +--------------+------------+-------+-------+------------+-----------------+
 ; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +--------------+------------+-------+-------+------------+-----------------+
-; n64_data[*]  ; n64_clock  ; 3.559 ; 3.559 ; Fall       ; n64_clock       ;
-;  n64_data[0] ; n64_clock  ; 3.350 ; 3.350 ; Fall       ; n64_clock       ;
-;  n64_data[1] ; n64_clock  ; 3.559 ; 3.559 ; Fall       ; n64_clock       ;
-;  n64_data[2] ; n64_clock  ; 3.425 ; 3.425 ; Fall       ; n64_clock       ;
-;  n64_data[3] ; n64_clock  ; 3.312 ; 3.312 ; Fall       ; n64_clock       ;
-;  n64_data[4] ; n64_clock  ; 3.441 ; 3.441 ; Fall       ; n64_clock       ;
-;  n64_data[5] ; n64_clock  ; 3.211 ; 3.211 ; Fall       ; n64_clock       ;
-;  n64_data[6] ; n64_clock  ; 3.285 ; 3.285 ; Fall       ; n64_clock       ;
-; n64_dsync_n  ; n64_clock  ; 3.169 ; 3.169 ; Fall       ; n64_clock       ;
+; n64_data[*]  ; n64_clock  ; 4.431 ; 4.431 ; Fall       ; n64_clock       ;
+;  n64_data[0] ; n64_clock  ; 4.188 ; 4.188 ; Fall       ; n64_clock       ;
+;  n64_data[1] ; n64_clock  ; 4.013 ; 4.013 ; Fall       ; n64_clock       ;
+;  n64_data[2] ; n64_clock  ; 4.431 ; 4.431 ; Fall       ; n64_clock       ;
+;  n64_data[3] ; n64_clock  ; 4.315 ; 4.315 ; Fall       ; n64_clock       ;
+;  n64_data[4] ; n64_clock  ; 4.252 ; 4.252 ; Fall       ; n64_clock       ;
+;  n64_data[5] ; n64_clock  ; 4.134 ; 4.134 ; Fall       ; n64_clock       ;
+;  n64_data[6] ; n64_clock  ; 3.957 ; 3.957 ; Fall       ; n64_clock       ;
+; n64_dsync_n  ; n64_clock  ; 4.039 ; 4.039 ; Fall       ; n64_clock       ;
 +--------------+------------+-------+-------+------------+-----------------+
 
 
@@ -496,15 +496,15 @@ No paths to report.
 +--------------+------------+--------+--------+------------+-----------------+
 ; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +--------------+------------+--------+--------+------------+-----------------+
-; n64_data[*]  ; n64_clock  ; -2.937 ; -2.937 ; Fall       ; n64_clock       ;
-;  n64_data[0] ; n64_clock  ; -2.989 ; -2.989 ; Fall       ; n64_clock       ;
-;  n64_data[1] ; n64_clock  ; -3.092 ; -3.092 ; Fall       ; n64_clock       ;
-;  n64_data[2] ; n64_clock  ; -3.194 ; -3.194 ; Fall       ; n64_clock       ;
-;  n64_data[3] ; n64_clock  ; -2.975 ; -2.975 ; Fall       ; n64_clock       ;
-;  n64_data[4] ; n64_clock  ; -3.208 ; -3.208 ; Fall       ; n64_clock       ;
-;  n64_data[5] ; n64_clock  ; -2.972 ; -2.972 ; Fall       ; n64_clock       ;
-;  n64_data[6] ; n64_clock  ; -2.937 ; -2.937 ; Fall       ; n64_clock       ;
-; n64_dsync_n  ; n64_clock  ; -2.936 ; -2.936 ; Fall       ; n64_clock       ;
+; n64_data[*]  ; n64_clock  ; -3.706 ; -3.706 ; Fall       ; n64_clock       ;
+;  n64_data[0] ; n64_clock  ; -3.932 ; -3.932 ; Fall       ; n64_clock       ;
+;  n64_data[1] ; n64_clock  ; -3.779 ; -3.779 ; Fall       ; n64_clock       ;
+;  n64_data[2] ; n64_clock  ; -3.939 ; -3.939 ; Fall       ; n64_clock       ;
+;  n64_data[3] ; n64_clock  ; -3.970 ; -3.970 ; Fall       ; n64_clock       ;
+;  n64_data[4] ; n64_clock  ; -4.005 ; -4.005 ; Fall       ; n64_clock       ;
+;  n64_data[5] ; n64_clock  ; -3.787 ; -3.787 ; Fall       ; n64_clock       ;
+;  n64_data[6] ; n64_clock  ; -3.706 ; -3.706 ; Fall       ; n64_clock       ;
+; n64_dsync_n  ; n64_clock  ; -3.809 ; -3.809 ; Fall       ; n64_clock       ;
 +--------------+------------+--------+--------+------------+-----------------+
 
 
@@ -513,36 +513,36 @@ No paths to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; led[*]        ; n64_clock  ; 6.957 ; 6.957 ; Fall       ; n64_clock       ;
-;  led[0]       ; n64_clock  ; 6.957 ; 6.957 ; Fall       ; n64_clock       ;
-;  led[2]       ; n64_clock  ; 6.786 ; 6.786 ; Fall       ; n64_clock       ;
-;  led[3]       ; n64_clock  ; 6.412 ; 6.412 ; Fall       ; n64_clock       ;
-; vga_blue[*]   ; n64_clock  ; 6.705 ; 6.705 ; Fall       ; n64_clock       ;
-;  vga_blue[0]  ; n64_clock  ; 6.705 ; 6.705 ; Fall       ; n64_clock       ;
-;  vga_blue[1]  ; n64_clock  ; 6.500 ; 6.500 ; Fall       ; n64_clock       ;
-;  vga_blue[2]  ; n64_clock  ; 6.409 ; 6.409 ; Fall       ; n64_clock       ;
-;  vga_blue[3]  ; n64_clock  ; 6.419 ; 6.419 ; Fall       ; n64_clock       ;
-;  vga_blue[4]  ; n64_clock  ; 6.646 ; 6.646 ; Fall       ; n64_clock       ;
-;  vga_blue[5]  ; n64_clock  ; 6.646 ; 6.646 ; Fall       ; n64_clock       ;
-;  vga_blue[6]  ; n64_clock  ; 6.513 ; 6.513 ; Fall       ; n64_clock       ;
-; vga_green[*]  ; n64_clock  ; 6.857 ; 6.857 ; Fall       ; n64_clock       ;
-;  vga_green[0] ; n64_clock  ; 6.674 ; 6.674 ; Fall       ; n64_clock       ;
-;  vga_green[1] ; n64_clock  ; 6.664 ; 6.664 ; Fall       ; n64_clock       ;
-;  vga_green[2] ; n64_clock  ; 6.439 ; 6.439 ; Fall       ; n64_clock       ;
-;  vga_green[3] ; n64_clock  ; 6.711 ; 6.711 ; Fall       ; n64_clock       ;
-;  vga_green[4] ; n64_clock  ; 6.716 ; 6.716 ; Fall       ; n64_clock       ;
-;  vga_green[5] ; n64_clock  ; 6.857 ; 6.857 ; Fall       ; n64_clock       ;
-;  vga_green[6] ; n64_clock  ; 6.425 ; 6.425 ; Fall       ; n64_clock       ;
-; vga_hsync     ; n64_clock  ; 7.684 ; 7.684 ; Fall       ; n64_clock       ;
-; vga_red[*]    ; n64_clock  ; 6.939 ; 6.939 ; Fall       ; n64_clock       ;
-;  vga_red[0]   ; n64_clock  ; 6.429 ; 6.429 ; Fall       ; n64_clock       ;
-;  vga_red[1]   ; n64_clock  ; 6.906 ; 6.906 ; Fall       ; n64_clock       ;
-;  vga_red[2]   ; n64_clock  ; 6.699 ; 6.699 ; Fall       ; n64_clock       ;
-;  vga_red[3]   ; n64_clock  ; 6.664 ; 6.664 ; Fall       ; n64_clock       ;
-;  vga_red[4]   ; n64_clock  ; 6.660 ; 6.660 ; Fall       ; n64_clock       ;
-;  vga_red[5]   ; n64_clock  ; 6.939 ; 6.939 ; Fall       ; n64_clock       ;
-;  vga_red[6]   ; n64_clock  ; 6.439 ; 6.439 ; Fall       ; n64_clock       ;
-; vga_vsync     ; n64_clock  ; 7.270 ; 7.270 ; Fall       ; n64_clock       ;
+; led[*]        ; n64_clock  ; 9.478 ; 9.478 ; Fall       ; n64_clock       ;
+;  led[0]       ; n64_clock  ; 9.478 ; 9.478 ; Fall       ; n64_clock       ;
+;  led[2]       ; n64_clock  ; 8.780 ; 8.780 ; Fall       ; n64_clock       ;
+;  led[3]       ; n64_clock  ; 9.448 ; 9.448 ; Fall       ; n64_clock       ;
+; vga_blue[*]   ; n64_clock  ; 7.186 ; 7.186 ; Fall       ; n64_clock       ;
+;  vga_blue[0]  ; n64_clock  ; 6.666 ; 6.666 ; Fall       ; n64_clock       ;
+;  vga_blue[1]  ; n64_clock  ; 6.853 ; 6.853 ; Fall       ; n64_clock       ;
+;  vga_blue[2]  ; n64_clock  ; 6.842 ; 6.842 ; Fall       ; n64_clock       ;
+;  vga_blue[3]  ; n64_clock  ; 6.844 ; 6.844 ; Fall       ; n64_clock       ;
+;  vga_blue[4]  ; n64_clock  ; 6.914 ; 6.914 ; Fall       ; n64_clock       ;
+;  vga_blue[5]  ; n64_clock  ; 6.952 ; 6.952 ; Fall       ; n64_clock       ;
+;  vga_blue[6]  ; n64_clock  ; 7.186 ; 7.186 ; Fall       ; n64_clock       ;
+; vga_green[*]  ; n64_clock  ; 6.871 ; 6.871 ; Fall       ; n64_clock       ;
+;  vga_green[0] ; n64_clock  ; 6.667 ; 6.667 ; Fall       ; n64_clock       ;
+;  vga_green[1] ; n64_clock  ; 6.431 ; 6.431 ; Fall       ; n64_clock       ;
+;  vga_green[2] ; n64_clock  ; 6.424 ; 6.424 ; Fall       ; n64_clock       ;
+;  vga_green[3] ; n64_clock  ; 6.644 ; 6.644 ; Fall       ; n64_clock       ;
+;  vga_green[4] ; n64_clock  ; 6.456 ; 6.456 ; Fall       ; n64_clock       ;
+;  vga_green[5] ; n64_clock  ; 6.871 ; 6.871 ; Fall       ; n64_clock       ;
+;  vga_green[6] ; n64_clock  ; 6.619 ; 6.619 ; Fall       ; n64_clock       ;
+; vga_hsync     ; n64_clock  ; 6.958 ; 6.958 ; Fall       ; n64_clock       ;
+; vga_red[*]    ; n64_clock  ; 7.169 ; 7.169 ; Fall       ; n64_clock       ;
+;  vga_red[0]   ; n64_clock  ; 7.169 ; 7.169 ; Fall       ; n64_clock       ;
+;  vga_red[1]   ; n64_clock  ; 6.642 ; 6.642 ; Fall       ; n64_clock       ;
+;  vga_red[2]   ; n64_clock  ; 6.951 ; 6.951 ; Fall       ; n64_clock       ;
+;  vga_red[3]   ; n64_clock  ; 6.907 ; 6.907 ; Fall       ; n64_clock       ;
+;  vga_red[4]   ; n64_clock  ; 6.653 ; 6.653 ; Fall       ; n64_clock       ;
+;  vga_red[5]   ; n64_clock  ; 6.674 ; 6.674 ; Fall       ; n64_clock       ;
+;  vga_red[6]   ; n64_clock  ; 6.644 ; 6.644 ; Fall       ; n64_clock       ;
+; vga_vsync     ; n64_clock  ; 6.897 ; 6.897 ; Fall       ; n64_clock       ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
@@ -551,36 +551,36 @@ No paths to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; led[*]        ; n64_clock  ; 6.412 ; 6.412 ; Fall       ; n64_clock       ;
-;  led[0]       ; n64_clock  ; 6.957 ; 6.957 ; Fall       ; n64_clock       ;
-;  led[2]       ; n64_clock  ; 6.786 ; 6.786 ; Fall       ; n64_clock       ;
-;  led[3]       ; n64_clock  ; 6.412 ; 6.412 ; Fall       ; n64_clock       ;
-; vga_blue[*]   ; n64_clock  ; 6.409 ; 6.409 ; Fall       ; n64_clock       ;
-;  vga_blue[0]  ; n64_clock  ; 6.705 ; 6.705 ; Fall       ; n64_clock       ;
-;  vga_blue[1]  ; n64_clock  ; 6.500 ; 6.500 ; Fall       ; n64_clock       ;
-;  vga_blue[2]  ; n64_clock  ; 6.409 ; 6.409 ; Fall       ; n64_clock       ;
-;  vga_blue[3]  ; n64_clock  ; 6.419 ; 6.419 ; Fall       ; n64_clock       ;
-;  vga_blue[4]  ; n64_clock  ; 6.646 ; 6.646 ; Fall       ; n64_clock       ;
-;  vga_blue[5]  ; n64_clock  ; 6.646 ; 6.646 ; Fall       ; n64_clock       ;
-;  vga_blue[6]  ; n64_clock  ; 6.513 ; 6.513 ; Fall       ; n64_clock       ;
-; vga_green[*]  ; n64_clock  ; 6.425 ; 6.425 ; Fall       ; n64_clock       ;
-;  vga_green[0] ; n64_clock  ; 6.674 ; 6.674 ; Fall       ; n64_clock       ;
-;  vga_green[1] ; n64_clock  ; 6.664 ; 6.664 ; Fall       ; n64_clock       ;
-;  vga_green[2] ; n64_clock  ; 6.439 ; 6.439 ; Fall       ; n64_clock       ;
-;  vga_green[3] ; n64_clock  ; 6.711 ; 6.711 ; Fall       ; n64_clock       ;
-;  vga_green[4] ; n64_clock  ; 6.716 ; 6.716 ; Fall       ; n64_clock       ;
-;  vga_green[5] ; n64_clock  ; 6.857 ; 6.857 ; Fall       ; n64_clock       ;
-;  vga_green[6] ; n64_clock  ; 6.425 ; 6.425 ; Fall       ; n64_clock       ;
-; vga_hsync     ; n64_clock  ; 7.684 ; 7.684 ; Fall       ; n64_clock       ;
-; vga_red[*]    ; n64_clock  ; 6.429 ; 6.429 ; Fall       ; n64_clock       ;
-;  vga_red[0]   ; n64_clock  ; 6.429 ; 6.429 ; Fall       ; n64_clock       ;
-;  vga_red[1]   ; n64_clock  ; 6.906 ; 6.906 ; Fall       ; n64_clock       ;
-;  vga_red[2]   ; n64_clock  ; 6.699 ; 6.699 ; Fall       ; n64_clock       ;
-;  vga_red[3]   ; n64_clock  ; 6.664 ; 6.664 ; Fall       ; n64_clock       ;
-;  vga_red[4]   ; n64_clock  ; 6.660 ; 6.660 ; Fall       ; n64_clock       ;
-;  vga_red[5]   ; n64_clock  ; 6.939 ; 6.939 ; Fall       ; n64_clock       ;
-;  vga_red[6]   ; n64_clock  ; 6.439 ; 6.439 ; Fall       ; n64_clock       ;
-; vga_vsync     ; n64_clock  ; 7.270 ; 7.270 ; Fall       ; n64_clock       ;
+; led[*]        ; n64_clock  ; 8.780 ; 8.780 ; Fall       ; n64_clock       ;
+;  led[0]       ; n64_clock  ; 9.478 ; 9.478 ; Fall       ; n64_clock       ;
+;  led[2]       ; n64_clock  ; 8.780 ; 8.780 ; Fall       ; n64_clock       ;
+;  led[3]       ; n64_clock  ; 9.448 ; 9.448 ; Fall       ; n64_clock       ;
+; vga_blue[*]   ; n64_clock  ; 6.666 ; 6.666 ; Fall       ; n64_clock       ;
+;  vga_blue[0]  ; n64_clock  ; 6.666 ; 6.666 ; Fall       ; n64_clock       ;
+;  vga_blue[1]  ; n64_clock  ; 6.853 ; 6.853 ; Fall       ; n64_clock       ;
+;  vga_blue[2]  ; n64_clock  ; 6.842 ; 6.842 ; Fall       ; n64_clock       ;
+;  vga_blue[3]  ; n64_clock  ; 6.844 ; 6.844 ; Fall       ; n64_clock       ;
+;  vga_blue[4]  ; n64_clock  ; 6.914 ; 6.914 ; Fall       ; n64_clock       ;
+;  vga_blue[5]  ; n64_clock  ; 6.952 ; 6.952 ; Fall       ; n64_clock       ;
+;  vga_blue[6]  ; n64_clock  ; 7.186 ; 7.186 ; Fall       ; n64_clock       ;
+; vga_green[*]  ; n64_clock  ; 6.424 ; 6.424 ; Fall       ; n64_clock       ;
+;  vga_green[0] ; n64_clock  ; 6.667 ; 6.667 ; Fall       ; n64_clock       ;
+;  vga_green[1] ; n64_clock  ; 6.431 ; 6.431 ; Fall       ; n64_clock       ;
+;  vga_green[2] ; n64_clock  ; 6.424 ; 6.424 ; Fall       ; n64_clock       ;
+;  vga_green[3] ; n64_clock  ; 6.644 ; 6.644 ; Fall       ; n64_clock       ;
+;  vga_green[4] ; n64_clock  ; 6.456 ; 6.456 ; Fall       ; n64_clock       ;
+;  vga_green[5] ; n64_clock  ; 6.871 ; 6.871 ; Fall       ; n64_clock       ;
+;  vga_green[6] ; n64_clock  ; 6.619 ; 6.619 ; Fall       ; n64_clock       ;
+; vga_hsync     ; n64_clock  ; 6.958 ; 6.958 ; Fall       ; n64_clock       ;
+; vga_red[*]    ; n64_clock  ; 6.642 ; 6.642 ; Fall       ; n64_clock       ;
+;  vga_red[0]   ; n64_clock  ; 7.169 ; 7.169 ; Fall       ; n64_clock       ;
+;  vga_red[1]   ; n64_clock  ; 6.642 ; 6.642 ; Fall       ; n64_clock       ;
+;  vga_red[2]   ; n64_clock  ; 6.951 ; 6.951 ; Fall       ; n64_clock       ;
+;  vga_red[3]   ; n64_clock  ; 6.907 ; 6.907 ; Fall       ; n64_clock       ;
+;  vga_red[4]   ; n64_clock  ; 6.653 ; 6.653 ; Fall       ; n64_clock       ;
+;  vga_red[5]   ; n64_clock  ; 6.674 ; 6.674 ; Fall       ; n64_clock       ;
+;  vga_red[6]   ; n64_clock  ; 6.644 ; 6.644 ; Fall       ; n64_clock       ;
+; vga_vsync     ; n64_clock  ; 6.897 ; 6.897 ; Fall       ; n64_clock       ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
@@ -589,7 +589,7 @@ No paths to report.
 +-----------+--------+---------------+
 ; Clock     ; Slack  ; End Point TNS ;
 +-----------+--------+---------------+
-; n64_clock ; -1.460 ; -297.085      ;
+; n64_clock ; -1.460 ; -278.423      ;
 +-----------+--------+---------------+
 
 
@@ -742,67 +742,70 @@ No paths to report.
 ; 0.215 ; enable_delay                                                                                               ; enable_delay                                                                                                                                   ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.367      ;
 ; 0.215 ; buffer_en_a                                                                                                ; buffer_en_a                                                                                                                                    ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.367      ;
 ; 0.215 ; buffer_en_b                                                                                                ; buffer_en_b                                                                                                                                    ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.367      ;
-; 0.237 ; n64_pixel:rgb_decoder|red_final[0]                                                                         ; n64_pixel:rgb_decoder|red_out[0]                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.389      ;
-; 0.238 ; n64_pixel:rgb_decoder|green_final[4]                                                                       ; n64_pixel:rgb_decoder|green_out[4]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.390      ;
-; 0.238 ; n64_pixel:rgb_decoder|blue_cap[0]                                                                          ; n64_pixel:rgb_decoder|blue_final[0]                                                                                                            ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.390      ;
-; 0.238 ; n64_pixel:rgb_decoder|blue_cap[2]                                                                          ; n64_pixel:rgb_decoder|blue_final[2]                                                                                                            ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.390      ;
-; 0.238 ; out_green[5]                                                                                               ; vga_green[5]~reg0                                                                                                                              ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.390      ;
-; 0.239 ; n64_pixel:rgb_decoder|red_final[3]                                                                         ; n64_pixel:rgb_decoder|red_out[3]                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.391      ;
-; 0.239 ; n64_pixel:rgb_decoder|green_final[3]                                                                       ; n64_pixel:rgb_decoder|green_out[3]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.391      ;
-; 0.239 ; n64_pixel:rgb_decoder|blue_cap[1]                                                                          ; n64_pixel:rgb_decoder|blue_final[1]                                                                                                            ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.391      ;
-; 0.239 ; n64_pixel:rgb_decoder|green_final[6]                                                                       ; n64_pixel:rgb_decoder|green_out[6]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.391      ;
-; 0.239 ; n64_pixel:rgb_decoder|green_final[5]                                                                       ; n64_pixel:rgb_decoder|green_out[5]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.391      ;
+; 0.235 ; out_red[0]                                                                                                 ; vga_red[0]~reg0                                                                                                                                ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.387      ;
+; 0.235 ; out_red[6]                                                                                                 ; vga_red[6]~reg0                                                                                                                                ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.387      ;
+; 0.237 ; n64_pixel:rgb_decoder|green_final[3]                                                                       ; n64_pixel:rgb_decoder|green_out[3]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.389      ;
+; 0.237 ; n64_pixel:rgb_decoder|green_final[2]                                                                       ; n64_pixel:rgb_decoder|green_out[2]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.389      ;
+; 0.237 ; n64_pixel:rgb_decoder|blue_cap[4]                                                                          ; n64_pixel:rgb_decoder|blue_final[4]                                                                                                            ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.389      ;
+; 0.237 ; out_blue[5]                                                                                                ; vga_blue[5]~reg0                                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.389      ;
+; 0.237 ; out_blue[6]                                                                                                ; vga_blue[6]~reg0                                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.389      ;
+; 0.238 ; n64_pixel:rgb_decoder|red_final[1]                                                                         ; n64_pixel:rgb_decoder|red_out[1]                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.390      ;
 ; 0.239 ; n64_pixel:rgb_decoder|blue_cap[5]                                                                          ; n64_pixel:rgb_decoder|blue_final[5]                                                                                                            ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.391      ;
-; 0.239 ; n64_pixel:rgb_decoder|blue_cap[4]                                                                          ; n64_pixel:rgb_decoder|blue_final[4]                                                                                                            ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.391      ;
-; 0.239 ; n64_pixel:rgb_decoder|blue_cap[6]                                                                          ; n64_pixel:rgb_decoder|blue_final[6]                                                                                                            ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.391      ;
-; 0.239 ; out_green[0]                                                                                               ; vga_green[0]~reg0                                                                                                                              ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.391      ;
-; 0.240 ; n64_pixel:rgb_decoder|blue_cap[3]                                                                          ; n64_pixel:rgb_decoder|blue_final[3]                                                                                                            ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.392      ;
-; 0.242 ; out_green[4]                                                                                               ; vga_green[4]~reg0                                                                                                                              ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.394      ;
+; 0.239 ; n64_pixel:rgb_decoder|blue_cap[3]                                                                          ; n64_pixel:rgb_decoder|blue_final[3]                                                                                                            ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.391      ;
+; 0.239 ; n64_pixel:rgb_decoder|blue_cap[2]                                                                          ; n64_pixel:rgb_decoder|blue_final[2]                                                                                                            ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.391      ;
+; 0.239 ; out_green[2]                                                                                               ; vga_green[2]~reg0                                                                                                                              ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.391      ;
+; 0.239 ; out_green[4]                                                                                               ; vga_green[4]~reg0                                                                                                                              ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.391      ;
+; 0.239 ; out_blue[1]                                                                                                ; vga_blue[1]~reg0                                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.391      ;
+; 0.240 ; n64_pixel:rgb_decoder|red_final[2]                                                                         ; n64_pixel:rgb_decoder|red_out[2]                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.392      ;
 ; 0.243 ; vga_px_count[15]                                                                                           ; vga_px_count[15]                                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.395      ;
 ; 0.243 ; hsync_time[15]                                                                                             ; hsync_time[15]                                                                                                                                 ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.395      ;
 ; 0.243 ; line_count[15]                                                                                             ; line_count[15]                                                                                                                                 ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.395      ;
 ; 0.243 ; vsync_time[15]                                                                                             ; vsync_time[15]                                                                                                                                 ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.395      ;
 ; 0.243 ; n64_px_count[15]                                                                                           ; n64_px_count[15]                                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.395      ;
-; 0.283 ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[0] ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a4~portb_address_reg0  ; n64_clock    ; n64_clock   ; 0.000        ; 0.070      ; 0.491      ;
-; 0.287 ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[0] ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a4~porta_address_reg0  ; n64_clock    ; n64_clock   ; 0.000        ; 0.066      ; 0.491      ;
-; 0.290 ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[2] ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a4~porta_address_reg2  ; n64_clock    ; n64_clock   ; 0.000        ; 0.066      ; 0.494      ;
-; 0.291 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[9] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~portb_address_reg9 ; n64_clock    ; n64_clock   ; 0.000        ; 0.065      ; 0.494      ;
-; 0.292 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[5] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~portb_address_reg5 ; n64_clock    ; n64_clock   ; 0.000        ; 0.065      ; 0.495      ;
-; 0.295 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[9] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~porta_address_reg9 ; n64_clock    ; n64_clock   ; 0.000        ; 0.061      ; 0.494      ;
-; 0.296 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[5] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~porta_address_reg5 ; n64_clock    ; n64_clock   ; 0.000        ; 0.061      ; 0.495      ;
-; 0.301 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[3] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~portb_address_reg3 ; n64_clock    ; n64_clock   ; 0.000        ; 0.065      ; 0.504      ;
-; 0.303 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[4] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~portb_address_reg4 ; n64_clock    ; n64_clock   ; 0.000        ; 0.065      ; 0.506      ;
-; 0.305 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[3] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~porta_address_reg3 ; n64_clock    ; n64_clock   ; 0.000        ; 0.061      ; 0.504      ;
-; 0.305 ; n64_pixel:rgb_decoder|green_final[2]                                                                       ; n64_pixel:rgb_decoder|green_out[2]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; 0.001      ; 0.458      ;
-; 0.307 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[4] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~porta_address_reg4 ; n64_clock    ; n64_clock   ; 0.000        ; 0.061      ; 0.506      ;
-; 0.308 ; n64_pixel:rgb_decoder|red_cap[1]                                                                           ; n64_pixel:rgb_decoder|red_final[1]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; 0.001      ; 0.461      ;
-; 0.309 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[7] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~portb_address_reg7 ; n64_clock    ; n64_clock   ; 0.000        ; 0.065      ; 0.512      ;
-; 0.310 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[8] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~portb_address_reg8 ; n64_clock    ; n64_clock   ; 0.000        ; 0.065      ; 0.513      ;
-; 0.312 ; n64_pixel:rgb_decoder|blue_final[1]                                                                        ; n64_pixel:rgb_decoder|blue_out[1]                                                                                                              ; n64_clock    ; n64_clock   ; 0.000        ; -0.001     ; 0.463      ;
-; 0.312 ; out_red[5]                                                                                                 ; vga_red[5]~reg0                                                                                                                                ; n64_clock    ; n64_clock   ; 0.000        ; -0.002     ; 0.462      ;
-; 0.312 ; out_blue[0]                                                                                                ; vga_blue[0]~reg0                                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; -0.002     ; 0.462      ;
-; 0.313 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[7] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~porta_address_reg7 ; n64_clock    ; n64_clock   ; 0.000        ; 0.061      ; 0.512      ;
-; 0.314 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[6] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~portb_address_reg6 ; n64_clock    ; n64_clock   ; 0.000        ; 0.065      ; 0.517      ;
-; 0.314 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[8] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~porta_address_reg8 ; n64_clock    ; n64_clock   ; 0.000        ; 0.061      ; 0.513      ;
-; 0.314 ; n64_pixel:rgb_decoder|red_cap[6]                                                                           ; n64_pixel:rgb_decoder|red_final[6]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; 0.001      ; 0.467      ;
-; 0.315 ; out_green[6]                                                                                               ; vga_green[6]~reg0                                                                                                                              ; n64_clock    ; n64_clock   ; 0.000        ; 0.002      ; 0.469      ;
-; 0.316 ; out_blue[4]                                                                                                ; vga_blue[4]~reg0                                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; 0.004      ; 0.472      ;
-; 0.318 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[6] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~porta_address_reg6 ; n64_clock    ; n64_clock   ; 0.000        ; 0.061      ; 0.517      ;
-; 0.319 ; n64_pixel:rgb_decoder|red_cap[4]                                                                           ; n64_pixel:rgb_decoder|red_final[4]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; 0.001      ; 0.472      ;
-; 0.319 ; out_blue[1]                                                                                                ; vga_blue[1]~reg0                                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; -0.002     ; 0.469      ;
-; 0.319 ; out_blue[5]                                                                                                ; vga_blue[5]~reg0                                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; -0.001     ; 0.470      ;
-; 0.320 ; n64_pixel:rgb_decoder|red_cap[0]                                                                           ; n64_pixel:rgb_decoder|red_final[0]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; 0.001      ; 0.473      ;
-; 0.320 ; n64_pixel:rgb_decoder|red_cap[5]                                                                           ; n64_pixel:rgb_decoder|red_final[5]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; 0.001      ; 0.473      ;
-; 0.320 ; n64_pixel:rgb_decoder|blue_final[0]                                                                        ; n64_pixel:rgb_decoder|blue_out[0]                                                                                                              ; n64_clock    ; n64_clock   ; 0.000        ; -0.001     ; 0.471      ;
-; 0.324 ; n64_pixel:rgb_decoder|green_cap[0]                                                                         ; n64_pixel:rgb_decoder|green_final[0]                                                                                                           ; n64_clock    ; n64_clock   ; 0.000        ; 0.001      ; 0.477      ;
-; 0.324 ; n64_pixel:rgb_decoder|green_final[1]                                                                       ; n64_pixel:rgb_decoder|green_out[1]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.476      ;
-; 0.325 ; n64_pixel:rgb_decoder|red_cap[3]                                                                           ; n64_pixel:rgb_decoder|red_final[3]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; 0.001      ; 0.478      ;
-; 0.326 ; n64_pixel:rgb_decoder|red_cap[2]                                                                           ; n64_pixel:rgb_decoder|red_final[2]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; -0.002     ; 0.476      ;
-; 0.355 ; vga_px_count[0]                                                                                            ; vga_px_count[0]                                                                                                                                ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.507      ;
+; 0.243 ; out_blue[3]                                                                                                ; vga_blue[3]~reg0                                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.395      ;
+; 0.249 ; n64_pixel:rgb_decoder|cycle_count[1]                                                                       ; n64_pixel:rgb_decoder|clock_count[1]                                                                                                           ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.401      ;
+; 0.282 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[2] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~portb_address_reg2 ; n64_clock    ; n64_clock   ; 0.000        ; 0.070      ; 0.490      ;
+; 0.282 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[0] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~portb_address_reg0 ; n64_clock    ; n64_clock   ; 0.000        ; 0.070      ; 0.490      ;
+; 0.286 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[2] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~porta_address_reg2 ; n64_clock    ; n64_clock   ; 0.000        ; 0.066      ; 0.490      ;
+; 0.286 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[0] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~porta_address_reg0 ; n64_clock    ; n64_clock   ; 0.000        ; 0.066      ; 0.490      ;
+; 0.290 ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[9] ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~portb_address_reg9 ; n64_clock    ; n64_clock   ; 0.000        ; 0.065      ; 0.493      ;
+; 0.291 ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[3] ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~portb_address_reg3 ; n64_clock    ; n64_clock   ; 0.000        ; 0.065      ; 0.494      ;
+; 0.293 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[1] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~portb_address_reg1 ; n64_clock    ; n64_clock   ; 0.000        ; 0.070      ; 0.501      ;
+; 0.294 ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[9] ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~porta_address_reg9 ; n64_clock    ; n64_clock   ; 0.000        ; 0.061      ; 0.493      ;
+; 0.294 ; n64_pixel:rgb_decoder|green_out[5]                                                                         ; buffer_in_b[12]                                                                                                                                ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.446      ;
+; 0.295 ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[3] ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~porta_address_reg3 ; n64_clock    ; n64_clock   ; 0.000        ; 0.061      ; 0.494      ;
+; 0.297 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[1] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~porta_address_reg1 ; n64_clock    ; n64_clock   ; 0.000        ; 0.066      ; 0.501      ;
+; 0.303 ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[5] ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~portb_address_reg5 ; n64_clock    ; n64_clock   ; 0.000        ; 0.065      ; 0.506      ;
+; 0.304 ; out_blue[4]                                                                                                ; vga_blue[4]~reg0                                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; 0.002      ; 0.458      ;
+; 0.305 ; out_green[1]                                                                                               ; vga_green[1]~reg0                                                                                                                              ; n64_clock    ; n64_clock   ; 0.000        ; 0.002      ; 0.459      ;
+; 0.307 ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[5] ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~porta_address_reg5 ; n64_clock    ; n64_clock   ; 0.000        ; 0.061      ; 0.506      ;
+; 0.310 ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[8] ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~portb_address_reg8 ; n64_clock    ; n64_clock   ; 0.000        ; 0.065      ; 0.513      ;
+; 0.310 ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[7] ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~portb_address_reg7 ; n64_clock    ; n64_clock   ; 0.000        ; 0.065      ; 0.513      ;
+; 0.310 ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[6] ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~portb_address_reg6 ; n64_clock    ; n64_clock   ; 0.000        ; 0.065      ; 0.513      ;
+; 0.312 ; out_red[3]                                                                                                 ; vga_red[3]~reg0                                                                                                                                ; n64_clock    ; n64_clock   ; 0.000        ; -0.002     ; 0.462      ;
+; 0.314 ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[8] ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~porta_address_reg8 ; n64_clock    ; n64_clock   ; 0.000        ; 0.061      ; 0.513      ;
+; 0.314 ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[7] ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~porta_address_reg7 ; n64_clock    ; n64_clock   ; 0.000        ; 0.061      ; 0.513      ;
+; 0.314 ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[6] ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20~porta_address_reg6 ; n64_clock    ; n64_clock   ; 0.000        ; 0.061      ; 0.513      ;
+; 0.314 ; out_green[5]                                                                                               ; vga_green[5]~reg0                                                                                                                              ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.466      ;
+; 0.315 ; n64_pixel:rgb_decoder|green_final[4]                                                                       ; n64_pixel:rgb_decoder|green_out[4]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; 0.004      ; 0.471      ;
+; 0.316 ; out_green[0]                                                                                               ; vga_green[0]~reg0                                                                                                                              ; n64_clock    ; n64_clock   ; 0.000        ; 0.002      ; 0.470      ;
+; 0.317 ; out_blue[2]                                                                                                ; vga_blue[2]~reg0                                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; 0.001      ; 0.470      ;
+; 0.318 ; n64_pixel:rgb_decoder|green_final[6]                                                                       ; n64_pixel:rgb_decoder|green_out[6]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; -0.001     ; 0.469      ;
+; 0.318 ; out_green[6]                                                                                               ; vga_green[6]~reg0                                                                                                                              ; n64_clock    ; n64_clock   ; 0.000        ; 0.002      ; 0.472      ;
+; 0.319 ; n64_pixel:rgb_decoder|blue_cap[0]                                                                          ; n64_pixel:rgb_decoder|blue_final[0]                                                                                                            ; n64_clock    ; n64_clock   ; 0.000        ; -0.001     ; 0.470      ;
+; 0.319 ; out_red[4]                                                                                                 ; vga_red[4]~reg0                                                                                                                                ; n64_clock    ; n64_clock   ; 0.000        ; -0.002     ; 0.469      ;
+; 0.321 ; out_red[2]                                                                                                 ; vga_red[2]~reg0                                                                                                                                ; n64_clock    ; n64_clock   ; 0.000        ; -0.002     ; 0.471      ;
+; 0.323 ; out_green[3]                                                                                               ; vga_green[3]~reg0                                                                                                                              ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.475      ;
+; 0.325 ; out_red[5]                                                                                                 ; vga_red[5]~reg0                                                                                                                                ; n64_clock    ; n64_clock   ; 0.000        ; -0.002     ; 0.475      ;
+; 0.327 ; n64_pixel:rgb_decoder|blue_final[1]                                                                        ; n64_pixel:rgb_decoder|blue_out[1]                                                                                                              ; n64_clock    ; n64_clock   ; 0.000        ; -0.001     ; 0.478      ;
+; 0.327 ; n64_pixel:rgb_decoder|blue_cap[6]                                                                          ; n64_pixel:rgb_decoder|blue_final[6]                                                                                                            ; n64_clock    ; n64_clock   ; 0.000        ; -0.001     ; 0.478      ;
+; 0.328 ; n64_pixel:rgb_decoder|green_final[5]                                                                       ; n64_pixel:rgb_decoder|green_out[5]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; -0.001     ; 0.479      ;
+; 0.328 ; out_blue[0]                                                                                                ; vga_blue[0]~reg0                                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.480      ;
+; 0.336 ; n64_pixel:rgb_decoder|cycle_count[0]                                                                       ; n64_pixel:rgb_decoder|clock_count[0]                                                                                                           ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.488      ;
 ; 0.355 ; line_count[0]                                                                                              ; line_count[0]                                                                                                                                  ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.507      ;
-; 0.358 ; n64_px_count[4]                                                                                            ; n64_px_count[4]                                                                                                                                ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.510      ;
-; 0.358 ; n64_px_count[7]                                                                                            ; n64_px_count[7]                                                                                                                                ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.510      ;
-; 0.358 ; n64_pixel:rgb_decoder|green_out[0]                                                                         ; buffer_in_a[7]                                                                                                                                 ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.510      ;
+; 0.356 ; n64_pixel:rgb_decoder|red_out[6]                                                                           ; buffer_in_b[20]                                                                                                                                ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.508      ;
+; 0.357 ; n64_pixel:rgb_decoder|blue_out[5]                                                                          ; buffer_in_b[5]                                                                                                                                 ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.509      ;
+; 0.358 ; n64_pixel:rgb_decoder|green_out[4]                                                                         ; buffer_in_b[11]                                                                                                                                ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.510      ;
 ; 0.359 ; vga_px_count[1]                                                                                            ; vga_px_count[1]                                                                                                                                ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.511      ;
 ; 0.359 ; hsync_time[1]                                                                                              ; hsync_time[1]                                                                                                                                  ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.511      ;
 ; 0.359 ; line_count[1]                                                                                              ; line_count[1]                                                                                                                                  ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.511      ;
@@ -833,9 +836,6 @@ No paths to report.
 ; 0.361 ; line_count[4]                                                                                              ; line_count[4]                                                                                                                                  ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.513      ;
 ; 0.361 ; line_count[7]                                                                                              ; line_count[7]                                                                                                                                  ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.513      ;
 ; 0.361 ; line_count[13]                                                                                             ; line_count[13]                                                                                                                                 ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.513      ;
-; 0.361 ; line_count[14]                                                                                             ; line_count[14]                                                                                                                                 ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.513      ;
-; 0.361 ; vsync_time[4]                                                                                              ; vsync_time[4]                                                                                                                                  ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.513      ;
-; 0.361 ; vsync_time[7]                                                                                              ; vsync_time[7]                                                                                                                                  ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.513      ;
 +-------+------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -952,15 +952,15 @@ No paths to report.
 +--------------+------------+-------+-------+------------+-----------------+
 ; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +--------------+------------+-------+-------+------------+-----------------+
-; n64_data[*]  ; n64_clock  ; 1.927 ; 1.927 ; Fall       ; n64_clock       ;
-;  n64_data[0] ; n64_clock  ; 1.839 ; 1.839 ; Fall       ; n64_clock       ;
-;  n64_data[1] ; n64_clock  ; 1.927 ; 1.927 ; Fall       ; n64_clock       ;
-;  n64_data[2] ; n64_clock  ; 1.837 ; 1.837 ; Fall       ; n64_clock       ;
-;  n64_data[3] ; n64_clock  ; 1.821 ; 1.821 ; Fall       ; n64_clock       ;
-;  n64_data[4] ; n64_clock  ; 1.851 ; 1.851 ; Fall       ; n64_clock       ;
-;  n64_data[5] ; n64_clock  ; 1.751 ; 1.751 ; Fall       ; n64_clock       ;
-;  n64_data[6] ; n64_clock  ; 1.781 ; 1.781 ; Fall       ; n64_clock       ;
-; n64_dsync_n  ; n64_clock  ; 1.717 ; 1.717 ; Fall       ; n64_clock       ;
+; n64_data[*]  ; n64_clock  ; 2.411 ; 2.411 ; Fall       ; n64_clock       ;
+;  n64_data[0] ; n64_clock  ; 2.307 ; 2.307 ; Fall       ; n64_clock       ;
+;  n64_data[1] ; n64_clock  ; 2.186 ; 2.186 ; Fall       ; n64_clock       ;
+;  n64_data[2] ; n64_clock  ; 2.411 ; 2.411 ; Fall       ; n64_clock       ;
+;  n64_data[3] ; n64_clock  ; 2.362 ; 2.362 ; Fall       ; n64_clock       ;
+;  n64_data[4] ; n64_clock  ; 2.317 ; 2.317 ; Fall       ; n64_clock       ;
+;  n64_data[5] ; n64_clock  ; 2.277 ; 2.277 ; Fall       ; n64_clock       ;
+;  n64_data[6] ; n64_clock  ; 2.172 ; 2.172 ; Fall       ; n64_clock       ;
+; n64_dsync_n  ; n64_clock  ; 2.205 ; 2.205 ; Fall       ; n64_clock       ;
 +--------------+------------+-------+-------+------------+-----------------+
 
 
@@ -969,15 +969,15 @@ No paths to report.
 +--------------+------------+--------+--------+------------+-----------------+
 ; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +--------------+------------+--------+--------+------------+-----------------+
-; n64_data[*]  ; n64_clock  ; -1.589 ; -1.589 ; Fall       ; n64_clock       ;
-;  n64_data[0] ; n64_clock  ; -1.639 ; -1.639 ; Fall       ; n64_clock       ;
-;  n64_data[1] ; n64_clock  ; -1.698 ; -1.698 ; Fall       ; n64_clock       ;
-;  n64_data[2] ; n64_clock  ; -1.716 ; -1.716 ; Fall       ; n64_clock       ;
-;  n64_data[3] ; n64_clock  ; -1.623 ; -1.623 ; Fall       ; n64_clock       ;
-;  n64_data[4] ; n64_clock  ; -1.730 ; -1.730 ; Fall       ; n64_clock       ;
-;  n64_data[5] ; n64_clock  ; -1.629 ; -1.629 ; Fall       ; n64_clock       ;
-;  n64_data[6] ; n64_clock  ; -1.589 ; -1.589 ; Fall       ; n64_clock       ;
-; n64_dsync_n  ; n64_clock  ; -1.595 ; -1.595 ; Fall       ; n64_clock       ;
+; n64_data[*]  ; n64_clock  ; -2.033 ; -2.033 ; Fall       ; n64_clock       ;
+;  n64_data[0] ; n64_clock  ; -2.168 ; -2.168 ; Fall       ; n64_clock       ;
+;  n64_data[1] ; n64_clock  ; -2.065 ; -2.065 ; Fall       ; n64_clock       ;
+;  n64_data[2] ; n64_clock  ; -2.166 ; -2.166 ; Fall       ; n64_clock       ;
+;  n64_data[3] ; n64_clock  ; -2.195 ; -2.195 ; Fall       ; n64_clock       ;
+;  n64_data[4] ; n64_clock  ; -2.182 ; -2.182 ; Fall       ; n64_clock       ;
+;  n64_data[5] ; n64_clock  ; -2.091 ; -2.091 ; Fall       ; n64_clock       ;
+;  n64_data[6] ; n64_clock  ; -2.033 ; -2.033 ; Fall       ; n64_clock       ;
+; n64_dsync_n  ; n64_clock  ; -2.084 ; -2.084 ; Fall       ; n64_clock       ;
 +--------------+------------+--------+--------+------------+-----------------+
 
 
@@ -986,36 +986,36 @@ No paths to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; led[*]        ; n64_clock  ; 3.929 ; 3.929 ; Fall       ; n64_clock       ;
-;  led[0]       ; n64_clock  ; 3.929 ; 3.929 ; Fall       ; n64_clock       ;
-;  led[2]       ; n64_clock  ; 3.864 ; 3.864 ; Fall       ; n64_clock       ;
-;  led[3]       ; n64_clock  ; 3.665 ; 3.665 ; Fall       ; n64_clock       ;
-; vga_blue[*]   ; n64_clock  ; 3.823 ; 3.823 ; Fall       ; n64_clock       ;
-;  vga_blue[0]  ; n64_clock  ; 3.823 ; 3.823 ; Fall       ; n64_clock       ;
-;  vga_blue[1]  ; n64_clock  ; 3.711 ; 3.711 ; Fall       ; n64_clock       ;
-;  vga_blue[2]  ; n64_clock  ; 3.662 ; 3.662 ; Fall       ; n64_clock       ;
-;  vga_blue[3]  ; n64_clock  ; 3.671 ; 3.671 ; Fall       ; n64_clock       ;
-;  vga_blue[4]  ; n64_clock  ; 3.777 ; 3.777 ; Fall       ; n64_clock       ;
-;  vga_blue[5]  ; n64_clock  ; 3.779 ; 3.779 ; Fall       ; n64_clock       ;
-;  vga_blue[6]  ; n64_clock  ; 3.716 ; 3.716 ; Fall       ; n64_clock       ;
-; vga_green[*]  ; n64_clock  ; 3.863 ; 3.863 ; Fall       ; n64_clock       ;
+; led[*]        ; n64_clock  ; 5.254 ; 5.254 ; Fall       ; n64_clock       ;
+;  led[0]       ; n64_clock  ; 5.195 ; 5.195 ; Fall       ; n64_clock       ;
+;  led[2]       ; n64_clock  ; 4.889 ; 4.889 ; Fall       ; n64_clock       ;
+;  led[3]       ; n64_clock  ; 5.254 ; 5.254 ; Fall       ; n64_clock       ;
+; vga_blue[*]   ; n64_clock  ; 4.033 ; 4.033 ; Fall       ; n64_clock       ;
+;  vga_blue[0]  ; n64_clock  ; 3.790 ; 3.790 ; Fall       ; n64_clock       ;
+;  vga_blue[1]  ; n64_clock  ; 3.864 ; 3.864 ; Fall       ; n64_clock       ;
+;  vga_blue[2]  ; n64_clock  ; 3.860 ; 3.860 ; Fall       ; n64_clock       ;
+;  vga_blue[3]  ; n64_clock  ; 3.854 ; 3.854 ; Fall       ; n64_clock       ;
+;  vga_blue[4]  ; n64_clock  ; 3.930 ; 3.930 ; Fall       ; n64_clock       ;
+;  vga_blue[5]  ; n64_clock  ; 3.947 ; 3.947 ; Fall       ; n64_clock       ;
+;  vga_blue[6]  ; n64_clock  ; 4.033 ; 4.033 ; Fall       ; n64_clock       ;
+; vga_green[*]  ; n64_clock  ; 3.877 ; 3.877 ; Fall       ; n64_clock       ;
 ;  vga_green[0] ; n64_clock  ; 3.793 ; 3.793 ; Fall       ; n64_clock       ;
-;  vga_green[1] ; n64_clock  ; 3.794 ; 3.794 ; Fall       ; n64_clock       ;
-;  vga_green[2] ; n64_clock  ; 3.684 ; 3.684 ; Fall       ; n64_clock       ;
-;  vga_green[3] ; n64_clock  ; 3.802 ; 3.802 ; Fall       ; n64_clock       ;
-;  vga_green[4] ; n64_clock  ; 3.812 ; 3.812 ; Fall       ; n64_clock       ;
-;  vga_green[5] ; n64_clock  ; 3.863 ; 3.863 ; Fall       ; n64_clock       ;
-;  vga_green[6] ; n64_clock  ; 3.679 ; 3.679 ; Fall       ; n64_clock       ;
-; vga_hsync     ; n64_clock  ; 4.287 ; 4.287 ; Fall       ; n64_clock       ;
-; vga_red[*]    ; n64_clock  ; 3.923 ; 3.923 ; Fall       ; n64_clock       ;
-;  vga_red[0]   ; n64_clock  ; 3.684 ; 3.684 ; Fall       ; n64_clock       ;
-;  vga_red[1]   ; n64_clock  ; 3.903 ; 3.903 ; Fall       ; n64_clock       ;
-;  vga_red[2]   ; n64_clock  ; 3.820 ; 3.820 ; Fall       ; n64_clock       ;
-;  vga_red[3]   ; n64_clock  ; 3.793 ; 3.793 ; Fall       ; n64_clock       ;
-;  vga_red[4]   ; n64_clock  ; 3.784 ; 3.784 ; Fall       ; n64_clock       ;
-;  vga_red[5]   ; n64_clock  ; 3.923 ; 3.923 ; Fall       ; n64_clock       ;
-;  vga_red[6]   ; n64_clock  ; 3.689 ; 3.689 ; Fall       ; n64_clock       ;
-; vga_vsync     ; n64_clock  ; 4.087 ; 4.087 ; Fall       ; n64_clock       ;
+;  vga_green[1] ; n64_clock  ; 3.693 ; 3.693 ; Fall       ; n64_clock       ;
+;  vga_green[2] ; n64_clock  ; 3.685 ; 3.685 ; Fall       ; n64_clock       ;
+;  vga_green[3] ; n64_clock  ; 3.779 ; 3.779 ; Fall       ; n64_clock       ;
+;  vga_green[4] ; n64_clock  ; 3.703 ; 3.703 ; Fall       ; n64_clock       ;
+;  vga_green[5] ; n64_clock  ; 3.877 ; 3.877 ; Fall       ; n64_clock       ;
+;  vga_green[6] ; n64_clock  ; 3.753 ; 3.753 ; Fall       ; n64_clock       ;
+; vga_hsync     ; n64_clock  ; 3.944 ; 3.944 ; Fall       ; n64_clock       ;
+; vga_red[*]    ; n64_clock  ; 4.025 ; 4.025 ; Fall       ; n64_clock       ;
+;  vga_red[0]   ; n64_clock  ; 4.025 ; 4.025 ; Fall       ; n64_clock       ;
+;  vga_red[1]   ; n64_clock  ; 3.774 ; 3.774 ; Fall       ; n64_clock       ;
+;  vga_red[2]   ; n64_clock  ; 3.921 ; 3.921 ; Fall       ; n64_clock       ;
+;  vga_red[3]   ; n64_clock  ; 3.897 ; 3.897 ; Fall       ; n64_clock       ;
+;  vga_red[4]   ; n64_clock  ; 3.777 ; 3.777 ; Fall       ; n64_clock       ;
+;  vga_red[5]   ; n64_clock  ; 3.794 ; 3.794 ; Fall       ; n64_clock       ;
+;  vga_red[6]   ; n64_clock  ; 3.771 ; 3.771 ; Fall       ; n64_clock       ;
+; vga_vsync     ; n64_clock  ; 3.896 ; 3.896 ; Fall       ; n64_clock       ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
@@ -1024,36 +1024,36 @@ No paths to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; led[*]        ; n64_clock  ; 3.665 ; 3.665 ; Fall       ; n64_clock       ;
-;  led[0]       ; n64_clock  ; 3.929 ; 3.929 ; Fall       ; n64_clock       ;
-;  led[2]       ; n64_clock  ; 3.864 ; 3.864 ; Fall       ; n64_clock       ;
-;  led[3]       ; n64_clock  ; 3.665 ; 3.665 ; Fall       ; n64_clock       ;
-; vga_blue[*]   ; n64_clock  ; 3.662 ; 3.662 ; Fall       ; n64_clock       ;
-;  vga_blue[0]  ; n64_clock  ; 3.823 ; 3.823 ; Fall       ; n64_clock       ;
-;  vga_blue[1]  ; n64_clock  ; 3.711 ; 3.711 ; Fall       ; n64_clock       ;
-;  vga_blue[2]  ; n64_clock  ; 3.662 ; 3.662 ; Fall       ; n64_clock       ;
-;  vga_blue[3]  ; n64_clock  ; 3.671 ; 3.671 ; Fall       ; n64_clock       ;
-;  vga_blue[4]  ; n64_clock  ; 3.777 ; 3.777 ; Fall       ; n64_clock       ;
-;  vga_blue[5]  ; n64_clock  ; 3.779 ; 3.779 ; Fall       ; n64_clock       ;
-;  vga_blue[6]  ; n64_clock  ; 3.716 ; 3.716 ; Fall       ; n64_clock       ;
-; vga_green[*]  ; n64_clock  ; 3.679 ; 3.679 ; Fall       ; n64_clock       ;
+; led[*]        ; n64_clock  ; 4.889 ; 4.889 ; Fall       ; n64_clock       ;
+;  led[0]       ; n64_clock  ; 5.195 ; 5.195 ; Fall       ; n64_clock       ;
+;  led[2]       ; n64_clock  ; 4.889 ; 4.889 ; Fall       ; n64_clock       ;
+;  led[3]       ; n64_clock  ; 5.254 ; 5.254 ; Fall       ; n64_clock       ;
+; vga_blue[*]   ; n64_clock  ; 3.790 ; 3.790 ; Fall       ; n64_clock       ;
+;  vga_blue[0]  ; n64_clock  ; 3.790 ; 3.790 ; Fall       ; n64_clock       ;
+;  vga_blue[1]  ; n64_clock  ; 3.864 ; 3.864 ; Fall       ; n64_clock       ;
+;  vga_blue[2]  ; n64_clock  ; 3.860 ; 3.860 ; Fall       ; n64_clock       ;
+;  vga_blue[3]  ; n64_clock  ; 3.854 ; 3.854 ; Fall       ; n64_clock       ;
+;  vga_blue[4]  ; n64_clock  ; 3.930 ; 3.930 ; Fall       ; n64_clock       ;
+;  vga_blue[5]  ; n64_clock  ; 3.947 ; 3.947 ; Fall       ; n64_clock       ;
+;  vga_blue[6]  ; n64_clock  ; 4.033 ; 4.033 ; Fall       ; n64_clock       ;
+; vga_green[*]  ; n64_clock  ; 3.685 ; 3.685 ; Fall       ; n64_clock       ;
 ;  vga_green[0] ; n64_clock  ; 3.793 ; 3.793 ; Fall       ; n64_clock       ;
-;  vga_green[1] ; n64_clock  ; 3.794 ; 3.794 ; Fall       ; n64_clock       ;
-;  vga_green[2] ; n64_clock  ; 3.684 ; 3.684 ; Fall       ; n64_clock       ;
-;  vga_green[3] ; n64_clock  ; 3.802 ; 3.802 ; Fall       ; n64_clock       ;
-;  vga_green[4] ; n64_clock  ; 3.812 ; 3.812 ; Fall       ; n64_clock       ;
-;  vga_green[5] ; n64_clock  ; 3.863 ; 3.863 ; Fall       ; n64_clock       ;
-;  vga_green[6] ; n64_clock  ; 3.679 ; 3.679 ; Fall       ; n64_clock       ;
-; vga_hsync     ; n64_clock  ; 4.287 ; 4.287 ; Fall       ; n64_clock       ;
-; vga_red[*]    ; n64_clock  ; 3.684 ; 3.684 ; Fall       ; n64_clock       ;
-;  vga_red[0]   ; n64_clock  ; 3.684 ; 3.684 ; Fall       ; n64_clock       ;
-;  vga_red[1]   ; n64_clock  ; 3.903 ; 3.903 ; Fall       ; n64_clock       ;
-;  vga_red[2]   ; n64_clock  ; 3.820 ; 3.820 ; Fall       ; n64_clock       ;
-;  vga_red[3]   ; n64_clock  ; 3.793 ; 3.793 ; Fall       ; n64_clock       ;
-;  vga_red[4]   ; n64_clock  ; 3.784 ; 3.784 ; Fall       ; n64_clock       ;
-;  vga_red[5]   ; n64_clock  ; 3.923 ; 3.923 ; Fall       ; n64_clock       ;
-;  vga_red[6]   ; n64_clock  ; 3.689 ; 3.689 ; Fall       ; n64_clock       ;
-; vga_vsync     ; n64_clock  ; 4.087 ; 4.087 ; Fall       ; n64_clock       ;
+;  vga_green[1] ; n64_clock  ; 3.693 ; 3.693 ; Fall       ; n64_clock       ;
+;  vga_green[2] ; n64_clock  ; 3.685 ; 3.685 ; Fall       ; n64_clock       ;
+;  vga_green[3] ; n64_clock  ; 3.779 ; 3.779 ; Fall       ; n64_clock       ;
+;  vga_green[4] ; n64_clock  ; 3.703 ; 3.703 ; Fall       ; n64_clock       ;
+;  vga_green[5] ; n64_clock  ; 3.877 ; 3.877 ; Fall       ; n64_clock       ;
+;  vga_green[6] ; n64_clock  ; 3.753 ; 3.753 ; Fall       ; n64_clock       ;
+; vga_hsync     ; n64_clock  ; 3.944 ; 3.944 ; Fall       ; n64_clock       ;
+; vga_red[*]    ; n64_clock  ; 3.771 ; 3.771 ; Fall       ; n64_clock       ;
+;  vga_red[0]   ; n64_clock  ; 4.025 ; 4.025 ; Fall       ; n64_clock       ;
+;  vga_red[1]   ; n64_clock  ; 3.774 ; 3.774 ; Fall       ; n64_clock       ;
+;  vga_red[2]   ; n64_clock  ; 3.921 ; 3.921 ; Fall       ; n64_clock       ;
+;  vga_red[3]   ; n64_clock  ; 3.897 ; 3.897 ; Fall       ; n64_clock       ;
+;  vga_red[4]   ; n64_clock  ; 3.777 ; 3.777 ; Fall       ; n64_clock       ;
+;  vga_red[5]   ; n64_clock  ; 3.794 ; 3.794 ; Fall       ; n64_clock       ;
+;  vga_red[6]   ; n64_clock  ; 3.771 ; 3.771 ; Fall       ; n64_clock       ;
+; vga_vsync     ; n64_clock  ; 3.896 ; 3.896 ; Fall       ; n64_clock       ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
@@ -1062,10 +1062,10 @@ No paths to report.
 +------------------+----------+-------+----------+---------+---------------------+
 ; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -3.168   ; 0.215 ; N/A      ; N/A     ; -1.627              ;
-;  n64_clock       ; -3.168   ; 0.215 ; N/A      ; N/A     ; -1.627              ;
-; Design-wide TNS  ; -946.476 ; 0.0   ; 0.0      ; 0.0     ; -1453.344           ;
-;  n64_clock       ; -946.476 ; 0.000 ; N/A      ; N/A     ; -1453.344           ;
+; Worst-case Slack ; -2.760   ; 0.215 ; N/A      ; N/A     ; -1.627              ;
+;  n64_clock       ; -2.760   ; 0.215 ; N/A      ; N/A     ; -1.627              ;
+; Design-wide TNS  ; -888.818 ; 0.0   ; 0.0      ; 0.0     ; -1453.344           ;
+;  n64_clock       ; -888.818 ; 0.000 ; N/A      ; N/A     ; -1453.344           ;
 +------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -1074,15 +1074,15 @@ No paths to report.
 +--------------+------------+-------+-------+------------+-----------------+
 ; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +--------------+------------+-------+-------+------------+-----------------+
-; n64_data[*]  ; n64_clock  ; 3.559 ; 3.559 ; Fall       ; n64_clock       ;
-;  n64_data[0] ; n64_clock  ; 3.350 ; 3.350 ; Fall       ; n64_clock       ;
-;  n64_data[1] ; n64_clock  ; 3.559 ; 3.559 ; Fall       ; n64_clock       ;
-;  n64_data[2] ; n64_clock  ; 3.425 ; 3.425 ; Fall       ; n64_clock       ;
-;  n64_data[3] ; n64_clock  ; 3.312 ; 3.312 ; Fall       ; n64_clock       ;
-;  n64_data[4] ; n64_clock  ; 3.441 ; 3.441 ; Fall       ; n64_clock       ;
-;  n64_data[5] ; n64_clock  ; 3.211 ; 3.211 ; Fall       ; n64_clock       ;
-;  n64_data[6] ; n64_clock  ; 3.285 ; 3.285 ; Fall       ; n64_clock       ;
-; n64_dsync_n  ; n64_clock  ; 3.169 ; 3.169 ; Fall       ; n64_clock       ;
+; n64_data[*]  ; n64_clock  ; 4.431 ; 4.431 ; Fall       ; n64_clock       ;
+;  n64_data[0] ; n64_clock  ; 4.188 ; 4.188 ; Fall       ; n64_clock       ;
+;  n64_data[1] ; n64_clock  ; 4.013 ; 4.013 ; Fall       ; n64_clock       ;
+;  n64_data[2] ; n64_clock  ; 4.431 ; 4.431 ; Fall       ; n64_clock       ;
+;  n64_data[3] ; n64_clock  ; 4.315 ; 4.315 ; Fall       ; n64_clock       ;
+;  n64_data[4] ; n64_clock  ; 4.252 ; 4.252 ; Fall       ; n64_clock       ;
+;  n64_data[5] ; n64_clock  ; 4.134 ; 4.134 ; Fall       ; n64_clock       ;
+;  n64_data[6] ; n64_clock  ; 3.957 ; 3.957 ; Fall       ; n64_clock       ;
+; n64_dsync_n  ; n64_clock  ; 4.039 ; 4.039 ; Fall       ; n64_clock       ;
 +--------------+------------+-------+-------+------------+-----------------+
 
 
@@ -1091,15 +1091,15 @@ No paths to report.
 +--------------+------------+--------+--------+------------+-----------------+
 ; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +--------------+------------+--------+--------+------------+-----------------+
-; n64_data[*]  ; n64_clock  ; -1.589 ; -1.589 ; Fall       ; n64_clock       ;
-;  n64_data[0] ; n64_clock  ; -1.639 ; -1.639 ; Fall       ; n64_clock       ;
-;  n64_data[1] ; n64_clock  ; -1.698 ; -1.698 ; Fall       ; n64_clock       ;
-;  n64_data[2] ; n64_clock  ; -1.716 ; -1.716 ; Fall       ; n64_clock       ;
-;  n64_data[3] ; n64_clock  ; -1.623 ; -1.623 ; Fall       ; n64_clock       ;
-;  n64_data[4] ; n64_clock  ; -1.730 ; -1.730 ; Fall       ; n64_clock       ;
-;  n64_data[5] ; n64_clock  ; -1.629 ; -1.629 ; Fall       ; n64_clock       ;
-;  n64_data[6] ; n64_clock  ; -1.589 ; -1.589 ; Fall       ; n64_clock       ;
-; n64_dsync_n  ; n64_clock  ; -1.595 ; -1.595 ; Fall       ; n64_clock       ;
+; n64_data[*]  ; n64_clock  ; -2.033 ; -2.033 ; Fall       ; n64_clock       ;
+;  n64_data[0] ; n64_clock  ; -2.168 ; -2.168 ; Fall       ; n64_clock       ;
+;  n64_data[1] ; n64_clock  ; -2.065 ; -2.065 ; Fall       ; n64_clock       ;
+;  n64_data[2] ; n64_clock  ; -2.166 ; -2.166 ; Fall       ; n64_clock       ;
+;  n64_data[3] ; n64_clock  ; -2.195 ; -2.195 ; Fall       ; n64_clock       ;
+;  n64_data[4] ; n64_clock  ; -2.182 ; -2.182 ; Fall       ; n64_clock       ;
+;  n64_data[5] ; n64_clock  ; -2.091 ; -2.091 ; Fall       ; n64_clock       ;
+;  n64_data[6] ; n64_clock  ; -2.033 ; -2.033 ; Fall       ; n64_clock       ;
+; n64_dsync_n  ; n64_clock  ; -2.084 ; -2.084 ; Fall       ; n64_clock       ;
 +--------------+------------+--------+--------+------------+-----------------+
 
 
@@ -1108,36 +1108,36 @@ No paths to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; led[*]        ; n64_clock  ; 6.957 ; 6.957 ; Fall       ; n64_clock       ;
-;  led[0]       ; n64_clock  ; 6.957 ; 6.957 ; Fall       ; n64_clock       ;
-;  led[2]       ; n64_clock  ; 6.786 ; 6.786 ; Fall       ; n64_clock       ;
-;  led[3]       ; n64_clock  ; 6.412 ; 6.412 ; Fall       ; n64_clock       ;
-; vga_blue[*]   ; n64_clock  ; 6.705 ; 6.705 ; Fall       ; n64_clock       ;
-;  vga_blue[0]  ; n64_clock  ; 6.705 ; 6.705 ; Fall       ; n64_clock       ;
-;  vga_blue[1]  ; n64_clock  ; 6.500 ; 6.500 ; Fall       ; n64_clock       ;
-;  vga_blue[2]  ; n64_clock  ; 6.409 ; 6.409 ; Fall       ; n64_clock       ;
-;  vga_blue[3]  ; n64_clock  ; 6.419 ; 6.419 ; Fall       ; n64_clock       ;
-;  vga_blue[4]  ; n64_clock  ; 6.646 ; 6.646 ; Fall       ; n64_clock       ;
-;  vga_blue[5]  ; n64_clock  ; 6.646 ; 6.646 ; Fall       ; n64_clock       ;
-;  vga_blue[6]  ; n64_clock  ; 6.513 ; 6.513 ; Fall       ; n64_clock       ;
-; vga_green[*]  ; n64_clock  ; 6.857 ; 6.857 ; Fall       ; n64_clock       ;
-;  vga_green[0] ; n64_clock  ; 6.674 ; 6.674 ; Fall       ; n64_clock       ;
-;  vga_green[1] ; n64_clock  ; 6.664 ; 6.664 ; Fall       ; n64_clock       ;
-;  vga_green[2] ; n64_clock  ; 6.439 ; 6.439 ; Fall       ; n64_clock       ;
-;  vga_green[3] ; n64_clock  ; 6.711 ; 6.711 ; Fall       ; n64_clock       ;
-;  vga_green[4] ; n64_clock  ; 6.716 ; 6.716 ; Fall       ; n64_clock       ;
-;  vga_green[5] ; n64_clock  ; 6.857 ; 6.857 ; Fall       ; n64_clock       ;
-;  vga_green[6] ; n64_clock  ; 6.425 ; 6.425 ; Fall       ; n64_clock       ;
-; vga_hsync     ; n64_clock  ; 7.684 ; 7.684 ; Fall       ; n64_clock       ;
-; vga_red[*]    ; n64_clock  ; 6.939 ; 6.939 ; Fall       ; n64_clock       ;
-;  vga_red[0]   ; n64_clock  ; 6.429 ; 6.429 ; Fall       ; n64_clock       ;
-;  vga_red[1]   ; n64_clock  ; 6.906 ; 6.906 ; Fall       ; n64_clock       ;
-;  vga_red[2]   ; n64_clock  ; 6.699 ; 6.699 ; Fall       ; n64_clock       ;
-;  vga_red[3]   ; n64_clock  ; 6.664 ; 6.664 ; Fall       ; n64_clock       ;
-;  vga_red[4]   ; n64_clock  ; 6.660 ; 6.660 ; Fall       ; n64_clock       ;
-;  vga_red[5]   ; n64_clock  ; 6.939 ; 6.939 ; Fall       ; n64_clock       ;
-;  vga_red[6]   ; n64_clock  ; 6.439 ; 6.439 ; Fall       ; n64_clock       ;
-; vga_vsync     ; n64_clock  ; 7.270 ; 7.270 ; Fall       ; n64_clock       ;
+; led[*]        ; n64_clock  ; 9.478 ; 9.478 ; Fall       ; n64_clock       ;
+;  led[0]       ; n64_clock  ; 9.478 ; 9.478 ; Fall       ; n64_clock       ;
+;  led[2]       ; n64_clock  ; 8.780 ; 8.780 ; Fall       ; n64_clock       ;
+;  led[3]       ; n64_clock  ; 9.448 ; 9.448 ; Fall       ; n64_clock       ;
+; vga_blue[*]   ; n64_clock  ; 7.186 ; 7.186 ; Fall       ; n64_clock       ;
+;  vga_blue[0]  ; n64_clock  ; 6.666 ; 6.666 ; Fall       ; n64_clock       ;
+;  vga_blue[1]  ; n64_clock  ; 6.853 ; 6.853 ; Fall       ; n64_clock       ;
+;  vga_blue[2]  ; n64_clock  ; 6.842 ; 6.842 ; Fall       ; n64_clock       ;
+;  vga_blue[3]  ; n64_clock  ; 6.844 ; 6.844 ; Fall       ; n64_clock       ;
+;  vga_blue[4]  ; n64_clock  ; 6.914 ; 6.914 ; Fall       ; n64_clock       ;
+;  vga_blue[5]  ; n64_clock  ; 6.952 ; 6.952 ; Fall       ; n64_clock       ;
+;  vga_blue[6]  ; n64_clock  ; 7.186 ; 7.186 ; Fall       ; n64_clock       ;
+; vga_green[*]  ; n64_clock  ; 6.871 ; 6.871 ; Fall       ; n64_clock       ;
+;  vga_green[0] ; n64_clock  ; 6.667 ; 6.667 ; Fall       ; n64_clock       ;
+;  vga_green[1] ; n64_clock  ; 6.431 ; 6.431 ; Fall       ; n64_clock       ;
+;  vga_green[2] ; n64_clock  ; 6.424 ; 6.424 ; Fall       ; n64_clock       ;
+;  vga_green[3] ; n64_clock  ; 6.644 ; 6.644 ; Fall       ; n64_clock       ;
+;  vga_green[4] ; n64_clock  ; 6.456 ; 6.456 ; Fall       ; n64_clock       ;
+;  vga_green[5] ; n64_clock  ; 6.871 ; 6.871 ; Fall       ; n64_clock       ;
+;  vga_green[6] ; n64_clock  ; 6.619 ; 6.619 ; Fall       ; n64_clock       ;
+; vga_hsync     ; n64_clock  ; 6.958 ; 6.958 ; Fall       ; n64_clock       ;
+; vga_red[*]    ; n64_clock  ; 7.169 ; 7.169 ; Fall       ; n64_clock       ;
+;  vga_red[0]   ; n64_clock  ; 7.169 ; 7.169 ; Fall       ; n64_clock       ;
+;  vga_red[1]   ; n64_clock  ; 6.642 ; 6.642 ; Fall       ; n64_clock       ;
+;  vga_red[2]   ; n64_clock  ; 6.951 ; 6.951 ; Fall       ; n64_clock       ;
+;  vga_red[3]   ; n64_clock  ; 6.907 ; 6.907 ; Fall       ; n64_clock       ;
+;  vga_red[4]   ; n64_clock  ; 6.653 ; 6.653 ; Fall       ; n64_clock       ;
+;  vga_red[5]   ; n64_clock  ; 6.674 ; 6.674 ; Fall       ; n64_clock       ;
+;  vga_red[6]   ; n64_clock  ; 6.644 ; 6.644 ; Fall       ; n64_clock       ;
+; vga_vsync     ; n64_clock  ; 6.897 ; 6.897 ; Fall       ; n64_clock       ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
@@ -1146,36 +1146,36 @@ No paths to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; led[*]        ; n64_clock  ; 3.665 ; 3.665 ; Fall       ; n64_clock       ;
-;  led[0]       ; n64_clock  ; 3.929 ; 3.929 ; Fall       ; n64_clock       ;
-;  led[2]       ; n64_clock  ; 3.864 ; 3.864 ; Fall       ; n64_clock       ;
-;  led[3]       ; n64_clock  ; 3.665 ; 3.665 ; Fall       ; n64_clock       ;
-; vga_blue[*]   ; n64_clock  ; 3.662 ; 3.662 ; Fall       ; n64_clock       ;
-;  vga_blue[0]  ; n64_clock  ; 3.823 ; 3.823 ; Fall       ; n64_clock       ;
-;  vga_blue[1]  ; n64_clock  ; 3.711 ; 3.711 ; Fall       ; n64_clock       ;
-;  vga_blue[2]  ; n64_clock  ; 3.662 ; 3.662 ; Fall       ; n64_clock       ;
-;  vga_blue[3]  ; n64_clock  ; 3.671 ; 3.671 ; Fall       ; n64_clock       ;
-;  vga_blue[4]  ; n64_clock  ; 3.777 ; 3.777 ; Fall       ; n64_clock       ;
-;  vga_blue[5]  ; n64_clock  ; 3.779 ; 3.779 ; Fall       ; n64_clock       ;
-;  vga_blue[6]  ; n64_clock  ; 3.716 ; 3.716 ; Fall       ; n64_clock       ;
-; vga_green[*]  ; n64_clock  ; 3.679 ; 3.679 ; Fall       ; n64_clock       ;
+; led[*]        ; n64_clock  ; 4.889 ; 4.889 ; Fall       ; n64_clock       ;
+;  led[0]       ; n64_clock  ; 5.195 ; 5.195 ; Fall       ; n64_clock       ;
+;  led[2]       ; n64_clock  ; 4.889 ; 4.889 ; Fall       ; n64_clock       ;
+;  led[3]       ; n64_clock  ; 5.254 ; 5.254 ; Fall       ; n64_clock       ;
+; vga_blue[*]   ; n64_clock  ; 3.790 ; 3.790 ; Fall       ; n64_clock       ;
+;  vga_blue[0]  ; n64_clock  ; 3.790 ; 3.790 ; Fall       ; n64_clock       ;
+;  vga_blue[1]  ; n64_clock  ; 3.864 ; 3.864 ; Fall       ; n64_clock       ;
+;  vga_blue[2]  ; n64_clock  ; 3.860 ; 3.860 ; Fall       ; n64_clock       ;
+;  vga_blue[3]  ; n64_clock  ; 3.854 ; 3.854 ; Fall       ; n64_clock       ;
+;  vga_blue[4]  ; n64_clock  ; 3.930 ; 3.930 ; Fall       ; n64_clock       ;
+;  vga_blue[5]  ; n64_clock  ; 3.947 ; 3.947 ; Fall       ; n64_clock       ;
+;  vga_blue[6]  ; n64_clock  ; 4.033 ; 4.033 ; Fall       ; n64_clock       ;
+; vga_green[*]  ; n64_clock  ; 3.685 ; 3.685 ; Fall       ; n64_clock       ;
 ;  vga_green[0] ; n64_clock  ; 3.793 ; 3.793 ; Fall       ; n64_clock       ;
-;  vga_green[1] ; n64_clock  ; 3.794 ; 3.794 ; Fall       ; n64_clock       ;
-;  vga_green[2] ; n64_clock  ; 3.684 ; 3.684 ; Fall       ; n64_clock       ;
-;  vga_green[3] ; n64_clock  ; 3.802 ; 3.802 ; Fall       ; n64_clock       ;
-;  vga_green[4] ; n64_clock  ; 3.812 ; 3.812 ; Fall       ; n64_clock       ;
-;  vga_green[5] ; n64_clock  ; 3.863 ; 3.863 ; Fall       ; n64_clock       ;
-;  vga_green[6] ; n64_clock  ; 3.679 ; 3.679 ; Fall       ; n64_clock       ;
-; vga_hsync     ; n64_clock  ; 4.287 ; 4.287 ; Fall       ; n64_clock       ;
-; vga_red[*]    ; n64_clock  ; 3.684 ; 3.684 ; Fall       ; n64_clock       ;
-;  vga_red[0]   ; n64_clock  ; 3.684 ; 3.684 ; Fall       ; n64_clock       ;
-;  vga_red[1]   ; n64_clock  ; 3.903 ; 3.903 ; Fall       ; n64_clock       ;
-;  vga_red[2]   ; n64_clock  ; 3.820 ; 3.820 ; Fall       ; n64_clock       ;
-;  vga_red[3]   ; n64_clock  ; 3.793 ; 3.793 ; Fall       ; n64_clock       ;
-;  vga_red[4]   ; n64_clock  ; 3.784 ; 3.784 ; Fall       ; n64_clock       ;
-;  vga_red[5]   ; n64_clock  ; 3.923 ; 3.923 ; Fall       ; n64_clock       ;
-;  vga_red[6]   ; n64_clock  ; 3.689 ; 3.689 ; Fall       ; n64_clock       ;
-; vga_vsync     ; n64_clock  ; 4.087 ; 4.087 ; Fall       ; n64_clock       ;
+;  vga_green[1] ; n64_clock  ; 3.693 ; 3.693 ; Fall       ; n64_clock       ;
+;  vga_green[2] ; n64_clock  ; 3.685 ; 3.685 ; Fall       ; n64_clock       ;
+;  vga_green[3] ; n64_clock  ; 3.779 ; 3.779 ; Fall       ; n64_clock       ;
+;  vga_green[4] ; n64_clock  ; 3.703 ; 3.703 ; Fall       ; n64_clock       ;
+;  vga_green[5] ; n64_clock  ; 3.877 ; 3.877 ; Fall       ; n64_clock       ;
+;  vga_green[6] ; n64_clock  ; 3.753 ; 3.753 ; Fall       ; n64_clock       ;
+; vga_hsync     ; n64_clock  ; 3.944 ; 3.944 ; Fall       ; n64_clock       ;
+; vga_red[*]    ; n64_clock  ; 3.771 ; 3.771 ; Fall       ; n64_clock       ;
+;  vga_red[0]   ; n64_clock  ; 4.025 ; 4.025 ; Fall       ; n64_clock       ;
+;  vga_red[1]   ; n64_clock  ; 3.774 ; 3.774 ; Fall       ; n64_clock       ;
+;  vga_red[2]   ; n64_clock  ; 3.921 ; 3.921 ; Fall       ; n64_clock       ;
+;  vga_red[3]   ; n64_clock  ; 3.897 ; 3.897 ; Fall       ; n64_clock       ;
+;  vga_red[4]   ; n64_clock  ; 3.777 ; 3.777 ; Fall       ; n64_clock       ;
+;  vga_red[5]   ; n64_clock  ; 3.794 ; 3.794 ; Fall       ; n64_clock       ;
+;  vga_red[6]   ; n64_clock  ; 3.771 ; 3.771 ; Fall       ; n64_clock       ;
+; vga_vsync     ; n64_clock  ; 3.896 ; 3.896 ; Fall       ; n64_clock       ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
@@ -1231,7 +1231,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 32-bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Feb 26 13:15:15 2015
+    Info: Processing started: Thu Feb 26 18:36:38 2015
 Info: Command: quartus_sta N6480 -c n6480
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -1244,10 +1244,10 @@ Info (332105): Deriving Clocks
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow Model
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -3.168
+Info (332146): Worst-case setup slack is -2.760
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -3.168      -946.476 n64_clock 
+    Info (332119):    -2.760      -888.818 n64_clock 
 Info (332146): Worst-case hold slack is 0.391
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
@@ -1264,7 +1264,7 @@ Critical Warning (332148): Timing requirements not met
 Info (332146): Worst-case setup slack is -1.460
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -1.460      -297.085 n64_clock 
+    Info (332119):    -1.460      -278.423 n64_clock 
 Info (332146): Worst-case hold slack is 0.215
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
@@ -1279,8 +1279,8 @@ Info (332001): The selected device family is not supported by the report_metasta
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 32-bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 301 megabytes
-    Info: Processing ended: Thu Feb 26 13:15:16 2015
+    Info: Peak virtual memory: 299 megabytes
+    Info: Processing ended: Thu Feb 26 18:36:39 2015
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
