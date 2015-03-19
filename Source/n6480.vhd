@@ -19,6 +19,9 @@ port (
 	vga_hsync: out std_logic;
 	vga_vsync: out std_logic;
 	vga_blank: out std_logic;
+	vga_sync: out std_logic;
+	vga_clk: out std_logic;
+	
 	
 	led: out std_logic_vector(3 downto 0);
 	button: in std_logic_vector(1 downto 0)
@@ -253,6 +256,7 @@ begin
 				vga_vsync <= '1';
 			end if;
 		end if;
+		vga_clk <= n64_clock;
 	end process;
 	
 	-- Set VGA Hsync based on VGA line progress
@@ -262,17 +266,23 @@ begin
 			if (VGA_HSYNC_MODE = '1') then
 				if (vga_px_count >= VGA_HSYNC_START and vga_px_count < VGA_HSYNC_END) then
 					vga_hsync <= '0';
+					vga_blank <= '0';
 				else
 					vga_hsync <= '1';
+					vga_blank <= '1';
 				end if;
 			else
 				if (vga_px_count >= VGA_HSYNC_START or vga_px_count < VGA_HSYNC_END) then
 					vga_hsync <= '0';
+					vga_blank <= '0';
 				else
 					vga_hsync <= '1';
+					vga_blank <= '1';
 				end if;
 			end if;
 		end if;
 	end process;
+	
+	vga_sync <= '0';
 end behavioral;
 
