@@ -51,7 +51,6 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
 set_location_assignment PIN_D25 -to n64_clock
 set_location_assignment PIN_J22 -to n64_dsync_n
@@ -92,3 +91,17 @@ set_location_assignment PIN_AF22 -to led[1]
 set_location_assignment PIN_AE22 -to led[0]
 set_location_assignment PIN_N23 -to button[1]
 set_location_assignment PIN_G26 -to button[0]
+set_location_assignment PIN_B8 -to vga_clk
+set_location_assignment PIN_B7 -to vga_sync
+set_location_assignment PIN_D12 -to vga_green[9]
+set_location_assignment PIN_E12 -to vga_green[8]
+set_location_assignment PIN_D11 -to vga_green[7]
+set_location_assignment PIN_E10 -to vga_red[9]
+set_location_assignment PIN_F11 -to vga_red[8]
+set_location_assignment PIN_H12 -to vga_red[7]
+set_location_assignment PIN_B12 -to vga_blue[9]
+set_location_assignment PIN_C12 -to vga_blue[8]
+set_location_assignment PIN_B11 -to vga_blue[7]
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_location_assignment PIN_N26 -to switches[1]
+set_location_assignment PIN_N25 -to switches[0]

@@ -13,14 +13,17 @@ port (
 	n64_clock: in  std_logic;
 	n64_dsync_n: in  std_logic;
 	
-	vga_red: out std_logic_vector(6 downto 0);
-	vga_green: out std_logic_vector(6 downto 0);
-	vga_blue: out std_logic_vector(6 downto 0);
+	vga_red: out std_logic_vector(9 downto 0);
+	vga_green: out std_logic_vector(9 downto 0);
+	vga_blue: out std_logic_vector(9 downto 0);
 	vga_hsync: out std_logic;
 	vga_vsync: out std_logic;
 	vga_blank: out std_logic;
+	vga_sync: out std_logic;
+	vga_clk: out std_logic;
 	
 	led: out std_logic_vector(3 downto 0);
+	switches: in std_logic_vector(1 downto 0);
 	button: in std_logic_vector(1 downto 0)
 	);
 end n6480;
@@ -50,6 +53,8 @@ constant VGA_HSYNC_LEN: integer := 160;
 constant VGA_HSYNC_MODE: std_logic := '0'; 
 constant VGA_HSYNC_START: integer := VGA_LINE_LEN - 30;
 constant VGA_HSYNC_END: integer := 162;
+constant VGA_BLANK_START: integer := VGA_LINE_LEN - 30;
+constant VGA_BLANK_END: integer := 162;
 constant VGA_VSYNC_START: integer := 248;
 constant VGA_VSYNC_END: integer := 250;
 constant U16_ZERO: std_logic_vector(15 downto 0) := "0000000000000000";
@@ -85,6 +90,8 @@ signal enable_delay: std_logic := '0'; -- When 1, delay the line by 8 clocks for
 signal out_red: std_logic_vector(6 downto 0);
 signal out_green: std_logic_vector(6 downto 0);
 signal out_blue: std_logic_vector(6 downto 0);
+
+signal vga_osc: std_logic := '0';
 
 begin
 	-- Used to deserialize the N64 pixel bus into values for a pixel.
@@ -139,9 +146,18 @@ begin
 	vga_assign_outputs: process(n64_clock)
 	begin
 		if (falling_edge(n64_clock)) then
-			vga_red <= out_red;
-			vga_green <= out_green;
-			vga_blue <= out_blue;
+			-- Fill 10 bits with 6 bits
+			if (switches(1) = '1') then
+				vga_red <= out_red(6 downto 1) & out_red(6 downto 3);
+				vga_green <= out_green(6 downto 1) & out_green(6 downto 3);
+				vga_blue <= out_blue(6 downto 1) & out_blue(6 downto 3);
+				
+			-- Un-brightened output
+			else
+				vga_red <= out_red & "000";
+				vga_green <= out_green & "000";
+				vga_blue <= out_blue & "000";
+			end if;
 		end if;
 	end process;
 	
@@ -159,7 +175,12 @@ begin
 					when others => buffer_en_a <= '0';
 				end case;
 				
-				buffer_in_b <= buffer_out_b;
+				-- Scanlines disable
+				if (switches(0) = '1') then
+					buffer_in_b <= buffer_out_b;
+				else
+					buffer_in_b <= (others => '0');
+				end if;
 				
 				-- Have it shift out data twice for every one N64 pixel 
 				-- (or once per VGA pixel)
@@ -181,7 +202,12 @@ begin
 					when others => buffer_en_b <= '0';
 				end case;
 				
-				buffer_in_a <= buffer_out_a;
+				-- Scanlines disable
+				if (switches(0) = '1') then
+					buffer_in_a <= buffer_out_a;
+				else
+					buffer_in_a <= (others => '0');
+				end if;
 				
 				-- Have it shift out data twice for every one N64 pixel 
 				-- (or once per VGA pixel)
@@ -274,5 +300,29 @@ begin
 			end if;
 		end if;
 	end process;
+	
+	-- Blank and vga clock outputs
+	vga_signals_proc: process(n64_clock)
+	begin
+		if (falling_edge(n64_clock)) then
+			if (VGA_HSYNC_MODE = '1') then
+				if (vga_px_count >= VGA_BLANK_START and vga_px_count < VGA_BLANK_END) then
+					vga_blank <= '0';
+				else
+					vga_blank <= '1';
+				end if;
+			else
+				if (vga_px_count >= VGA_BLANK_START or vga_px_count < VGA_BLANK_END) then
+					vga_blank <= '0';
+				else
+					vga_blank <= '1';
+				end if;
+			end if;
+			vga_osc <= not vga_osc;
+			vga_clk <= vga_osc;
+			vga_sync <= '0';
+		end if;
+	end process;
+	
 end behavioral;
 
