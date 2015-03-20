@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Thu Mar 19 22:27:48 2015
+Analysis & Synthesis Status : Successful - Thu Mar 19 23:53:47 2015
 Quartus II 32-bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : n6480
 Top-level Entity Name : n6480
 Family : Cyclone II
-Total logic elements : 334
-    Total combinational functions : 245
-    Dedicated logic registers : 273
-Total registers : 273
+Total logic elements : 317
+    Total combinational functions : 226
+    Dedicated logic registers : 255
+Total registers : 255
 Total pins : 52
 Total virtual pins : 0
-Total memory bits : 32,382
+Total memory bits : 27,756
 Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0

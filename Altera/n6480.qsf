@@ -53,14 +53,14 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
 set_location_assignment PIN_P26 -to n64_clock
-set_location_assignment PIN_K25 -to n64_dsync_n
-set_location_assignment PIN_J21 -to n64_data[6]
-set_location_assignment PIN_F23 -to n64_data[5]
-set_location_assignment PIN_F24 -to n64_data[4]
-set_location_assignment PIN_E25 -to n64_data[3]
-set_location_assignment PIN_E26 -to n64_data[2]
-set_location_assignment PIN_J22 -to n64_data[1]
-set_location_assignment PIN_D25 -to n64_data[0]
+set_location_assignment PIN_M21 -to n64_dsync_n
+set_location_assignment PIN_N20 -to n64_data[6]
+set_location_assignment PIN_M20 -to n64_data[5]
+set_location_assignment PIN_M19 -to n64_data[4]
+set_location_assignment PIN_M23 -to n64_data[3]
+set_location_assignment PIN_M22 -to n64_data[2]
+set_location_assignment PIN_K26 -to n64_data[1]
+set_location_assignment PIN_K25 -to n64_data[0]
 set_location_assignment PIN_H11 -to vga_red[6]
 set_location_assignment PIN_A8 -to vga_red[5]
 set_location_assignment PIN_C9 -to vga_red[4]

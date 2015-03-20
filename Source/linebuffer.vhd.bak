@@ -28,7 +28,7 @@ signal line_buffer: buffer_arr;
 begin
 	neo_buffer: process (clk,line_buffer)
 	begin
-		if (falling_edge(clk)) then
+		if (rising_edge(clk)) then
 			if (enable = '1') then
 				-- Shift out the line
 				line_buffer((line_len - 1) downto 1) <= line_buffer((line_len - 2) downto 0);

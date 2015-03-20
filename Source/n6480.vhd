@@ -144,18 +144,9 @@ begin
 	vga_assign_outputs: process(n64_clock)
 	begin
 		if (falling_edge(n64_clock)) then
-			-- Fill 10 bits with 6 bits
-			if (switches(1) = '1') then
-				vga_red <= out_red(6 downto 1) & out_red(6 downto 3);
-				vga_green <= out_green(6 downto 1) & out_green(6 downto 3);
-				vga_blue <= out_blue(6 downto 1) & out_blue(6 downto 3);
-				
-			-- Un-brightened output
-			else
-				vga_red <= out_red & "000";
-				vga_green <= out_green & "000";
-				vga_blue <= out_blue & "000";
-			end if;
+			vga_red <= out_red(6 downto 1) & out_red(6 downto 3);
+			vga_green <= out_green(6 downto 1) & out_green(6 downto 3);
+			vga_blue <= out_blue(6 downto 1) & out_blue(6 downto 3);
 		end if;
 	end process;
 	
@@ -174,11 +165,11 @@ begin
 				end case;
 				
 				-- Scanlines disable
-				if (switches(0) = '1') then
-					buffer_in_b <= buffer_out_b;
-				else
-					buffer_in_b <= (others => '0');
-				end if;
+				--if (switches(0) = '1') then
+				buffer_in_b <= buffer_out_b;
+				--else
+				--	buffer_in_b <= (others => '0');
+				--end if;
 				
 				-- Have it shift out data twice for every one N64 pixel 
 				-- (or once per VGA pixel)
@@ -186,8 +177,10 @@ begin
 				then
 					if (n64_px_count >= VGA_LINE_LEN) then
 						buffer_en_b <= not clock_count(0);
+						vga_clk <= vga_osc;
 					else
 						buffer_en_b <= clock_count(0);
+						vga_clk <= not vga_osc;
 					end if;
 				end if;
 			else
@@ -201,11 +194,11 @@ begin
 				end case;
 				
 				-- Scanlines disable
-				if (switches(0) = '1') then
+				--if (switches(0) = '1') then
 					buffer_in_a <= buffer_out_a;
-				else
-					buffer_in_a <= (others => '0');
-				end if;
+				--else
+				--	buffer_in_a <= (others => '0');
+				--end if;
 				
 				-- Have it shift out data twice for every one N64 pixel 
 				-- (or once per VGA pixel)
@@ -213,8 +206,10 @@ begin
 				then
 					if (n64_px_count >= VGA_LINE_LEN) then
 						buffer_en_a <= not clock_count(0);
+						vga_clk <= vga_osc;
 					else
 						buffer_en_a <= clock_count(0);
+						vga_clk <= not vga_osc;
 					end if;
 				end if;
 			end if;
@@ -283,7 +278,7 @@ begin
 		end if;
 	end process;
 	
-	led(3 downto 0) <= n64_dsync_n & (not n64_dsync_n) & '0' & (not n64_vsync_n);
+	led(3 downto 0) <= n64_dsync_n & (not n64_dsync_n) & (n64_vsync_n) & (not n64_vsync_n);
 	
 	-- Set VGA Hsync based on VGA line progress
 	vga_hsync_proc: process(n64_clock)
@@ -324,10 +319,10 @@ begin
 				end if;
 			end if;
 			vga_osc <= not vga_osc;
-			vga_clk <= vga_osc;
 			vga_sync <= '0';
 		end if;
 	end process;
+	
 	
 end behavioral;
 

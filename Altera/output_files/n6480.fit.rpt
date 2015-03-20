@@ -1,5 +1,5 @@
 Fitter report for n6480
-Thu Mar 19 22:27:58 2015
+Thu Mar 19 23:53:55 2015
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -63,20 +63,20 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Thu Mar 19 22:27:58 2015           ;
+; Fitter Status                      ; Successful - Thu Mar 19 23:53:55 2015           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; n6480                                           ;
 ; Top-level Entity Name              ; n6480                                           ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 330 / 33,216 ( < 1 % )                          ;
-;     Total combinational functions  ; 245 / 33,216 ( < 1 % )                          ;
-;     Dedicated logic registers      ; 273 / 33,216 ( < 1 % )                          ;
-; Total registers                    ; 273                                             ;
+; Total logic elements               ; 317 / 33,216 ( < 1 % )                          ;
+;     Total combinational functions  ; 226 / 33,216 ( < 1 % )                          ;
+;     Dedicated logic registers      ; 255 / 33,216 ( < 1 % )                          ;
+; Total registers                    ; 255                                             ;
 ; Total pins                         ; 52 / 475 ( 11 % )                               ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 32,382 / 483,840 ( 7 % )                        ;
+; Total memory bits                  ; 27,756 / 483,840 ( 6 % )                        ;
 ; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                                  ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                                   ;
 +------------------------------------+-------------------------------------------------+
@@ -150,8 +150,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 616 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 616 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 573 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 573 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -174,7 +174,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 613     ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 570     ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -190,34 +190,34 @@ The pin-out file can be found in /home/moffitt/Development/N6480/Altera/output_f
 +---------------------------------------------+---------------------------+
 ; Resource                                    ; Usage                     ;
 +---------------------------------------------+---------------------------+
-; Total logic elements                        ; 330 / 33,216 ( < 1 % )    ;
-;     -- Combinational with no register       ; 57                        ;
-;     -- Register only                        ; 85                        ;
-;     -- Combinational with a register        ; 188                       ;
+; Total logic elements                        ; 317 / 33,216 ( < 1 % )    ;
+;     -- Combinational with no register       ; 62                        ;
+;     -- Register only                        ; 91                        ;
+;     -- Combinational with a register        ; 164                       ;
 ;                                             ;                           ;
 ; Logic element usage by number of LUT inputs ;                           ;
-;     -- 4 input functions                    ; 86                        ;
-;     -- 3 input functions                    ; 30                        ;
-;     -- <=2 input functions                  ; 129                       ;
-;     -- Register only                        ; 85                        ;
+;     -- 4 input functions                    ; 43                        ;
+;     -- 3 input functions                    ; 63                        ;
+;     -- <=2 input functions                  ; 120                       ;
+;     -- Register only                        ; 91                        ;
 ;                                             ;                           ;
 ; Logic elements by mode                      ;                           ;
-;     -- normal mode                          ; 150                       ;
+;     -- normal mode                          ; 131                       ;
 ;     -- arithmetic mode                      ; 95                        ;
 ;                                             ;                           ;
-; Total registers*                            ; 273 / 34,593 ( < 1 % )    ;
-;     -- Dedicated logic registers            ; 273 / 33,216 ( < 1 % )    ;
+; Total registers*                            ; 255 / 34,593 ( < 1 % )    ;
+;     -- Dedicated logic registers            ; 255 / 33,216 ( < 1 % )    ;
 ;     -- I/O registers                        ; 0 / 1,377 ( 0 % )         ;
 ;                                             ;                           ;
-; Total LABs:  partially or completely used   ; 43 / 2,076 ( 2 % )        ;
+; Total LABs:  partially or completely used   ; 31 / 2,076 ( 1 % )        ;
 ; Virtual pins                                ; 0                         ;
 ; I/O pins                                    ; 52 / 475 ( 11 % )         ;
 ;     -- Clock pins                           ; 2 / 8 ( 25 % )            ;
 ;                                             ;                           ;
 ; Global signals                              ; 1                         ;
-; M4Ks                                        ; 12 / 105 ( 11 % )         ;
-; Total block memory bits                     ; 32,382 / 483,840 ( 7 % )  ;
-; Total block memory implementation bits      ; 55,296 / 483,840 ( 11 % ) ;
+; M4Ks                                        ; 10 / 105 ( 10 % )         ;
+; Total block memory bits                     ; 27,756 / 483,840 ( 6 % )  ;
+; Total block memory implementation bits      ; 46,080 / 483,840 ( 10 % ) ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 70 ( 0 % )            ;
 ; PLLs                                        ; 0 / 4 ( 0 % )             ;
 ; Global clocks                               ; 1 / 16 ( 6 % )            ;
@@ -225,11 +225,11 @@ The pin-out file can be found in /home/moffitt/Development/N6480/Altera/output_f
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )             ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )             ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%              ;
-; Peak interconnect usage (total/H/V)         ; 3% / 5% / 1%              ;
-; Maximum fan-out                             ; 285                       ;
-; Highest non-global fan-out                  ; 66                        ;
-; Total fan-out                               ; 1724                      ;
-; Average fan-out                             ; 2.63                      ;
+; Peak interconnect usage (total/H/V)         ; 3% / 2% / 4%              ;
+; Maximum fan-out                             ; 265                       ;
+; Highest non-global fan-out                  ; 57                        ;
+; Total fan-out                               ; 1561                      ;
+; Average fan-out                             ; 2.53                      ;
 +---------------------------------------------+---------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -242,32 +242,32 @@ The pin-out file can be found in /home/moffitt/Development/N6480/Altera/output_f
 +---------------------------------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                            ;
 ;                                             ;                       ;                                ;
-; Total logic elements                        ; 330 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
-;     -- Combinational with no register       ; 57                    ; 0                              ;
-;     -- Register only                        ; 85                    ; 0                              ;
-;     -- Combinational with a register        ; 188                   ; 0                              ;
+; Total logic elements                        ; 317 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
+;     -- Combinational with no register       ; 62                    ; 0                              ;
+;     -- Register only                        ; 91                    ; 0                              ;
+;     -- Combinational with a register        ; 164                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
-;     -- 4 input functions                    ; 86                    ; 0                              ;
-;     -- 3 input functions                    ; 30                    ; 0                              ;
-;     -- <=2 input functions                  ; 129                   ; 0                              ;
-;     -- Register only                        ; 85                    ; 0                              ;
+;     -- 4 input functions                    ; 43                    ; 0                              ;
+;     -- 3 input functions                    ; 63                    ; 0                              ;
+;     -- <=2 input functions                  ; 120                   ; 0                              ;
+;     -- Register only                        ; 91                    ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
-;     -- normal mode                          ; 150                   ; 0                              ;
+;     -- normal mode                          ; 131                   ; 0                              ;
 ;     -- arithmetic mode                      ; 95                    ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total registers                             ; 273                   ; 0                              ;
-;     -- Dedicated logic registers            ; 273 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
+; Total registers                             ; 255                   ; 0                              ;
+;     -- Dedicated logic registers            ; 255 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
 ;                                             ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 43 / 2076 ( 2 % )     ; 0 / 2076 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 31 / 2076 ( 1 % )     ; 0 / 2076 ( 0 % )               ;
 ;                                             ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                              ;
 ; I/O pins                                    ; 52                    ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 70 ( 0 % )        ; 0 / 70 ( 0 % )                 ;
-; Total memory bits                           ; 32382                 ; 0                              ;
-; Total RAM block bits                        ; 55296                 ; 0                              ;
-; M4K                                         ; 12 / 105 ( 11 % )     ; 0 / 105 ( 0 % )                ;
+; Total memory bits                           ; 27756                 ; 0                              ;
+; Total RAM block bits                        ; 46080                 ; 0                              ;
+; M4K                                         ; 10 / 105 ( 9 % )      ; 0 / 105 ( 0 % )                ;
 ; Clock control block                         ; 1 / 20 ( 5 % )        ; 0 / 20 ( 0 % )                 ;
 ;                                             ;                       ;                                ;
 ; Connections                                 ;                       ;                                ;
@@ -277,8 +277,8 @@ The pin-out file can be found in /home/moffitt/Development/N6480/Altera/output_f
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 1844                  ; 0                              ;
-;     -- Registered Connections               ; 915                   ; 0                              ;
+;     -- Total Connections                    ; 1661                  ; 0                              ;
+;     -- Registered Connections               ; 832                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
 ;     -- Top                                  ; 0                     ; 0                              ;
@@ -313,16 +313,16 @@ The pin-out file can be found in /home/moffitt/Development/N6480/Altera/output_f
 ; button[0]   ; G26   ; 5        ; 65           ; 27           ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; button[1]   ; N23   ; 5        ; 65           ; 20           ; 2           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; n64_clock   ; P26   ; 6        ; 65           ; 19           ; 3           ; 1                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; n64_data[0] ; D25   ; 5        ; 65           ; 31           ; 1           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; n64_data[1] ; J22   ; 5        ; 65           ; 31           ; 2           ; 4                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; n64_data[2] ; E26   ; 5        ; 65           ; 31           ; 3           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; n64_data[3] ; E25   ; 5        ; 65           ; 31           ; 4           ; 4                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; n64_data[4] ; F24   ; 5        ; 65           ; 30           ; 0           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; n64_data[5] ; F23   ; 5        ; 65           ; 30           ; 1           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; n64_data[6] ; J21   ; 5        ; 65           ; 30           ; 2           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; n64_dsync_n ; K25   ; 5        ; 65           ; 22           ; 0           ; 4                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; switches[0] ; N25   ; 5        ; 65           ; 19           ; 0           ; 42                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; switches[1] ; N26   ; 5        ; 65           ; 19           ; 1           ; 12                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; n64_data[0] ; K25   ; 5        ; 65           ; 22           ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; n64_data[1] ; K26   ; 5        ; 65           ; 22           ; 1           ; 4                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; n64_data[2] ; M22   ; 5        ; 65           ; 22           ; 2           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; n64_data[3] ; M23   ; 5        ; 65           ; 22           ; 3           ; 4                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; n64_data[4] ; M19   ; 5        ; 65           ; 21           ; 0           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; n64_data[5] ; M20   ; 5        ; 65           ; 21           ; 1           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; n64_data[6] ; N20   ; 5        ; 65           ; 21           ; 2           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; n64_dsync_n ; M21   ; 5        ; 65           ; 21           ; 3           ; 4                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; switches[0] ; N25   ; 5        ; 65           ; 19           ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; switches[1] ; N26   ; 5        ; 65           ; 19           ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 +-------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
@@ -648,7 +648,7 @@ The pin-out file can be found in /home/moffitt/Development/N6480/Altera/output_f
 ; D22      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; D23      ; 369        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; D24      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; D25      ; 358        ; 5        ; n64_data[0]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; D25      ; 358        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; D26      ; 359        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; E1       ; 20         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; E2       ; 19         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -674,8 +674,8 @@ The pin-out file can be found in /home/moffitt/Development/N6480/Altera/output_f
 ; E22      ; 370        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; E23      ; 365        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; E24      ; 364        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; E25      ; 355        ; 5        ; n64_data[3]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
-; E26      ; 356        ; 5        ; n64_data[2]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; E25      ; 355        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; E26      ; 356        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F1       ; 29         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F2       ; 28         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F3       ; 10         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -698,8 +698,8 @@ The pin-out file can be found in /home/moffitt/Development/N6480/Altera/output_f
 ; F20      ; 372        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F21      ; 371        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F22      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; F23      ; 353        ; 5        ; n64_data[5]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
-; F24      ; 354        ; 5        ; n64_data[4]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; F23      ; 353        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; F24      ; 354        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F25      ; 350        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F26      ; 349        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G1       ; 30         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -774,8 +774,8 @@ The pin-out file can be found in /home/moffitt/Development/N6480/Altera/output_f
 ; J18      ; 383        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; J19      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; J20      ; 351        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; J21      ; 352        ; 5        ; n64_data[6]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
-; J22      ; 357        ; 5        ; n64_data[1]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; J21      ; 352        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; J22      ; 357        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; J23      ; 339        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J24      ; 338        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J25      ; 327        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -804,8 +804,8 @@ The pin-out file can be found in /home/moffitt/Development/N6480/Altera/output_f
 ; K22      ; 344        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; K23      ; 331        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; K24      ; 330        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; K25      ; 321        ; 5        ; n64_dsync_n                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
-; K26      ; 320        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; K25      ; 321        ; 5        ; n64_data[0]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; K26      ; 320        ; 5        ; n64_data[1]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; L1       ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; L2       ; 50         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; L3       ; 51         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -850,11 +850,11 @@ The pin-out file can be found in /home/moffitt/Development/N6480/Altera/output_f
 ; M16      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; M17      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; M18      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; M19      ; 317        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; M20      ; 316        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; M21      ; 314        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; M22      ; 319        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; M23      ; 318        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; M19      ; 317        ; 5        ; n64_data[4]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; M20      ; 316        ; 5        ; n64_data[5]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; M21      ; 314        ; 5        ; n64_dsync_n                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; M22      ; 319        ; 5        ; n64_data[2]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; M23      ; 318        ; 5        ; n64_data[3]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; M24      ; 313        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; M25      ; 312        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; M26      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -877,7 +877,7 @@ The pin-out file can be found in /home/moffitt/Development/N6480/Altera/output_f
 ; N17      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; N18      ; 348        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; N19      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; N20      ; 315        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; N20      ; 315        ; 5        ; n64_data[6]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; N21      ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; N22      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; N23      ; 311        ; 5        ; button[1]                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
@@ -1112,20 +1112,20 @@ Note: User assignments will override these defaults. The user specified values a
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                    ; Library Name ;
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------------+--------------+
-; |n6480                                    ; 330 (227)   ; 273 (182)                 ; 0 (0)         ; 32382       ; 12   ; 0            ; 0       ; 0         ; 52   ; 0            ; 57 (45)      ; 85 (20)           ; 188 (164)        ; |n6480                                                                                                                 ; work         ;
-;    |linebuffer:buffer_a|                  ; 15 (0)      ; 10 (0)                    ; 0 (0)         ; 16191       ; 6    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 10 (0)           ; |n6480|linebuffer:buffer_a                                                                                             ; work         ;
-;       |altshift_taps:line_buffer_rtl_0|   ; 15 (0)      ; 10 (0)                    ; 0 (0)         ; 16191       ; 6    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 10 (0)           ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0                                                             ; work         ;
-;          |shift_taps_hmm:auto_generated|  ; 15 (0)      ; 10 (0)                    ; 0 (0)         ; 16191       ; 6    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 10 (0)           ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated                               ; work         ;
-;             |altsyncram_ui81:altsyncram2| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 16191       ; 6    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2   ; work         ;
-;             |cntr_fpf:cntr1|              ; 15 (12)     ; 10 (10)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (2)        ; 0 (0)             ; 10 (10)          ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1                ; work         ;
-;                |cmpr_ldc:cmpr5|           ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5 ; work         ;
-;    |linebuffer:buffer_b|                  ; 15 (0)      ; 10 (0)                    ; 0 (0)         ; 16191       ; 6    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 10 (0)           ; |n6480|linebuffer:buffer_b                                                                                             ; work         ;
-;       |altshift_taps:line_buffer_rtl_0|   ; 15 (0)      ; 10 (0)                    ; 0 (0)         ; 16191       ; 6    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 10 (0)           ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0                                                             ; work         ;
-;          |shift_taps_hmm:auto_generated|  ; 15 (0)      ; 10 (0)                    ; 0 (0)         ; 16191       ; 6    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 10 (0)           ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated                               ; work         ;
-;             |altsyncram_ui81:altsyncram2| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 16191       ; 6    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2   ; work         ;
-;             |cntr_fpf:cntr1|              ; 15 (12)     ; 10 (10)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (2)        ; 0 (0)             ; 10 (10)          ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1                ; work         ;
-;                |cmpr_ldc:cmpr5|           ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5 ; work         ;
-;    |n64_pixel:rgb_decoder|                ; 73 (73)     ; 71 (71)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 65 (65)           ; 6 (6)            ; |n6480|n64_pixel:rgb_decoder                                                                                           ; work         ;
+; |n6480                                    ; 317 (225)   ; 255 (173)                 ; 0 (0)         ; 27756       ; 10   ; 0            ; 0       ; 0         ; 52   ; 0            ; 62 (51)      ; 91 (36)           ; 164 (139)        ; |n6480                                                                                                                 ; work         ;
+;    |linebuffer:buffer_a|                  ; 15 (0)      ; 10 (0)                    ; 0 (0)         ; 13878       ; 5    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 10 (0)           ; |n6480|linebuffer:buffer_a                                                                                             ; work         ;
+;       |altshift_taps:line_buffer_rtl_0|   ; 15 (0)      ; 10 (0)                    ; 0 (0)         ; 13878       ; 5    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 10 (0)           ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0                                                             ; work         ;
+;          |shift_taps_nmm:auto_generated|  ; 15 (0)      ; 10 (0)                    ; 0 (0)         ; 13878       ; 5    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 10 (0)           ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated                               ; work         ;
+;             |altsyncram_aj81:altsyncram2| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 13878       ; 5    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2   ; work         ;
+;             |cntr_fpf:cntr1|              ; 15 (12)     ; 10 (10)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (2)        ; 0 (0)             ; 10 (10)          ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1                ; work         ;
+;                |cmpr_ldc:cmpr5|           ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5 ; work         ;
+;    |linebuffer:buffer_b|                  ; 15 (0)      ; 10 (0)                    ; 0 (0)         ; 13878       ; 5    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 10 (0)           ; |n6480|linebuffer:buffer_b                                                                                             ; work         ;
+;       |altshift_taps:line_buffer_rtl_0|   ; 15 (0)      ; 10 (0)                    ; 0 (0)         ; 13878       ; 5    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 10 (0)           ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0                                                             ; work         ;
+;          |shift_taps_nmm:auto_generated|  ; 15 (0)      ; 10 (0)                    ; 0 (0)         ; 13878       ; 5    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 10 (0)           ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated                               ; work         ;
+;             |altsyncram_aj81:altsyncram2| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 13878       ; 5    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2   ; work         ;
+;             |cntr_fpf:cntr1|              ; 15 (12)     ; 10 (10)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (2)        ; 0 (0)             ; 10 (10)          ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1                ; work         ;
+;                |cmpr_ldc:cmpr5|           ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5 ; work         ;
+;    |n64_pixel:rgb_decoder|                ; 63 (63)     ; 62 (62)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 55 (55)           ; 7 (7)            ; |n6480|n64_pixel:rgb_decoder                                                                                           ; work         ;
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1135,6 +1135,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------+----------+---------------+---------------+-----------------------+-----+
 ; Name         ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ;
 +--------------+----------+---------------+---------------+-----------------------+-----+
+; n64_data[0]  ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; vga_red[0]   ; Output   ; --            ; --            ; --                    ; --  ;
 ; vga_red[1]   ; Output   ; --            ; --            ; --                    ; --  ;
 ; vga_red[2]   ; Output   ; --            ; --            ; --                    ; --  ;
@@ -1174,18 +1175,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; led[1]       ; Output   ; --            ; --            ; --                    ; --  ;
 ; led[2]       ; Output   ; --            ; --            ; --                    ; --  ;
 ; led[3]       ; Output   ; --            ; --            ; --                    ; --  ;
+; switches[0]  ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; switches[1]  ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; button[0]    ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; button[1]    ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; n64_dsync_n  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; switches[1]  ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; n64_clock    ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; n64_data[3]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; switches[0]  ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; n64_data[1]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; n64_data[4]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; n64_data[5]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; n64_data[6]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; n64_data[0]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; n64_data[2]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 +--------------+----------+---------------+---------------+-----------------------+-----+
 
@@ -1195,46 +1195,43 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------+-------------------+---------+
 ; Source Pin / Fanout                              ; Pad To Core Index ; Setting ;
 +--------------------------------------------------+-------------------+---------+
+; n64_data[0]                                      ;                   ;         ;
+; switches[0]                                      ;                   ;         ;
+; switches[1]                                      ;                   ;         ;
 ; button[0]                                        ;                   ;         ;
 ; button[1]                                        ;                   ;         ;
 ; n64_dsync_n                                      ;                   ;         ;
-;      - n64_pixel:rgb_decoder|cycle_count~0       ; 0                 ; 6       ;
-;      - n64_pixel:rgb_decoder|cycle_count~1       ; 0                 ; 6       ;
-;      - led[3]                                    ; 0                 ; 6       ;
-;      - led[2]                                    ; 0                 ; 6       ;
-; switches[1]                                      ;                   ;         ;
+;      - n64_pixel:rgb_decoder|cycle_count~0       ; 1                 ; 6       ;
+;      - n64_pixel:rgb_decoder|cycle_count~1       ; 1                 ; 6       ;
+;      - led[3]                                    ; 1                 ; 6       ;
+;      - led[2]                                    ; 1                 ; 6       ;
 ; n64_clock                                        ;                   ;         ;
 ; n64_data[3]                                      ;                   ;         ;
-;      - n64_pixel:rgb_decoder|red_cap[3]          ; 1                 ; 6       ;
-;      - n64_pixel:rgb_decoder|blue_cap[3]         ; 1                 ; 6       ;
+;      - n64_pixel:rgb_decoder|vsync_n_cap         ; 1                 ; 6       ;
 ;      - n64_pixel:rgb_decoder|green_cap[3]~feeder ; 1                 ; 6       ;
-;      - n64_pixel:rgb_decoder|vsync_n_cap~feeder  ; 1                 ; 6       ;
-; switches[0]                                      ;                   ;         ;
+;      - n64_pixel:rgb_decoder|blue_cap[3]~feeder  ; 1                 ; 6       ;
+;      - n64_pixel:rgb_decoder|red_cap[3]~feeder   ; 1                 ; 6       ;
 ; n64_data[1]                                      ;                   ;         ;
-;      - n64_pixel:rgb_decoder|hsync_n_cap~feeder  ; 0                 ; 6       ;
-;      - n64_pixel:rgb_decoder|red_cap[1]~feeder   ; 0                 ; 6       ;
-;      - n64_pixel:rgb_decoder|blue_cap[1]~feeder  ; 0                 ; 6       ;
-;      - n64_pixel:rgb_decoder|green_cap[1]~feeder ; 0                 ; 6       ;
+;      - n64_pixel:rgb_decoder|hsync_n_cap         ; 1                 ; 6       ;
+;      - n64_pixel:rgb_decoder|red_cap[1]          ; 1                 ; 6       ;
+;      - n64_pixel:rgb_decoder|blue_cap[1]         ; 1                 ; 6       ;
+;      - n64_pixel:rgb_decoder|green_cap[1]~feeder ; 1                 ; 6       ;
 ; n64_data[4]                                      ;                   ;         ;
-;      - n64_pixel:rgb_decoder|green_cap[4]        ; 0                 ; 6       ;
-;      - n64_pixel:rgb_decoder|red_cap[4]~feeder   ; 0                 ; 6       ;
-;      - n64_pixel:rgb_decoder|blue_cap[4]~feeder  ; 0                 ; 6       ;
+;      - n64_pixel:rgb_decoder|red_cap[4]          ; 0                 ; 6       ;
+;      - n64_pixel:rgb_decoder|blue_cap[4]         ; 0                 ; 6       ;
+;      - n64_pixel:rgb_decoder|green_cap[4]~feeder ; 0                 ; 6       ;
 ; n64_data[5]                                      ;                   ;         ;
 ;      - n64_pixel:rgb_decoder|red_cap[5]          ; 0                 ; 6       ;
-;      - n64_pixel:rgb_decoder|green_cap[5]        ; 0                 ; 6       ;
 ;      - n64_pixel:rgb_decoder|blue_cap[5]         ; 0                 ; 6       ;
+;      - n64_pixel:rgb_decoder|green_cap[5]~feeder ; 0                 ; 6       ;
 ; n64_data[6]                                      ;                   ;         ;
-;      - n64_pixel:rgb_decoder|red_cap[6]          ; 0                 ; 6       ;
-;      - n64_pixel:rgb_decoder|green_cap[6]~feeder ; 0                 ; 6       ;
-;      - n64_pixel:rgb_decoder|blue_cap[6]~feeder  ; 0                 ; 6       ;
-; n64_data[0]                                      ;                   ;         ;
-;      - n64_pixel:rgb_decoder|red_cap[0]          ; 1                 ; 6       ;
-;      - n64_pixel:rgb_decoder|green_cap[0]~feeder ; 1                 ; 6       ;
-;      - n64_pixel:rgb_decoder|blue_cap[0]~feeder  ; 1                 ; 6       ;
+;      - n64_pixel:rgb_decoder|red_cap[6]          ; 1                 ; 6       ;
+;      - n64_pixel:rgb_decoder|blue_cap[6]         ; 1                 ; 6       ;
+;      - n64_pixel:rgb_decoder|green_cap[6]~feeder ; 1                 ; 6       ;
 ; n64_data[2]                                      ;                   ;         ;
-;      - n64_pixel:rgb_decoder|red_cap[2]~feeder   ; 1                 ; 6       ;
-;      - n64_pixel:rgb_decoder|green_cap[2]~feeder ; 1                 ; 6       ;
-;      - n64_pixel:rgb_decoder|blue_cap[2]~feeder  ; 1                 ; 6       ;
+;      - n64_pixel:rgb_decoder|green_cap[2]~feeder ; 0                 ; 6       ;
+;      - n64_pixel:rgb_decoder|red_cap[2]~feeder   ; 0                 ; 6       ;
+;      - n64_pixel:rgb_decoder|blue_cap[2]~feeder  ; 0                 ; 6       ;
 +--------------------------------------------------+-------------------+---------+
 
 
@@ -1243,22 +1240,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                                                                         ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +--------------------------------------------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; buffer_en_a                                                                                                  ; LCFF_X27_Y31_N17   ; 17      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; buffer_en_b                                                                                                  ; LCFF_X51_Y31_N13   ; 17      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; buffer_sel                                                                                                   ; LCFF_X30_Y31_N5    ; 66      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; line_count[0]~20                                                                                             ; LCCOMB_X24_Y30_N16 ; 16      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; line_count[0]~21                                                                                             ; LCCOMB_X28_Y30_N26 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|cout_actual ; LCCOMB_X28_Y34_N28 ; 10      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|cout_actual ; LCCOMB_X53_Y31_N28 ; 10      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; n64_clock                                                                                                    ; PIN_P26            ; 285     ; Clock        ; yes    ; Global Clock         ; GCLK7            ; --                        ;
-; n64_pixel:rgb_decoder|Equal0~0                                                                               ; LCCOMB_X40_Y31_N28 ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; n64_pixel:rgb_decoder|Equal0~1                                                                               ; LCCOMB_X40_Y31_N26 ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; n64_pixel:rgb_decoder|Equal0~2                                                                               ; LCCOMB_X40_Y31_N24 ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; n64_pixel:rgb_decoder|green_final[4]~0                                                                       ; LCCOMB_X38_Y31_N22 ; 23      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; n64_pixel:rgb_decoder|hsync_n_out                                                                            ; LCFF_X34_Y31_N17   ; 16      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; n64_pixel:rgb_decoder|vsync_n_out                                                                            ; LCFF_X28_Y30_N1    ; 20      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; n64_px_count[1]~40                                                                                           ; LCCOMB_X30_Y31_N12 ; 16      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; vga_px_count[15]~38                                                                                          ; LCCOMB_X19_Y31_N24 ; 16      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; buffer_en_a                                                                                                  ; LCFF_X29_Y24_N13   ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; buffer_en_b                                                                                                  ; LCFF_X28_Y24_N1    ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; buffer_sel                                                                                                   ; LCFF_X29_Y25_N27   ; 57      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; line_count[6]~20                                                                                             ; LCCOMB_X12_Y26_N24 ; 16      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; line_count[6]~21                                                                                             ; LCCOMB_X12_Y26_N14 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|cout_actual ; LCCOMB_X25_Y25_N6  ; 10      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|cout_actual ; LCCOMB_X25_Y29_N28 ; 10      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; n64_clock                                                                                                    ; PIN_P26            ; 265     ; Clock        ; yes    ; Global Clock         ; GCLK7            ; --                        ;
+; n64_pixel:rgb_decoder|Equal0~0                                                                               ; LCCOMB_X27_Y24_N18 ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; n64_pixel:rgb_decoder|Equal0~1                                                                               ; LCCOMB_X28_Y24_N14 ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; n64_pixel:rgb_decoder|Equal0~2                                                                               ; LCCOMB_X27_Y24_N22 ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; n64_pixel:rgb_decoder|green_final[5]~0                                                                       ; LCCOMB_X27_Y24_N10 ; 20      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; n64_pixel:rgb_decoder|hsync_n_out                                                                            ; LCFF_X30_Y25_N21   ; 16      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; n64_pixel:rgb_decoder|vsync_n_out                                                                            ; LCFF_X12_Y26_N17   ; 21      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; n64_px_count[7]~42                                                                                           ; LCCOMB_X29_Y25_N18 ; 16      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; vga_px_count[8]~38                                                                                           ; LCCOMB_X10_Y26_N16 ; 16      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
 +--------------------------------------------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1267,7 +1264,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------+----------+---------+----------------------+------------------+---------------------------+
 ; Name      ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-----------+----------+---------+----------------------+------------------+---------------------------+
-; n64_clock ; PIN_P26  ; 285     ; Global Clock         ; GCLK7            ; --                        ;
+; n64_clock ; PIN_P26  ; 265     ; Global Clock         ; GCLK7            ; --                        ;
 +-----------+----------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1276,53 +1273,50 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; Name                                                                                                                                  ; Fan-Out ;
 +---------------------------------------------------------------------------------------------------------------------------------------+---------+
-; buffer_sel                                                                                                                            ; 66      ;
-; switches[0]                                                                                                                           ; 42      ;
-; n64_pixel:rgb_decoder|green_final[4]~0                                                                                                ; 23      ;
+; buffer_sel                                                                                                                            ; 57      ;
+; n64_pixel:rgb_decoder|vsync_n_out                                                                                                     ; 21      ;
 ; ~GND                                                                                                                                  ; 20      ;
-; n64_pixel:rgb_decoder|vsync_n_out                                                                                                     ; 20      ;
-; buffer_en_b                                                                                                                           ; 17      ;
-; buffer_en_a                                                                                                                           ; 17      ;
-; n64_px_count[1]~40                                                                                                                    ; 16      ;
+; n64_pixel:rgb_decoder|green_final[5]~0                                                                                                ; 20      ;
 ; n64_pixel:rgb_decoder|hsync_n_out                                                                                                     ; 16      ;
-; line_count[0]~21                                                                                                                      ; 16      ;
-; line_count[0]~20                                                                                                                      ; 16      ;
-; vga_px_count[15]~38                                                                                                                   ; 16      ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[9]                            ; 14      ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[8]                            ; 14      ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[7]                            ; 14      ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[6]                            ; 14      ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[5]                            ; 14      ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[4]                            ; 14      ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[3]                            ; 14      ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[2]                            ; 14      ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[1]                            ; 14      ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[0]                            ; 14      ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[9]                            ; 14      ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[8]                            ; 14      ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[7]                            ; 14      ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[6]                            ; 14      ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[5]                            ; 14      ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[4]                            ; 14      ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[3]                            ; 14      ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[2]                            ; 14      ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[1]                            ; 14      ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|safe_q[0]                            ; 14      ;
-; switches[1]                                                                                                                           ; 12      ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|cout_actual                          ; 10      ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|cout_actual                          ; 10      ;
-; n64_pixel:rgb_decoder|Equal0~2                                                                                                        ; 7       ;
-; n64_pixel:rgb_decoder|Equal0~1                                                                                                        ; 7       ;
-; n64_pixel:rgb_decoder|Equal0~0                                                                                                        ; 7       ;
+; n64_px_count[7]~42                                                                                                                    ; 16      ;
+; line_count[6]~21                                                                                                                      ; 16      ;
+; line_count[6]~20                                                                                                                      ; 16      ;
+; vga_px_count[8]~38                                                                                                                    ; 16      ;
+; buffer_en_b                                                                                                                           ; 16      ;
+; buffer_en_a                                                                                                                           ; 16      ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[9]                            ; 12      ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[8]                            ; 12      ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[7]                            ; 12      ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[6]                            ; 12      ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[5]                            ; 12      ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[4]                            ; 12      ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[3]                            ; 12      ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[2]                            ; 12      ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[1]                            ; 12      ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[0]                            ; 12      ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[9]                            ; 12      ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[8]                            ; 12      ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[7]                            ; 12      ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[6]                            ; 12      ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[5]                            ; 12      ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[4]                            ; 12      ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[3]                            ; 12      ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[2]                            ; 12      ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[1]                            ; 12      ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[0]                            ; 12      ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|cout_actual                          ; 10      ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|cout_actual                          ; 10      ;
 ; n64_pixel:rgb_decoder|cycle_count[0]                                                                                                  ; 7       ;
+; n64_pixel:rgb_decoder|Equal0~2                                                                                                        ; 6       ;
+; n64_pixel:rgb_decoder|Equal0~1                                                                                                        ; 6       ;
+; n64_pixel:rgb_decoder|Equal0~0                                                                                                        ; 6       ;
 ; n64_pixel:rgb_decoder|cycle_count[1]                                                                                                  ; 6       ;
+; n64_px_count[11]                                                                                                                      ; 5       ;
 ; n64_data[1]                                                                                                                           ; 4       ;
 ; n64_data[3]                                                                                                                           ; 4       ;
 ; n64_dsync_n                                                                                                                           ; 4       ;
-; n64_px_count[8]                                                                                                                       ; 4       ;
+; LessThan1~0                                                                                                                           ; 4       ;
 ; n64_px_count[10]                                                                                                                      ; 4       ;
-; n64_px_count[9]                                                                                                                       ; 4       ;
-; n64_px_count[11]                                                                                                                      ; 4       ;
 ; vga_px_count[1]                                                                                                                       ; 4       ;
 ; vga_px_count[3]                                                                                                                       ; 4       ;
 ; vga_px_count[2]                                                                                                                       ; 4       ;
@@ -1333,18 +1327,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; vga_px_count[5]                                                                                                                       ; 4       ;
 ; vga_px_count[10]                                                                                                                      ; 4       ;
 ; n64_data[2]                                                                                                                           ; 3       ;
-; n64_data[0]                                                                                                                           ; 3       ;
 ; n64_data[6]                                                                                                                           ; 3       ;
 ; n64_data[5]                                                                                                                           ; 3       ;
 ; n64_data[4]                                                                                                                           ; 3       ;
-; LessThan1~3                                                                                                                           ; 3       ;
-; LessThan1~0                                                                                                                           ; 3       ;
 ; Equal1~4                                                                                                                              ; 3       ;
 ; Equal2~4                                                                                                                              ; 3       ;
+; write_buffers~2                                                                                                                       ; 3       ;
+; n64_px_count[8]                                                                                                                       ; 3       ;
 ; n64_px_count[3]                                                                                                                       ; 3       ;
 ; n64_px_count[2]                                                                                                                       ; 3       ;
 ; n64_px_count[1]                                                                                                                       ; 3       ;
 ; n64_px_count[0]                                                                                                                       ; 3       ;
+; n64_px_count[9]                                                                                                                       ; 3       ;
 ; line_count[7]                                                                                                                         ; 3       ;
 ; line_count[6]                                                                                                                         ; 3       ;
 ; line_count[5]                                                                                                                         ; 3       ;
@@ -1355,32 +1349,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; line_count[1]                                                                                                                         ; 3       ;
 ; vga_px_count[9]                                                                                                                       ; 3       ;
 ; vga_px_count[0]                                                                                                                       ; 3       ;
+; buffer_en_b~3                                                                                                                         ; 2       ;
 ; n64_pixel:rgb_decoder|blue_out[2]                                                                                                     ; 2       ;
 ; n64_pixel:rgb_decoder|blue_out[1]                                                                                                     ; 2       ;
-; n64_pixel:rgb_decoder|blue_out[0]                                                                                                     ; 2       ;
 ; n64_pixel:rgb_decoder|blue_out[6]                                                                                                     ; 2       ;
 ; n64_pixel:rgb_decoder|blue_out[5]                                                                                                     ; 2       ;
 ; n64_pixel:rgb_decoder|blue_out[4]                                                                                                     ; 2       ;
 ; n64_pixel:rgb_decoder|blue_out[3]                                                                                                     ; 2       ;
 ; n64_pixel:rgb_decoder|green_out[2]                                                                                                    ; 2       ;
 ; n64_pixel:rgb_decoder|green_out[1]                                                                                                    ; 2       ;
-; n64_pixel:rgb_decoder|green_out[0]                                                                                                    ; 2       ;
 ; n64_pixel:rgb_decoder|green_out[6]                                                                                                    ; 2       ;
 ; n64_pixel:rgb_decoder|green_out[5]                                                                                                    ; 2       ;
 ; n64_pixel:rgb_decoder|green_out[4]                                                                                                    ; 2       ;
 ; n64_pixel:rgb_decoder|green_out[3]                                                                                                    ; 2       ;
 ; n64_pixel:rgb_decoder|red_out[2]                                                                                                      ; 2       ;
 ; n64_pixel:rgb_decoder|red_out[1]                                                                                                      ; 2       ;
-; n64_pixel:rgb_decoder|red_out[0]                                                                                                      ; 2       ;
 ; n64_pixel:rgb_decoder|red_out[6]                                                                                                      ; 2       ;
 ; n64_pixel:rgb_decoder|red_out[5]                                                                                                      ; 2       ;
 ; n64_pixel:rgb_decoder|red_out[4]                                                                                                      ; 2       ;
 ; n64_pixel:rgb_decoder|red_out[3]                                                                                                      ; 2       ;
 ; Mux0~0                                                                                                                                ; 2       ;
-; write_buffers~2                                                                                                                       ; 2       ;
-; enable_delay                                                                                                                          ; 2       ;
-; buffer_en_b~1                                                                                                                         ; 2       ;
 ; n64_pixel:rgb_decoder|clock_count[0]                                                                                                  ; 2       ;
+; LessThan2~0                                                                                                                           ; 2       ;
+; enable_delay                                                                                                                          ; 2       ;
+; LessThan1~5                                                                                                                           ; 2       ;
+; LessThan1~4                                                                                                                           ; 2       ;
 ; vga_osc                                                                                                                               ; 2       ;
 ; Equal3~1                                                                                                                              ; 2       ;
 ; vga_hsync_proc~7                                                                                                                      ; 2       ;
@@ -1398,14 +1391,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; out_red[5]                                                                                                                            ; 2       ;
 ; out_red[4]                                                                                                                            ; 2       ;
 ; out_red[3]                                                                                                                            ; 2       ;
-; n64_px_count[7]                                                                                                                       ; 2       ;
-; n64_px_count[6]                                                                                                                       ; 2       ;
-; n64_px_count[5]                                                                                                                       ; 2       ;
-; n64_px_count[4]                                                                                                                       ; 2       ;
-; n64_px_count[15]                                                                                                                      ; 2       ;
-; n64_px_count[14]                                                                                                                      ; 2       ;
-; n64_px_count[13]                                                                                                                      ; 2       ;
-; n64_px_count[12]                                                                                                                      ; 2       ;
+; vga_clk~reg0                                                                                                                          ; 2       ;
 ; vsync_time[15]                                                                                                                        ; 2       ;
 ; vsync_time[14]                                                                                                                        ; 2       ;
 ; vsync_time[13]                                                                                                                        ; 2       ;
@@ -1439,48 +1425,50 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; hsync_time[2]                                                                                                                         ; 2       ;
 ; hsync_time[1]                                                                                                                         ; 2       ;
 ; line_count[0]                                                                                                                         ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20           ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a20           ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a17           ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a18           ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a19           ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a16           ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a17           ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a18           ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a19           ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a16           ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a13           ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a14           ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a15           ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a12           ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a13           ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a14           ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a15           ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a12           ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a9            ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a10           ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a11           ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a8            ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a9            ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a10           ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a11           ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a8            ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a5            ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a6            ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a7            ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a3            ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a5            ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a6            ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a7            ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a3            ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a1            ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a2            ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a4            ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a0            ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a1            ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a2            ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a4            ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ram_block3a0            ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a17           ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a16           ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a17           ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a16           ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a13           ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a14           ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a15           ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a12           ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a13           ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a14           ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a15           ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a12           ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a9            ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a10           ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a11           ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a8            ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a9            ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a10           ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a11           ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a8            ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a5            ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a6            ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a7            ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a4            ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a5            ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a6            ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a7            ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a4            ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a1            ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a2            ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a3            ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a0            ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a1            ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a2            ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a3            ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a0            ; 2       ;
+; n64_px_count[7]                                                                                                                       ; 2       ;
+; n64_px_count[6]                                                                                                                       ; 2       ;
+; n64_px_count[5]                                                                                                                       ; 2       ;
+; n64_px_count[4]                                                                                                                       ; 2       ;
+; n64_px_count[15]                                                                                                                      ; 2       ;
+; n64_px_count[14]                                                                                                                      ; 2       ;
+; n64_px_count[13]                                                                                                                      ; 2       ;
+; n64_px_count[12]                                                                                                                      ; 2       ;
 ; line_count[15]                                                                                                                        ; 2       ;
 ; line_count[14]                                                                                                                        ; 2       ;
 ; line_count[13]                                                                                                                        ; 2       ;
@@ -1494,58 +1482,44 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; vga_px_count[12]                                                                                                                      ; 2       ;
 ; vga_px_count[11]                                                                                                                      ; 2       ;
 ; vga_osc~0                                                                                                                             ; 1       ;
+; vga_clk~3                                                                                                                             ; 1       ;
 ; n64_pixel:rgb_decoder|blue_cap[2]                                                                                                     ; 1       ;
 ; n64_pixel:rgb_decoder|blue_cap[1]                                                                                                     ; 1       ;
-; n64_pixel:rgb_decoder|blue_cap[0]                                                                                                     ; 1       ;
 ; n64_pixel:rgb_decoder|blue_cap[6]                                                                                                     ; 1       ;
 ; n64_pixel:rgb_decoder|blue_cap[5]                                                                                                     ; 1       ;
 ; n64_pixel:rgb_decoder|blue_cap[4]                                                                                                     ; 1       ;
 ; n64_pixel:rgb_decoder|blue_cap[3]                                                                                                     ; 1       ;
 ; n64_pixel:rgb_decoder|green_cap[2]                                                                                                    ; 1       ;
 ; n64_pixel:rgb_decoder|green_cap[1]                                                                                                    ; 1       ;
-; n64_pixel:rgb_decoder|green_cap[0]                                                                                                    ; 1       ;
 ; n64_pixel:rgb_decoder|green_cap[6]                                                                                                    ; 1       ;
 ; n64_pixel:rgb_decoder|green_cap[5]                                                                                                    ; 1       ;
 ; n64_pixel:rgb_decoder|green_cap[4]                                                                                                    ; 1       ;
 ; n64_pixel:rgb_decoder|green_cap[3]                                                                                                    ; 1       ;
 ; n64_pixel:rgb_decoder|red_cap[2]                                                                                                      ; 1       ;
 ; n64_pixel:rgb_decoder|red_cap[1]                                                                                                      ; 1       ;
-; n64_pixel:rgb_decoder|red_cap[0]                                                                                                      ; 1       ;
 ; n64_pixel:rgb_decoder|red_cap[6]                                                                                                      ; 1       ;
 ; n64_pixel:rgb_decoder|red_cap[5]                                                                                                      ; 1       ;
 ; n64_pixel:rgb_decoder|red_cap[4]                                                                                                      ; 1       ;
 ; n64_pixel:rgb_decoder|red_cap[3]                                                                                                      ; 1       ;
 ; n64_pixel:rgb_decoder|blue_final[2]                                                                                                   ; 1       ;
 ; n64_pixel:rgb_decoder|blue_final[1]                                                                                                   ; 1       ;
-; n64_pixel:rgb_decoder|blue_final[0]                                                                                                   ; 1       ;
 ; n64_pixel:rgb_decoder|blue_final[6]                                                                                                   ; 1       ;
 ; n64_pixel:rgb_decoder|blue_final[5]                                                                                                   ; 1       ;
 ; n64_pixel:rgb_decoder|blue_final[4]                                                                                                   ; 1       ;
 ; n64_pixel:rgb_decoder|blue_final[3]                                                                                                   ; 1       ;
 ; n64_pixel:rgb_decoder|green_final[2]                                                                                                  ; 1       ;
 ; n64_pixel:rgb_decoder|green_final[1]                                                                                                  ; 1       ;
-; n64_pixel:rgb_decoder|green_final[0]                                                                                                  ; 1       ;
 ; n64_pixel:rgb_decoder|green_final[6]                                                                                                  ; 1       ;
 ; n64_pixel:rgb_decoder|green_final[5]                                                                                                  ; 1       ;
 ; n64_pixel:rgb_decoder|green_final[4]                                                                                                  ; 1       ;
 ; n64_pixel:rgb_decoder|green_final[3]                                                                                                  ; 1       ;
 ; n64_pixel:rgb_decoder|red_final[2]                                                                                                    ; 1       ;
 ; n64_pixel:rgb_decoder|red_final[1]                                                                                                    ; 1       ;
-; n64_pixel:rgb_decoder|red_final[0]                                                                                                    ; 1       ;
 ; n64_pixel:rgb_decoder|red_final[6]                                                                                                    ; 1       ;
 ; n64_pixel:rgb_decoder|red_final[5]                                                                                                    ; 1       ;
 ; n64_pixel:rgb_decoder|red_final[4]                                                                                                    ; 1       ;
 ; n64_pixel:rgb_decoder|red_final[3]                                                                                                    ; 1       ;
-; enable_delay~0                                                                                                                        ; 1       ;
-; LessThan2~1                                                                                                                           ; 1       ;
-; LessThan2~0                                                                                                                           ; 1       ;
 ; n64_pixel:rgb_decoder|hsync_n_cap                                                                                                     ; 1       ;
-; buffer_in_b~20                                                                                                                        ; 1       ;
-; buffer_in_a~20                                                                                                                        ; 1       ;
-; buffer_in_b~19                                                                                                                        ; 1       ;
-; buffer_in_a~19                                                                                                                        ; 1       ;
-; buffer_in_b~18                                                                                                                        ; 1       ;
-; buffer_in_a~18                                                                                                                        ; 1       ;
 ; buffer_in_b~17                                                                                                                        ; 1       ;
 ; buffer_in_a~17                                                                                                                        ; 1       ;
 ; buffer_in_b~16                                                                                                                        ; 1       ;
@@ -1580,29 +1554,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; buffer_in_a~2                                                                                                                         ; 1       ;
 ; buffer_in_b~1                                                                                                                         ; 1       ;
 ; buffer_in_a~1                                                                                                                         ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5|aneb_result_wire[0]~2 ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5|aneb_result_wire[0]~1 ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5|aneb_result_wire[0]~0 ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5|aneb_result_wire[0]~2 ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5|aneb_result_wire[0]~1 ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5|aneb_result_wire[0]~0 ; 1       ;
 ; buffer_in_b~0                                                                                                                         ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5|aneb_result_wire[0]~2 ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5|aneb_result_wire[0]~1 ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5|aneb_result_wire[0]~0 ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5|aneb_result_wire[0]~2 ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5|aneb_result_wire[0]~1 ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5|aneb_result_wire[0]~0 ; 1       ;
 ; buffer_in_a~0                                                                                                                         ; 1       ;
 ; n64_pixel:rgb_decoder|clock_count[1]                                                                                                  ; 1       ;
-; LessThan1~5                                                                                                                           ; 1       ;
-; write_buffers~1                                                                                                                       ; 1       ;
-; write_buffers~0                                                                                                                       ; 1       ;
-; LessThan1~4                                                                                                                           ; 1       ;
-; LessThan1~2                                                                                                                           ; 1       ;
-; LessThan1~1                                                                                                                           ; 1       ;
 ; n64_pixel:rgb_decoder|cycle_count~1                                                                                                   ; 1       ;
 ; n64_pixel:rgb_decoder|cycle_count~0                                                                                                   ; 1       ;
 ; buffer_in_b[2]                                                                                                                        ; 1       ;
 ; buffer_in_a[2]                                                                                                                        ; 1       ;
 ; buffer_in_b[1]                                                                                                                        ; 1       ;
 ; buffer_in_a[1]                                                                                                                        ; 1       ;
-; buffer_in_b[0]                                                                                                                        ; 1       ;
-; buffer_in_a[0]                                                                                                                        ; 1       ;
 ; buffer_in_b[6]                                                                                                                        ; 1       ;
 ; buffer_in_a[6]                                                                                                                        ; 1       ;
 ; buffer_in_b[5]                                                                                                                        ; 1       ;
@@ -1615,8 +1581,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; buffer_in_a[9]                                                                                                                        ; 1       ;
 ; buffer_in_b[8]                                                                                                                        ; 1       ;
 ; buffer_in_a[8]                                                                                                                        ; 1       ;
-; buffer_in_b[7]                                                                                                                        ; 1       ;
-; buffer_in_a[7]                                                                                                                        ; 1       ;
 ; buffer_in_b[13]                                                                                                                       ; 1       ;
 ; buffer_in_a[13]                                                                                                                       ; 1       ;
 ; buffer_in_b[12]                                                                                                                       ; 1       ;
@@ -1629,8 +1593,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; buffer_in_a[16]                                                                                                                       ; 1       ;
 ; buffer_in_b[15]                                                                                                                       ; 1       ;
 ; buffer_in_a[15]                                                                                                                       ; 1       ;
-; buffer_in_b[14]                                                                                                                       ; 1       ;
-; buffer_in_a[14]                                                                                                                       ; 1       ;
 ; buffer_in_b[20]                                                                                                                       ; 1       ;
 ; buffer_in_a[20]                                                                                                                       ; 1       ;
 ; buffer_in_b[19]                                                                                                                       ; 1       ;
@@ -1638,12 +1600,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; buffer_in_b[18]                                                                                                                       ; 1       ;
 ; buffer_in_a[18]                                                                                                                       ; 1       ;
 ; buffer_sel~0                                                                                                                          ; 1       ;
+; buffer_in_b[17]                                                                                                                       ; 1       ;
+; buffer_in_a[17]                                                                                                                       ; 1       ;
+; enable_delay~1                                                                                                                        ; 1       ;
+; enable_delay~0                                                                                                                        ; 1       ;
 ; Equal1~3                                                                                                                              ; 1       ;
 ; Equal1~2                                                                                                                              ; 1       ;
 ; Equal1~1                                                                                                                              ; 1       ;
 ; Equal1~0                                                                                                                              ; 1       ;
-; buffer_in_b[17]                                                                                                                       ; 1       ;
-; buffer_in_a[17]                                                                                                                       ; 1       ;
 ; Equal2~3                                                                                                                              ; 1       ;
 ; Equal2~2                                                                                                                              ; 1       ;
 ; Equal2~1                                                                                                                              ; 1       ;
@@ -1654,21 +1618,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Equal0~4                                                                                                                              ; 1       ;
 ; Equal0~3                                                                                                                              ; 1       ;
 ; Equal0~2                                                                                                                              ; 1       ;
-; out_blue~6                                                                                                                            ; 1       ;
 ; out_blue~5                                                                                                                            ; 1       ;
 ; out_blue~4                                                                                                                            ; 1       ;
 ; out_blue~3                                                                                                                            ; 1       ;
 ; out_blue~2                                                                                                                            ; 1       ;
 ; out_blue~1                                                                                                                            ; 1       ;
 ; out_blue~0                                                                                                                            ; 1       ;
-; out_green~6                                                                                                                           ; 1       ;
 ; out_green~5                                                                                                                           ; 1       ;
 ; out_green~4                                                                                                                           ; 1       ;
 ; out_green~3                                                                                                                           ; 1       ;
 ; out_green~2                                                                                                                           ; 1       ;
 ; out_green~1                                                                                                                           ; 1       ;
 ; out_green~0                                                                                                                           ; 1       ;
-; out_red~6                                                                                                                             ; 1       ;
 ; out_red~5                                                                                                                             ; 1       ;
 ; out_red~4                                                                                                                             ; 1       ;
 ; out_red~3                                                                                                                             ; 1       ;
@@ -1676,6 +1637,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; out_red~1                                                                                                                             ; 1       ;
 ; out_red~0                                                                                                                             ; 1       ;
 ; n64_pixel:rgb_decoder|vsync_n_cap                                                                                                     ; 1       ;
+; vga_clk~2                                                                                                                             ; 1       ;
+; write_buffers~1                                                                                                                       ; 1       ;
+; write_buffers~0                                                                                                                       ; 1       ;
+; LessThan1~3                                                                                                                           ; 1       ;
+; LessThan1~2                                                                                                                           ; 1       ;
+; LessThan1~1                                                                                                                           ; 1       ;
 ; vga_vsync_proc~2                                                                                                                      ; 1       ;
 ; Equal3~0                                                                                                                              ; 1       ;
 ; vga_vsync_proc~1                                                                                                                      ; 1       ;
@@ -1689,26 +1656,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; vga_hsync_proc~0                                                                                                                      ; 1       ;
 ; out_blue[2]                                                                                                                           ; 1       ;
 ; out_blue[1]                                                                                                                           ; 1       ;
-; vga_blue~3                                                                                                                            ; 1       ;
-; out_blue[0]                                                                                                                           ; 1       ;
-; vga_blue~2                                                                                                                            ; 1       ;
-; vga_blue~1                                                                                                                            ; 1       ;
-; vga_blue~0                                                                                                                            ; 1       ;
 ; out_green[2]                                                                                                                          ; 1       ;
 ; out_green[1]                                                                                                                          ; 1       ;
-; vga_green~3                                                                                                                           ; 1       ;
-; out_green[0]                                                                                                                          ; 1       ;
-; vga_green~2                                                                                                                           ; 1       ;
-; vga_green~1                                                                                                                           ; 1       ;
-; vga_green~0                                                                                                                           ; 1       ;
 ; out_red[2]                                                                                                                            ; 1       ;
 ; out_red[1]                                                                                                                            ; 1       ;
-; vga_red~3                                                                                                                             ; 1       ;
-; out_red[0]                                                                                                                            ; 1       ;
-; vga_red~2                                                                                                                             ; 1       ;
-; vga_red~1                                                                                                                             ; 1       ;
-; vga_red~0                                                                                                                             ; 1       ;
-; vga_clk~reg0                                                                                                                          ; 1       ;
 ; vga_blank~reg0                                                                                                                        ; 1       ;
 ; vga_vsync~reg0                                                                                                                        ; 1       ;
 ; vga_hsync~reg0                                                                                                                        ; 1       ;
@@ -1742,37 +1693,50 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; vga_red[2]~reg0                                                                                                                       ; 1       ;
 ; vga_red[1]~reg0                                                                                                                       ; 1       ;
 ; vga_red[0]~reg0                                                                                                                       ; 1       ;
-; n64_px_count[15]~47                                                                                                                   ; 1       ;
-; n64_px_count[14]~46                                                                                                                   ; 1       ;
-; n64_px_count[14]~45                                                                                                                   ; 1       ;
-; n64_px_count[13]~44                                                                                                                   ; 1       ;
-; n64_px_count[13]~43                                                                                                                   ; 1       ;
-; n64_px_count[12]~42                                                                                                                   ; 1       ;
-; n64_px_count[12]~41                                                                                                                   ; 1       ;
-; n64_px_count[11]~39                                                                                                                   ; 1       ;
-; n64_px_count[11]~38                                                                                                                   ; 1       ;
-; n64_px_count[10]~37                                                                                                                   ; 1       ;
-; n64_px_count[10]~36                                                                                                                   ; 1       ;
-; n64_px_count[9]~35                                                                                                                    ; 1       ;
-; n64_px_count[9]~34                                                                                                                    ; 1       ;
-; n64_px_count[8]~33                                                                                                                    ; 1       ;
-; n64_px_count[8]~32                                                                                                                    ; 1       ;
-; n64_px_count[7]~31                                                                                                                    ; 1       ;
-; n64_px_count[7]~30                                                                                                                    ; 1       ;
-; n64_px_count[6]~29                                                                                                                    ; 1       ;
-; n64_px_count[6]~28                                                                                                                    ; 1       ;
-; n64_px_count[5]~27                                                                                                                    ; 1       ;
-; n64_px_count[5]~26                                                                                                                    ; 1       ;
-; n64_px_count[4]~25                                                                                                                    ; 1       ;
-; n64_px_count[4]~24                                                                                                                    ; 1       ;
-; n64_px_count[3]~23                                                                                                                    ; 1       ;
-; n64_px_count[3]~22                                                                                                                    ; 1       ;
-; n64_px_count[2]~21                                                                                                                    ; 1       ;
-; n64_px_count[2]~20                                                                                                                    ; 1       ;
-; n64_px_count[1]~19                                                                                                                    ; 1       ;
-; n64_px_count[1]~18                                                                                                                    ; 1       ;
-; n64_px_count[0]~17                                                                                                                    ; 1       ;
-; n64_px_count[0]~16                                                                                                                    ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita9~0                 ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita9~COUT              ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita9                   ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita8~COUT              ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita8                   ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita7~COUT              ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita7                   ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita6~COUT              ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita6                   ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita5~COUT              ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita5                   ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita4~COUT              ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita4                   ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita3~COUT              ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita3                   ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita2~COUT              ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita2                   ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita1~COUT              ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita1                   ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita0~COUT              ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita0                   ; 1       ;
+; buffer_en_b~0                                                                                                                         ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita9~0                 ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita9~COUT              ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita9                   ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita8~COUT              ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita8                   ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita7~COUT              ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita7                   ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita6~COUT              ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita6                   ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita5~COUT              ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita5                   ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita4~COUT              ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita4                   ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita3~COUT              ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita3                   ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita2~COUT              ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita2                   ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita1~COUT              ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita1                   ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita0~COUT              ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita0                   ; 1       ;
+; buffer_en_a~0                                                                                                                         ; 1       ;
 ; vsync_time[15]~46                                                                                                                     ; 1       ;
 ; vsync_time[14]~45                                                                                                                     ; 1       ;
 ; vsync_time[14]~44                                                                                                                     ; 1       ;
@@ -1804,50 +1768,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; vsync_time[1]~18                                                                                                                      ; 1       ;
 ; vsync_time[0]~17                                                                                                                      ; 1       ;
 ; vsync_time[0]~16                                                                                                                      ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita9~0                 ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita9~COUT              ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita9                   ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita8~COUT              ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita8                   ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita7~COUT              ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita7                   ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita6~COUT              ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita6                   ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita5~COUT              ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita5                   ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita4~COUT              ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita4                   ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita3~COUT              ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita3                   ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita2~COUT              ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita2                   ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita1~COUT              ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita1                   ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita0~COUT              ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita0                   ; 1       ;
-; buffer_en_b~0                                                                                                                         ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita9~0                 ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita9~COUT              ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita9                   ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita8~COUT              ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita8                   ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita7~COUT              ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita7                   ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita6~COUT              ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita6                   ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita5~COUT              ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita5                   ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita4~COUT              ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita4                   ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita3~COUT              ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita3                   ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita2~COUT              ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita2                   ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita1~COUT              ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita1                   ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita0~COUT              ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita0                   ; 1       ;
-; buffer_en_a~0                                                                                                                         ; 1       ;
 ; hsync_time[15]~46                                                                                                                     ; 1       ;
 ; hsync_time[14]~45                                                                                                                     ; 1       ;
 ; hsync_time[14]~44                                                                                                                     ; 1       ;
@@ -1879,6 +1799,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; hsync_time[1]~18                                                                                                                      ; 1       ;
 ; hsync_time[0]~17                                                                                                                      ; 1       ;
 ; hsync_time[0]~16                                                                                                                      ; 1       ;
+; n64_px_count[15]~47                                                                                                                   ; 1       ;
+; n64_px_count[14]~46                                                                                                                   ; 1       ;
+; n64_px_count[14]~45                                                                                                                   ; 1       ;
+; n64_px_count[13]~44                                                                                                                   ; 1       ;
+; n64_px_count[13]~43                                                                                                                   ; 1       ;
+; n64_px_count[12]~41                                                                                                                   ; 1       ;
+; n64_px_count[12]~40                                                                                                                   ; 1       ;
+; n64_px_count[11]~39                                                                                                                   ; 1       ;
+; n64_px_count[11]~38                                                                                                                   ; 1       ;
+; n64_px_count[10]~37                                                                                                                   ; 1       ;
+; n64_px_count[10]~36                                                                                                                   ; 1       ;
+; n64_px_count[9]~35                                                                                                                    ; 1       ;
+; n64_px_count[9]~34                                                                                                                    ; 1       ;
+; n64_px_count[8]~33                                                                                                                    ; 1       ;
+; n64_px_count[8]~32                                                                                                                    ; 1       ;
+; n64_px_count[7]~31                                                                                                                    ; 1       ;
+; n64_px_count[7]~30                                                                                                                    ; 1       ;
+; n64_px_count[6]~29                                                                                                                    ; 1       ;
+; n64_px_count[6]~28                                                                                                                    ; 1       ;
+; n64_px_count[5]~27                                                                                                                    ; 1       ;
+; n64_px_count[5]~26                                                                                                                    ; 1       ;
+; n64_px_count[4]~25                                                                                                                    ; 1       ;
+; n64_px_count[4]~24                                                                                                                    ; 1       ;
+; n64_px_count[3]~23                                                                                                                    ; 1       ;
+; n64_px_count[3]~22                                                                                                                    ; 1       ;
+; n64_px_count[2]~21                                                                                                                    ; 1       ;
+; n64_px_count[2]~20                                                                                                                    ; 1       ;
+; n64_px_count[1]~19                                                                                                                    ; 1       ;
+; n64_px_count[1]~18                                                                                                                    ; 1       ;
+; n64_px_count[0]~17                                                                                                                    ; 1       ;
+; n64_px_count[0]~16                                                                                                                    ; 1       ;
 ; line_count[15]~48                                                                                                                     ; 1       ;
 ; line_count[14]~47                                                                                                                     ; 1       ;
 ; line_count[14]~46                                                                                                                     ; 1       ;
@@ -1944,14 +1895,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter RAM Summary                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
-+--------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+------------------------------------------------------------------------------+----------------------+-----------------+-----------------+
-; Name                                                                                                                     ; Type ; Mode             ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size  ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M4Ks ; MIF  ; Location                                                                     ; Mixed Width RDW Mode ; Port A RDW Mode ; Port B RDW Mode ;
-+--------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+------------------------------------------------------------------------------+----------------------+-----------------+-----------------+
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 771          ; 21           ; 771          ; 21           ; yes                    ; no                      ; yes                    ; yes                     ; 16191 ; 771                         ; 21                          ; 771                         ; 21                          ; 16191               ; 6    ; None ; M4K_X26_Y33, M4K_X26_Y34, M4K_X26_Y35, M4K_X26_Y32, M4K_X26_Y31, M4K_X26_Y30 ; Old data             ; Don't care      ; Don't care      ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_hmm:auto_generated|altsyncram_ui81:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 771          ; 21           ; 771          ; 21           ; yes                    ; no                      ; yes                    ; yes                     ; 16191 ; 771                         ; 21                          ; 771                         ; 21                          ; 16191               ; 6    ; None ; M4K_X52_Y33, M4K_X52_Y34, M4K_X52_Y35, M4K_X52_Y32, M4K_X52_Y31, M4K_X52_Y30 ; Old data             ; Don't care      ; Don't care      ;
-+--------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+------------------------------------------------------------------------------+----------------------+-----------------+-----------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter RAM Summary                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ;
++--------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+-----------------------------------------------------------------+----------------------+-----------------+-----------------+
+; Name                                                                                                                     ; Type ; Mode             ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size  ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M4Ks ; MIF  ; Location                                                        ; Mixed Width RDW Mode ; Port A RDW Mode ; Port B RDW Mode ;
++--------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+-----------------------------------------------------------------+----------------------+-----------------+-----------------+
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 771          ; 18           ; 771          ; 18           ; yes                    ; no                      ; yes                    ; yes                     ; 13878 ; 771                         ; 18                          ; 771                         ; 18                          ; 13878               ; 5    ; None ; M4K_X26_Y25, M4K_X26_Y26, M4K_X26_Y24, M4K_X26_Y27, M4K_X26_Y23 ; Old data             ; Don't care      ; Don't care      ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 771          ; 18           ; 771          ; 18           ; yes                    ; no                      ; yes                    ; yes                     ; 13878 ; 771                         ; 18                          ; 771                         ; 18                          ; 13878               ; 5    ; None ; M4K_X26_Y32, M4K_X26_Y29, M4K_X26_Y28, M4K_X26_Y30, M4K_X26_Y31 ; Old data             ; Don't care      ; Don't care      ;
++--------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+-----------------------------------------------------------------+----------------------+-----------------+-----------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
 
@@ -1960,111 +1911,112 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +-----------------------------+------------------------+
 ; Other Routing Resource Type ; Usage                  ;
 +-----------------------------+------------------------+
-; Block interconnects         ; 555 / 94,460 ( < 1 % ) ;
-; C16 interconnects           ; 7 / 3,315 ( < 1 % )    ;
-; C4 interconnects            ; 176 / 60,840 ( < 1 % ) ;
-; Direct links                ; 113 / 94,460 ( < 1 % ) ;
+; Block interconnects         ; 440 / 94,460 ( < 1 % ) ;
+; C16 interconnects           ; 3 / 3,315 ( < 1 % )    ;
+; C4 interconnects            ; 228 / 60,840 ( < 1 % ) ;
+; Direct links                ; 99 / 94,460 ( < 1 % )  ;
 ; Global clocks               ; 1 / 16 ( 6 % )         ;
-; Local interconnects         ; 174 / 33,216 ( < 1 % ) ;
-; R24 interconnects           ; 71 / 3,091 ( 2 % )     ;
-; R4 interconnects            ; 414 / 81,294 ( < 1 % ) ;
+; Local interconnects         ; 190 / 33,216 ( < 1 % ) ;
+; R24 interconnects           ; 18 / 3,091 ( < 1 % )   ;
+; R4 interconnects            ; 180 / 81,294 ( < 1 % ) ;
 +-----------------------------+------------------------+
 
 
-+---------------------------------------------------------------------------+
-; LAB Logic Elements                                                        ;
-+--------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 7.67) ; Number of LABs  (Total = 43) ;
-+--------------------------------------------+------------------------------+
-; 1                                          ; 8                            ;
-; 2                                          ; 3                            ;
-; 3                                          ; 1                            ;
-; 4                                          ; 0                            ;
-; 5                                          ; 6                            ;
-; 6                                          ; 4                            ;
-; 7                                          ; 4                            ;
-; 8                                          ; 2                            ;
-; 9                                          ; 1                            ;
-; 10                                         ; 0                            ;
-; 11                                         ; 1                            ;
-; 12                                         ; 2                            ;
-; 13                                         ; 1                            ;
-; 14                                         ; 0                            ;
-; 15                                         ; 2                            ;
-; 16                                         ; 8                            ;
-+--------------------------------------------+------------------------------+
++----------------------------------------------------------------------------+
+; LAB Logic Elements                                                         ;
++---------------------------------------------+------------------------------+
+; Number of Logic Elements  (Average = 10.23) ; Number of LABs  (Total = 31) ;
++---------------------------------------------+------------------------------+
+; 1                                           ; 4                            ;
+; 2                                           ; 2                            ;
+; 3                                           ; 1                            ;
+; 4                                           ; 2                            ;
+; 5                                           ; 0                            ;
+; 6                                           ; 1                            ;
+; 7                                           ; 0                            ;
+; 8                                           ; 0                            ;
+; 9                                           ; 1                            ;
+; 10                                          ; 2                            ;
+; 11                                          ; 0                            ;
+; 12                                          ; 4                            ;
+; 13                                          ; 1                            ;
+; 14                                          ; 1                            ;
+; 15                                          ; 4                            ;
+; 16                                          ; 8                            ;
++---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.28) ; Number of LABs  (Total = 43) ;
+; LAB-wide Signals  (Average = 1.52) ; Number of LABs  (Total = 31) ;
 +------------------------------------+------------------------------+
-; 1 Clock                            ; 41                           ;
-; 1 Clock enable                     ; 6                            ;
+; 1 Clock                            ; 31                           ;
+; 1 Clock enable                     ; 8                            ;
 ; 1 Sync. clear                      ; 5                            ;
-; 2 Clock enables                    ; 3                            ;
+; 1 Sync. load                       ; 2                            ;
+; 2 Clock enables                    ; 1                            ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 13.67) ; Number of LABs  (Total = 43) ;
+; Number of Signals Sourced  (Average = 17.74) ; Number of LABs  (Total = 31) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
-; 2                                            ; 8                            ;
-; 3                                            ; 1                            ;
+; 2                                            ; 4                            ;
+; 3                                            ; 0                            ;
 ; 4                                            ; 2                            ;
-; 5                                            ; 2                            ;
+; 5                                            ; 0                            ;
 ; 6                                            ; 1                            ;
 ; 7                                            ; 0                            ;
-; 8                                            ; 0                            ;
-; 9                                            ; 3                            ;
-; 10                                           ; 3                            ;
+; 8                                            ; 2                            ;
+; 9                                            ; 0                            ;
+; 10                                           ; 1                            ;
 ; 11                                           ; 0                            ;
-; 12                                           ; 3                            ;
-; 13                                           ; 1                            ;
-; 14                                           ; 4                            ;
-; 15                                           ; 1                            ;
-; 16                                           ; 0                            ;
+; 12                                           ; 1                            ;
+; 13                                           ; 0                            ;
+; 14                                           ; 1                            ;
+; 15                                           ; 0                            ;
+; 16                                           ; 1                            ;
 ; 17                                           ; 1                            ;
 ; 18                                           ; 0                            ;
-; 19                                           ; 0                            ;
-; 20                                           ; 2                            ;
+; 19                                           ; 2                            ;
+; 20                                           ; 1                            ;
 ; 21                                           ; 0                            ;
-; 22                                           ; 0                            ;
-; 23                                           ; 0                            ;
-; 24                                           ; 3                            ;
+; 22                                           ; 2                            ;
+; 23                                           ; 1                            ;
+; 24                                           ; 0                            ;
 ; 25                                           ; 1                            ;
-; 26                                           ; 1                            ;
+; 26                                           ; 3                            ;
 ; 27                                           ; 0                            ;
 ; 28                                           ; 1                            ;
-; 29                                           ; 0                            ;
+; 29                                           ; 1                            ;
 ; 30                                           ; 0                            ;
-; 31                                           ; 0                            ;
-; 32                                           ; 5                            ;
+; 31                                           ; 2                            ;
+; 32                                           ; 3                            ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 6.14) ; Number of LABs  (Total = 43) ;
+; Number of Signals Sourced Out  (Average = 7.81) ; Number of LABs  (Total = 31) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 11                           ;
-; 2                                               ; 3                            ;
-; 3                                               ; 3                            ;
-; 4                                               ; 1                            ;
-; 5                                               ; 4                            ;
-; 6                                               ; 4                            ;
-; 7                                               ; 5                            ;
+; 1                                               ; 4                            ;
+; 2                                               ; 2                            ;
+; 3                                               ; 2                            ;
+; 4                                               ; 3                            ;
+; 5                                               ; 2                            ;
+; 6                                               ; 2                            ;
+; 7                                               ; 1                            ;
 ; 8                                               ; 1                            ;
 ; 9                                               ; 0                            ;
-; 10                                              ; 2                            ;
-; 11                                              ; 2                            ;
+; 10                                              ; 3                            ;
+; 11                                              ; 4                            ;
 ; 12                                              ; 1                            ;
 ; 13                                              ; 1                            ;
 ; 14                                              ; 0                            ;
@@ -2076,30 +2028,33 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                        ;
 +---------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 8.12) ; Number of LABs  (Total = 43) ;
+; Number of Distinct Inputs  (Average = 8.23) ; Number of LABs  (Total = 31) ;
 +---------------------------------------------+------------------------------+
 ; 0                                           ; 0                            ;
-; 1                                           ; 1                            ;
-; 2                                           ; 11                           ;
-; 3                                           ; 3                            ;
-; 4                                           ; 5                            ;
-; 5                                           ; 2                            ;
-; 6                                           ; 2                            ;
-; 7                                           ; 2                            ;
+; 1                                           ; 0                            ;
+; 2                                           ; 9                            ;
+; 3                                           ; 4                            ;
+; 4                                           ; 1                            ;
+; 5                                           ; 1                            ;
+; 6                                           ; 1                            ;
+; 7                                           ; 0                            ;
 ; 8                                           ; 1                            ;
-; 9                                           ; 0                            ;
-; 10                                          ; 0                            ;
+; 9                                           ; 2                            ;
+; 10                                          ; 2                            ;
 ; 11                                          ; 0                            ;
-; 12                                          ; 3                            ;
-; 13                                          ; 1                            ;
-; 14                                          ; 3                            ;
+; 12                                          ; 2                            ;
+; 13                                          ; 2                            ;
+; 14                                          ; 1                            ;
 ; 15                                          ; 0                            ;
-; 16                                          ; 3                            ;
-; 17                                          ; 1                            ;
+; 16                                          ; 0                            ;
+; 17                                          ; 0                            ;
 ; 18                                          ; 2                            ;
 ; 19                                          ; 1                            ;
 ; 20                                          ; 0                            ;
-; 21                                          ; 2                            ;
+; 21                                          ; 1                            ;
+; 22                                          ; 0                            ;
+; 23                                          ; 0                            ;
+; 24                                          ; 1                            ;
 +---------------------------------------------+------------------------------+
 
 
@@ -2169,7 +2124,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.62 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.54 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 39 output pins without output pin load capacitance assignment
     Info (306007): Pin "vga_red[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -2219,10 +2174,10 @@ Info (176045): Design uses memory blocks. Violating setup or hold times of memor
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file /home/moffitt/Development/N6480/Altera/output_files/n6480.fit.smsg
 Info: Quartus II 32-bit Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 472 megabytes
-    Info: Processing ended: Thu Mar 19 22:27:58 2015
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:08
+    Info: Peak virtual memory: 468 megabytes
+    Info: Processing ended: Thu Mar 19 23:53:55 2015
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:07
 
 
 +----------------------------+
