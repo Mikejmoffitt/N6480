@@ -284,7 +284,7 @@ vga_red[4]                   : C9        : output : 3.3-V LVTTL       :         
 vga_green[2]                 : C10       : output : 3.3-V LVTTL       :         : 3         : Y              
 vga_blue[6]                  : C11       : output : 3.3-V LVTTL       :         : 3         : Y              
 vga_blue[8]                  : C12       : output : 3.3-V LVTTL       :         : 3         : Y              
-switches[1]                  : C13       : input  : 3.3-V LVTTL       :         : 3         : N              
+GND+                         : C13       :        :                   :         : 3         :                
 GND                          : C14       : gnd    :                   :         :           :                
 GND*                         : C15       :        :                   :         : 4         :                
 GND*                         : C16       :        :                   :         : 4         :                
@@ -310,7 +310,7 @@ vga_red[3]                   : D9        : output : 3.3-V LVTTL       :         
 vga_green[3]                 : D10       : output : 3.3-V LVTTL       :         : 3         : Y              
 vga_green[7]                 : D11       : output : 3.3-V LVTTL       :         : 3         : Y              
 vga_green[9]                 : D12       : output : 3.3-V LVTTL       :         : 3         : Y              
-switches[0]                  : D13       : input  : 3.3-V LVTTL       :         : 3         : N              
+GND+                         : D13       :        :                   :         : 3         :                
 GND*                         : D14       :        :                   :         : 4         :                
 GND*                         : D15       :        :                   :         : 4         :                
 GND*                         : D16       :        :                   :         : 4         :                
@@ -322,7 +322,7 @@ GND*                         : D21       :        :                   :         
 VCCIO4                       : D22       : power  :                   : 3.3V    : 4         :                
 GND*                         : D23       :        :                   :         : 5         :                
 GND                          : D24       : gnd    :                   :         :           :                
-n64_clock                    : D25       : input  : 3.3-V LVTTL       :         : 5         : Y              
+n64_data[0]                  : D25       : input  : 3.3-V LVTTL       :         : 5         : Y              
 GND*                         : D26       :        :                   :         : 5         :                
 GND*                         : E1        :        :                   :         : 2         :                
 GND*                         : E2        :        :                   :         : 2         :                
@@ -348,8 +348,8 @@ GND_PLL2                     : E21       : gnd    :                   :         
 GND*                         : E22       :        :                   :         : 5         :                
 GND*                         : E23       :        :                   :         : 5         :                
 GND*                         : E24       :        :                   :         : 5         :                
-n64_data[5]                  : E25       : input  : 3.3-V LVTTL       :         : 5         : Y              
-n64_data[6]                  : E26       : input  : 3.3-V LVTTL       :         : 5         : Y              
+n64_data[3]                  : E25       : input  : 3.3-V LVTTL       :         : 5         : Y              
+n64_data[2]                  : E26       : input  : 3.3-V LVTTL       :         : 5         : Y              
 GND*                         : F1        :        :                   :         : 2         :                
 GND*                         : F2        :        :                   :         : 2         :                
 GND*                         : F3        :        :                   :         : 2         :                
@@ -372,9 +372,9 @@ GNDA_PLL2                    : F19       : gnd    :                   :         
 GND*                         : F20       :        :                   :         : 5         :                
 GND*                         : F21       :        :                   :         : 5         :                
 VCCIO5                       : F22       : power  :                   : 3.3V    : 5         :                
-n64_data[3]                  : F23       : input  : 3.3-V LVTTL       :         : 5         : Y              
+n64_data[5]                  : F23       : input  : 3.3-V LVTTL       :         : 5         : Y              
 n64_data[4]                  : F24       : input  : 3.3-V LVTTL       :         : 5         : Y              
-n64_data[0]                  : F25       : input  : 3.3-V LVTTL       :         : 5         : Y              
+GND*                         : F25       :        :                   :         : 5         :                
 GND*                         : F26       :        :                   :         : 5         :                
 GND*                         : G1        :        :                   :         : 2         :                
 GND*                         : G2        :        :                   :         : 2         :                
@@ -447,9 +447,9 @@ GND*                         : J16       :        :                   :         
 GND*                         : J17       :        :                   :         : 4         :                
 GND*                         : J18       :        :                   :         : 4         :                
 VCCIO5                       : J19       : power  :                   : 3.3V    : 5         :                
-n64_data[1]                  : J20       : input  : 3.3-V LVTTL       :         : 5         : Y              
-n64_data[2]                  : J21       : input  : 3.3-V LVTTL       :         : 5         : Y              
-n64_dsync_n                  : J22       : input  : 3.3-V LVTTL       :         : 5         : Y              
+GND*                         : J20       :        :                   :         : 5         :                
+n64_data[6]                  : J21       : input  : 3.3-V LVTTL       :         : 5         : Y              
+n64_data[1]                  : J22       : input  : 3.3-V LVTTL       :         : 5         : Y              
 GND*                         : J23       :        :                   :         : 5         :                
 GND*                         : J24       :        :                   :         : 5         :                
 GND*                         : J25       :        :                   :         : 5         :                
@@ -478,7 +478,7 @@ GND*                         : K21       :        :                   :         
 GND*                         : K22       :        :                   :         : 5         :                
 GND*                         : K23       :        :                   :         : 5         :                
 GND*                         : K24       :        :                   :         : 5         :                
-GND*                         : K25       :        :                   :         : 5         :                
+n64_dsync_n                  : K25       : input  : 3.3-V LVTTL       :         : 5         : Y              
 GND*                         : K26       :        :                   :         : 5         :                
 VCCIO2                       : L1        : power  :                   : 3.3V    : 2         :                
 GND*                         : L2        :        :                   :         : 2         :                
@@ -556,8 +556,8 @@ NC                           : N21       :        :                   :         
 VCCIO5                       : N22       : power  :                   : 3.3V    : 5         :                
 button[1]                    : N23       : input  : 3.3-V LVTTL       :         : 5         : Y              
 GND*                         : N24       :        :                   :         : 5         :                
-GND+                         : N25       :        :                   :         : 5         :                
-GND+                         : N26       :        :                   :         : 5         :                
+switches[0]                  : N25       : input  : 3.3-V LVTTL       :         : 5         : Y              
+switches[1]                  : N26       : input  : 3.3-V LVTTL       :         : 5         : Y              
 GND+                         : P1        :        :                   :         : 1         :                
 GND+                         : P2        :        :                   :         : 1         :                
 GND*                         : P3        :        :                   :         : 1         :                
@@ -583,7 +583,7 @@ VCCIO6                       : P22       : power  :                   : 3.3V    
 GND*                         : P23       :        :                   :         : 6         :                
 GND*                         : P24       :        :                   :         : 6         :                
 GND+                         : P25       :        :                   :         : 6         :                
-GND+                         : P26       :        :                   :         : 6         :                
+n64_clock                    : P26       : input  : 3.3-V LVTTL       :         : 6         : Y              
 GND                          : R1        : gnd    :                   :         :           :                
 GND*                         : R2        :        :                   :         : 1         :                
 GND*                         : R3        :        :                   :         : 1         :                

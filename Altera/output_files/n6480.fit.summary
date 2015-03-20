@@ -1,11 +1,11 @@
-Fitter Status : Successful - Thu Mar 19 09:58:25 2015
+Fitter Status : Successful - Thu Mar 19 22:27:58 2015
 Quartus II 32-bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : n6480
 Top-level Entity Name : n6480
 Family : Cyclone II
 Device : EP2C35F672C6
 Timing Models : Final
-Total logic elements : 334 / 33,216 ( 1 % )
+Total logic elements : 330 / 33,216 ( < 1 % )
     Total combinational functions : 245 / 33,216 ( < 1 % )
     Dedicated logic registers : 273 / 33,216 ( < 1 % )
 Total registers : 273

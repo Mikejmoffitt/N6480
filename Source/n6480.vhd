@@ -99,8 +99,6 @@ begin
 	rgb_decoder: entity work.n64_pixel(behavioral) port map (
 		n64_data, n64_clock, n64_dsync_n, n64_red, n64_green, n64_blue,
 		n64_csync_n, n64_hsync_n, n64_clamp_n, n64_vsync_n, clock_count);
-		
-	led <= clock_count & '0' & enable_delay;
 	
 	-- Both alternating line buffers
 	buffer_a: entity work.linebuffer(behavioral) 
@@ -275,11 +273,17 @@ begin
 		if (falling_edge(n64_clock)) then
 			if (line_count >= VGA_VSYNC_START and line_count < VGA_VSYNC_END) then
 				vga_vsync <= '0';
+				--led <= "01" & '0' & enable_delay;
+				-- led <= clock_count(0) & n64_dsync_n & '1' & enable_delay;
 			else
 				vga_vsync <= '1';
+				--led <= "10" & '0' & enable_delay;
+				--led <= clock_count(0) & n64_dsync_n & '0' & enable_delay;
 			end if;
 		end if;
 	end process;
+	
+	led(3 downto 0) <= n64_dsync_n & (not n64_dsync_n) & '0' & (not n64_vsync_n);
 	
 	-- Set VGA Hsync based on VGA line progress
 	vga_hsync_proc: process(n64_clock)
@@ -297,6 +301,7 @@ begin
 				else
 					vga_hsync <= '1';
 				end if;
+		
 			end if;
 		end if;
 	end process;
