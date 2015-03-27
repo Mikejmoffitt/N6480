@@ -1,5 +1,5 @@
 Fitter report for n6480
-Thu Mar 19 23:53:55 2015
+Tue Mar 24 17:09:01 2015
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -63,15 +63,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Thu Mar 19 23:53:55 2015           ;
+; Fitter Status                      ; Successful - Tue Mar 24 17:09:01 2015           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; n6480                                           ;
 ; Top-level Entity Name              ; n6480                                           ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 317 / 33,216 ( < 1 % )                          ;
-;     Total combinational functions  ; 226 / 33,216 ( < 1 % )                          ;
+; Total logic elements               ; 318 / 33,216 ( < 1 % )                          ;
+;     Total combinational functions  ; 225 / 33,216 ( < 1 % )                          ;
 ;     Dedicated logic registers      ; 255 / 33,216 ( < 1 % )                          ;
 ; Total registers                    ; 255                                             ;
 ; Total pins                         ; 52 / 475 ( 11 % )                               ;
@@ -139,7 +139,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 8      ;
+; Number detected on machine ; 2      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -150,8 +150,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 573 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 573 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 572 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 572 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -174,7 +174,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 570     ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 569     ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -190,26 +190,26 @@ The pin-out file can be found in /home/moffitt/Development/N6480/Altera/output_f
 +---------------------------------------------+---------------------------+
 ; Resource                                    ; Usage                     ;
 +---------------------------------------------+---------------------------+
-; Total logic elements                        ; 317 / 33,216 ( < 1 % )    ;
-;     -- Combinational with no register       ; 62                        ;
-;     -- Register only                        ; 91                        ;
-;     -- Combinational with a register        ; 164                       ;
+; Total logic elements                        ; 318 / 33,216 ( < 1 % )    ;
+;     -- Combinational with no register       ; 63                        ;
+;     -- Register only                        ; 93                        ;
+;     -- Combinational with a register        ; 162                       ;
 ;                                             ;                           ;
 ; Logic element usage by number of LUT inputs ;                           ;
-;     -- 4 input functions                    ; 43                        ;
-;     -- 3 input functions                    ; 63                        ;
+;     -- 4 input functions                    ; 45                        ;
+;     -- 3 input functions                    ; 60                        ;
 ;     -- <=2 input functions                  ; 120                       ;
-;     -- Register only                        ; 91                        ;
+;     -- Register only                        ; 93                        ;
 ;                                             ;                           ;
 ; Logic elements by mode                      ;                           ;
-;     -- normal mode                          ; 131                       ;
+;     -- normal mode                          ; 130                       ;
 ;     -- arithmetic mode                      ; 95                        ;
 ;                                             ;                           ;
 ; Total registers*                            ; 255 / 34,593 ( < 1 % )    ;
 ;     -- Dedicated logic registers            ; 255 / 33,216 ( < 1 % )    ;
 ;     -- I/O registers                        ; 0 / 1,377 ( 0 % )         ;
 ;                                             ;                           ;
-; Total LABs:  partially or completely used   ; 31 / 2,076 ( 1 % )        ;
+; Total LABs:  partially or completely used   ; 29 / 2,076 ( 1 % )        ;
 ; Virtual pins                                ; 0                         ;
 ; I/O pins                                    ; 52 / 475 ( 11 % )         ;
 ;     -- Clock pins                           ; 2 / 8 ( 25 % )            ;
@@ -225,11 +225,11 @@ The pin-out file can be found in /home/moffitt/Development/N6480/Altera/output_f
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )             ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )             ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%              ;
-; Peak interconnect usage (total/H/V)         ; 3% / 2% / 4%              ;
+; Peak interconnect usage (total/H/V)         ; 2% / 1% / 3%              ;
 ; Maximum fan-out                             ; 265                       ;
 ; Highest non-global fan-out                  ; 57                        ;
-; Total fan-out                               ; 1561                      ;
-; Average fan-out                             ; 2.53                      ;
+; Total fan-out                               ; 1565                      ;
+; Average fan-out                             ; 2.52                      ;
 +---------------------------------------------+---------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -242,25 +242,25 @@ The pin-out file can be found in /home/moffitt/Development/N6480/Altera/output_f
 +---------------------------------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                            ;
 ;                                             ;                       ;                                ;
-; Total logic elements                        ; 317 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
-;     -- Combinational with no register       ; 62                    ; 0                              ;
-;     -- Register only                        ; 91                    ; 0                              ;
-;     -- Combinational with a register        ; 164                   ; 0                              ;
+; Total logic elements                        ; 318 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
+;     -- Combinational with no register       ; 63                    ; 0                              ;
+;     -- Register only                        ; 93                    ; 0                              ;
+;     -- Combinational with a register        ; 162                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
-;     -- 4 input functions                    ; 43                    ; 0                              ;
-;     -- 3 input functions                    ; 63                    ; 0                              ;
+;     -- 4 input functions                    ; 45                    ; 0                              ;
+;     -- 3 input functions                    ; 60                    ; 0                              ;
 ;     -- <=2 input functions                  ; 120                   ; 0                              ;
-;     -- Register only                        ; 91                    ; 0                              ;
+;     -- Register only                        ; 93                    ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
-;     -- normal mode                          ; 131                   ; 0                              ;
+;     -- normal mode                          ; 130                   ; 0                              ;
 ;     -- arithmetic mode                      ; 95                    ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Total registers                             ; 255                   ; 0                              ;
 ;     -- Dedicated logic registers            ; 255 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
 ;                                             ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 31 / 2076 ( 1 % )     ; 0 / 2076 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 29 / 2076 ( 1 % )     ; 0 / 2076 ( 0 % )               ;
 ;                                             ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                              ;
 ; I/O pins                                    ; 52                    ; 0                              ;
@@ -277,8 +277,8 @@ The pin-out file can be found in /home/moffitt/Development/N6480/Altera/output_f
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 1661                  ; 0                              ;
-;     -- Registered Connections               ; 832                   ; 0                              ;
+;     -- Total Connections                    ; 1665                  ; 0                              ;
+;     -- Registered Connections               ; 830                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
 ;     -- Top                                  ; 0                     ; 0                              ;
@@ -1112,20 +1112,20 @@ Note: User assignments will override these defaults. The user specified values a
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                    ; Library Name ;
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------------+--------------+
-; |n6480                                    ; 317 (225)   ; 255 (173)                 ; 0 (0)         ; 27756       ; 10   ; 0            ; 0       ; 0         ; 52   ; 0            ; 62 (51)      ; 91 (36)           ; 164 (139)        ; |n6480                                                                                                                 ; work         ;
+; |n6480                                    ; 318 (226)   ; 255 (173)                 ; 0 (0)         ; 27756       ; 10   ; 0            ; 0       ; 0         ; 52   ; 0            ; 63 (49)      ; 93 (39)           ; 162 (140)        ; |n6480                                                                                                                 ; work         ;
 ;    |linebuffer:buffer_a|                  ; 15 (0)      ; 10 (0)                    ; 0 (0)         ; 13878       ; 5    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 10 (0)           ; |n6480|linebuffer:buffer_a                                                                                             ; work         ;
 ;       |altshift_taps:line_buffer_rtl_0|   ; 15 (0)      ; 10 (0)                    ; 0 (0)         ; 13878       ; 5    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 10 (0)           ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0                                                             ; work         ;
-;          |shift_taps_nmm:auto_generated|  ; 15 (0)      ; 10 (0)                    ; 0 (0)         ; 13878       ; 5    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 10 (0)           ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated                               ; work         ;
-;             |altsyncram_aj81:altsyncram2| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 13878       ; 5    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2   ; work         ;
-;             |cntr_fpf:cntr1|              ; 15 (12)     ; 10 (10)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (2)        ; 0 (0)             ; 10 (10)          ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1                ; work         ;
-;                |cmpr_ldc:cmpr5|           ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5 ; work         ;
+;          |shift_taps_nim:auto_generated|  ; 15 (0)      ; 10 (0)                    ; 0 (0)         ; 13878       ; 5    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 10 (0)           ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated                               ; work         ;
+;             |altsyncram_af81:altsyncram2| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 13878       ; 5    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2   ; work         ;
+;             |cntr_fpf:cntr1|              ; 15 (12)     ; 10 (10)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (2)        ; 0 (0)             ; 10 (10)          ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1                ; work         ;
+;                |cmpr_ldc:cmpr5|           ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5 ; work         ;
 ;    |linebuffer:buffer_b|                  ; 15 (0)      ; 10 (0)                    ; 0 (0)         ; 13878       ; 5    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 10 (0)           ; |n6480|linebuffer:buffer_b                                                                                             ; work         ;
 ;       |altshift_taps:line_buffer_rtl_0|   ; 15 (0)      ; 10 (0)                    ; 0 (0)         ; 13878       ; 5    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 10 (0)           ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0                                                             ; work         ;
-;          |shift_taps_nmm:auto_generated|  ; 15 (0)      ; 10 (0)                    ; 0 (0)         ; 13878       ; 5    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 10 (0)           ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated                               ; work         ;
-;             |altsyncram_aj81:altsyncram2| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 13878       ; 5    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2   ; work         ;
-;             |cntr_fpf:cntr1|              ; 15 (12)     ; 10 (10)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (2)        ; 0 (0)             ; 10 (10)          ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1                ; work         ;
-;                |cmpr_ldc:cmpr5|           ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5 ; work         ;
-;    |n64_pixel:rgb_decoder|                ; 63 (63)     ; 62 (62)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 55 (55)           ; 7 (7)            ; |n6480|n64_pixel:rgb_decoder                                                                                           ; work         ;
+;          |shift_taps_nim:auto_generated|  ; 15 (0)      ; 10 (0)                    ; 0 (0)         ; 13878       ; 5    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 10 (0)           ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated                               ; work         ;
+;             |altsyncram_af81:altsyncram2| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 13878       ; 5    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2   ; work         ;
+;             |cntr_fpf:cntr1|              ; 15 (12)     ; 10 (10)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (2)        ; 0 (0)             ; 10 (10)          ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1                ; work         ;
+;                |cmpr_ldc:cmpr5|           ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5 ; work         ;
+;    |n64_pixel:rgb_decoder|                ; 66 (66)     ; 62 (62)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 54 (54)           ; 8 (8)            ; |n6480|n64_pixel:rgb_decoder                                                                                           ; work         ;
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1207,27 +1207,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - led[2]                                    ; 1                 ; 6       ;
 ; n64_clock                                        ;                   ;         ;
 ; n64_data[3]                                      ;                   ;         ;
-;      - n64_pixel:rgb_decoder|vsync_n_cap         ; 1                 ; 6       ;
+;      - n64_pixel:rgb_decoder|red_cap[3]          ; 1                 ; 6       ;
+;      - n64_pixel:rgb_decoder|blue_cap[3]         ; 1                 ; 6       ;
 ;      - n64_pixel:rgb_decoder|green_cap[3]~feeder ; 1                 ; 6       ;
-;      - n64_pixel:rgb_decoder|blue_cap[3]~feeder  ; 1                 ; 6       ;
-;      - n64_pixel:rgb_decoder|red_cap[3]~feeder   ; 1                 ; 6       ;
+;      - n64_pixel:rgb_decoder|vsync_n_cap~feeder  ; 1                 ; 6       ;
 ; n64_data[1]                                      ;                   ;         ;
-;      - n64_pixel:rgb_decoder|hsync_n_cap         ; 1                 ; 6       ;
 ;      - n64_pixel:rgb_decoder|red_cap[1]          ; 1                 ; 6       ;
 ;      - n64_pixel:rgb_decoder|blue_cap[1]         ; 1                 ; 6       ;
 ;      - n64_pixel:rgb_decoder|green_cap[1]~feeder ; 1                 ; 6       ;
+;      - n64_pixel:rgb_decoder|hsync_n_cap~feeder  ; 1                 ; 6       ;
 ; n64_data[4]                                      ;                   ;         ;
-;      - n64_pixel:rgb_decoder|red_cap[4]          ; 0                 ; 6       ;
-;      - n64_pixel:rgb_decoder|blue_cap[4]         ; 0                 ; 6       ;
 ;      - n64_pixel:rgb_decoder|green_cap[4]~feeder ; 0                 ; 6       ;
+;      - n64_pixel:rgb_decoder|red_cap[4]~feeder   ; 0                 ; 6       ;
+;      - n64_pixel:rgb_decoder|blue_cap[4]~feeder  ; 0                 ; 6       ;
 ; n64_data[5]                                      ;                   ;         ;
-;      - n64_pixel:rgb_decoder|red_cap[5]          ; 0                 ; 6       ;
-;      - n64_pixel:rgb_decoder|blue_cap[5]         ; 0                 ; 6       ;
-;      - n64_pixel:rgb_decoder|green_cap[5]~feeder ; 0                 ; 6       ;
+;      - n64_pixel:rgb_decoder|green_cap[5]~feeder ; 1                 ; 6       ;
+;      - n64_pixel:rgb_decoder|red_cap[5]~feeder   ; 1                 ; 6       ;
+;      - n64_pixel:rgb_decoder|blue_cap[5]~feeder  ; 1                 ; 6       ;
 ; n64_data[6]                                      ;                   ;         ;
-;      - n64_pixel:rgb_decoder|red_cap[6]          ; 1                 ; 6       ;
-;      - n64_pixel:rgb_decoder|blue_cap[6]         ; 1                 ; 6       ;
-;      - n64_pixel:rgb_decoder|green_cap[6]~feeder ; 1                 ; 6       ;
+;      - n64_pixel:rgb_decoder|red_cap[6]          ; 0                 ; 6       ;
+;      - n64_pixel:rgb_decoder|green_cap[6]        ; 0                 ; 6       ;
+;      - n64_pixel:rgb_decoder|blue_cap[6]         ; 0                 ; 6       ;
 ; n64_data[2]                                      ;                   ;         ;
 ;      - n64_pixel:rgb_decoder|green_cap[2]~feeder ; 0                 ; 6       ;
 ;      - n64_pixel:rgb_decoder|red_cap[2]~feeder   ; 0                 ; 6       ;
@@ -1240,22 +1240,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                                                                         ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +--------------------------------------------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; buffer_en_a                                                                                                  ; LCFF_X29_Y24_N13   ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; buffer_en_b                                                                                                  ; LCFF_X28_Y24_N1    ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; buffer_sel                                                                                                   ; LCFF_X29_Y25_N27   ; 57      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; line_count[6]~20                                                                                             ; LCCOMB_X12_Y26_N24 ; 16      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; line_count[6]~21                                                                                             ; LCCOMB_X12_Y26_N14 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|cout_actual ; LCCOMB_X25_Y25_N6  ; 10      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|cout_actual ; LCCOMB_X25_Y29_N28 ; 10      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; buffer_en_a                                                                                                  ; LCFF_X28_Y23_N1    ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; buffer_en_b                                                                                                  ; LCFF_X27_Y23_N1    ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; buffer_sel                                                                                                   ; LCFF_X28_Y19_N29   ; 57      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; line_count[6]~0                                                                                              ; LCCOMB_X25_Y19_N2  ; 16      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; line_count[6]~1                                                                                              ; LCCOMB_X28_Y19_N20 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|cout_actual ; LCCOMB_X27_Y22_N28 ; 10      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|cout_actual ; LCCOMB_X27_Y26_N28 ; 10      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
 ; n64_clock                                                                                                    ; PIN_P26            ; 265     ; Clock        ; yes    ; Global Clock         ; GCLK7            ; --                        ;
-; n64_pixel:rgb_decoder|Equal0~0                                                                               ; LCCOMB_X27_Y24_N18 ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; n64_pixel:rgb_decoder|Equal0~1                                                                               ; LCCOMB_X28_Y24_N14 ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; n64_pixel:rgb_decoder|Equal0~2                                                                               ; LCCOMB_X27_Y24_N22 ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; n64_pixel:rgb_decoder|green_final[5]~0                                                                       ; LCCOMB_X27_Y24_N10 ; 20      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; n64_pixel:rgb_decoder|hsync_n_out                                                                            ; LCFF_X30_Y25_N21   ; 16      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; n64_pixel:rgb_decoder|vsync_n_out                                                                            ; LCFF_X12_Y26_N17   ; 21      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; n64_px_count[7]~42                                                                                           ; LCCOMB_X29_Y25_N18 ; 16      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; vga_px_count[8]~38                                                                                           ; LCCOMB_X10_Y26_N16 ; 16      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; n64_pixel:rgb_decoder|Equal0~0                                                                               ; LCCOMB_X28_Y22_N16 ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; n64_pixel:rgb_decoder|Equal0~1                                                                               ; LCCOMB_X28_Y22_N30 ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; n64_pixel:rgb_decoder|Equal0~2                                                                               ; LCCOMB_X28_Y22_N8  ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; n64_pixel:rgb_decoder|green_final[5]~0                                                                       ; LCCOMB_X28_Y22_N2  ; 20      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; n64_pixel:rgb_decoder|hsync_n_out                                                                            ; LCFF_X28_Y19_N19   ; 16      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; n64_pixel:rgb_decoder|vsync_n_out                                                                            ; LCFF_X25_Y22_N13   ; 21      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; n64_px_count[7]~0                                                                                            ; LCCOMB_X28_Y19_N0  ; 16      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; vga_px_count[8]~0                                                                                            ; LCCOMB_X12_Y24_N26 ; 16      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
 +--------------------------------------------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1278,34 +1278,34 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ~GND                                                                                                                                  ; 20      ;
 ; n64_pixel:rgb_decoder|green_final[5]~0                                                                                                ; 20      ;
 ; n64_pixel:rgb_decoder|hsync_n_out                                                                                                     ; 16      ;
-; n64_px_count[7]~42                                                                                                                    ; 16      ;
-; line_count[6]~21                                                                                                                      ; 16      ;
-; line_count[6]~20                                                                                                                      ; 16      ;
-; vga_px_count[8]~38                                                                                                                    ; 16      ;
+; n64_px_count[7]~0                                                                                                                     ; 16      ;
+; line_count[6]~1                                                                                                                       ; 16      ;
+; line_count[6]~0                                                                                                                       ; 16      ;
+; vga_px_count[8]~0                                                                                                                     ; 16      ;
 ; buffer_en_b                                                                                                                           ; 16      ;
 ; buffer_en_a                                                                                                                           ; 16      ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[9]                            ; 12      ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[8]                            ; 12      ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[7]                            ; 12      ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[6]                            ; 12      ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[5]                            ; 12      ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[4]                            ; 12      ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[3]                            ; 12      ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[2]                            ; 12      ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[1]                            ; 12      ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[0]                            ; 12      ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[9]                            ; 12      ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[8]                            ; 12      ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[7]                            ; 12      ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[6]                            ; 12      ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[5]                            ; 12      ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[4]                            ; 12      ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[3]                            ; 12      ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[2]                            ; 12      ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[1]                            ; 12      ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|safe_q[0]                            ; 12      ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|cout_actual                          ; 10      ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|cout_actual                          ; 10      ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|safe_q[9]                            ; 12      ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|safe_q[8]                            ; 12      ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|safe_q[7]                            ; 12      ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|safe_q[6]                            ; 12      ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|safe_q[5]                            ; 12      ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|safe_q[4]                            ; 12      ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|safe_q[3]                            ; 12      ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|safe_q[2]                            ; 12      ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|safe_q[1]                            ; 12      ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|safe_q[0]                            ; 12      ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|safe_q[9]                            ; 12      ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|safe_q[8]                            ; 12      ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|safe_q[7]                            ; 12      ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|safe_q[6]                            ; 12      ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|safe_q[5]                            ; 12      ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|safe_q[4]                            ; 12      ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|safe_q[3]                            ; 12      ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|safe_q[2]                            ; 12      ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|safe_q[1]                            ; 12      ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|safe_q[0]                            ; 12      ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|cout_actual                          ; 10      ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|cout_actual                          ; 10      ;
 ; n64_pixel:rgb_decoder|cycle_count[0]                                                                                                  ; 7       ;
 ; n64_pixel:rgb_decoder|Equal0~2                                                                                                        ; 6       ;
 ; n64_pixel:rgb_decoder|Equal0~1                                                                                                        ; 6       ;
@@ -1316,15 +1316,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; n64_data[3]                                                                                                                           ; 4       ;
 ; n64_dsync_n                                                                                                                           ; 4       ;
 ; LessThan1~0                                                                                                                           ; 4       ;
+; n64_px_count[6]                                                                                                                       ; 4       ;
 ; n64_px_count[10]                                                                                                                      ; 4       ;
+; n64_px_count[9]                                                                                                                       ; 4       ;
 ; vga_px_count[1]                                                                                                                       ; 4       ;
-; vga_px_count[3]                                                                                                                       ; 4       ;
 ; vga_px_count[2]                                                                                                                       ; 4       ;
+; vga_px_count[3]                                                                                                                       ; 4       ;
 ; vga_px_count[4]                                                                                                                       ; 4       ;
-; vga_px_count[8]                                                                                                                       ; 4       ;
-; vga_px_count[7]                                                                                                                       ; 4       ;
-; vga_px_count[6]                                                                                                                       ; 4       ;
 ; vga_px_count[5]                                                                                                                       ; 4       ;
+; vga_px_count[6]                                                                                                                       ; 4       ;
+; vga_px_count[7]                                                                                                                       ; 4       ;
+; vga_px_count[8]                                                                                                                       ; 4       ;
 ; vga_px_count[10]                                                                                                                      ; 4       ;
 ; n64_data[2]                                                                                                                           ; 3       ;
 ; n64_data[6]                                                                                                                           ; 3       ;
@@ -1332,24 +1334,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; n64_data[4]                                                                                                                           ; 3       ;
 ; Equal1~4                                                                                                                              ; 3       ;
 ; Equal2~4                                                                                                                              ; 3       ;
-; write_buffers~2                                                                                                                       ; 3       ;
-; n64_px_count[8]                                                                                                                       ; 3       ;
+; write_buffers~3                                                                                                                       ; 3       ;
+; LessThan1~3                                                                                                                           ; 3       ;
 ; n64_px_count[3]                                                                                                                       ; 3       ;
 ; n64_px_count[2]                                                                                                                       ; 3       ;
 ; n64_px_count[1]                                                                                                                       ; 3       ;
 ; n64_px_count[0]                                                                                                                       ; 3       ;
-; n64_px_count[9]                                                                                                                       ; 3       ;
-; line_count[7]                                                                                                                         ; 3       ;
-; line_count[6]                                                                                                                         ; 3       ;
-; line_count[5]                                                                                                                         ; 3       ;
-; line_count[8]                                                                                                                         ; 3       ;
-; line_count[4]                                                                                                                         ; 3       ;
-; line_count[3]                                                                                                                         ; 3       ;
-; line_count[2]                                                                                                                         ; 3       ;
+; line_count[0]                                                                                                                         ; 3       ;
 ; line_count[1]                                                                                                                         ; 3       ;
+; line_count[8]                                                                                                                         ; 3       ;
+; line_count[2]                                                                                                                         ; 3       ;
 ; vga_px_count[9]                                                                                                                       ; 3       ;
 ; vga_px_count[0]                                                                                                                       ; 3       ;
-; buffer_en_b~3                                                                                                                         ; 2       ;
 ; n64_pixel:rgb_decoder|blue_out[2]                                                                                                     ; 2       ;
 ; n64_pixel:rgb_decoder|blue_out[1]                                                                                                     ; 2       ;
 ; n64_pixel:rgb_decoder|blue_out[6]                                                                                                     ; 2       ;
@@ -1369,13 +1365,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; n64_pixel:rgb_decoder|red_out[4]                                                                                                      ; 2       ;
 ; n64_pixel:rgb_decoder|red_out[3]                                                                                                      ; 2       ;
 ; Mux0~0                                                                                                                                ; 2       ;
+; buffer_en_b~1                                                                                                                         ; 2       ;
 ; n64_pixel:rgb_decoder|clock_count[0]                                                                                                  ; 2       ;
-; LessThan2~0                                                                                                                           ; 2       ;
 ; enable_delay                                                                                                                          ; 2       ;
-; LessThan1~5                                                                                                                           ; 2       ;
 ; LessThan1~4                                                                                                                           ; 2       ;
 ; vga_osc                                                                                                                               ; 2       ;
+; Equal3~2                                                                                                                              ; 2       ;
 ; Equal3~1                                                                                                                              ; 2       ;
+; Equal3~0                                                                                                                              ; 2       ;
 ; vga_hsync_proc~7                                                                                                                      ; 2       ;
 ; Equal0~1                                                                                                                              ; 2       ;
 ; vga_hsync_proc~6                                                                                                                      ; 2       ;
@@ -1392,22 +1389,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; out_red[4]                                                                                                                            ; 2       ;
 ; out_red[3]                                                                                                                            ; 2       ;
 ; vga_clk~reg0                                                                                                                          ; 2       ;
-; vsync_time[15]                                                                                                                        ; 2       ;
-; vsync_time[14]                                                                                                                        ; 2       ;
-; vsync_time[13]                                                                                                                        ; 2       ;
-; vsync_time[12]                                                                                                                        ; 2       ;
-; vsync_time[11]                                                                                                                        ; 2       ;
-; vsync_time[10]                                                                                                                        ; 2       ;
-; vsync_time[9]                                                                                                                         ; 2       ;
-; vsync_time[8]                                                                                                                         ; 2       ;
-; vsync_time[7]                                                                                                                         ; 2       ;
-; vsync_time[6]                                                                                                                         ; 2       ;
-; vsync_time[5]                                                                                                                         ; 2       ;
-; vsync_time[4]                                                                                                                         ; 2       ;
-; vsync_time[3]                                                                                                                         ; 2       ;
-; vsync_time[2]                                                                                                                         ; 2       ;
 ; vsync_time[1]                                                                                                                         ; 2       ;
+; vsync_time[2]                                                                                                                         ; 2       ;
+; vsync_time[3]                                                                                                                         ; 2       ;
 ; vsync_time[0]                                                                                                                         ; 2       ;
+; vsync_time[6]                                                                                                                         ; 2       ;
+; vsync_time[7]                                                                                                                         ; 2       ;
+; vsync_time[8]                                                                                                                         ; 2       ;
+; vsync_time[9]                                                                                                                         ; 2       ;
+; vsync_time[10]                                                                                                                        ; 2       ;
+; vsync_time[11]                                                                                                                        ; 2       ;
+; vsync_time[12]                                                                                                                        ; 2       ;
+; vsync_time[13]                                                                                                                        ; 2       ;
+; vsync_time[4]                                                                                                                         ; 2       ;
+; vsync_time[14]                                                                                                                        ; 2       ;
+; vsync_time[15]                                                                                                                        ; 2       ;
+; vsync_time[5]                                                                                                                         ; 2       ;
+; hsync_time[4]                                                                                                                         ; 2       ;
+; hsync_time[3]                                                                                                                         ; 2       ;
+; hsync_time[2]                                                                                                                         ; 2       ;
+; hsync_time[1]                                                                                                                         ; 2       ;
+; hsync_time[0]                                                                                                                         ; 2       ;
 ; hsync_time[15]                                                                                                                        ; 2       ;
 ; hsync_time[14]                                                                                                                        ; 2       ;
 ; hsync_time[13]                                                                                                                        ; 2       ;
@@ -1419,70 +1421,68 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; hsync_time[7]                                                                                                                         ; 2       ;
 ; hsync_time[6]                                                                                                                         ; 2       ;
 ; hsync_time[5]                                                                                                                         ; 2       ;
-; hsync_time[4]                                                                                                                         ; 2       ;
-; hsync_time[0]                                                                                                                         ; 2       ;
-; hsync_time[3]                                                                                                                         ; 2       ;
-; hsync_time[2]                                                                                                                         ; 2       ;
-; hsync_time[1]                                                                                                                         ; 2       ;
-; line_count[0]                                                                                                                         ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a17           ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a16           ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a17           ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a16           ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a13           ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a14           ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a15           ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a12           ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a13           ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a14           ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a15           ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a12           ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a9            ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a10           ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a11           ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a8            ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a9            ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a10           ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a11           ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a8            ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a5            ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a6            ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a7            ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a4            ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a5            ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a6            ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a7            ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a4            ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a1            ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a2            ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a3            ; 2       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a0            ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a1            ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a2            ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a3            ; 2       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ram_block3a0            ; 2       ;
-; n64_px_count[7]                                                                                                                       ; 2       ;
-; n64_px_count[6]                                                                                                                       ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a17           ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a16           ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a17           ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a16           ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a13           ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a14           ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a15           ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a12           ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a13           ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a14           ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a15           ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a12           ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a9            ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a10           ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a11           ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a8            ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a9            ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a10           ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a11           ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a8            ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a5            ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a6            ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a7            ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a4            ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a5            ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a6            ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a7            ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a4            ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a1            ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a2            ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a3            ; 2       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a0            ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a1            ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a2            ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a3            ; 2       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ram_block3a0            ; 2       ;
 ; n64_px_count[5]                                                                                                                       ; 2       ;
 ; n64_px_count[4]                                                                                                                       ; 2       ;
+; n64_px_count[8]                                                                                                                       ; 2       ;
+; n64_px_count[7]                                                                                                                       ; 2       ;
+; n64_px_count[13]                                                                                                                      ; 2       ;
 ; n64_px_count[15]                                                                                                                      ; 2       ;
 ; n64_px_count[14]                                                                                                                      ; 2       ;
-; n64_px_count[13]                                                                                                                      ; 2       ;
 ; n64_px_count[12]                                                                                                                      ; 2       ;
+; line_count[9]                                                                                                                         ; 2       ;
+; line_count[13]                                                                                                                        ; 2       ;
+; line_count[10]                                                                                                                        ; 2       ;
+; line_count[11]                                                                                                                        ; 2       ;
+; line_count[7]                                                                                                                         ; 2       ;
+; line_count[12]                                                                                                                        ; 2       ;
 ; line_count[15]                                                                                                                        ; 2       ;
 ; line_count[14]                                                                                                                        ; 2       ;
-; line_count[13]                                                                                                                        ; 2       ;
-; line_count[12]                                                                                                                        ; 2       ;
-; line_count[11]                                                                                                                        ; 2       ;
-; line_count[10]                                                                                                                        ; 2       ;
-; line_count[9]                                                                                                                         ; 2       ;
-; vga_px_count[15]                                                                                                                      ; 2       ;
-; vga_px_count[14]                                                                                                                      ; 2       ;
+; line_count[3]                                                                                                                         ; 2       ;
+; line_count[4]                                                                                                                         ; 2       ;
+; line_count[5]                                                                                                                         ; 2       ;
+; line_count[6]                                                                                                                         ; 2       ;
 ; vga_px_count[13]                                                                                                                      ; 2       ;
 ; vga_px_count[12]                                                                                                                      ; 2       ;
+; vga_px_count[14]                                                                                                                      ; 2       ;
 ; vga_px_count[11]                                                                                                                      ; 2       ;
+; vga_px_count[15]                                                                                                                      ; 2       ;
 ; vga_osc~0                                                                                                                             ; 1       ;
-; vga_clk~3                                                                                                                             ; 1       ;
 ; n64_pixel:rgb_decoder|blue_cap[2]                                                                                                     ; 1       ;
 ; n64_pixel:rgb_decoder|blue_cap[1]                                                                                                     ; 1       ;
 ; n64_pixel:rgb_decoder|blue_cap[6]                                                                                                     ; 1       ;
@@ -1554,13 +1554,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; buffer_in_a~2                                                                                                                         ; 1       ;
 ; buffer_in_b~1                                                                                                                         ; 1       ;
 ; buffer_in_a~1                                                                                                                         ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5|aneb_result_wire[0]~2 ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5|aneb_result_wire[0]~1 ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5|aneb_result_wire[0]~0 ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5|aneb_result_wire[0]~2 ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5|aneb_result_wire[0]~1 ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5|aneb_result_wire[0]~0 ; 1       ;
 ; buffer_in_b~0                                                                                                                         ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5|aneb_result_wire[0]~2 ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5|aneb_result_wire[0]~1 ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5|aneb_result_wire[0]~0 ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5|aneb_result_wire[0]~2 ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5|aneb_result_wire[0]~1 ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5|aneb_result_wire[0]~0 ; 1       ;
 ; buffer_in_a~0                                                                                                                         ; 1       ;
 ; n64_pixel:rgb_decoder|clock_count[1]                                                                                                  ; 1       ;
 ; n64_pixel:rgb_decoder|cycle_count~1                                                                                                   ; 1       ;
@@ -1602,8 +1602,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; buffer_sel~0                                                                                                                          ; 1       ;
 ; buffer_in_b[17]                                                                                                                       ; 1       ;
 ; buffer_in_a[17]                                                                                                                       ; 1       ;
-; enable_delay~1                                                                                                                        ; 1       ;
 ; enable_delay~0                                                                                                                        ; 1       ;
+; LessThan2~1                                                                                                                           ; 1       ;
+; LessThan2~0                                                                                                                           ; 1       ;
 ; Equal1~3                                                                                                                              ; 1       ;
 ; Equal1~2                                                                                                                              ; 1       ;
 ; Equal1~1                                                                                                                              ; 1       ;
@@ -1614,7 +1615,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Equal2~0                                                                                                                              ; 1       ;
 ; Equal3~4                                                                                                                              ; 1       ;
 ; Equal3~3                                                                                                                              ; 1       ;
-; Equal3~2                                                                                                                              ; 1       ;
 ; Equal0~4                                                                                                                              ; 1       ;
 ; Equal0~3                                                                                                                              ; 1       ;
 ; Equal0~2                                                                                                                              ; 1       ;
@@ -1637,14 +1637,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; out_red~1                                                                                                                             ; 1       ;
 ; out_red~0                                                                                                                             ; 1       ;
 ; n64_pixel:rgb_decoder|vsync_n_cap                                                                                                     ; 1       ;
-; vga_clk~2                                                                                                                             ; 1       ;
+; vga_clk~0                                                                                                                             ; 1       ;
+; write_buffers~2                                                                                                                       ; 1       ;
 ; write_buffers~1                                                                                                                       ; 1       ;
 ; write_buffers~0                                                                                                                       ; 1       ;
-; LessThan1~3                                                                                                                           ; 1       ;
+; LessThan1~5                                                                                                                           ; 1       ;
 ; LessThan1~2                                                                                                                           ; 1       ;
 ; LessThan1~1                                                                                                                           ; 1       ;
-; vga_vsync_proc~2                                                                                                                      ; 1       ;
-; Equal3~0                                                                                                                              ; 1       ;
 ; vga_vsync_proc~1                                                                                                                      ; 1       ;
 ; vga_vsync_proc~0                                                                                                                      ; 1       ;
 ; Equal0~0                                                                                                                              ; 1       ;
@@ -1693,205 +1692,205 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; vga_red[2]~reg0                                                                                                                       ; 1       ;
 ; vga_red[1]~reg0                                                                                                                       ; 1       ;
 ; vga_red[0]~reg0                                                                                                                       ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita9~0                 ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita9~COUT              ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita9                   ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita8~COUT              ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita8                   ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita7~COUT              ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita7                   ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita6~COUT              ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita6                   ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita5~COUT              ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita5                   ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita4~COUT              ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita4                   ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita3~COUT              ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita3                   ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita2~COUT              ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita2                   ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita1~COUT              ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita1                   ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita0~COUT              ; 1       ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita0                   ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita9~0                 ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita9~COUT              ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita9                   ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita8~COUT              ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita8                   ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita7~COUT              ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita7                   ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita6~COUT              ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita6                   ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita5~COUT              ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita5                   ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita4~COUT              ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita4                   ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita3~COUT              ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita3                   ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita2~COUT              ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita2                   ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita1~COUT              ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita1                   ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita0~COUT              ; 1       ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita0                   ; 1       ;
 ; buffer_en_b~0                                                                                                                         ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita9~0                 ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita9~COUT              ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita9                   ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita8~COUT              ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita8                   ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita7~COUT              ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita7                   ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita6~COUT              ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita6                   ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita5~COUT              ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita5                   ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita4~COUT              ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita4                   ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita3~COUT              ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita3                   ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita2~COUT              ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita2                   ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita1~COUT              ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita1                   ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita0~COUT              ; 1       ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|counter_comb_bita0                   ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita9~0                 ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita9~COUT              ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita9                   ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita8~COUT              ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita8                   ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita7~COUT              ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita7                   ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita6~COUT              ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita6                   ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita5~COUT              ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita5                   ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita4~COUT              ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita4                   ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita3~COUT              ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita3                   ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita2~COUT              ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita2                   ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita1~COUT              ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita1                   ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita0~COUT              ; 1       ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|counter_comb_bita0                   ; 1       ;
 ; buffer_en_a~0                                                                                                                         ; 1       ;
-; vsync_time[15]~46                                                                                                                     ; 1       ;
-; vsync_time[14]~45                                                                                                                     ; 1       ;
-; vsync_time[14]~44                                                                                                                     ; 1       ;
-; vsync_time[13]~43                                                                                                                     ; 1       ;
-; vsync_time[13]~42                                                                                                                     ; 1       ;
-; vsync_time[12]~41                                                                                                                     ; 1       ;
-; vsync_time[12]~40                                                                                                                     ; 1       ;
-; vsync_time[11]~39                                                                                                                     ; 1       ;
-; vsync_time[11]~38                                                                                                                     ; 1       ;
-; vsync_time[10]~37                                                                                                                     ; 1       ;
-; vsync_time[10]~36                                                                                                                     ; 1       ;
-; vsync_time[9]~35                                                                                                                      ; 1       ;
-; vsync_time[9]~34                                                                                                                      ; 1       ;
-; vsync_time[8]~33                                                                                                                      ; 1       ;
-; vsync_time[8]~32                                                                                                                      ; 1       ;
-; vsync_time[7]~31                                                                                                                      ; 1       ;
-; vsync_time[7]~30                                                                                                                      ; 1       ;
-; vsync_time[6]~29                                                                                                                      ; 1       ;
-; vsync_time[6]~28                                                                                                                      ; 1       ;
-; vsync_time[5]~27                                                                                                                      ; 1       ;
-; vsync_time[5]~26                                                                                                                      ; 1       ;
-; vsync_time[4]~25                                                                                                                      ; 1       ;
-; vsync_time[4]~24                                                                                                                      ; 1       ;
-; vsync_time[3]~23                                                                                                                      ; 1       ;
-; vsync_time[3]~22                                                                                                                      ; 1       ;
-; vsync_time[2]~21                                                                                                                      ; 1       ;
-; vsync_time[2]~20                                                                                                                      ; 1       ;
-; vsync_time[1]~19                                                                                                                      ; 1       ;
-; vsync_time[1]~18                                                                                                                      ; 1       ;
-; vsync_time[0]~17                                                                                                                      ; 1       ;
-; vsync_time[0]~16                                                                                                                      ; 1       ;
-; hsync_time[15]~46                                                                                                                     ; 1       ;
-; hsync_time[14]~45                                                                                                                     ; 1       ;
-; hsync_time[14]~44                                                                                                                     ; 1       ;
-; hsync_time[13]~43                                                                                                                     ; 1       ;
-; hsync_time[13]~42                                                                                                                     ; 1       ;
-; hsync_time[12]~41                                                                                                                     ; 1       ;
-; hsync_time[12]~40                                                                                                                     ; 1       ;
-; hsync_time[11]~39                                                                                                                     ; 1       ;
-; hsync_time[11]~38                                                                                                                     ; 1       ;
-; hsync_time[10]~37                                                                                                                     ; 1       ;
-; hsync_time[10]~36                                                                                                                     ; 1       ;
-; hsync_time[9]~35                                                                                                                      ; 1       ;
-; hsync_time[9]~34                                                                                                                      ; 1       ;
-; hsync_time[8]~33                                                                                                                      ; 1       ;
-; hsync_time[8]~32                                                                                                                      ; 1       ;
-; hsync_time[7]~31                                                                                                                      ; 1       ;
-; hsync_time[7]~30                                                                                                                      ; 1       ;
-; hsync_time[6]~29                                                                                                                      ; 1       ;
-; hsync_time[6]~28                                                                                                                      ; 1       ;
-; hsync_time[5]~27                                                                                                                      ; 1       ;
-; hsync_time[5]~26                                                                                                                      ; 1       ;
-; hsync_time[4]~25                                                                                                                      ; 1       ;
-; hsync_time[4]~24                                                                                                                      ; 1       ;
-; hsync_time[3]~23                                                                                                                      ; 1       ;
-; hsync_time[3]~22                                                                                                                      ; 1       ;
-; hsync_time[2]~21                                                                                                                      ; 1       ;
-; hsync_time[2]~20                                                                                                                      ; 1       ;
-; hsync_time[1]~19                                                                                                                      ; 1       ;
-; hsync_time[1]~18                                                                                                                      ; 1       ;
-; hsync_time[0]~17                                                                                                                      ; 1       ;
-; hsync_time[0]~16                                                                                                                      ; 1       ;
-; n64_px_count[15]~47                                                                                                                   ; 1       ;
-; n64_px_count[14]~46                                                                                                                   ; 1       ;
-; n64_px_count[14]~45                                                                                                                   ; 1       ;
-; n64_px_count[13]~44                                                                                                                   ; 1       ;
-; n64_px_count[13]~43                                                                                                                   ; 1       ;
-; n64_px_count[12]~41                                                                                                                   ; 1       ;
-; n64_px_count[12]~40                                                                                                                   ; 1       ;
-; n64_px_count[11]~39                                                                                                                   ; 1       ;
-; n64_px_count[11]~38                                                                                                                   ; 1       ;
-; n64_px_count[10]~37                                                                                                                   ; 1       ;
-; n64_px_count[10]~36                                                                                                                   ; 1       ;
-; n64_px_count[9]~35                                                                                                                    ; 1       ;
-; n64_px_count[9]~34                                                                                                                    ; 1       ;
-; n64_px_count[8]~33                                                                                                                    ; 1       ;
-; n64_px_count[8]~32                                                                                                                    ; 1       ;
-; n64_px_count[7]~31                                                                                                                    ; 1       ;
-; n64_px_count[7]~30                                                                                                                    ; 1       ;
-; n64_px_count[6]~29                                                                                                                    ; 1       ;
-; n64_px_count[6]~28                                                                                                                    ; 1       ;
-; n64_px_count[5]~27                                                                                                                    ; 1       ;
-; n64_px_count[5]~26                                                                                                                    ; 1       ;
-; n64_px_count[4]~25                                                                                                                    ; 1       ;
-; n64_px_count[4]~24                                                                                                                    ; 1       ;
-; n64_px_count[3]~23                                                                                                                    ; 1       ;
-; n64_px_count[3]~22                                                                                                                    ; 1       ;
-; n64_px_count[2]~21                                                                                                                    ; 1       ;
-; n64_px_count[2]~20                                                                                                                    ; 1       ;
-; n64_px_count[1]~19                                                                                                                    ; 1       ;
-; n64_px_count[1]~18                                                                                                                    ; 1       ;
-; n64_px_count[0]~17                                                                                                                    ; 1       ;
-; n64_px_count[0]~16                                                                                                                    ; 1       ;
-; line_count[15]~48                                                                                                                     ; 1       ;
-; line_count[14]~47                                                                                                                     ; 1       ;
-; line_count[14]~46                                                                                                                     ; 1       ;
-; line_count[13]~45                                                                                                                     ; 1       ;
-; line_count[13]~44                                                                                                                     ; 1       ;
-; line_count[12]~43                                                                                                                     ; 1       ;
-; line_count[12]~42                                                                                                                     ; 1       ;
-; line_count[11]~41                                                                                                                     ; 1       ;
-; line_count[11]~40                                                                                                                     ; 1       ;
-; line_count[10]~39                                                                                                                     ; 1       ;
-; line_count[10]~38                                                                                                                     ; 1       ;
-; line_count[9]~37                                                                                                                      ; 1       ;
-; line_count[9]~36                                                                                                                      ; 1       ;
-; line_count[8]~35                                                                                                                      ; 1       ;
-; line_count[8]~34                                                                                                                      ; 1       ;
-; line_count[7]~33                                                                                                                      ; 1       ;
-; line_count[7]~32                                                                                                                      ; 1       ;
-; line_count[6]~31                                                                                                                      ; 1       ;
-; line_count[6]~30                                                                                                                      ; 1       ;
-; line_count[5]~29                                                                                                                      ; 1       ;
-; line_count[5]~28                                                                                                                      ; 1       ;
-; line_count[4]~27                                                                                                                      ; 1       ;
-; line_count[4]~26                                                                                                                      ; 1       ;
-; line_count[3]~25                                                                                                                      ; 1       ;
-; line_count[3]~24                                                                                                                      ; 1       ;
-; line_count[2]~23                                                                                                                      ; 1       ;
-; line_count[2]~22                                                                                                                      ; 1       ;
-; line_count[1]~19                                                                                                                      ; 1       ;
-; line_count[1]~18                                                                                                                      ; 1       ;
-; line_count[0]~17                                                                                                                      ; 1       ;
-; line_count[0]~16                                                                                                                      ; 1       ;
-; vga_px_count[15]~47                                                                                                                   ; 1       ;
-; vga_px_count[14]~46                                                                                                                   ; 1       ;
-; vga_px_count[14]~45                                                                                                                   ; 1       ;
-; vga_px_count[13]~44                                                                                                                   ; 1       ;
-; vga_px_count[13]~43                                                                                                                   ; 1       ;
-; vga_px_count[12]~42                                                                                                                   ; 1       ;
-; vga_px_count[12]~41                                                                                                                   ; 1       ;
-; vga_px_count[11]~40                                                                                                                   ; 1       ;
-; vga_px_count[11]~39                                                                                                                   ; 1       ;
-; vga_px_count[10]~37                                                                                                                   ; 1       ;
-; vga_px_count[10]~36                                                                                                                   ; 1       ;
-; vga_px_count[9]~35                                                                                                                    ; 1       ;
-; vga_px_count[9]~34                                                                                                                    ; 1       ;
-; vga_px_count[8]~33                                                                                                                    ; 1       ;
-; vga_px_count[8]~32                                                                                                                    ; 1       ;
-; vga_px_count[7]~31                                                                                                                    ; 1       ;
-; vga_px_count[7]~30                                                                                                                    ; 1       ;
-; vga_px_count[6]~29                                                                                                                    ; 1       ;
-; vga_px_count[6]~28                                                                                                                    ; 1       ;
-; vga_px_count[5]~27                                                                                                                    ; 1       ;
-; vga_px_count[5]~26                                                                                                                    ; 1       ;
-; vga_px_count[4]~25                                                                                                                    ; 1       ;
-; vga_px_count[4]~24                                                                                                                    ; 1       ;
-; vga_px_count[3]~23                                                                                                                    ; 1       ;
-; vga_px_count[3]~22                                                                                                                    ; 1       ;
-; vga_px_count[2]~21                                                                                                                    ; 1       ;
-; vga_px_count[2]~20                                                                                                                    ; 1       ;
-; vga_px_count[1]~19                                                                                                                    ; 1       ;
-; vga_px_count[1]~18                                                                                                                    ; 1       ;
-; vga_px_count[0]~17                                                                                                                    ; 1       ;
-; vga_px_count[0]~16                                                                                                                    ; 1       ;
+; Add0~30                                                                                                                               ; 1       ;
+; Add0~29                                                                                                                               ; 1       ;
+; Add0~28                                                                                                                               ; 1       ;
+; Add0~27                                                                                                                               ; 1       ;
+; Add0~26                                                                                                                               ; 1       ;
+; Add0~25                                                                                                                               ; 1       ;
+; Add0~24                                                                                                                               ; 1       ;
+; Add0~23                                                                                                                               ; 1       ;
+; Add0~22                                                                                                                               ; 1       ;
+; Add0~21                                                                                                                               ; 1       ;
+; Add0~20                                                                                                                               ; 1       ;
+; Add0~19                                                                                                                               ; 1       ;
+; Add0~18                                                                                                                               ; 1       ;
+; Add0~17                                                                                                                               ; 1       ;
+; Add0~16                                                                                                                               ; 1       ;
+; Add0~15                                                                                                                               ; 1       ;
+; Add0~14                                                                                                                               ; 1       ;
+; Add0~13                                                                                                                               ; 1       ;
+; Add0~12                                                                                                                               ; 1       ;
+; Add0~11                                                                                                                               ; 1       ;
+; Add0~10                                                                                                                               ; 1       ;
+; Add0~9                                                                                                                                ; 1       ;
+; Add0~8                                                                                                                                ; 1       ;
+; Add0~7                                                                                                                                ; 1       ;
+; Add0~6                                                                                                                                ; 1       ;
+; Add0~5                                                                                                                                ; 1       ;
+; Add0~4                                                                                                                                ; 1       ;
+; Add0~3                                                                                                                                ; 1       ;
+; Add0~2                                                                                                                                ; 1       ;
+; Add0~1                                                                                                                                ; 1       ;
+; Add0~0                                                                                                                                ; 1       ;
+; Add1~30                                                                                                                               ; 1       ;
+; Add1~29                                                                                                                               ; 1       ;
+; Add1~28                                                                                                                               ; 1       ;
+; Add1~27                                                                                                                               ; 1       ;
+; Add1~26                                                                                                                               ; 1       ;
+; Add1~25                                                                                                                               ; 1       ;
+; Add1~24                                                                                                                               ; 1       ;
+; Add1~23                                                                                                                               ; 1       ;
+; Add1~22                                                                                                                               ; 1       ;
+; Add1~21                                                                                                                               ; 1       ;
+; Add1~20                                                                                                                               ; 1       ;
+; Add1~19                                                                                                                               ; 1       ;
+; Add1~18                                                                                                                               ; 1       ;
+; Add1~17                                                                                                                               ; 1       ;
+; Add1~16                                                                                                                               ; 1       ;
+; Add1~15                                                                                                                               ; 1       ;
+; Add1~14                                                                                                                               ; 1       ;
+; Add1~13                                                                                                                               ; 1       ;
+; Add1~12                                                                                                                               ; 1       ;
+; Add1~11                                                                                                                               ; 1       ;
+; Add1~10                                                                                                                               ; 1       ;
+; Add1~9                                                                                                                                ; 1       ;
+; Add1~8                                                                                                                                ; 1       ;
+; Add1~7                                                                                                                                ; 1       ;
+; Add1~6                                                                                                                                ; 1       ;
+; Add1~5                                                                                                                                ; 1       ;
+; Add1~4                                                                                                                                ; 1       ;
+; Add1~3                                                                                                                                ; 1       ;
+; Add1~2                                                                                                                                ; 1       ;
+; Add1~1                                                                                                                                ; 1       ;
+; Add1~0                                                                                                                                ; 1       ;
+; Add3~30                                                                                                                               ; 1       ;
+; Add3~29                                                                                                                               ; 1       ;
+; Add3~28                                                                                                                               ; 1       ;
+; Add3~27                                                                                                                               ; 1       ;
+; Add3~26                                                                                                                               ; 1       ;
+; Add3~25                                                                                                                               ; 1       ;
+; Add3~24                                                                                                                               ; 1       ;
+; Add3~23                                                                                                                               ; 1       ;
+; Add3~22                                                                                                                               ; 1       ;
+; Add3~21                                                                                                                               ; 1       ;
+; Add3~20                                                                                                                               ; 1       ;
+; Add3~19                                                                                                                               ; 1       ;
+; Add3~18                                                                                                                               ; 1       ;
+; Add3~17                                                                                                                               ; 1       ;
+; Add3~16                                                                                                                               ; 1       ;
+; Add3~15                                                                                                                               ; 1       ;
+; Add3~14                                                                                                                               ; 1       ;
+; Add3~13                                                                                                                               ; 1       ;
+; Add3~12                                                                                                                               ; 1       ;
+; Add3~11                                                                                                                               ; 1       ;
+; Add3~10                                                                                                                               ; 1       ;
+; Add3~9                                                                                                                                ; 1       ;
+; Add3~8                                                                                                                                ; 1       ;
+; Add3~7                                                                                                                                ; 1       ;
+; Add3~6                                                                                                                                ; 1       ;
+; Add3~5                                                                                                                                ; 1       ;
+; Add3~4                                                                                                                                ; 1       ;
+; Add3~3                                                                                                                                ; 1       ;
+; Add3~2                                                                                                                                ; 1       ;
+; Add3~1                                                                                                                                ; 1       ;
+; Add3~0                                                                                                                                ; 1       ;
+; Add4~30                                                                                                                               ; 1       ;
+; Add4~29                                                                                                                               ; 1       ;
+; Add4~28                                                                                                                               ; 1       ;
+; Add4~27                                                                                                                               ; 1       ;
+; Add4~26                                                                                                                               ; 1       ;
+; Add4~25                                                                                                                               ; 1       ;
+; Add4~24                                                                                                                               ; 1       ;
+; Add4~23                                                                                                                               ; 1       ;
+; Add4~22                                                                                                                               ; 1       ;
+; Add4~21                                                                                                                               ; 1       ;
+; Add4~20                                                                                                                               ; 1       ;
+; Add4~19                                                                                                                               ; 1       ;
+; Add4~18                                                                                                                               ; 1       ;
+; Add4~17                                                                                                                               ; 1       ;
+; Add4~16                                                                                                                               ; 1       ;
+; Add4~15                                                                                                                               ; 1       ;
+; Add4~14                                                                                                                               ; 1       ;
+; Add4~13                                                                                                                               ; 1       ;
+; Add4~12                                                                                                                               ; 1       ;
+; Add4~11                                                                                                                               ; 1       ;
+; Add4~10                                                                                                                               ; 1       ;
+; Add4~9                                                                                                                                ; 1       ;
+; Add4~8                                                                                                                                ; 1       ;
+; Add4~7                                                                                                                                ; 1       ;
+; Add4~6                                                                                                                                ; 1       ;
+; Add4~5                                                                                                                                ; 1       ;
+; Add4~4                                                                                                                                ; 1       ;
+; Add4~3                                                                                                                                ; 1       ;
+; Add4~2                                                                                                                                ; 1       ;
+; Add4~1                                                                                                                                ; 1       ;
+; Add4~0                                                                                                                                ; 1       ;
+; Add2~30                                                                                                                               ; 1       ;
+; Add2~29                                                                                                                               ; 1       ;
+; Add2~28                                                                                                                               ; 1       ;
+; Add2~27                                                                                                                               ; 1       ;
+; Add2~26                                                                                                                               ; 1       ;
+; Add2~25                                                                                                                               ; 1       ;
+; Add2~24                                                                                                                               ; 1       ;
+; Add2~23                                                                                                                               ; 1       ;
+; Add2~22                                                                                                                               ; 1       ;
+; Add2~21                                                                                                                               ; 1       ;
+; Add2~20                                                                                                                               ; 1       ;
+; Add2~19                                                                                                                               ; 1       ;
+; Add2~18                                                                                                                               ; 1       ;
+; Add2~17                                                                                                                               ; 1       ;
+; Add2~16                                                                                                                               ; 1       ;
+; Add2~15                                                                                                                               ; 1       ;
+; Add2~14                                                                                                                               ; 1       ;
+; Add2~13                                                                                                                               ; 1       ;
+; Add2~12                                                                                                                               ; 1       ;
+; Add2~11                                                                                                                               ; 1       ;
+; Add2~10                                                                                                                               ; 1       ;
+; Add2~9                                                                                                                                ; 1       ;
+; Add2~8                                                                                                                                ; 1       ;
+; Add2~7                                                                                                                                ; 1       ;
+; Add2~6                                                                                                                                ; 1       ;
+; Add2~5                                                                                                                                ; 1       ;
+; Add2~4                                                                                                                                ; 1       ;
+; Add2~3                                                                                                                                ; 1       ;
+; Add2~2                                                                                                                                ; 1       ;
+; Add2~1                                                                                                                                ; 1       ;
+; Add2~0                                                                                                                                ; 1       ;
 +---------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -1900,8 +1899,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+-----------------------------------------------------------------+----------------------+-----------------+-----------------+
 ; Name                                                                                                                     ; Type ; Mode             ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size  ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M4Ks ; MIF  ; Location                                                        ; Mixed Width RDW Mode ; Port A RDW Mode ; Port B RDW Mode ;
 +--------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+-----------------------------------------------------------------+----------------------+-----------------+-----------------+
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 771          ; 18           ; 771          ; 18           ; yes                    ; no                      ; yes                    ; yes                     ; 13878 ; 771                         ; 18                          ; 771                         ; 18                          ; 13878               ; 5    ; None ; M4K_X26_Y25, M4K_X26_Y26, M4K_X26_Y24, M4K_X26_Y27, M4K_X26_Y23 ; Old data             ; Don't care      ; Don't care      ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 771          ; 18           ; 771          ; 18           ; yes                    ; no                      ; yes                    ; yes                     ; 13878 ; 771                         ; 18                          ; 771                         ; 18                          ; 13878               ; 5    ; None ; M4K_X26_Y32, M4K_X26_Y29, M4K_X26_Y28, M4K_X26_Y30, M4K_X26_Y31 ; Old data             ; Don't care      ; Don't care      ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 771          ; 18           ; 771          ; 18           ; yes                    ; no                      ; yes                    ; yes                     ; 13878 ; 771                         ; 18                          ; 771                         ; 18                          ; 13878               ; 5    ; None ; M4K_X26_Y22, M4K_X26_Y23, M4K_X26_Y19, M4K_X26_Y21, M4K_X26_Y20 ; Old data             ; Don't care      ; Don't care      ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 771          ; 18           ; 771          ; 18           ; yes                    ; no                      ; yes                    ; yes                     ; 13878 ; 771                         ; 18                          ; 771                         ; 18                          ; 13878               ; 5    ; None ; M4K_X26_Y25, M4K_X26_Y27, M4K_X26_Y26, M4K_X26_Y28, M4K_X26_Y24 ; Old data             ; Don't care      ; Don't care      ;
 +--------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+-----------------------------------------------------------------+----------------------+-----------------+-----------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
@@ -1911,50 +1910,50 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +-----------------------------+------------------------+
 ; Other Routing Resource Type ; Usage                  ;
 +-----------------------------+------------------------+
-; Block interconnects         ; 440 / 94,460 ( < 1 % ) ;
+; Block interconnects         ; 439 / 94,460 ( < 1 % ) ;
 ; C16 interconnects           ; 3 / 3,315 ( < 1 % )    ;
-; C4 interconnects            ; 228 / 60,840 ( < 1 % ) ;
-; Direct links                ; 99 / 94,460 ( < 1 % )  ;
+; C4 interconnects            ; 235 / 60,840 ( < 1 % ) ;
+; Direct links                ; 105 / 94,460 ( < 1 % ) ;
 ; Global clocks               ; 1 / 16 ( 6 % )         ;
-; Local interconnects         ; 190 / 33,216 ( < 1 % ) ;
+; Local interconnects         ; 184 / 33,216 ( < 1 % ) ;
 ; R24 interconnects           ; 18 / 3,091 ( < 1 % )   ;
-; R4 interconnects            ; 180 / 81,294 ( < 1 % ) ;
+; R4 interconnects            ; 160 / 81,294 ( < 1 % ) ;
 +-----------------------------+------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 10.23) ; Number of LABs  (Total = 31) ;
+; Number of Logic Elements  (Average = 10.97) ; Number of LABs  (Total = 29) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 4                            ;
-; 2                                           ; 2                            ;
+; 1                                           ; 1                            ;
+; 2                                           ; 4                            ;
 ; 3                                           ; 1                            ;
-; 4                                           ; 2                            ;
+; 4                                           ; 0                            ;
 ; 5                                           ; 0                            ;
-; 6                                           ; 1                            ;
-; 7                                           ; 0                            ;
+; 6                                           ; 3                            ;
+; 7                                           ; 2                            ;
 ; 8                                           ; 0                            ;
-; 9                                           ; 1                            ;
-; 10                                          ; 2                            ;
+; 9                                           ; 0                            ;
+; 10                                          ; 0                            ;
 ; 11                                          ; 0                            ;
-; 12                                          ; 4                            ;
-; 13                                          ; 1                            ;
-; 14                                          ; 1                            ;
-; 15                                          ; 4                            ;
-; 16                                          ; 8                            ;
+; 12                                          ; 3                            ;
+; 13                                          ; 0                            ;
+; 14                                          ; 0                            ;
+; 15                                          ; 2                            ;
+; 16                                          ; 13                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.52) ; Number of LABs  (Total = 31) ;
+; LAB-wide Signals  (Average = 1.52) ; Number of LABs  (Total = 29) ;
 +------------------------------------+------------------------------+
-; 1 Clock                            ; 31                           ;
-; 1 Clock enable                     ; 8                            ;
-; 1 Sync. clear                      ; 5                            ;
-; 1 Sync. load                       ; 2                            ;
+; 1 Clock                            ; 29                           ;
+; 1 Clock enable                     ; 7                            ;
+; 1 Sync. clear                      ; 6                            ;
+; 1 Sync. load                       ; 1                            ;
 ; 2 Clock enables                    ; 1                            ;
 +------------------------------------+------------------------------+
 
@@ -1962,64 +1961,64 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 17.74) ; Number of LABs  (Total = 31) ;
+; Number of Signals Sourced  (Average = 19.10) ; Number of LABs  (Total = 29) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 0                            ;
-; 2                                            ; 4                            ;
+; 1                                            ; 1                            ;
+; 2                                            ; 0                            ;
 ; 3                                            ; 0                            ;
-; 4                                            ; 2                            ;
+; 4                                            ; 4                            ;
 ; 5                                            ; 0                            ;
 ; 6                                            ; 1                            ;
 ; 7                                            ; 0                            ;
-; 8                                            ; 2                            ;
+; 8                                            ; 0                            ;
 ; 9                                            ; 0                            ;
-; 10                                           ; 1                            ;
+; 10                                           ; 0                            ;
 ; 11                                           ; 0                            ;
-; 12                                           ; 1                            ;
-; 13                                           ; 0                            ;
-; 14                                           ; 1                            ;
+; 12                                           ; 3                            ;
+; 13                                           ; 2                            ;
+; 14                                           ; 2                            ;
 ; 15                                           ; 0                            ;
-; 16                                           ; 1                            ;
-; 17                                           ; 1                            ;
-; 18                                           ; 0                            ;
-; 19                                           ; 2                            ;
-; 20                                           ; 1                            ;
+; 16                                           ; 0                            ;
+; 17                                           ; 0                            ;
+; 18                                           ; 2                            ;
+; 19                                           ; 1                            ;
+; 20                                           ; 0                            ;
 ; 21                                           ; 0                            ;
-; 22                                           ; 2                            ;
-; 23                                           ; 1                            ;
+; 22                                           ; 0                            ;
+; 23                                           ; 0                            ;
 ; 24                                           ; 0                            ;
-; 25                                           ; 1                            ;
-; 26                                           ; 3                            ;
+; 25                                           ; 2                            ;
+; 26                                           ; 1                            ;
 ; 27                                           ; 0                            ;
-; 28                                           ; 1                            ;
+; 28                                           ; 0                            ;
 ; 29                                           ; 1                            ;
-; 30                                           ; 0                            ;
-; 31                                           ; 2                            ;
-; 32                                           ; 3                            ;
+; 30                                           ; 2                            ;
+; 31                                           ; 3                            ;
+; 32                                           ; 4                            ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 7.81) ; Number of LABs  (Total = 31) ;
+; Number of Signals Sourced Out  (Average = 8.55) ; Number of LABs  (Total = 29) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 4                            ;
-; 2                                               ; 2                            ;
-; 3                                               ; 2                            ;
-; 4                                               ; 3                            ;
-; 5                                               ; 2                            ;
-; 6                                               ; 2                            ;
-; 7                                               ; 1                            ;
-; 8                                               ; 1                            ;
+; 1                                               ; 1                            ;
+; 2                                               ; 4                            ;
+; 3                                               ; 1                            ;
+; 4                                               ; 2                            ;
+; 5                                               ; 0                            ;
+; 6                                               ; 4                            ;
+; 7                                               ; 3                            ;
+; 8                                               ; 0                            ;
 ; 9                                               ; 0                            ;
-; 10                                              ; 3                            ;
-; 11                                              ; 4                            ;
-; 12                                              ; 1                            ;
-; 13                                              ; 1                            ;
-; 14                                              ; 0                            ;
+; 10                                              ; 2                            ;
+; 11                                              ; 3                            ;
+; 12                                              ; 3                            ;
+; 13                                              ; 0                            ;
+; 14                                              ; 1                            ;
 ; 15                                              ; 0                            ;
 ; 16                                              ; 5                            ;
 +-------------------------------------------------+------------------------------+
@@ -2028,33 +2027,40 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                        ;
 +---------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 8.23) ; Number of LABs  (Total = 31) ;
+; Number of Distinct Inputs  (Average = 8.76) ; Number of LABs  (Total = 29) ;
 +---------------------------------------------+------------------------------+
 ; 0                                           ; 0                            ;
 ; 1                                           ; 0                            ;
-; 2                                           ; 9                            ;
-; 3                                           ; 4                            ;
+; 2                                           ; 6                            ;
+; 3                                           ; 6                            ;
 ; 4                                           ; 1                            ;
-; 5                                           ; 1                            ;
-; 6                                           ; 1                            ;
+; 5                                           ; 2                            ;
+; 6                                           ; 0                            ;
 ; 7                                           ; 0                            ;
-; 8                                           ; 1                            ;
+; 8                                           ; 3                            ;
 ; 9                                           ; 2                            ;
-; 10                                          ; 2                            ;
+; 10                                          ; 0                            ;
 ; 11                                          ; 0                            ;
-; 12                                          ; 2                            ;
-; 13                                          ; 2                            ;
+; 12                                          ; 1                            ;
+; 13                                          ; 1                            ;
 ; 14                                          ; 1                            ;
-; 15                                          ; 0                            ;
-; 16                                          ; 0                            ;
+; 15                                          ; 1                            ;
+; 16                                          ; 1                            ;
 ; 17                                          ; 0                            ;
-; 18                                          ; 2                            ;
-; 19                                          ; 1                            ;
+; 18                                          ; 1                            ;
+; 19                                          ; 0                            ;
 ; 20                                          ; 0                            ;
-; 21                                          ; 1                            ;
-; 22                                          ; 0                            ;
+; 21                                          ; 0                            ;
+; 22                                          ; 1                            ;
 ; 23                                          ; 0                            ;
-; 24                                          ; 1                            ;
+; 24                                          ; 0                            ;
+; 25                                          ; 0                            ;
+; 26                                          ; 0                            ;
+; 27                                          ; 1                            ;
+; 28                                          ; 0                            ;
+; 29                                          ; 0                            ;
+; 30                                          ; 0                            ;
+; 31                                          ; 1                            ;
 +---------------------------------------------+------------------------------+
 
 
@@ -2112,19 +2118,19 @@ Info (176353): Automatically promoted node n64_clock (placed in PIN P26 (CLK7, L
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 3% of the available device resources in the region that extends from location X22_Y24 to location X32_Y36
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
+    Info (170196): Router estimated peak interconnect usage is 2% of the available device resources in the region that extends from location X22_Y24 to location X32_Y36
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.54 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.90 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 39 output pins without output pin load capacitance assignment
     Info (306007): Pin "vga_red[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -2169,15 +2175,15 @@ Warning (306006): Found 39 output pins without output pin load capacitance assig
 Info (306005): Delay annotation completed successfully
 Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
 Info (176045): Design uses memory blocks. Violating setup or hold times of memory block address registers for either read or write operations could cause memory contents to be corrupted. Make sure that all memory block address registers meet the setup and hold time requirements.
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file /home/moffitt/Development/N6480/Altera/output_files/n6480.fit.smsg
 Info: Quartus II 32-bit Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 468 megabytes
-    Info: Processing ended: Thu Mar 19 23:53:55 2015
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Peak virtual memory: 474 megabytes
+    Info: Processing ended: Tue Mar 24 17:09:02 2015
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:13
 
 
 +----------------------------+

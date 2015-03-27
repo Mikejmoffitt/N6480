@@ -1,5 +1,5 @@
 Analysis & Synthesis report for n6480
-Thu Mar 19 23:53:47 2015
+Tue Mar 24 17:08:45 2015
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -18,8 +18,8 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  10. General Register Statistics
  11. Registers Packed Into Inferred Megafunctions
  12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Source assignments for linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2
- 14. Source assignments for linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2
+ 13. Source assignments for linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2
+ 14. Source assignments for linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2
  15. Parameter Settings for User Entity Instance: linebuffer:buffer_a
  16. Parameter Settings for User Entity Instance: linebuffer:buffer_b
  17. Parameter Settings for Inferred Entity Instance: linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0
@@ -53,13 +53,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Mar 19 23:53:47 2015           ;
+; Analysis & Synthesis Status        ; Successful - Tue Mar 24 17:08:45 2015           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; n6480                                           ;
 ; Top-level Entity Name              ; n6480                                           ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 317                                             ;
-;     Total combinational functions  ; 226                                             ;
+; Total logic elements               ; 316                                             ;
+;     Total combinational functions  ; 225                                             ;
 ;     Dedicated logic registers      ; 255                                             ;
 ; Total registers                    ; 255                                             ;
 ; Total pins                         ; 52                                              ;
@@ -70,89 +70,89 @@ applicable agreement for further details.
 +------------------------------------+-------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                        ;
-+----------------------------------------------------------------------------+--------------------+--------------------+
-; Option                                                                     ; Setting            ; Default Value      ;
-+----------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                     ; EP2C35F672C6       ;                    ;
-; Top-level entity name                                                      ; n6480              ; n6480              ;
-; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
-; Use smart compilation                                                      ; Off                ; Off                ;
-; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
-; Enable compact report table                                                ; Off                ; Off                ;
-; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
-; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
-; Preserve fewer node names                                                  ; On                 ; On                 ;
-; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
-; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
-; State Machine Processing                                                   ; Auto               ; Auto               ;
-; Safe State Machine                                                         ; Off                ; Off                ;
-; Extract Verilog State Machines                                             ; On                 ; On                 ;
-; Extract VHDL State Machines                                                ; On                 ; On                 ;
-; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
-; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
-; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
-; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
-; Parallel Synthesis                                                         ; On                 ; On                 ;
-; DSP Block Balancing                                                        ; Auto               ; Auto               ;
-; NOT Gate Push-Back                                                         ; On                 ; On                 ;
-; Power-Up Don't Care                                                        ; On                 ; On                 ;
-; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
-; Remove Duplicate Registers                                                 ; On                 ; On                 ;
-; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
-; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
-; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
-; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
-; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
-; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
-; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
-; Optimization Technique                                                     ; Balanced           ; Balanced           ;
-; Carry Chain Length                                                         ; 70                 ; 70                 ;
-; Auto Carry Chains                                                          ; On                 ; On                 ;
-; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
-; Auto ROM Replacement                                                       ; On                 ; On                 ;
-; Auto RAM Replacement                                                       ; On                 ; On                 ;
-; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
-; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
-; Strict RAM Replacement                                                     ; Off                ; Off                ;
-; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
-; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
-; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
-; Auto Resource Sharing                                                      ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
-; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
-; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
-; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
-; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
-; Report Parameter Settings                                                  ; On                 ; On                 ;
-; Report Source Assignments                                                  ; On                 ; On                 ;
-; Report Connectivity Checks                                                 ; On                 ; On                 ;
-; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
-; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
-; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
-; HDL message level                                                          ; Level2             ; Level2             ;
-; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
-; Clock MUX Protection                                                       ; On                 ; On                 ;
-; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
-; Block Design Naming                                                        ; Auto               ; Auto               ;
-; SDC constraint protection                                                  ; Off                ; Off                ;
-; Synthesis Effort                                                           ; Auto               ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
-; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
-; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
-; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
-; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
-; Synthesis Seed                                                             ; 1                  ; 1                  ;
-+----------------------------------------------------------------------------+--------------------+--------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                  ;
++----------------------------------------------------------------------------+--------------+--------------------+
+; Option                                                                     ; Setting      ; Default Value      ;
++----------------------------------------------------------------------------+--------------+--------------------+
+; Device                                                                     ; EP2C35F672C6 ;                    ;
+; Top-level entity name                                                      ; n6480        ; n6480              ;
+; Family name                                                                ; Cyclone II   ; Cyclone IV GX      ;
+; Optimization Technique                                                     ; Speed        ; Balanced           ;
+; PowerPlay Power Optimization                                               ; Extra effort ; Normal compilation ;
+; Use smart compilation                                                      ; Off          ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On           ; On                 ;
+; Enable compact report table                                                ; Off          ; Off                ;
+; Restructure Multiplexers                                                   ; Auto         ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off          ; Off                ;
+; Preserve fewer node names                                                  ; On           ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off          ; Off                ;
+; Verilog Version                                                            ; Verilog_2001 ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993    ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto         ; Auto               ;
+; Safe State Machine                                                         ; Off          ; Off                ;
+; Extract Verilog State Machines                                             ; On           ; On                 ;
+; Extract VHDL State Machines                                                ; On           ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off          ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000         ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250          ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On           ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On           ; On                 ;
+; Parallel Synthesis                                                         ; On           ; On                 ;
+; DSP Block Balancing                                                        ; Auto         ; Auto               ;
+; NOT Gate Push-Back                                                         ; On           ; On                 ;
+; Power-Up Don't Care                                                        ; On           ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off          ; Off                ;
+; Remove Duplicate Registers                                                 ; On           ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off          ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off          ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off          ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off          ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off          ; Off                ;
+; Ignore SOFT Buffers                                                        ; On           ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off          ; Off                ;
+; Carry Chain Length                                                         ; 70           ; 70                 ;
+; Auto Carry Chains                                                          ; On           ; On                 ;
+; Auto Open-Drain Pins                                                       ; On           ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off          ; Off                ;
+; Auto ROM Replacement                                                       ; On           ; On                 ;
+; Auto RAM Replacement                                                       ; On           ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto         ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto         ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On           ; On                 ;
+; Strict RAM Replacement                                                     ; Off          ; Off                ;
+; Allow Synchronous Control Signals                                          ; On           ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off          ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off          ; Off                ;
+; Auto Resource Sharing                                                      ; Off          ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off          ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off          ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off          ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On           ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off          ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off          ; Off                ;
+; Report Parameter Settings                                                  ; On           ; On                 ;
+; Report Source Assignments                                                  ; On           ; On                 ;
+; Report Connectivity Checks                                                 ; On           ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off          ; Off                ;
+; Synchronization Register Chain Length                                      ; 2            ; 2                  ;
+; HDL message level                                                          ; Level2       ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off          ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000         ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000         ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100          ; 100                ;
+; Clock MUX Protection                                                       ; On           ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off          ; Off                ;
+; Block Design Naming                                                        ; Auto         ; Auto               ;
+; SDC constraint protection                                                  ; Off          ; Off                ;
+; Synthesis Effort                                                           ; Auto         ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On           ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off          ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium       ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto         ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On           ; On                 ;
+; Synthesis Seed                                                             ; 1            ; 1                  ;
++----------------------------------------------------------------------------+--------------+--------------------+
 
 
 Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
@@ -161,7 +161,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 8      ;
+; Number detected on machine ; 2      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -179,8 +179,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; lpm_counter.inc                  ; yes             ; Megafunction                 ; /altera/13.0sp1/quartus/libraries/megafunctions/lpm_counter.inc   ;         ;
 ; lpm_compare.inc                  ; yes             ; Megafunction                 ; /altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.inc   ;         ;
 ; lpm_constant.inc                 ; yes             ; Megafunction                 ; /altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.inc  ;         ;
-; db/shift_taps_nmm.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/moffitt/Development/N6480/Altera/db/shift_taps_nmm.tdf      ;         ;
-; db/altsyncram_aj81.tdf           ; yes             ; Auto-Generated Megafunction  ; /home/moffitt/Development/N6480/Altera/db/altsyncram_aj81.tdf     ;         ;
+; db/shift_taps_nim.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/moffitt/Development/N6480/Altera/db/shift_taps_nim.tdf      ;         ;
+; db/altsyncram_af81.tdf           ; yes             ; Auto-Generated Megafunction  ; /home/moffitt/Development/N6480/Altera/db/altsyncram_af81.tdf     ;         ;
 ; db/cntr_fpf.tdf                  ; yes             ; Auto-Generated Megafunction  ; /home/moffitt/Development/N6480/Altera/db/cntr_fpf.tdf            ;         ;
 ; db/cmpr_ldc.tdf                  ; yes             ; Auto-Generated Megafunction  ; /home/moffitt/Development/N6480/Altera/db/cmpr_ldc.tdf            ;         ;
 +----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+---------+
@@ -191,16 +191,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 317       ;
+; Estimated Total logic elements              ; 316       ;
 ;                                             ;           ;
-; Total combinational functions               ; 226       ;
+; Total combinational functions               ; 225       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 43        ;
-;     -- 3 input functions                    ; 63        ;
+;     -- 4 input functions                    ; 45        ;
+;     -- 3 input functions                    ; 60        ;
 ;     -- <=2 input functions                  ; 120       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 131       ;
+;     -- normal mode                          ; 130       ;
 ;     -- arithmetic mode                      ; 95        ;
 ;                                             ;           ;
 ; Total registers                             ; 255       ;
@@ -212,7 +212,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ; Maximum fan-out node                        ; n64_clock ;
 ; Maximum fan-out                             ; 291       ;
-; Total fan-out                               ; 1803      ;
+; Total fan-out                               ; 1802      ;
 ; Average fan-out                             ; 3.17      ;
 +---------------------------------------------+-----------+
 
@@ -222,19 +222,19 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                    ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+--------------+
-; |n6480                                    ; 226 (190)         ; 255 (173)    ; 27756       ; 0            ; 0       ; 0         ; 52   ; 0            ; |n6480                                                                                                                 ; work         ;
+; |n6480                                    ; 225 (189)         ; 255 (173)    ; 27756       ; 0            ; 0       ; 0         ; 52   ; 0            ; |n6480                                                                                                                 ; work         ;
 ;    |linebuffer:buffer_a|                  ; 15 (0)            ; 10 (0)       ; 13878       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_a                                                                                             ; work         ;
 ;       |altshift_taps:line_buffer_rtl_0|   ; 15 (0)            ; 10 (0)       ; 13878       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0                                                             ; work         ;
-;          |shift_taps_nmm:auto_generated|  ; 15 (0)            ; 10 (0)       ; 13878       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated                               ; work         ;
-;             |altsyncram_aj81:altsyncram2| ; 0 (0)             ; 0 (0)        ; 13878       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2   ; work         ;
-;             |cntr_fpf:cntr1|              ; 15 (12)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1                ; work         ;
-;                |cmpr_ldc:cmpr5|           ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5 ; work         ;
+;          |shift_taps_nim:auto_generated|  ; 15 (0)            ; 10 (0)       ; 13878       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated                               ; work         ;
+;             |altsyncram_af81:altsyncram2| ; 0 (0)             ; 0 (0)        ; 13878       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2   ; work         ;
+;             |cntr_fpf:cntr1|              ; 15 (12)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1                ; work         ;
+;                |cmpr_ldc:cmpr5|           ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5 ; work         ;
 ;    |linebuffer:buffer_b|                  ; 15 (0)            ; 10 (0)       ; 13878       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_b                                                                                             ; work         ;
 ;       |altshift_taps:line_buffer_rtl_0|   ; 15 (0)            ; 10 (0)       ; 13878       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0                                                             ; work         ;
-;          |shift_taps_nmm:auto_generated|  ; 15 (0)            ; 10 (0)       ; 13878       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated                               ; work         ;
-;             |altsyncram_aj81:altsyncram2| ; 0 (0)             ; 0 (0)        ; 13878       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2   ; work         ;
-;             |cntr_fpf:cntr1|              ; 15 (12)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1                ; work         ;
-;                |cmpr_ldc:cmpr5|           ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5 ; work         ;
+;          |shift_taps_nim:auto_generated|  ; 15 (0)            ; 10 (0)       ; 13878       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated                               ; work         ;
+;             |altsyncram_af81:altsyncram2| ; 0 (0)             ; 0 (0)        ; 13878       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2   ; work         ;
+;             |cntr_fpf:cntr1|              ; 15 (12)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1                ; work         ;
+;                |cmpr_ldc:cmpr5|           ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5 ; work         ;
 ;    |n64_pixel:rgb_decoder|                ; 6 (6)             ; 62 (62)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|n64_pixel:rgb_decoder                                                                                           ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -245,8 +245,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
 ; Name                                                                                                                     ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF  ;
 +--------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 771          ; 18           ; 771          ; 18           ; 13878 ; None ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 771          ; 18           ; 771          ; 18           ; 13878 ; None ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 771          ; 18           ; 771          ; 18           ; 13878 ; None ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 771          ; 18           ; 771          ; 18           ; 13878 ; None ;
 +--------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
 
 
@@ -290,28 +290,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |n6480|vga_px_count[8]     ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |n6480|n64_px_count[7]     ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |n6480|line_count[6]       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |n6480|vga_px_count[8]     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |n6480|n64_px_count[7]     ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |n6480|line_count[6]       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2 ;
-+---------------------------------+--------------------+------+------------------------------------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                                                     ;
-+---------------------------------+--------------------+------+------------------------------------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                      ;
-+---------------------------------+--------------------+------+------------------------------------------------------------------------+
+; Source assignments for linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2 ;
++---------------------------------+--------------+------+------------------------------------------------------------------------------+
+; Assignment                      ; Value        ; From ; To                                                                           ;
++---------------------------------+--------------+------+------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; EXTRA_EFFORT ; -    ; -                                                                            ;
++---------------------------------+--------------+------+------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nmm:auto_generated|altsyncram_aj81:altsyncram2 ;
-+---------------------------------+--------------------+------+------------------------------------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                                                     ;
-+---------------------------------+--------------------+------+------------------------------------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                      ;
-+---------------------------------+--------------------+------+------------------------------------------------------------------------+
+; Source assignments for linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2 ;
++---------------------------------+--------------+------+------------------------------------------------------------------------------+
+; Assignment                      ; Value        ; From ; To                                                                           ;
++---------------------------------+--------------+------+------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; EXTRA_EFFORT ; -    ; -                                                                            ;
++---------------------------------+--------------+------+------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------+
@@ -346,7 +346,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; TAP_DISTANCE   ; 773            ; Untyped                                                            ;
 ; WIDTH          ; 18             ; Untyped                                                            ;
 ; POWER_UP_STATE ; CLEARED        ; Untyped                                                            ;
-; CBXI_PARAMETER ; shift_taps_nmm ; Untyped                                                            ;
+; CBXI_PARAMETER ; shift_taps_nim ; Untyped                                                            ;
 +----------------+----------------+--------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -361,7 +361,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; TAP_DISTANCE   ; 773            ; Untyped                                                            ;
 ; WIDTH          ; 18             ; Untyped                                                            ;
 ; POWER_UP_STATE ; CLEARED        ; Untyped                                                            ;
-; CBXI_PARAMETER ; shift_taps_nmm ; Untyped                                                            ;
+; CBXI_PARAMETER ; shift_taps_nim ; Untyped                                                            ;
 +----------------+----------------+--------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -398,7 +398,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:09     ;
+; Top            ; 00:00:17     ;
 +----------------+--------------+
 
 
@@ -408,7 +408,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Mar 19 23:53:33 2015
+    Info: Processing started: Tue Mar 24 17:08:22 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off N6480 -c n6480
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /home/moffitt/Development/N6480/Source/n6480.vhd
@@ -441,10 +441,10 @@ Info (12133): Instantiated megafunction "linebuffer:buffer_b|altshift_taps:line_
     Info (12134): Parameter "NUMBER_OF_TAPS" = "1"
     Info (12134): Parameter "TAP_DISTANCE" = "773"
     Info (12134): Parameter "WIDTH" = "18"
-Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_nmm.tdf
-    Info (12023): Found entity 1: shift_taps_nmm
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_aj81.tdf
-    Info (12023): Found entity 1: altsyncram_aj81
+Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_nim.tdf
+    Info (12023): Found entity 1: shift_taps_nim
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_af81.tdf
+    Info (12023): Found entity 1: altsyncram_af81
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_fpf.tdf
     Info (12023): Found entity 1: cntr_fpf
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_ldc.tdf
@@ -459,15 +459,15 @@ Warning (21074): Design contains 5 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "switches[1]"
     Warning (15610): No output dependent on input pin "button[0]"
     Warning (15610): No output dependent on input pin "button[1]"
-Info (21057): Implemented 406 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 405 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 39 output pins
-    Info (21061): Implemented 318 logic cells
+    Info (21061): Implemented 317 logic cells
     Info (21064): Implemented 36 RAM segments
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 397 megabytes
-    Info: Processing ended: Thu Mar 19 23:53:47 2015
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:13
+    Info: Peak virtual memory: 406 megabytes
+    Info: Processing ended: Tue Mar 24 17:08:45 2015
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:23
 
 

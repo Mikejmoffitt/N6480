@@ -1,5 +1,5 @@
 Flow report for n6480
-Thu Mar 19 23:54:01 2015
+Tue Mar 24 17:09:11 2015
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,15 +40,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Thu Mar 19 23:53:59 2015           ;
+; Flow Status                        ; Successful - Tue Mar 24 17:09:07 2015           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; n6480                                           ;
 ; Top-level Entity Name              ; n6480                                           ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 317 / 33,216 ( < 1 % )                          ;
-;     Total combinational functions  ; 226 / 33,216 ( < 1 % )                          ;
+; Total logic elements               ; 318 / 33,216 ( < 1 % )                          ;
+;     Total combinational functions  ; 225 / 33,216 ( < 1 % )                          ;
 ;     Dedicated logic registers      ; 255 / 33,216 ( < 1 % )                          ;
 ; Total registers                    ; 255                                             ;
 ; Total pins                         ; 52 / 475 ( 11 % )                               ;
@@ -64,25 +64,29 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/19/2015 23:53:34 ;
+; Start date & time ; 03/24/2015 17:08:23 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; n6480               ;
 +-------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                 ;
-+-------------------------------------+---------------------------------+---------------+-------------+------------+
-; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id ;
-+-------------------------------------+---------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 119170006620471.142682361404005 ; --            ; --          ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --          ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                               ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; 16764057                        ; --            ; --          ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; --          ; Top        ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; --          ; Top        ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --            ; --          ; --         ;
-+-------------------------------------+---------------------------------+---------------+-------------+------------+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                            ;
++-------------------------------------+---------------------------------------+--------------------+-------------+------------+
+; Assignment Name                     ; Value                                 ; Default Value      ; Entity Name ; Section Id ;
++-------------------------------------+---------------------------------------+--------------------+-------------+------------+
+; COMPILER_SIGNATURE_ID               ; 167834333317.142723130202538          ; --                 ; --          ; --         ;
+; CYCLONEII_OPTIMIZATION_TECHNIQUE    ; Speed                                 ; Balanced           ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --                 ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --                 ; --          ; --         ;
+; OPTIMIZE_POWER_DURING_SYNTHESIS     ; Extra effort                          ; Normal compilation ; --          ; --         ;
+; PARTITION_COLOR                     ; 16764057                              ; --                 ; --          ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --                 ; --          ; Top        ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --                 ; --          ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --                 ; --          ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --                 ; --          ; --         ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                          ; --                 ; --          ; --         ;
++-------------------------------------+---------------------------------------+--------------------+-------------+------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -90,11 +94,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 397 MB              ; 00:00:13                           ;
-; Fitter                    ; 00:00:07     ; 1.0                     ; 468 MB              ; 00:00:07                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 345 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 299 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:23     ; --                      ; --                  ; 00:00:23                           ;
+; Analysis & Synthesis      ; 00:00:22     ; 1.0                     ; 404 MB              ; 00:00:22                           ;
+; Fitter                    ; 00:00:14     ; 1.0                     ; 474 MB              ; 00:00:13                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 338 MB              ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 301 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:41     ; --                      ; --                  ; 00:00:39                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -103,10 +107,10 @@ applicable agreement for further details.
 +---------------------------+------------------+------------------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name          ; OS Version ; Processor type ;
 +---------------------------+------------------+------------------+------------+----------------+
-; Analysis & Synthesis      ; suzu             ; Debian GNU/Linux ; 8          ; x86_64         ;
-; Fitter                    ; suzu             ; Debian GNU/Linux ; 8          ; x86_64         ;
-; Assembler                 ; suzu             ; Debian GNU/Linux ; 8          ; x86_64         ;
-; TimeQuest Timing Analyzer ; suzu             ; Debian GNU/Linux ; 8          ; x86_64         ;
+; Analysis & Synthesis      ; momose           ; Debian GNU/Linux ; 8          ; x86_64         ;
+; Fitter                    ; momose           ; Debian GNU/Linux ; 8          ; x86_64         ;
+; Assembler                 ; momose           ; Debian GNU/Linux ; 8          ; x86_64         ;
+; TimeQuest Timing Analyzer ; momose           ; Debian GNU/Linux ; 8          ; x86_64         ;
 +---------------------------+------------------+------------------+------------+----------------+
 
 
