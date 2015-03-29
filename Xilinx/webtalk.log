@@ -3,12 +3,12 @@ Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
 Project Information
 --------------------
-ProjectID=d1da74e855e4459da7f4ceed03755e37
-ProjectIteration=1
+ProjectID=D149070F3F78FF65088B0E10E836F5B0
+ProjectIteration=116
 
 WebTalk Summary
 ----------------
-INFO:WebTalk:2 - WebTalk is enabled.
+INFO:WebTalk:1 - WebTalk is enabled because you are using a WebPACK license.
 
 INFO:WebTalk:8 - WebTalk Install setting is ON.
 INFO:WebTalk:6 - WebTalk User setting is ON.

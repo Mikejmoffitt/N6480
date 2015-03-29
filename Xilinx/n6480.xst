@@ -6,8 +6,8 @@ run
 -ofmt NGC
 -p xc6slx4-2-cpg196
 -top n6480
--opt_mode Speed
--opt_level 1
+-opt_mode Area
+-opt_level 2
 -power NO
 -iuc NO
 -keep_hierarchy No

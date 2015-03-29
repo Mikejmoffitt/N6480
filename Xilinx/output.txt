@@ -1,8 +1,10 @@
 Storage Target: SPI Flash Single FPGA
 16M
 FF
-cmods6-reversed-vga
+cmods6-adv-dac
 /home/moffitt/Development/N6480/Xilinx/
 
 MCS
+No
+S
 No

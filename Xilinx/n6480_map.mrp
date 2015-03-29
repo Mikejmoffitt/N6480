@@ -10,23 +10,23 @@ Target Device  : xc6slx4
 Target Package : cpg196
 Target Speed   : -2
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Wed Feb 25 19:51:56 2015
+Mapped Date    : Mon Mar 16 21:22:10 2015
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    0
+Number of warnings:    1
 Slice Logic Utilization:
-  Number of Slice Registers:                   256 out of   4,800    5%
-    Number used as Flip Flops:                 256
+  Number of Slice Registers:                   235 out of   4,800    4%
+    Number used as Flip Flops:                 235
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                      1,050 out of   2,400   43%
+  Number of Slice LUTs:                      1,048 out of   2,400   43%
     Number used as logic:                      143 out of   2,400    5%
-      Number using O6 output only:              35
+      Number using O6 output only:              34
       Number using O5 output only:              70
-      Number using O5 and O6:                   38
+      Number using O5 and O6:                   39
       Number used as ROM:                        0
     Number used as Memory:                     900 out of   1,200   75%
       Number used as Dual Port RAM:              0
@@ -35,21 +35,21 @@ Slice Logic Utilization:
         Number using O6 output only:           900
         Number using O5 output only:             0
         Number using O5 and O6:                  0
-    Number used exclusively as route-thrus:      7
-      Number with same-slice register load:      2
+    Number used exclusively as route-thrus:      5
+      Number with same-slice register load:      0
       Number with same-slice carry load:         5
       Number with other load:                    0
 
 Slice Logic Distribution:
   Number of occupied Slices:                   324 out of     600   54%
   Number of MUXCYs used:                        80 out of   1,200    6%
-  Number of LUT Flip Flop pairs used:        1,121
-    Number with an unused Flip Flop:           895 out of   1,121   79%
-    Number with an unused LUT:                  71 out of   1,121    6%
-    Number of fully used LUT-FF pairs:         155 out of   1,121   13%
+  Number of LUT Flip Flop pairs used:        1,108
+    Number with an unused Flip Flop:           900 out of   1,108   81%
+    Number with an unused LUT:                  60 out of   1,108    5%
+    Number of fully used LUT-FF pairs:         148 out of   1,108   13%
     Number of unique control sets:              13
     Number of slice register sites lost
-      to control set restrictions:              28 out of   4,800    1%
+      to control set restrictions:              25 out of   4,800    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -58,12 +58,13 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        38 out of     106   35%
-    Number of LOCed IOBs:                       38 out of      38  100%
+  Number of bonded IOBs:                        41 out of     106   38%
+    Number of LOCed IOBs:                       41 out of      41  100%
+    IOB Flip Flops:                             25
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of      12    0%
-  Number of RAMB8BWERs:                          0 out of      24    0%
+  Number of RAMB8BWERs:                          1 out of      24    4%
   Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
   Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
   Number of BUFG/BUFGMUXs:                       1 out of      16    6%
@@ -72,7 +73,9 @@ Specific Feature Utilization:
   Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
   Number of ILOGIC2/ISERDES2s:                   0 out of     200    0%
   Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     200    0%
-  Number of OLOGIC2/OSERDES2s:                   0 out of     200    0%
+  Number of OLOGIC2/OSERDES2s:                  25 out of     200   12%
+    Number used as OLOGIC2s:                    25
+    Number used as OSERDES2s:                    0
   Number of BSCANs:                              0 out of       4    0%
   Number of BUFHs:                               0 out of     128    0%
   Number of BUFPLLs:                             0 out of       8    0%
@@ -85,11 +88,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                1.75
+Average Fanout of Non-Clock Nets:                1.76
 
-Peak Memory Usage:  654 MB
-Total REAL time to MAP completion:  7 secs 
-Total CPU time to MAP completion:   6 secs 
+Peak Memory Usage:  655 MB
+Total REAL time to MAP completion:  10 secs 
+Total CPU time to MAP completion:   10 secs 
 
 Table of Contents
 -----------------
@@ -112,13 +115,16 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
+WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
+   (RAMB8BWER).  9K Block RAM initialization data, both user defined and
+   default, may be incorrect and should not be used.  For more information,
+   please reference Xilinx Answer Record 39999.
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network vga_blank has no load.
-INFO:LIT:395 - The above info message is repeated 3 more times for the following
+INFO:LIT:243 - Logical network n64_data<0>_IBUF has no load.
+INFO:LIT:395 - The above info message is repeated 2 more times for the following
    (max. 5 shown):
-   n64_data<0>_IBUF,
    button<1>_IBUF,
    button<0>_IBUF
    To see the details of these info messages, please use the -detail switch.
@@ -158,10 +164,10 @@ Section 6 - IOB Properties
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 | button<0>                          | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
 | button<1>                          | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
-| led<0>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| led<0>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
 | led<1>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
-| led<2>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
-| led<3>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| led<2>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| led<3>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
 | n64_clock                          | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
 | n64_data<0>                        | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
 | n64_data<1>                        | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
@@ -171,29 +177,32 @@ Section 6 - IOB Properties
 | n64_data<5>                        | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
 | n64_data<6>                        | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
 | n64_dsync_n                        | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| vga_blank                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
 | vga_blue<0>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
-| vga_blue<1>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
-| vga_blue<2>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
-| vga_blue<3>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
-| vga_blue<4>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
-| vga_blue<5>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
-| vga_blue<6>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| vga_blue<1>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| vga_blue<2>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| vga_blue<3>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| vga_blue<4>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| vga_blue<5>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| vga_blue<6>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| vga_clk                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
 | vga_green<0>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
-| vga_green<1>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
-| vga_green<2>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
-| vga_green<3>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
-| vga_green<4>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
-| vga_green<5>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
-| vga_green<6>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
-| vga_hsync                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| vga_green<1>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| vga_green<2>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| vga_green<3>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| vga_green<4>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| vga_green<5>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| vga_green<6>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| vga_hsync                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
 | vga_red<0>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
-| vga_red<1>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
-| vga_red<2>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
-| vga_red<3>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
-| vga_red<4>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
-| vga_red<5>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
-| vga_red<6>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
-| vga_vsync                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| vga_red<1>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| vga_red<2>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| vga_red<3>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| vga_red<4>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| vga_red<5>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| vga_red<6>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| vga_sync_n                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| vga_vsync                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs

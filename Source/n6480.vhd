@@ -18,6 +18,8 @@ port (
 	vga_blue: out std_logic_vector(9 downto 0);
 	vga_hsync: out std_logic;
 	vga_vsync: out std_logic;
+	vga_clk: out std_logic;
+	vga_sync_n: out std_logic;
 	vga_blank: out std_logic;
 	vga_sync: out std_logic;
 	vga_clk: out std_logic;
@@ -31,7 +33,7 @@ end n6480;
 architecture behavioral of n6480 is
 
 -- For now I am truncating the 7th color bit on the N64. None of the games I've tested so far actually use it. 
-constant N64_PIXEL_LEN: integer := 21;
+constant N64_PIXEL_LEN: integer := 18;
 constant N64_R_H: integer := (N64_PIXEL_LEN) - 1;
 constant N64_R_L: integer := 2 * (N64_PIXEL_LEN / 3);
 constant N64_G_H: integer := (2 * (N64_PIXEL_LEN / 3)) - 1;
@@ -58,6 +60,8 @@ constant VGA_BLANK_END: integer := 162;
 constant VGA_VSYNC_START: integer := 1;
 constant VGA_VSYNC_END: integer := 3;
 constant U16_ZERO: std_logic_vector(15 downto 0) := "0000000000000000";
+constant INTERLACE_LINE_DELAY: integer := 4;
+constant INTERLACE_LINE_THRESHHOLD: integer := 320;
 
 -- Deserialized pixel data, ready to read
 signal n64_red: std_logic_vector(6 downto 0);
@@ -130,13 +134,13 @@ begin
 	begin
 		if (rising_edge(n64_clock)) then
 			if (buffer_sel = '1') then
-				out_red <= buffer_out_a(N64_R_H downto N64_R_L);
-				out_green <= buffer_out_a(N64_G_H downto N64_G_L);
-				out_blue <= buffer_out_a(N64_B_H downto N64_B_L);
+				out_red <= buffer_out_a(N64_R_H downto N64_R_L) & '0';
+				out_green <= buffer_out_a(N64_G_H downto N64_G_L) & '0';
+				out_blue <= buffer_out_a(N64_B_H downto N64_B_L) & '0';
 			else
-				out_red <= buffer_out_b(N64_R_H downto N64_R_L);
-				out_green <= buffer_out_b(N64_G_H downto N64_G_L);
-				out_blue <= buffer_out_b(N64_B_H downto N64_B_L);
+				out_red <= buffer_out_b(N64_R_H downto N64_R_L) & '0';
+				out_green <= buffer_out_b(N64_G_H downto N64_G_L) & '0';
+				out_blue <= buffer_out_b(N64_B_H downto N64_B_L) & '0';
 			end if;
 		end if;
 	end process;
@@ -150,13 +154,14 @@ begin
 		end if;
 	end process;
 	
+	
 	-- Capture pixels into the active buffer when clock_count is "00".
 	write_buffers: process(n64_clock)
 	begin
 		if (rising_edge(n64_clock)) then
 			if (buffer_sel = '0') then
 				-- Feed pixel data as a vector into the buffer
-				buffer_in_a <= n64_red(6 downto 0) & n64_green(6 downto 0) & n64_blue(6 downto 0);
+				buffer_in_a <= n64_red(6 downto 1) & n64_green(6 downto 1) & n64_blue(6 downto 1);
 				
 				-- Capture only when a new N64 pixel is ready
 				case clock_count is
@@ -185,7 +190,7 @@ begin
 				end if;
 			else
 				-- Feed pixel data as a vector into the buffer
-				buffer_in_b <= n64_red(6 downto 0) & n64_green(6 downto 0) & n64_blue(6 downto 0);
+				buffer_in_b <= n64_red(6 downto 1) & n64_green(6 downto 1) & n64_blue(6 downto 1);
 				
 				-- Capture only when a new N64 pixel is ready
 				case clock_count is
@@ -202,7 +207,7 @@ begin
 				
 				-- Have it shift out data twice for every one N64 pixel 
 				-- (or once per VGA pixel)
-				if ((n64_px_count > 4 and enable_delay = '1') or (enable_delay = '0'))
+				if ((n64_px_count > INTERLACE_LINE_DELAY and enable_delay = '1') or (enable_delay = '0'))
 				then
 					if (n64_px_count >= VGA_LINE_LEN) then
 						buffer_en_a <= not clock_count(0);
@@ -237,7 +242,7 @@ begin
 			-- End of N64 line - swap buffers, increment line count
 			if (vsync_time = 1) then
 				n64_px_count <= U16_ZERO;
-				if (n64_px_count < N64_LINE_LEN - 8) then
+				if (n64_px_count < N64_LINE_LEN - INTERLACE_LINE_THRESHHOLD) then
 					enable_delay <= '1';
 				else
 					enable_delay <= '0';
@@ -325,6 +330,32 @@ begin
 			end if;
 			vga_osc <= not vga_osc;
 			vga_sync <= '0';
+		end if;
+	end process;
+	
+	vga_extra_signals: process(n64_clock)
+	begin
+		if (falling_edge(n64_clock)) then
+			-- Blanking period for front/back porches
+			if (VGA_HSYNC_MODE = '1') then
+				if (vga_px_count >= VGA_BLANK_START and vga_px_count < VGA_BLANK_END) then
+					vga_blank <= '0';
+				else
+					vga_blank <= '1';
+				end if;
+			else
+				if (vga_px_count >= VGA_BLANK_START or vga_px_count < VGA_BLANK_END) then
+					vga_blank <= '0';
+				else
+					vga_blank <= '1';
+				end if;
+			end if;
+			
+			-- Not using C-sync at all
+			vga_sync_n <= '0';
+			
+			-- VGA clock is every other N64 clock tick
+			vga_clk <= not clock_count(0);
 		end if;
 	end process;
 end behavioral;
