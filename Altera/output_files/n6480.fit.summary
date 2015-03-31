@@ -1,16 +1,16 @@
-Fitter Status : Successful - Tue Mar 24 17:09:01 2015
-Quartus II 32-bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Fitter Status : Successful - Tue Mar 31 00:50:51 2015
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : n6480
 Top-level Entity Name : n6480
 Family : Cyclone II
-Device : EP2C35F672C6
+Device : EP2C5T144C8
 Timing Models : Final
-Total logic elements : 318 / 33,216 ( < 1 % )
-    Total combinational functions : 225 / 33,216 ( < 1 % )
-    Dedicated logic registers : 255 / 33,216 ( < 1 % )
-Total registers : 255
-Total pins : 52 / 475 ( 11 % )
+Total logic elements : 400 / 4,608 ( 9 % )
+    Total combinational functions : 329 / 4,608 ( 7 % )
+    Dedicated logic registers : 266 / 4,608 ( 6 % )
+Total registers : 266
+Total pins : 52 / 89 ( 58 % )
 Total virtual pins : 0
-Total memory bits : 27,756 / 483,840 ( 6 % )
-Embedded Multiplier 9-bit elements : 0 / 70 ( 0 % )
-Total PLLs : 0 / 4 ( 0 % )
+Total memory bits : 29,298 / 119,808 ( 24 % )
+Embedded Multiplier 9-bit elements : 0 / 26 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )
