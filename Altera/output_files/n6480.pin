@@ -80,12 +80,12 @@ TDI                          : 13        : input  :                   :         
 DATA0                        : 14        : input  :                   :         : 1         :                
 DCLK                         : 15        :        :                   :         : 1         :                
 nCE                          : 16        :        :                   :         : 1         :                
-button[0]                    : 17        : input  : 3.3-V LVTTL       :         : 1         : N              
-button[1]                    : 18        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND+                         : 17        :        :                   :         : 1         :                
+GND+                         : 18        :        :                   :         : 1         :                
 GND                          : 19        : gnd    :                   :         :           :                
 nCONFIG                      : 20        :        :                   :         : 1         :                
-switches[0]                  : 21        : input  : 3.3-V LVTTL       :         : 1         : N              
-switches[1]                  : 22        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND+                         : 21        :        :                   :         : 1         :                
+GND+                         : 22        :        :                   :         : 1         :                
 VCCIO1                       : 23        : power  :                   : 3.3V    : 1         :                
 vga_green[5]                 : 24        : output : 3.3-V LVTTL       :         : 1         : Y              
 vga_green[4]                 : 25        : output : 3.3-V LVTTL       :         : 1         : Y              
@@ -122,8 +122,8 @@ GND*                         : 55        :        :                   :         
 GND                          : 56        : gnd    :                   :         :           :                
 GND*                         : 57        :        :                   :         : 4         :                
 GND*                         : 58        :        :                   :         : 4         :                
-led[0]                       : 59        : output : 3.3-V LVTTL       :         : 4         : N              
-led[1]                       : 60        : output : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : 59        :        :                   :         : 4         :                
+GND*                         : 60        :        :                   :         : 4         :                
 GND                          : 61        : gnd    :                   :         :           :                
 VCCINT                       : 62        : power  :                   : 1.2V    :           :                
 GND*                         : 63        :        :                   :         : 4         :                
@@ -142,9 +142,9 @@ GND*                         : 75        :        :                   :         
 ~LVDS41p/nCEO~               : 76        : output : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : 77        : power  :                   : 3.3V    : 3         :                
 GND                          : 78        : gnd    :                   :         :           :                
-led[3]                       : 79        : output : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : 79        :        :                   :         : 3         :                
 GND*                         : 80        :        :                   :         : 3         :                
-led[2]                       : 81        : output : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : 81        :        :                   :         : 3         :                
 nSTATUS                      : 82        :        :                   :         : 3         :                
 CONF_DONE                    : 83        :        :                   :         : 3         :                
 MSEL1                        : 84        :        :                   :         : 3         :                
@@ -166,8 +166,8 @@ n64_data[6]                  : 99        : input  : 3.3-V LVTTL       :         
 vga_hsync                    : 100       : output : 3.3-V LVTTL       :         : 3         : Y              
 vga_vsync                    : 101       : output : 3.3-V LVTTL       :         : 3         : Y              
 VCCIO3                       : 102       : power  :                   : 3.3V    : 3         :                
-GND*                         : 103       :        :                   :         : 3         :                
-GND*                         : 104       :        :                   :         : 3         :                
+switches[0]                  : 103       : input  : 3.3-V LVTTL       :         : 3         : Y              
+switches[1]                  : 104       : input  : 3.3-V LVTTL       :         : 3         : Y              
 GND                          : 105       : gnd    :                   :         :           :                
 GND_PLL2                     : 106       : gnd    :                   :         :           :                
 VCCD_PLL2                    : 107       : power  :                   : 1.2V    :           :                

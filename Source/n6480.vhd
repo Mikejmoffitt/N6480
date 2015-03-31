@@ -22,9 +22,8 @@ port (
 	vga_sync: out std_logic;
 	vga_clk: out std_logic;
 	
-	led: out std_logic_vector(3 downto 0);
-	switches: in std_logic_vector(1 downto 0); -- SW0 is YUV, SW1 is RGB15 mode
-	button: in std_logic_vector(1 downto 0)
+	-- led: out std_logic_vector(3 downto 0);
+	switches: in std_logic_vector(1 downto 0) -- SW0 is YUV, SW1 is RGB15 mode
 	);
 end n6480;
 
@@ -310,7 +309,7 @@ begin
 		end if;
 	end process;
 	
-	led(3 downto 0) <= n64_dsync_n & (not n64_dsync_n) & (n64_vsync_n) & (not n64_vsync_n);
+	--led(3 downto 0) <= n64_dsync_n & (not n64_dsync_n) & (n64_vsync_n) & (not n64_vsync_n);
 	
 	-- Set VGA Hsync based on VGA line progress
 	vga_hsync_proc: process(n64_clock)

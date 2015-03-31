@@ -1,5 +1,5 @@
 Fitter report for n6480
-Tue Mar 31 00:50:51 2015
+Tue Mar 31 02:34:15 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -63,18 +63,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Tue Mar 31 00:50:51 2015           ;
+; Fitter Status                      ; Successful - Tue Mar 31 02:34:15 2015           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; n6480                                           ;
 ; Top-level Entity Name              ; n6480                                           ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C5T144C8                                     ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 400 / 4,608 ( 9 % )                             ;
+; Total logic elements               ; 405 / 4,608 ( 9 % )                             ;
 ;     Total combinational functions  ; 329 / 4,608 ( 7 % )                             ;
 ;     Dedicated logic registers      ; 266 / 4,608 ( 6 % )                             ;
 ; Total registers                    ; 266                                             ;
-; Total pins                         ; 52 / 89 ( 58 % )                                ;
+; Total pins                         ; 46 / 89 ( 52 % )                                ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 29,298 / 119,808 ( 24 % )                       ;
 ; Embedded Multiplier 9-bit elements ; 0 / 26 ( 0 % )                                  ;
@@ -150,8 +150,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 689 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 689 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 683 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 683 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -174,7 +174,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 686     ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 680     ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -190,16 +190,16 @@ The pin-out file can be found in /home/moffitt/Development/N6480/Altera/output_f
 +---------------------------------------------+---------------------------+
 ; Resource                                    ; Usage                     ;
 +---------------------------------------------+---------------------------+
-; Total logic elements                        ; 400 / 4,608 ( 9 % )       ;
-;     -- Combinational with no register       ; 134                       ;
-;     -- Register only                        ; 71                        ;
-;     -- Combinational with a register        ; 195                       ;
+; Total logic elements                        ; 405 / 4,608 ( 9 % )       ;
+;     -- Combinational with no register       ; 139                       ;
+;     -- Register only                        ; 76                        ;
+;     -- Combinational with a register        ; 190                       ;
 ;                                             ;                           ;
 ; Logic element usage by number of LUT inputs ;                           ;
 ;     -- 4 input functions                    ; 53                        ;
 ;     -- 3 input functions                    ; 132                       ;
 ;     -- <=2 input functions                  ; 144                       ;
-;     -- Register only                        ; 71                        ;
+;     -- Register only                        ; 76                        ;
 ;                                             ;                           ;
 ; Logic elements by mode                      ;                           ;
 ;     -- normal mode                          ; 178                       ;
@@ -209,10 +209,10 @@ The pin-out file can be found in /home/moffitt/Development/N6480/Altera/output_f
 ;     -- Dedicated logic registers            ; 266 / 4,608 ( 6 % )       ;
 ;     -- I/O registers                        ; 0 / 243 ( 0 % )           ;
 ;                                             ;                           ;
-; Total LABs:  partially or completely used   ; 31 / 288 ( 11 % )         ;
+; Total LABs:  partially or completely used   ; 35 / 288 ( 12 % )         ;
 ; Virtual pins                                ; 0                         ;
-; I/O pins                                    ; 52 / 89 ( 58 % )          ;
-;     -- Clock pins                           ; 4 / 4 ( 100 % )           ;
+; I/O pins                                    ; 46 / 89 ( 52 % )          ;
+;     -- Clock pins                           ; 2 / 4 ( 50 % )            ;
 ;                                             ;                           ;
 ; Global signals                              ; 1                         ;
 ; M4Ks                                        ; 10 / 26 ( 38 % )          ;
@@ -224,12 +224,12 @@ The pin-out file can be found in /home/moffitt/Development/N6480/Altera/output_f
 ; JTAGs                                       ; 0 / 1 ( 0 % )             ;
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )             ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )             ;
-; Average interconnect usage (total/H/V)      ; 2% / 2% / 2%              ;
-; Peak interconnect usage (total/H/V)         ; 4% / 3% / 4%              ;
+; Average interconnect usage (total/H/V)      ; 2% / 3% / 2%              ;
+; Peak interconnect usage (total/H/V)         ; 3% / 4% / 3%              ;
 ; Maximum fan-out                             ; 276                       ;
 ; Highest non-global fan-out                  ; 65                        ;
-; Total fan-out                               ; 1975                      ;
-; Average fan-out                             ; 2.75                      ;
+; Total fan-out                               ; 1967                      ;
+; Average fan-out                             ; 2.78                      ;
 +---------------------------------------------+---------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -242,16 +242,16 @@ The pin-out file can be found in /home/moffitt/Development/N6480/Altera/output_f
 +---------------------------------------------+--------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                ; Low                            ;
 ;                                             ;                    ;                                ;
-; Total logic elements                        ; 400 / 4608 ( 9 % ) ; 0 / 4608 ( 0 % )               ;
-;     -- Combinational with no register       ; 134                ; 0                              ;
-;     -- Register only                        ; 71                 ; 0                              ;
-;     -- Combinational with a register        ; 195                ; 0                              ;
+; Total logic elements                        ; 405 / 4608 ( 9 % ) ; 0 / 4608 ( 0 % )               ;
+;     -- Combinational with no register       ; 139                ; 0                              ;
+;     -- Register only                        ; 76                 ; 0                              ;
+;     -- Combinational with a register        ; 190                ; 0                              ;
 ;                                             ;                    ;                                ;
 ; Logic element usage by number of LUT inputs ;                    ;                                ;
 ;     -- 4 input functions                    ; 53                 ; 0                              ;
 ;     -- 3 input functions                    ; 132                ; 0                              ;
 ;     -- <=2 input functions                  ; 144                ; 0                              ;
-;     -- Register only                        ; 71                 ; 0                              ;
+;     -- Register only                        ; 76                 ; 0                              ;
 ;                                             ;                    ;                                ;
 ; Logic elements by mode                      ;                    ;                                ;
 ;     -- normal mode                          ; 178                ; 0                              ;
@@ -260,10 +260,10 @@ The pin-out file can be found in /home/moffitt/Development/N6480/Altera/output_f
 ; Total registers                             ; 266                ; 0                              ;
 ;     -- Dedicated logic registers            ; 266 / 4608 ( 6 % ) ; 0 / 4608 ( 0 % )               ;
 ;                                             ;                    ;                                ;
-; Total LABs:  partially or completely used   ; 31 / 288 ( 11 % )  ; 0 / 288 ( 0 % )                ;
+; Total LABs:  partially or completely used   ; 35 / 288 ( 12 % )  ; 0 / 288 ( 0 % )                ;
 ;                                             ;                    ;                                ;
 ; Virtual pins                                ; 0                  ; 0                              ;
-; I/O pins                                    ; 52                 ; 0                              ;
+; I/O pins                                    ; 46                 ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 26 ( 0 % )     ; 0 / 26 ( 0 % )                 ;
 ; Total memory bits                           ; 29298              ; 0                              ;
 ; Total RAM block bits                        ; 46080              ; 0                              ;
@@ -277,16 +277,16 @@ The pin-out file can be found in /home/moffitt/Development/N6480/Altera/output_f
 ;     -- Registered Output Connections        ; 0                  ; 0                              ;
 ;                                             ;                    ;                                ;
 ; Internal Connections                        ;                    ;                                ;
-;     -- Total Connections                    ; 2075               ; 0                              ;
-;     -- Registered Connections               ; 957                ; 0                              ;
+;     -- Total Connections                    ; 2067               ; 0                              ;
+;     -- Registered Connections               ; 955                ; 0                              ;
 ;                                             ;                    ;                                ;
 ; External Connections                        ;                    ;                                ;
 ;     -- Top                                  ; 0                  ; 0                              ;
 ;     -- hard_block:auto_generated_inst       ; 0                  ; 0                              ;
 ;                                             ;                    ;                                ;
 ; Partition Interface                         ;                    ;                                ;
-;     -- Input Ports                          ; 13                 ; 0                              ;
-;     -- Output Ports                         ; 39                 ; 0                              ;
+;     -- Input Ports                          ; 11                 ; 0                              ;
+;     -- Output Ports                         ; 35                 ; 0                              ;
 ;     -- Bidir Ports                          ; 0                  ; 0                              ;
 ;                                             ;                    ;                                ;
 ; Registered Ports                            ;                    ;                                ;
@@ -310,8 +310,6 @@ The pin-out file can be found in /home/moffitt/Development/N6480/Altera/output_f
 +-------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 ; Name        ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
 +-------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; button[0]   ; 17    ; 1        ; 0            ; 6            ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; button[1]   ; 18    ; 1        ; 0            ; 6            ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; n64_clock   ; 89    ; 3        ; 28           ; 7            ; 2           ; 1                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; n64_data[0] ; 90    ; 3        ; 28           ; 7            ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; n64_data[1] ; 91    ; 3        ; 28           ; 7            ; 0           ; 4                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
@@ -320,9 +318,9 @@ The pin-out file can be found in /home/moffitt/Development/N6480/Altera/output_f
 ; n64_data[4] ; 96    ; 3        ; 28           ; 9            ; 1           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; n64_data[5] ; 97    ; 3        ; 28           ; 9            ; 0           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; n64_data[6] ; 99    ; 3        ; 28           ; 11           ; 2           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; n64_dsync_n ; 88    ; 3        ; 28           ; 7            ; 3           ; 4                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; switches[0] ; 21    ; 1        ; 0            ; 6            ; 2           ; 32                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; switches[1] ; 22    ; 1        ; 0            ; 6            ; 3           ; 65                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; n64_dsync_n ; 88    ; 3        ; 28           ; 7            ; 3           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; switches[0] ; 103   ; 3        ; 28           ; 12           ; 1           ; 32                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; switches[1] ; 104   ; 3        ; 28           ; 12           ; 0           ; 65                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 +-------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
@@ -331,10 +329,6 @@ The pin-out file can be found in /home/moffitt/Development/N6480/Altera/output_f
 +--------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 ; Name         ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
 +--------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
-; led[0]       ; 59    ; 4        ; 14           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; led[1]       ; 60    ; 4        ; 14           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; led[2]       ; 81    ; 3        ; 28           ; 5            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; led[3]       ; 79    ; 3        ; 28           ; 5            ; 4           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 ; vga_blank    ; 132   ; 2        ; 9            ; 14           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; vga_blue[0]  ; 144   ; 2        ; 1            ; 14           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; vga_blue[1]  ; 143   ; 2        ; 1            ; 14           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
@@ -378,10 +372,10 @@ The pin-out file can be found in /home/moffitt/Development/N6480/Altera/output_f
 +----------+------------------+---------------+--------------+
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
 +----------+------------------+---------------+--------------+
-; 1        ; 17 / 19 ( 89 % ) ; 3.3V          ; --           ;
+; 1        ; 13 / 19 ( 68 % ) ; 3.3V          ; --           ;
 ; 2        ; 22 / 23 ( 96 % ) ; 3.3V          ; --           ;
 ; 3        ; 14 / 23 ( 61 % ) ; 3.3V          ; --           ;
-; 4        ; 2 / 24 ( 8 % )   ; 3.3V          ; --           ;
+; 4        ; 0 / 24 ( 0 % )   ; 3.3V          ; --           ;
 +----------+------------------+---------------+--------------+
 
 
@@ -406,12 +400,12 @@ The pin-out file can be found in /home/moffitt/Development/N6480/Altera/output_f
 ; 14       ; 17         ; 1        ; ^DATA0                                   ; input  ;              ;         ; --         ;                 ; --       ; --           ;
 ; 15       ; 18         ; 1        ; ^DCLK                                    ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; 16       ; 19         ; 1        ; ^nCE                                     ;        ;              ;         ; --         ;                 ; --       ; --           ;
-; 17       ; 20         ; 1        ; button[0]                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 18       ; 21         ; 1        ; button[1]                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 17       ; 20         ; 1        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; 18       ; 21         ; 1        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; 19       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 20       ; 22         ; 1        ; ^nCONFIG                                 ;        ;              ;         ; --         ;                 ; --       ; --           ;
-; 21       ; 23         ; 1        ; switches[0]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 22       ; 24         ; 1        ; switches[1]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 21       ; 23         ; 1        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; 22       ; 24         ; 1        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; 23       ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 24       ; 25         ; 1        ; vga_green[5]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; 25       ; 26         ; 1        ; vga_green[4]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
@@ -448,8 +442,8 @@ The pin-out file can be found in /home/moffitt/Development/N6480/Altera/output_f
 ; 56       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 57       ; 59         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 58       ; 60         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 59       ; 63         ; 4        ; led[0]                                   ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 60       ; 64         ; 4        ; led[1]                                   ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 59       ; 63         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 60       ; 64         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 61       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 62       ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; 63       ; 72         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
@@ -468,9 +462,9 @@ The pin-out file can be found in /home/moffitt/Development/N6480/Altera/output_f
 ; 76       ; 87         ; 3        ; ~LVDS41p/nCEO~                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 77       ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 78       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 79       ; 95         ; 3        ; led[3]                                   ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 79       ; 95         ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; 80       ; 97         ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 81       ; 98         ; 3        ; led[2]                                   ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 81       ; 98         ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 82       ; 99         ; 3        ; ^nSTATUS                                 ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; 83       ; 100        ; 3        ; ^CONF_DONE                               ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; 84       ; 101        ; 3        ; ^MSEL1                                   ;        ;              ;         ; --         ;                 ; --       ; --           ;
@@ -492,8 +486,8 @@ The pin-out file can be found in /home/moffitt/Development/N6480/Altera/output_f
 ; 100      ; 120        ; 3        ; vga_hsync                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; 101      ; 121        ; 3        ; vga_vsync                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; 102      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; 103      ; 125        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 104      ; 126        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 103      ; 125        ; 3        ; switches[0]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 104      ; 126        ; 3        ; switches[1]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; 105      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 106      ;            ;          ; GND_PLL2                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 107      ;            ;          ; VCCD_PLL2                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -580,7 +574,7 @@ Note: User assignments will override these defaults. The user specified values a
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                    ; Library Name ;
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------------+--------------+
-; |n6480                                    ; 400 (224)   ; 266 (179)                 ; 0 (0)         ; 29298       ; 10   ; 0            ; 0       ; 0         ; 52   ; 0            ; 134 (45)     ; 71 (7)            ; 195 (156)        ; |n6480                                                                                                                 ; work         ;
+; |n6480                                    ; 405 (224)   ; 266 (179)                 ; 0 (0)         ; 29298       ; 10   ; 0            ; 0       ; 0         ; 46   ; 0            ; 139 (45)     ; 76 (12)           ; 190 (156)        ; |n6480                                                                                                                 ; work         ;
 ;    |linebuffer:buffer_a|                  ; 15 (0)      ; 10 (0)                    ; 0 (0)         ; 14649       ; 5    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 10 (0)           ; |n6480|linebuffer:buffer_a                                                                                             ; work         ;
 ;       |altshift_taps:line_buffer_rtl_0|   ; 15 (0)      ; 10 (0)                    ; 0 (0)         ; 14649       ; 5    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 10 (0)           ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0                                                             ; work         ;
 ;          |shift_taps_oim:auto_generated|  ; 15 (0)      ; 10 (0)                    ; 0 (0)         ; 14649       ; 5    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 10 (0)           ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_oim:auto_generated                               ; work         ;
@@ -594,7 +588,7 @@ Note: User assignments will override these defaults. The user specified values a
 ;             |cntr_fpf:cntr1|              ; 15 (12)     ; 10 (10)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (2)        ; 0 (0)             ; 10 (10)          ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_oim:auto_generated|cntr_fpf:cntr1                ; work         ;
 ;                |cmpr_ldc:cmpr5|           ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_oim:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5 ; work         ;
 ;    |n64_pixel:rgb_decoder|                ; 71 (71)     ; 67 (67)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 64 (64)           ; 3 (3)            ; |n6480|n64_pixel:rgb_decoder                                                                                           ; work         ;
-;    |rgb2yuv:yuv_encoder|                  ; 92 (92)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 75 (75)      ; 0 (0)             ; 17 (17)          ; |n6480|rgb2yuv:yuv_encoder                                                                                             ; work         ;
+;    |rgb2yuv:yuv_encoder|                  ; 92 (92)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 80 (80)      ; 0 (0)             ; 12 (12)          ; |n6480|rgb2yuv:yuv_encoder                                                                                             ; work         ;
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -639,18 +633,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; vga_blank    ; Output   ; --            ; --            ; --                    ; --  ;
 ; vga_sync     ; Output   ; --            ; --            ; --                    ; --  ;
 ; vga_clk      ; Output   ; --            ; --            ; --                    ; --  ;
-; led[0]       ; Output   ; --            ; --            ; --                    ; --  ;
-; led[1]       ; Output   ; --            ; --            ; --                    ; --  ;
-; led[2]       ; Output   ; --            ; --            ; --                    ; --  ;
-; led[3]       ; Output   ; --            ; --            ; --                    ; --  ;
-; button[0]    ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; button[1]    ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; n64_dsync_n  ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; n64_clock    ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; switches[0]  ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; switches[1]  ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; n64_data[3]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; switches[0]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; switches[1]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; n64_data[0]  ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; n64_dsync_n  ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; n64_data[3]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; n64_data[4]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; n64_data[2]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; n64_data[1]  ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
@@ -664,35 +652,130 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------+-------------------+---------+
 ; Source Pin / Fanout                              ; Pad To Core Index ; Setting ;
 +--------------------------------------------------+-------------------+---------+
-; button[0]                                        ;                   ;         ;
-; button[1]                                        ;                   ;         ;
-; n64_dsync_n                                      ;                   ;         ;
 ; n64_clock                                        ;                   ;         ;
 ; switches[0]                                      ;                   ;         ;
+;      - vga_red[0]~reg0                           ; 1                 ; 6       ;
+;      - vga_red[1]~reg0                           ; 1                 ; 6       ;
+;      - vga_blue[8]~reg0                          ; 1                 ; 6       ;
+;      - vga_green[9]~reg0                         ; 1                 ; 6       ;
+;      - vga_blue[0]~reg0                          ; 1                 ; 6       ;
+;      - vga_blue[1]~reg0                          ; 1                 ; 6       ;
+;      - vga_red[8]~reg0                           ; 1                 ; 6       ;
+;      - vga_red[9]~reg0                           ; 1                 ; 6       ;
+;      - vga_green[0]~reg0                         ; 1                 ; 6       ;
+;      - vga_green[1]~reg0                         ; 1                 ; 6       ;
+;      - vga_blue[9]~reg0                          ; 1                 ; 6       ;
+;      - vga_sync~reg0                             ; 1                 ; 6       ;
+;      - rgb2yuv:yuv_encoder|Add8~2                ; 1                 ; 6       ;
+;      - vga_blue[7]~0                             ; 1                 ; 6       ;
+;      - rgb2yuv:yuv_encoder|Add8~5                ; 1                 ; 6       ;
+;      - rgb2yuv:yuv_encoder|Add8~8                ; 1                 ; 6       ;
+;      - rgb2yuv:yuv_encoder|Add8~11               ; 1                 ; 6       ;
+;      - rgb2yuv:yuv_encoder|Add8~14               ; 1                 ; 6       ;
+;      - rgb2yuv:yuv_encoder|Add8~17               ; 1                 ; 6       ;
+;      - vga_green~0                               ; 1                 ; 6       ;
+;      - vga_green~1                               ; 1                 ; 6       ;
+;      - vga_green~2                               ; 1                 ; 6       ;
+;      - vga_green~3                               ; 1                 ; 6       ;
+;      - vga_green~4                               ; 1                 ; 6       ;
+;      - vga_green~5                               ; 1                 ; 6       ;
+;      - vga_green~6                               ; 1                 ; 6       ;
+;      - rgb2yuv:yuv_encoder|Add13~2               ; 1                 ; 6       ;
+;      - rgb2yuv:yuv_encoder|Add13~5               ; 1                 ; 6       ;
+;      - rgb2yuv:yuv_encoder|Add13~8               ; 1                 ; 6       ;
+;      - rgb2yuv:yuv_encoder|Add13~11              ; 1                 ; 6       ;
+;      - rgb2yuv:yuv_encoder|Add13~14              ; 1                 ; 6       ;
+;      - rgb2yuv:yuv_encoder|Add13~17              ; 1                 ; 6       ;
 ; switches[1]                                      ;                   ;         ;
-; n64_data[3]                                      ;                   ;         ;
-;      - n64_pixel:rgb_decoder|vsync_n_cap~feeder  ; 0                 ; 6       ;
-;      - n64_pixel:rgb_decoder|green_cap[3]~feeder ; 0                 ; 6       ;
-;      - n64_pixel:rgb_decoder|red_cap[3]~feeder   ; 0                 ; 6       ;
-;      - n64_pixel:rgb_decoder|blue_cap[3]~feeder  ; 0                 ; 6       ;
+;      - out_red[3]                                ; 0                 ; 6       ;
+;      - out_red[4]                                ; 0                 ; 6       ;
+;      - out_red[6]                                ; 0                 ; 6       ;
+;      - out_red[5]                                ; 0                 ; 6       ;
+;      - out_red[2]                                ; 0                 ; 6       ;
+;      - out_red[1]                                ; 0                 ; 6       ;
+;      - out_green[6]                              ; 0                 ; 6       ;
+;      - out_green[5]                              ; 0                 ; 6       ;
+;      - out_green[4]                              ; 0                 ; 6       ;
+;      - out_green[3]                              ; 0                 ; 6       ;
+;      - out_green[2]                              ; 0                 ; 6       ;
+;      - out_green[1]                              ; 0                 ; 6       ;
+;      - out_blue[6]                               ; 0                 ; 6       ;
+;      - out_blue[5]                               ; 0                 ; 6       ;
+;      - out_blue[4]                               ; 0                 ; 6       ;
+;      - out_blue[3]                               ; 0                 ; 6       ;
+;      - out_green[0]                              ; 0                 ; 6       ;
+;      - out_blue[2]                               ; 0                 ; 6       ;
+;      - out_blue[1]                               ; 0                 ; 6       ;
+;      - buffer_en_b                               ; 0                 ; 6       ;
+;      - buffer_en_a                               ; 0                 ; 6       ;
+;      - vga_blue[7]~0                             ; 0                 ; 6       ;
+;      - out_hsync                                 ; 0                 ; 6       ;
+;      - vga_hsync~0                               ; 0                 ; 6       ;
+;      - out_vsync                                 ; 0                 ; 6       ;
+;      - vga_vsync~0                               ; 0                 ; 6       ;
+;      - vga_clk~1                                 ; 0                 ; 6       ;
+;      - buffer_in_a[17]                           ; 0                 ; 6       ;
+;      - buffer_in_b[17]                           ; 0                 ; 6       ;
+;      - buffer_in_a[18]                           ; 0                 ; 6       ;
+;      - buffer_in_b[18]                           ; 0                 ; 6       ;
+;      - buffer_in_a[3]                            ; 0                 ; 6       ;
+;      - buffer_in_b[3]                            ; 0                 ; 6       ;
+;      - buffer_in_a[9]                            ; 0                 ; 6       ;
+;      - buffer_in_b[9]                            ; 0                 ; 6       ;
+;      - buffer_in_a[8]                            ; 0                 ; 6       ;
+;      - buffer_in_b[8]                            ; 0                 ; 6       ;
+;      - buffer_in_a[15]                           ; 0                 ; 6       ;
+;      - buffer_in_b[15]                           ; 0                 ; 6       ;
+;      - buffer_in_a[16]                           ; 0                 ; 6       ;
+;      - buffer_in_b[16]                           ; 0                 ; 6       ;
+;      - buffer_in_a[19]                           ; 0                 ; 6       ;
+;      - buffer_in_b[19]                           ; 0                 ; 6       ;
+;      - buffer_in_a[4]                            ; 0                 ; 6       ;
+;      - buffer_in_b[4]                            ; 0                 ; 6       ;
+;      - buffer_in_a[10]                           ; 0                 ; 6       ;
+;      - buffer_in_b[10]                           ; 0                 ; 6       ;
+;      - buffer_in_a[20]                           ; 0                 ; 6       ;
+;      - buffer_in_b[20]                           ; 0                 ; 6       ;
+;      - buffer_in_a[5]                            ; 0                 ; 6       ;
+;      - buffer_in_b[5]                            ; 0                 ; 6       ;
+;      - buffer_in_a[11]                           ; 0                 ; 6       ;
+;      - buffer_in_b[11]                           ; 0                 ; 6       ;
+;      - buffer_in_a[6]                            ; 0                 ; 6       ;
+;      - buffer_in_b[6]                            ; 0                 ; 6       ;
+;      - buffer_in_a[12]                           ; 0                 ; 6       ;
+;      - buffer_in_b[12]                           ; 0                 ; 6       ;
+;      - buffer_in_a[13]                           ; 0                 ; 6       ;
+;      - buffer_in_b[13]                           ; 0                 ; 6       ;
+;      - buffer_in_a[7]                            ; 0                 ; 6       ;
+;      - buffer_in_b[7]                            ; 0                 ; 6       ;
+;      - buffer_in_a[1]                            ; 0                 ; 6       ;
+;      - buffer_in_b[1]                            ; 0                 ; 6       ;
+;      - buffer_in_a[2]                            ; 0                 ; 6       ;
+;      - buffer_in_b[2]                            ; 0                 ; 6       ;
 ; n64_data[0]                                      ;                   ;         ;
+; n64_dsync_n                                      ;                   ;         ;
+; n64_data[3]                                      ;                   ;         ;
+;      - n64_pixel:rgb_decoder|red_cap[3]          ; 0                 ; 6       ;
+;      - n64_pixel:rgb_decoder|green_cap[3]        ; 0                 ; 6       ;
+;      - n64_pixel:rgb_decoder|blue_cap[3]~feeder  ; 0                 ; 6       ;
+;      - n64_pixel:rgb_decoder|vsync_n_cap~feeder  ; 0                 ; 6       ;
 ; n64_data[4]                                      ;                   ;         ;
-;      - n64_pixel:rgb_decoder|blue_cap[4]         ; 1                 ; 6       ;
-;      - n64_pixel:rgb_decoder|green_cap[4]~feeder ; 1                 ; 6       ;
 ;      - n64_pixel:rgb_decoder|red_cap[4]~feeder   ; 1                 ; 6       ;
+;      - n64_pixel:rgb_decoder|green_cap[4]~feeder ; 1                 ; 6       ;
+;      - n64_pixel:rgb_decoder|blue_cap[4]~feeder  ; 1                 ; 6       ;
 ; n64_data[2]                                      ;                   ;         ;
-;      - n64_pixel:rgb_decoder|red_cap[2]          ; 1                 ; 6       ;
-;      - n64_pixel:rgb_decoder|green_cap[2]~feeder ; 1                 ; 6       ;
-;      - n64_pixel:rgb_decoder|blue_cap[2]~feeder  ; 1                 ; 6       ;
+;      - n64_pixel:rgb_decoder|red_cap[2]          ; 0                 ; 6       ;
+;      - n64_pixel:rgb_decoder|green_cap[2]        ; 0                 ; 6       ;
+;      - n64_pixel:rgb_decoder|blue_cap[2]~feeder  ; 0                 ; 6       ;
 ; n64_data[1]                                      ;                   ;         ;
 ; n64_data[5]                                      ;                   ;         ;
-;      - n64_pixel:rgb_decoder|blue_cap[5]         ; 0                 ; 6       ;
-;      - n64_pixel:rgb_decoder|green_cap[5]~feeder ; 0                 ; 6       ;
 ;      - n64_pixel:rgb_decoder|red_cap[5]~feeder   ; 0                 ; 6       ;
+;      - n64_pixel:rgb_decoder|green_cap[5]~feeder ; 0                 ; 6       ;
+;      - n64_pixel:rgb_decoder|blue_cap[5]~feeder  ; 0                 ; 6       ;
 ; n64_data[6]                                      ;                   ;         ;
-;      - n64_pixel:rgb_decoder|red_cap[6]          ; 0                 ; 6       ;
-;      - n64_pixel:rgb_decoder|blue_cap[6]         ; 0                 ; 6       ;
-;      - n64_pixel:rgb_decoder|green_cap[6]~feeder ; 0                 ; 6       ;
+;      - n64_pixel:rgb_decoder|blue_cap[6]         ; 1                 ; 6       ;
+;      - n64_pixel:rgb_decoder|red_cap[6]~feeder   ; 1                 ; 6       ;
+;      - n64_pixel:rgb_decoder|green_cap[6]~feeder ; 1                 ; 6       ;
 +--------------------------------------------------+-------------------+---------+
 
 
@@ -701,25 +784,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------------------------------+--------------------+---------+--------------------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                                                                         ; Location           ; Fan-Out ; Usage                    ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +--------------------------------------------------------------------------------------------------------------+--------------------+---------+--------------------------+--------+----------------------+------------------+---------------------------+
-; buffer_en_a                                                                                                  ; LCFF_X10_Y6_N25    ; 16      ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; buffer_en_b                                                                                                  ; LCFF_X13_Y5_N9     ; 16      ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; buffer_sel                                                                                                   ; LCFF_X13_Y7_N9     ; 60      ; Sync. load               ; no     ; --                   ; --               ; --                        ;
-; line_count[10]~0                                                                                             ; LCCOMB_X13_Y7_N14  ; 16      ; Sync. clear              ; no     ; --                   ; --               ; --                        ;
-; line_count[10]~1                                                                                             ; LCCOMB_X13_Y7_N24  ; 16      ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_oim:auto_generated|cntr_fpf:cntr1|cout_actual ; LCCOMB_X12_Y8_N30  ; 10      ; Sync. load               ; no     ; --                   ; --               ; --                        ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_oim:auto_generated|cntr_fpf:cntr1|cout_actual ; LCCOMB_X12_Y4_N24  ; 10      ; Sync. load               ; no     ; --                   ; --               ; --                        ;
+; buffer_en_a                                                                                                  ; LCFF_X20_Y10_N17   ; 16      ; Clock enable             ; no     ; --                   ; --               ; --                        ;
+; buffer_en_b                                                                                                  ; LCFF_X19_Y10_N5    ; 16      ; Clock enable             ; no     ; --                   ; --               ; --                        ;
+; buffer_sel                                                                                                   ; LCFF_X17_Y10_N25   ; 60      ; Sync. load               ; no     ; --                   ; --               ; --                        ;
+; line_count[10]~0                                                                                             ; LCCOMB_X15_Y9_N24  ; 16      ; Sync. clear              ; no     ; --                   ; --               ; --                        ;
+; line_count[10]~1                                                                                             ; LCCOMB_X15_Y9_N26  ; 16      ; Clock enable             ; no     ; --                   ; --               ; --                        ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_oim:auto_generated|cntr_fpf:cntr1|cout_actual ; LCCOMB_X24_Y8_N2   ; 10      ; Sync. load               ; no     ; --                   ; --               ; --                        ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_oim:auto_generated|cntr_fpf:cntr1|cout_actual ; LCCOMB_X12_Y8_N4   ; 10      ; Sync. load               ; no     ; --                   ; --               ; --                        ;
 ; n64_clock                                                                                                    ; PIN_89             ; 276     ; Clock                    ; yes    ; Global Clock         ; GCLK7            ; --                        ;
-; n64_pixel:rgb_decoder|Equal0~0                                                                               ; LCCOMB_X10_Y5_N30  ; 6       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; n64_pixel:rgb_decoder|Equal0~1                                                                               ; LCCOMB_X10_Y5_N4   ; 6       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; n64_pixel:rgb_decoder|Equal0~2                                                                               ; LCCOMB_X10_Y5_N10  ; 7       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; n64_pixel:rgb_decoder|green_final[3]~0                                                                       ; LCCOMB_X10_Y5_N0   ; 22      ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; n64_pixel:rgb_decoder|hsync_n_out                                                                            ; LCFF_X13_Y6_N1     ; 16      ; Sync. clear              ; no     ; --                   ; --               ; --                        ;
-; n64_pixel:rgb_decoder|vsync_n_out                                                                            ; LCFF_X13_Y6_N21    ; 21      ; Sync. clear              ; no     ; --                   ; --               ; --                        ;
-; n64_px_count[4]~0                                                                                            ; LCCOMB_X13_Y7_N6   ; 16      ; Sync. clear              ; no     ; --                   ; --               ; --                        ;
-; switches[0]                                                                                                  ; PIN_21             ; 32      ; Sync. clear              ; no     ; --                   ; --               ; --                        ;
-; switches[1]                                                                                                  ; PIN_22             ; 65      ; Clock enable, Sync. load ; no     ; --                   ; --               ; --                        ;
-; vga_blue[7]~0                                                                                                ; LCCOMB_X9_Y9_N24   ; 19      ; Sync. clear              ; no     ; --                   ; --               ; --                        ;
-; vga_px_count[7]~0                                                                                            ; LCCOMB_X17_Y10_N10 ; 16      ; Sync. clear              ; no     ; --                   ; --               ; --                        ;
+; n64_pixel:rgb_decoder|Equal0~0                                                                               ; LCCOMB_X20_Y9_N30  ; 6       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
+; n64_pixel:rgb_decoder|Equal0~1                                                                               ; LCCOMB_X20_Y9_N0   ; 6       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
+; n64_pixel:rgb_decoder|Equal0~2                                                                               ; LCCOMB_X20_Y9_N14  ; 7       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
+; n64_pixel:rgb_decoder|green_final[3]~0                                                                       ; LCCOMB_X20_Y9_N20  ; 22      ; Clock enable             ; no     ; --                   ; --               ; --                        ;
+; n64_pixel:rgb_decoder|hsync_n_out                                                                            ; LCFF_X17_Y9_N17    ; 16      ; Sync. clear              ; no     ; --                   ; --               ; --                        ;
+; n64_pixel:rgb_decoder|vsync_n_out                                                                            ; LCFF_X15_Y9_N11    ; 19      ; Sync. clear              ; no     ; --                   ; --               ; --                        ;
+; n64_px_count[4]~0                                                                                            ; LCCOMB_X17_Y10_N14 ; 16      ; Sync. clear              ; no     ; --                   ; --               ; --                        ;
+; switches[0]                                                                                                  ; PIN_103            ; 32      ; Sync. clear              ; no     ; --                   ; --               ; --                        ;
+; switches[1]                                                                                                  ; PIN_104            ; 65      ; Clock enable, Sync. load ; no     ; --                   ; --               ; --                        ;
+; vga_blue[7]~0                                                                                                ; LCCOMB_X18_Y7_N30  ; 19      ; Sync. clear              ; no     ; --                   ; --               ; --                        ;
+; vga_px_count[7]~0                                                                                            ; LCCOMB_X15_Y11_N30 ; 16      ; Sync. clear              ; no     ; --                   ; --               ; --                        ;
 +--------------------------------------------------------------------------------------------------------------+--------------------+---------+--------------------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -741,8 +824,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; buffer_sel                                                                                                                            ; 60      ;
 ; switches[0]                                                                                                                           ; 32      ;
 ; n64_pixel:rgb_decoder|green_final[3]~0                                                                                                ; 22      ;
-; n64_pixel:rgb_decoder|vsync_n_out                                                                                                     ; 21      ;
 ; ~GND                                                                                                                                  ; 20      ;
+; n64_pixel:rgb_decoder|vsync_n_out                                                                                                     ; 19      ;
 ; vga_blue[7]~0                                                                                                                         ; 19      ;
 ; n64_pixel:rgb_decoder|hsync_n_out                                                                                                     ; 16      ;
 ; line_count[10]~1                                                                                                                      ; 16      ;
@@ -796,7 +879,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; n64_px_count[11]                                                                                                                      ; 5       ;
 ; n64_data[1]                                                                                                                           ; 4       ;
 ; n64_data[3]                                                                                                                           ; 4       ;
-; n64_dsync_n                                                                                                                           ; 4       ;
 ; LessThan1~0                                                                                                                           ; 4       ;
 ; n64_px_count[10]                                                                                                                      ; 4       ;
 ; n64_px_count[9]                                                                                                                       ; 4       ;
@@ -850,6 +932,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; out_blue[2]                                                                                                                           ; 3       ;
 ; rgb2yuv:yuv_encoder|Add2~8                                                                                                            ; 3       ;
 ; out_red[1]                                                                                                                            ; 3       ;
+; n64_dsync_n                                                                                                                           ; 2       ;
 ; n64_data[0]                                                                                                                           ; 2       ;
 ; Mux0~0                                                                                                                                ; 2       ;
 ; buffer_en_b~1                                                                                                                         ; 2       ;
@@ -874,38 +957,38 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; rgb2yuv:yuv_encoder|Add6~1                                                                                                            ; 2       ;
 ; rgb2yuv:yuv_encoder|Add6~0                                                                                                            ; 2       ;
 ; vga_clk~reg0                                                                                                                          ; 2       ;
+; vsync_time[3]                                                                                                                         ; 2       ;
+; vsync_time[4]                                                                                                                         ; 2       ;
+; vsync_time[5]                                                                                                                         ; 2       ;
+; vsync_time[6]                                                                                                                         ; 2       ;
+; vsync_time[7]                                                                                                                         ; 2       ;
+; vsync_time[8]                                                                                                                         ; 2       ;
+; vsync_time[9]                                                                                                                         ; 2       ;
+; vsync_time[10]                                                                                                                        ; 2       ;
+; vsync_time[11]                                                                                                                        ; 2       ;
+; vsync_time[12]                                                                                                                        ; 2       ;
+; vsync_time[13]                                                                                                                        ; 2       ;
 ; vsync_time[15]                                                                                                                        ; 2       ;
 ; vsync_time[14]                                                                                                                        ; 2       ;
-; vsync_time[13]                                                                                                                        ; 2       ;
-; vsync_time[12]                                                                                                                        ; 2       ;
-; vsync_time[11]                                                                                                                        ; 2       ;
-; vsync_time[10]                                                                                                                        ; 2       ;
-; vsync_time[9]                                                                                                                         ; 2       ;
-; vsync_time[8]                                                                                                                         ; 2       ;
-; vsync_time[7]                                                                                                                         ; 2       ;
-; vsync_time[6]                                                                                                                         ; 2       ;
-; vsync_time[5]                                                                                                                         ; 2       ;
-; vsync_time[4]                                                                                                                         ; 2       ;
-; vsync_time[3]                                                                                                                         ; 2       ;
 ; vsync_time[1]                                                                                                                         ; 2       ;
 ; vsync_time[2]                                                                                                                         ; 2       ;
 ; vsync_time[0]                                                                                                                         ; 2       ;
 ; hsync_time[9]                                                                                                                         ; 2       ;
-; hsync_time[15]                                                                                                                        ; 2       ;
-; hsync_time[14]                                                                                                                        ; 2       ;
-; hsync_time[13]                                                                                                                        ; 2       ;
-; hsync_time[12]                                                                                                                        ; 2       ;
-; hsync_time[11]                                                                                                                        ; 2       ;
-; hsync_time[10]                                                                                                                        ; 2       ;
-; hsync_time[8]                                                                                                                         ; 2       ;
-; hsync_time[7]                                                                                                                         ; 2       ;
-; hsync_time[6]                                                                                                                         ; 2       ;
-; hsync_time[5]                                                                                                                         ; 2       ;
+; hsync_time[1]                                                                                                                         ; 2       ;
+; hsync_time[3]                                                                                                                         ; 2       ;
 ; hsync_time[4]                                                                                                                         ; 2       ;
 ; hsync_time[0]                                                                                                                         ; 2       ;
-; hsync_time[3]                                                                                                                         ; 2       ;
+; hsync_time[5]                                                                                                                         ; 2       ;
+; hsync_time[6]                                                                                                                         ; 2       ;
+; hsync_time[7]                                                                                                                         ; 2       ;
+; hsync_time[8]                                                                                                                         ; 2       ;
+; hsync_time[10]                                                                                                                        ; 2       ;
+; hsync_time[11]                                                                                                                        ; 2       ;
+; hsync_time[12]                                                                                                                        ; 2       ;
+; hsync_time[13]                                                                                                                        ; 2       ;
+; hsync_time[14]                                                                                                                        ; 2       ;
+; hsync_time[15]                                                                                                                        ; 2       ;
 ; hsync_time[2]                                                                                                                         ; 2       ;
-; hsync_time[1]                                                                                                                         ; 2       ;
 ; line_count[11]                                                                                                                        ; 2       ;
 ; line_count[12]                                                                                                                        ; 2       ;
 ; line_count[15]                                                                                                                        ; 2       ;
@@ -964,8 +1047,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; n64_px_count[14]                                                                                                                      ; 2       ;
 ; n64_px_count[13]                                                                                                                      ; 2       ;
 ; n64_px_count[12]                                                                                                                      ; 2       ;
-; vga_px_count[13]                                                                                                                      ; 2       ;
 ; vga_px_count[14]                                                                                                                      ; 2       ;
+; vga_px_count[13]                                                                                                                      ; 2       ;
 ; vga_px_count[15]                                                                                                                      ; 2       ;
 ; vga_px_count[12]                                                                                                                      ; 2       ;
 ; vga_px_count[11]                                                                                                                      ; 2       ;
@@ -973,6 +1056,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; rgb2yuv:yuv_encoder|Add2~10                                                                                                           ; 2       ;
 ; vga_osc~0                                                                                                                             ; 1       ;
 ; n64_pixel:rgb_decoder|hsync_n_cap                                                                                                     ; 1       ;
+; n64_pixel:rgb_decoder|cycle_count~1                                                                                                   ; 1       ;
+; n64_pixel:rgb_decoder|cycle_count~0                                                                                                   ; 1       ;
 ; n64_pixel:rgb_decoder|blue_cap[2]                                                                                                     ; 1       ;
 ; buffer_in_b~18                                                                                                                        ; 1       ;
 ; buffer_in_a~18                                                                                                                        ; 1       ;
@@ -1037,8 +1122,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_oim:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5|aneb_result_wire[0]~0 ; 1       ;
 ; buffer_in_a~0                                                                                                                         ; 1       ;
 ; n64_pixel:rgb_decoder|clock_count[1]                                                                                                  ; 1       ;
-; n64_pixel:rgb_decoder|cycle_count~1                                                                                                   ; 1       ;
-; n64_pixel:rgb_decoder|cycle_count~0                                                                                                   ; 1       ;
+; n64_pixel:rgb_decoder|vsync_n_cap                                                                                                     ; 1       ;
 ; Equal3~4                                                                                                                              ; 1       ;
 ; Equal3~3                                                                                                                              ; 1       ;
 ; n64_pixel:rgb_decoder|blue_final[2]                                                                                                   ; 1       ;
@@ -1134,7 +1218,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; out_blue~0                                                                                                                            ; 1       ;
 ; out_red~1                                                                                                                             ; 1       ;
 ; out_red~0                                                                                                                             ; 1       ;
-; n64_pixel:rgb_decoder|vsync_n_cap                                                                                                     ; 1       ;
 ; vga_clk~1                                                                                                                             ; 1       ;
 ; vga_clk~0                                                                                                                             ; 1       ;
 ; LessThan1~4                                                                                                                           ; 1       ;
@@ -1533,107 +1616,107 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter RAM Summary                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ;
-+--------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+---------------------------------------------------------------+----------------------+-----------------+-----------------+
-; Name                                                                                                                     ; Type ; Mode             ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size  ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M4Ks ; MIF  ; Location                                                      ; Mixed Width RDW Mode ; Port A RDW Mode ; Port B RDW Mode ;
-+--------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+---------------------------------------------------------------+----------------------+-----------------+-----------------+
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_oim:auto_generated|altsyncram_cf81:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 771          ; 19           ; 771          ; 19           ; yes                    ; no                      ; yes                    ; yes                     ; 14649 ; 771                         ; 19                          ; 771                         ; 19                          ; 14649               ; 5    ; None ; M4K_X11_Y10, M4K_X11_Y11, M4K_X11_Y8, M4K_X11_Y9, M4K_X11_Y12 ; Old data             ; Don't care      ; Don't care      ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_oim:auto_generated|altsyncram_cf81:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 771          ; 19           ; 771          ; 19           ; yes                    ; no                      ; yes                    ; yes                     ; 14649 ; 771                         ; 19                          ; 771                         ; 19                          ; 14649               ; 5    ; None ; M4K_X11_Y6, M4K_X11_Y3, M4K_X11_Y7, M4K_X11_Y4, M4K_X11_Y5    ; Old data             ; Don't care      ; Don't care      ;
-+--------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+---------------------------------------------------------------+----------------------+-----------------+-----------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter RAM Summary                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
++--------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+--------------------------------------------------------------+----------------------+-----------------+-----------------+
+; Name                                                                                                                     ; Type ; Mode             ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size  ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M4Ks ; MIF  ; Location                                                     ; Mixed Width RDW Mode ; Port A RDW Mode ; Port B RDW Mode ;
++--------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+--------------------------------------------------------------+----------------------+-----------------+-----------------+
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_oim:auto_generated|altsyncram_cf81:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 771          ; 19           ; 771          ; 19           ; yes                    ; no                      ; yes                    ; yes                     ; 14649 ; 771                         ; 19                          ; 771                         ; 19                          ; 14649               ; 5    ; None ; M4K_X23_Y8, M4K_X23_Y9, M4K_X23_Y10, M4K_X23_Y7, M4K_X23_Y11 ; Old data             ; Don't care      ; Don't care      ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_oim:auto_generated|altsyncram_cf81:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 771          ; 19           ; 771          ; 19           ; yes                    ; no                      ; yes                    ; yes                     ; 14649 ; 771                         ; 19                          ; 771                         ; 19                          ; 14649               ; 5    ; None ; M4K_X11_Y10, M4K_X11_Y9, M4K_X11_Y8, M4K_X11_Y7, M4K_X11_Y6  ; Old data             ; Don't care      ; Don't care      ;
++--------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+--------------------------------------------------------------+----------------------+-----------------+-----------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
 
-+------------------------------------------------------+
-; Other Routing Usage Summary                          ;
-+-----------------------------+------------------------+
-; Other Routing Resource Type ; Usage                  ;
-+-----------------------------+------------------------+
-; Block interconnects         ; 610 / 15,666 ( 4 % )   ;
-; C16 interconnects           ; 0 / 812 ( 0 % )        ;
-; C4 interconnects            ; 287 / 11,424 ( 3 % )   ;
-; Direct links                ; 146 / 15,666 ( < 1 % ) ;
-; Global clocks               ; 1 / 8 ( 13 % )         ;
-; Local interconnects         ; 234 / 4,608 ( 5 % )    ;
-; R24 interconnects           ; 13 / 652 ( 2 % )       ;
-; R4 interconnects            ; 268 / 13,328 ( 2 % )   ;
-+-----------------------------+------------------------+
++----------------------------------------------------+
+; Other Routing Usage Summary                        ;
++-----------------------------+----------------------+
+; Other Routing Resource Type ; Usage                ;
++-----------------------------+----------------------+
+; Block interconnects         ; 628 / 15,666 ( 4 % ) ;
+; C16 interconnects           ; 0 / 812 ( 0 % )      ;
+; C4 interconnects            ; 241 / 11,424 ( 2 % ) ;
+; Direct links                ; 160 / 15,666 ( 1 % ) ;
+; Global clocks               ; 1 / 8 ( 13 % )       ;
+; Local interconnects         ; 220 / 4,608 ( 5 % )  ;
+; R24 interconnects           ; 15 / 652 ( 2 % )     ;
+; R4 interconnects            ; 386 / 13,328 ( 3 % ) ;
++-----------------------------+----------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 12.90) ; Number of LABs  (Total = 31) ;
+; Number of Logic Elements  (Average = 11.57) ; Number of LABs  (Total = 35) ;
 +---------------------------------------------+------------------------------+
 ; 1                                           ; 1                            ;
 ; 2                                           ; 2                            ;
-; 3                                           ; 1                            ;
-; 4                                           ; 1                            ;
-; 5                                           ; 1                            ;
-; 6                                           ; 0                            ;
-; 7                                           ; 0                            ;
+; 3                                           ; 0                            ;
+; 4                                           ; 2                            ;
+; 5                                           ; 3                            ;
+; 6                                           ; 2                            ;
+; 7                                           ; 2                            ;
 ; 8                                           ; 0                            ;
 ; 9                                           ; 0                            ;
-; 10                                          ; 0                            ;
+; 10                                          ; 1                            ;
 ; 11                                          ; 0                            ;
-; 12                                          ; 1                            ;
-; 13                                          ; 1                            ;
-; 14                                          ; 4                            ;
-; 15                                          ; 2                            ;
-; 16                                          ; 17                           ;
+; 12                                          ; 0                            ;
+; 13                                          ; 2                            ;
+; 14                                          ; 1                            ;
+; 15                                          ; 3                            ;
+; 16                                          ; 16                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.77) ; Number of LABs  (Total = 31) ;
+; LAB-wide Signals  (Average = 1.94) ; Number of LABs  (Total = 35) ;
 +------------------------------------+------------------------------+
-; 1 Clock                            ; 28                           ;
-; 1 Clock enable                     ; 8                            ;
-; 1 Sync. clear                      ; 11                           ;
-; 1 Sync. load                       ; 5                            ;
-; 2 Clock enables                    ; 3                            ;
+; 1 Clock                            ; 33                           ;
+; 1 Clock enable                     ; 13                           ;
+; 1 Sync. clear                      ; 15                           ;
+; 1 Sync. load                       ; 6                            ;
+; 2 Clock enables                    ; 1                            ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 20.97) ; Number of LABs  (Total = 31) ;
+; Number of Signals Sourced  (Average = 18.46) ; Number of LABs  (Total = 35) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 1                            ;
+; 1                                            ; 0                            ;
 ; 2                                            ; 2                            ;
-; 3                                            ; 0                            ;
+; 3                                            ; 1                            ;
 ; 4                                            ; 0                            ;
-; 5                                            ; 1                            ;
+; 5                                            ; 2                            ;
 ; 6                                            ; 1                            ;
-; 7                                            ; 1                            ;
-; 8                                            ; 0                            ;
-; 9                                            ; 0                            ;
-; 10                                           ; 0                            ;
-; 11                                           ; 0                            ;
-; 12                                           ; 0                            ;
+; 7                                            ; 0                            ;
+; 8                                            ; 1                            ;
+; 9                                            ; 1                            ;
+; 10                                           ; 1                            ;
+; 11                                           ; 1                            ;
+; 12                                           ; 2                            ;
 ; 13                                           ; 0                            ;
 ; 14                                           ; 1                            ;
 ; 15                                           ; 0                            ;
-; 16                                           ; 0                            ;
-; 17                                           ; 1                            ;
+; 16                                           ; 1                            ;
+; 17                                           ; 0                            ;
 ; 18                                           ; 0                            ;
 ; 19                                           ; 1                            ;
 ; 20                                           ; 6                            ;
-; 21                                           ; 0                            ;
-; 22                                           ; 1                            ;
-; 23                                           ; 1                            ;
+; 21                                           ; 2                            ;
+; 22                                           ; 0                            ;
+; 23                                           ; 0                            ;
 ; 24                                           ; 0                            ;
-; 25                                           ; 2                            ;
-; 26                                           ; 2                            ;
-; 27                                           ; 1                            ;
+; 25                                           ; 1                            ;
+; 26                                           ; 3                            ;
+; 27                                           ; 0                            ;
 ; 28                                           ; 0                            ;
-; 29                                           ; 0                            ;
-; 30                                           ; 1                            ;
-; 31                                           ; 3                            ;
+; 29                                           ; 3                            ;
+; 30                                           ; 0                            ;
+; 31                                           ; 0                            ;
 ; 32                                           ; 5                            ;
 +----------------------------------------------+------------------------------+
 
@@ -1641,24 +1724,24 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 9.81) ; Number of LABs  (Total = 31) ;
+; Number of Signals Sourced Out  (Average = 8.89) ; Number of LABs  (Total = 35) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 2                            ;
+; 1                                               ; 3                            ;
 ; 2                                               ; 2                            ;
-; 3                                               ; 1                            ;
-; 4                                               ; 3                            ;
-; 5                                               ; 0                            ;
-; 6                                               ; 1                            ;
-; 7                                               ; 1                            ;
-; 8                                               ; 3                            ;
+; 3                                               ; 0                            ;
+; 4                                               ; 4                            ;
+; 5                                               ; 2                            ;
+; 6                                               ; 4                            ;
+; 7                                               ; 2                            ;
+; 8                                               ; 1                            ;
 ; 9                                               ; 0                            ;
-; 10                                              ; 2                            ;
-; 11                                              ; 4                            ;
+; 10                                              ; 3                            ;
+; 11                                              ; 2                            ;
 ; 12                                              ; 1                            ;
-; 13                                              ; 1                            ;
+; 13                                              ; 2                            ;
 ; 14                                              ; 1                            ;
-; 15                                              ; 1                            ;
+; 15                                              ; 0                            ;
 ; 16                                              ; 8                            ;
 +-------------------------------------------------+------------------------------+
 
@@ -1666,38 +1749,34 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 13.19) ; Number of LABs  (Total = 31) ;
+; Number of Distinct Inputs  (Average = 12.34) ; Number of LABs  (Total = 35) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
 ; 2                                            ; 5                            ;
-; 3                                            ; 1                            ;
-; 4                                            ; 3                            ;
-; 5                                            ; 1                            ;
-; 6                                            ; 0                            ;
+; 3                                            ; 3                            ;
+; 4                                            ; 1                            ;
+; 5                                            ; 0                            ;
+; 6                                            ; 1                            ;
 ; 7                                            ; 1                            ;
-; 8                                            ; 2                            ;
-; 9                                            ; 0                            ;
+; 8                                            ; 1                            ;
+; 9                                            ; 1                            ;
 ; 10                                           ; 2                            ;
 ; 11                                           ; 1                            ;
-; 12                                           ; 0                            ;
-; 13                                           ; 0                            ;
-; 14                                           ; 0                            ;
-; 15                                           ; 1                            ;
-; 16                                           ; 1                            ;
+; 12                                           ; 1                            ;
+; 13                                           ; 2                            ;
+; 14                                           ; 3                            ;
+; 15                                           ; 0                            ;
+; 16                                           ; 2                            ;
 ; 17                                           ; 1                            ;
 ; 18                                           ; 0                            ;
 ; 19                                           ; 0                            ;
 ; 20                                           ; 2                            ;
-; 21                                           ; 1                            ;
-; 22                                           ; 2                            ;
+; 21                                           ; 2                            ;
+; 22                                           ; 3                            ;
 ; 23                                           ; 2                            ;
-; 24                                           ; 3                            ;
+; 24                                           ; 0                            ;
 ; 25                                           ; 1                            ;
-; 26                                           ; 0                            ;
-; 27                                           ; 0                            ;
-; 28                                           ; 0                            ;
-; 29                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -1748,15 +1827,6 @@ Info (169124): Fitter converted 3 user pins into dedicated programming pins
     Info (169125): Pin ~nCSO~ is reserved at location 2
     Info (169125): Pin ~LVDS41p/nCEO~ is reserved at location 76
 Info (176045): Design uses memory blocks. Violating setup or hold times of memory block address registers for either read or write operations could cause memory contents to be corrupted. Make sure that all memory block address registers meet the setup and hold time requirements.
-Critical Warning (169085): No exact pin location assignment(s) for 8 pins of 52 total pins
-    Info (169086): Pin led[0] not assigned to an exact location on the device
-    Info (169086): Pin led[1] not assigned to an exact location on the device
-    Info (169086): Pin led[2] not assigned to an exact location on the device
-    Info (169086): Pin led[3] not assigned to an exact location on the device
-    Info (169086): Pin button[0] not assigned to an exact location on the device
-    Info (169086): Pin button[1] not assigned to an exact location on the device
-    Info (169086): Pin switches[0] not assigned to an exact location on the device
-    Info (169086): Pin switches[1] not assigned to an exact location on the device
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'n6480.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
@@ -1765,15 +1835,6 @@ Info (176353): Automatically promoted node n64_clock (placed in PIN 89 (CLK6, LV
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info (176211): Number of I/O pins in group: 8 (unused VREF, 3.3V VCCIO, 4 input, 4 output, 0 bidirectional)
-        Info (176212): I/O standards used: 3.3-V LVTTL.
-Info (176215): I/O bank details before I/O pin placement
-    Info (176214): Statistics of I/O banks
-        Info (176213): I/O bank number 1 does not use VREF pins and has 3.3V VCCIO pins. 13 total pin(s) used --  6 pins available
-        Info (176213): I/O bank number 2 does not use VREF pins and has 3.3V VCCIO pins. 22 total pin(s) used --  1 pins available
-        Info (176213): I/O bank number 3 does not use VREF pins and has 3.3V VCCIO pins. 12 total pin(s) used --  11 pins available
-        Info (176213): I/O bank number 4 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  24 pins available
 Info (128000): Starting physical synthesis optimizations for speed
 Info (128002): Starting physical synthesis algorithm register retiming
 Info (128003): Physical synthesis algorithm register retiming complete: estimated slack improvement of 0 ps
@@ -1792,13 +1853,13 @@ Info (128003): Physical synthesis algorithm register retiming complete: estimate
 Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 2% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 3% of the available device resources in the region that extends from location X0_Y0 to location X13_Y14
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
+    Info (170196): Router estimated peak interconnect usage is 3% of the available device resources in the region that extends from location X14_Y0 to location X28_Y14
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.57 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.55 seconds.
 Info (306004): Started post-fitting delay annotation
-Warning (306006): Found 39 output pins without output pin load capacitance assignment
+Warning (306006): Found 35 output pins without output pin load capacitance assignment
     Info (306007): Pin "vga_red[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "vga_red[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "vga_red[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -1834,21 +1895,17 @@ Warning (306006): Found 39 output pins without output pin load capacitance assig
     Info (306007): Pin "vga_blank" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "vga_sync" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "vga_clk" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "led[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "led[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "led[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "led[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
 Info (306005): Delay annotation completed successfully
 Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Info (176045): Design uses memory blocks. Violating setup or hold times of memory block address registers for either read or write operations could cause memory contents to be corrupted. Make sure that all memory block address registers meet the setup and hold time requirements.
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file /home/moffitt/Development/N6480/Altera/output_files/n6480.fit.smsg
-Info: Quartus II 64-Bit Fitter was successful. 0 errors, 6 warnings
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 645 megabytes
-    Info: Processing ended: Tue Mar 31 00:50:51 2015
-    Info: Elapsed time: 00:00:05
+    Info: Processing ended: Tue Mar 31 02:34:15 2015
+    Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:05
 
 

@@ -24,7 +24,7 @@ end entity;
 
 architecture behavioral of rgb2yuv is 
 begin
-	make_yuv: process(r, g, b)
+	make_yuv: process(r, g, b, sw_en)
 	begin
 		if (sw_en = '1') then
 			y <= '0' & (r(7 downto 2) + g(7 downto 1) + b(7 downto 4) + b(7 downto 5) + 16);
