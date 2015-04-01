@@ -1,5 +1,5 @@
 Analysis & Synthesis report for n6480
-Tue Mar 31 20:11:48 2015
+Tue Mar 31 20:30:48 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -17,8 +17,8 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   9. General Register Statistics
  10. Registers Packed Into Inferred Megafunctions
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Source assignments for linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2
- 13. Source assignments for linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2
+ 12. Source assignments for linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_iim:auto_generated|altsyncram_ve81:altsyncram2
+ 13. Source assignments for linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_iim:auto_generated|altsyncram_ve81:altsyncram2
  14. Parameter Settings for User Entity Instance: linebuffer:buffer_a
  15. Parameter Settings for User Entity Instance: linebuffer:buffer_b
  16. Parameter Settings for Inferred Entity Instance: linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0
@@ -52,18 +52,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Mar 31 20:11:48 2015           ;
+; Analysis & Synthesis Status        ; Successful - Tue Mar 31 20:30:48 2015           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; n6480                                           ;
 ; Top-level Entity Name              ; n6480                                           ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 438                                             ;
-;     Total combinational functions  ; 376                                             ;
-;     Dedicated logic registers      ; 260                                             ;
-; Total registers                    ; 260                                             ;
+; Total logic elements               ; 461                                             ;
+;     Total combinational functions  ; 390                                             ;
+;     Dedicated logic registers      ; 278                                             ;
+; Total registers                    ; 278                                             ;
 ; Total pins                         ; 46                                              ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 27,756                                          ;
+; Total memory bits                  ; 32,382                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
 ; Total PLLs                         ; 0                                               ;
 +------------------------------------+-------------------------------------------------+
@@ -179,8 +179,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; lpm_counter.inc                  ; yes             ; Megafunction                 ; /altera/13.0sp1/quartus/libraries/megafunctions/lpm_counter.inc   ;         ;
 ; lpm_compare.inc                  ; yes             ; Megafunction                 ; /altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.inc   ;         ;
 ; lpm_constant.inc                 ; yes             ; Megafunction                 ; /altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.inc  ;         ;
-; db/shift_taps_nim.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/moffitt/Development/N6480/Altera/db/shift_taps_nim.tdf      ;         ;
-; db/altsyncram_af81.tdf           ; yes             ; Auto-Generated Megafunction  ; /home/moffitt/Development/N6480/Altera/db/altsyncram_af81.tdf     ;         ;
+; db/shift_taps_iim.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/moffitt/Development/N6480/Altera/db/shift_taps_iim.tdf      ;         ;
+; db/altsyncram_ve81.tdf           ; yes             ; Auto-Generated Megafunction  ; /home/moffitt/Development/N6480/Altera/db/altsyncram_ve81.tdf     ;         ;
 ; db/cntr_fpf.tdf                  ; yes             ; Auto-Generated Megafunction  ; /home/moffitt/Development/N6480/Altera/db/cntr_fpf.tdf            ;         ;
 ; db/cmpr_ldc.tdf                  ; yes             ; Auto-Generated Megafunction  ; /home/moffitt/Development/N6480/Altera/db/cmpr_ldc.tdf            ;         ;
 +----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+---------+
@@ -191,29 +191,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 438       ;
+; Estimated Total logic elements              ; 461       ;
 ;                                             ;           ;
-; Total combinational functions               ; 376       ;
+; Total combinational functions               ; 390       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 53        ;
-;     -- 3 input functions                    ; 161       ;
-;     -- <=2 input functions                  ; 162       ;
+;     -- 4 input functions                    ; 46        ;
+;     -- 3 input functions                    ; 177       ;
+;     -- <=2 input functions                  ; 167       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 192       ;
-;     -- arithmetic mode                      ; 184       ;
+;     -- normal mode                          ; 161       ;
+;     -- arithmetic mode                      ; 229       ;
 ;                                             ;           ;
-; Total registers                             ; 260       ;
-;     -- Dedicated logic registers            ; 260       ;
+; Total registers                             ; 278       ;
+;     -- Dedicated logic registers            ; 278       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 46        ;
-; Total memory bits                           ; 27756     ;
+; Total memory bits                           ; 32382     ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ; Maximum fan-out node                        ; n64_clock ;
-; Maximum fan-out                             ; 296       ;
-; Total fan-out                               ; 2248      ;
-; Average fan-out                             ; 3.13      ;
+; Maximum fan-out                             ; 320       ;
+; Total fan-out                               ; 2458      ;
+; Average fan-out                             ; 3.25      ;
 +---------------------------------------------+-----------+
 
 
@@ -222,21 +222,21 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                    ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+--------------+
-; |n6480                                    ; 376 (223)         ; 260 (176)    ; 27756       ; 0            ; 0       ; 0         ; 46   ; 0            ; |n6480                                                                                                                 ; work         ;
-;    |linebuffer:buffer_a|                  ; 15 (0)            ; 10 (0)       ; 13878       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_a                                                                                             ; work         ;
-;       |altshift_taps:line_buffer_rtl_0|   ; 15 (0)            ; 10 (0)       ; 13878       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0                                                             ; work         ;
-;          |shift_taps_nim:auto_generated|  ; 15 (0)            ; 10 (0)       ; 13878       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated                               ; work         ;
-;             |altsyncram_af81:altsyncram2| ; 0 (0)             ; 0 (0)        ; 13878       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2   ; work         ;
-;             |cntr_fpf:cntr1|              ; 15 (12)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1                ; work         ;
-;                |cmpr_ldc:cmpr5|           ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5 ; work         ;
-;    |linebuffer:buffer_b|                  ; 15 (0)            ; 10 (0)       ; 13878       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_b                                                                                             ; work         ;
-;       |altshift_taps:line_buffer_rtl_0|   ; 15 (0)            ; 10 (0)       ; 13878       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0                                                             ; work         ;
-;          |shift_taps_nim:auto_generated|  ; 15 (0)            ; 10 (0)       ; 13878       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated                               ; work         ;
-;             |altsyncram_af81:altsyncram2| ; 0 (0)             ; 0 (0)        ; 13878       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2   ; work         ;
-;             |cntr_fpf:cntr1|              ; 15 (12)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1                ; work         ;
-;                |cmpr_ldc:cmpr5|           ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5 ; work         ;
-;    |n64_pixel:rgb_decoder|                ; 6 (6)             ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|n64_pixel:rgb_decoder                                                                                           ; work         ;
-;    |rgb2yuv:yuv_encoder|                  ; 117 (117)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|rgb2yuv:yuv_encoder                                                                                             ; work         ;
+; |n6480                                    ; 390 (233)         ; 278 (185)    ; 32382       ; 0            ; 0       ; 0         ; 46   ; 0            ; |n6480                                                                                                                 ; work         ;
+;    |linebuffer:buffer_a|                  ; 15 (0)            ; 10 (0)       ; 16191       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_a                                                                                             ; work         ;
+;       |altshift_taps:line_buffer_rtl_0|   ; 15 (0)            ; 10 (0)       ; 16191       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0                                                             ; work         ;
+;          |shift_taps_iim:auto_generated|  ; 15 (0)            ; 10 (0)       ; 16191       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_iim:auto_generated                               ; work         ;
+;             |altsyncram_ve81:altsyncram2| ; 0 (0)             ; 0 (0)        ; 16191       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_iim:auto_generated|altsyncram_ve81:altsyncram2   ; work         ;
+;             |cntr_fpf:cntr1|              ; 15 (12)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_iim:auto_generated|cntr_fpf:cntr1                ; work         ;
+;                |cmpr_ldc:cmpr5|           ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_iim:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5 ; work         ;
+;    |linebuffer:buffer_b|                  ; 15 (0)            ; 10 (0)       ; 16191       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_b                                                                                             ; work         ;
+;       |altshift_taps:line_buffer_rtl_0|   ; 15 (0)            ; 10 (0)       ; 16191       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0                                                             ; work         ;
+;          |shift_taps_iim:auto_generated|  ; 15 (0)            ; 10 (0)       ; 16191       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_iim:auto_generated                               ; work         ;
+;             |altsyncram_ve81:altsyncram2| ; 0 (0)             ; 0 (0)        ; 16191       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_iim:auto_generated|altsyncram_ve81:altsyncram2   ; work         ;
+;             |cntr_fpf:cntr1|              ; 15 (12)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_iim:auto_generated|cntr_fpf:cntr1                ; work         ;
+;                |cmpr_ldc:cmpr5|           ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_iim:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5 ; work         ;
+;    |n64_pixel:rgb_decoder|                ; 6 (6)             ; 73 (73)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|n64_pixel:rgb_decoder                                                                                           ; work         ;
+;    |rgb2yuv:yuv_encoder|                  ; 121 (121)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|rgb2yuv:yuv_encoder                                                                                             ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -246,8 +246,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
 ; Name                                                                                                                     ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF  ;
 +--------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
-; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 771          ; 18           ; 771          ; 18           ; 13878 ; None ;
-; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 771          ; 18           ; 771          ; 18           ; 13878 ; None ;
+; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_iim:auto_generated|altsyncram_ve81:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 771          ; 21           ; 771          ; 21           ; 16191 ; None ;
+; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_iim:auto_generated|altsyncram_ve81:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 771          ; 21           ; 771          ; 21           ; 16191 ; None ;
 +--------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
 
 
@@ -256,24 +256,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 260   ;
+; Total registers                              ; 278   ;
 ; Number of registers using Synchronous Clear  ; 81    ;
-; Number of registers using Synchronous Load   ; 41    ;
+; Number of registers using Synchronous Load   ; 74    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 77    ;
+; Number of registers using Clock Enable       ; 83    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------+
-; Registers Packed Into Inferred Megafunctions                                                                    ;
-+------------------------------------------------------------+---------------------------------------+------------+
-; Register Name                                              ; Megafunction                          ; Type       ;
-+------------------------------------------------------------+---------------------------------------+------------+
-; linebuffer:buffer_b|line_buffer[0..772][1..6,8..13,15..20] ; linebuffer:buffer_b|line_buffer_rtl_0 ; SHIFT_TAPS ;
-; linebuffer:buffer_a|line_buffer[0..772][1..6,8..13,15..20] ; linebuffer:buffer_a|line_buffer_rtl_0 ; SHIFT_TAPS ;
-+------------------------------------------------------------+---------------------------------------+------------+
++-----------------------------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                                        ;
++------------------------------------------------+---------------------------------------+------------+
+; Register Name                                  ; Megafunction                          ; Type       ;
++------------------------------------------------+---------------------------------------+------------+
+; linebuffer:buffer_b|line_buffer[0..772][0..20] ; linebuffer:buffer_b|line_buffer_rtl_0 ; SHIFT_TAPS ;
+; linebuffer:buffer_a|line_buffer[0..772][0..20] ; linebuffer:buffer_a|line_buffer_rtl_0 ; SHIFT_TAPS ;
++------------------------------------------------+---------------------------------------+------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------+
@@ -281,15 +281,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 18 bits   ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; Yes        ; |n6480|out_red[3]          ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |n6480|vga_px_count[11]    ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |n6480|n64_px_count[11]    ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |n6480|line_count[15]      ;
+; 3:1                ; 21 bits   ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |n6480|out_blue[5]         ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |n6480|vga_px_count[3]     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |n6480|n64_px_count[4]     ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |n6480|line_count[3]       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2 ;
+; Source assignments for linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_iim:auto_generated|altsyncram_ve81:altsyncram2 ;
 +---------------------------------+--------------+------+------------------------------------------------------------------------------+
 ; Assignment                      ; Value        ; From ; To                                                                           ;
 +---------------------------------+--------------+------+------------------------------------------------------------------------------+
@@ -298,7 +298,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_nim:auto_generated|altsyncram_af81:altsyncram2 ;
+; Source assignments for linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_iim:auto_generated|altsyncram_ve81:altsyncram2 ;
 +---------------------------------+--------------+------+------------------------------------------------------------------------------+
 ; Assignment                      ; Value        ; From ; To                                                                           ;
 +---------------------------------+--------------+------+------------------------------------------------------------------------------+
@@ -336,9 +336,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; WIDTH_BYTEENA  ; 1              ; Untyped                                                            ;
 ; NUMBER_OF_TAPS ; 1              ; Untyped                                                            ;
 ; TAP_DISTANCE   ; 773            ; Untyped                                                            ;
-; WIDTH          ; 18             ; Untyped                                                            ;
+; WIDTH          ; 21             ; Untyped                                                            ;
 ; POWER_UP_STATE ; CLEARED        ; Untyped                                                            ;
-; CBXI_PARAMETER ; shift_taps_nim ; Untyped                                                            ;
+; CBXI_PARAMETER ; shift_taps_iim ; Untyped                                                            ;
 +----------------+----------------+--------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -351,9 +351,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; WIDTH_BYTEENA  ; 1              ; Untyped                                                            ;
 ; NUMBER_OF_TAPS ; 1              ; Untyped                                                            ;
 ; TAP_DISTANCE   ; 773            ; Untyped                                                            ;
-; WIDTH          ; 18             ; Untyped                                                            ;
+; WIDTH          ; 21             ; Untyped                                                            ;
 ; POWER_UP_STATE ; CLEARED        ; Untyped                                                            ;
-; CBXI_PARAMETER ; shift_taps_nim ; Untyped                                                            ;
+; CBXI_PARAMETER ; shift_taps_iim ; Untyped                                                            ;
 +----------------+----------------+--------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -367,11 +367,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Entity Instance            ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0 ;
 ;     -- NUMBER_OF_TAPS      ; 1                                                   ;
 ;     -- TAP_DISTANCE        ; 773                                                 ;
-;     -- WIDTH               ; 18                                                  ;
+;     -- WIDTH               ; 21                                                  ;
 ; Entity Instance            ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0 ;
 ;     -- NUMBER_OF_TAPS      ; 1                                                   ;
 ;     -- TAP_DISTANCE        ; 773                                                 ;
-;     -- WIDTH               ; 18                                                  ;
+;     -- WIDTH               ; 21                                                  ;
 +----------------------------+-----------------------------------------------------+
 
 
@@ -389,7 +389,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:17     ;
+; Top            ; 00:00:19     ;
 +----------------+--------------+
 
 
@@ -399,7 +399,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Mar 31 20:11:26 2015
+    Info: Processing started: Tue Mar 31 20:30:24 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off N6480 -c n6480
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /home/moffitt/Development/N6480/Source/n6480.vhd
@@ -425,35 +425,35 @@ Info (19000): Inferred 2 megafunctions from design logic
     Info (276034): Inferred altshift_taps megafunction from the following design logic: "linebuffer:buffer_b|line_buffer_rtl_0"
         Info (286033): Parameter NUMBER_OF_TAPS set to 1
         Info (286033): Parameter TAP_DISTANCE set to 773
-        Info (286033): Parameter WIDTH set to 18
+        Info (286033): Parameter WIDTH set to 21
     Info (276034): Inferred altshift_taps megafunction from the following design logic: "linebuffer:buffer_a|line_buffer_rtl_0"
         Info (286033): Parameter NUMBER_OF_TAPS set to 1
         Info (286033): Parameter TAP_DISTANCE set to 773
-        Info (286033): Parameter WIDTH set to 18
+        Info (286033): Parameter WIDTH set to 21
 Info (12130): Elaborated megafunction instantiation "linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0"
 Info (12133): Instantiated megafunction "linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0" with the following parameter:
     Info (12134): Parameter "NUMBER_OF_TAPS" = "1"
     Info (12134): Parameter "TAP_DISTANCE" = "773"
-    Info (12134): Parameter "WIDTH" = "18"
-Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_nim.tdf
-    Info (12023): Found entity 1: shift_taps_nim
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_af81.tdf
-    Info (12023): Found entity 1: altsyncram_af81
+    Info (12134): Parameter "WIDTH" = "21"
+Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_iim.tdf
+    Info (12023): Found entity 1: shift_taps_iim
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ve81.tdf
+    Info (12023): Found entity 1: altsyncram_ve81
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_fpf.tdf
     Info (12023): Found entity 1: cntr_fpf
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_ldc.tdf
     Info (12023): Found entity 1: cmpr_ldc
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 521 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 550 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 35 output pins
-    Info (21061): Implemented 439 logic cells
-    Info (21064): Implemented 36 RAM segments
+    Info (21061): Implemented 462 logic cells
+    Info (21064): Implemented 42 RAM segments
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 727 megabytes
-    Info: Processing ended: Tue Mar 31 20:11:48 2015
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:22
+    Info: Peak virtual memory: 719 megabytes
+    Info: Processing ended: Tue Mar 31 20:30:48 2015
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:24
 
 
