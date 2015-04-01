@@ -95,9 +95,9 @@ signal vga_osc: std_logic := '0';
 signal out_vsync: std_logic;
 signal out_hsync: std_logic;
 
-signal y_data: std_logic_vector(7 downto 0);
-signal u_data: std_logic_vector(7 downto 0);
-signal v_data: std_logic_vector(7 downto 0);
+signal y_data: std_logic_vector(9 downto 0);
+signal u_data: std_logic_vector(9 downto 0);
+signal v_data: std_logic_vector(9 downto 0);
 
 begin
 	-- Used to deserialize the N64 pixel bus into values for a pixel.
@@ -117,7 +117,7 @@ begin
 		
 	-- For making component video
 	yuv_encoder: entity work.rgb2yuv(behavioral) port map (
-		(out_red(6 downto 1) & out_red(6 downto 5)), (out_green(6 downto 1) & out_green(6 downto 5)), (out_blue(6 downto 1) & out_blue(6 downto 5)),
+		(out_red(6 downto 0) & out_red(6 downto 4)), (out_green(6 downto 0) & out_green(6 downto 4)), (out_blue(6 downto 0) & out_blue(6 downto 4)),
 		y_data, u_data, v_data, switches(0));
 		
 	sync_counters: process(n64_clock)
@@ -162,13 +162,13 @@ begin
 	begin
 		if (rising_edge(n64_clock)) then
 			if (switches(0) = '1') then -- YUV mode
-				vga_red <= u_data & u_data(7 downto 6);
-				vga_green <= y_data & y_data(7 downto 6);
-				vga_blue <= v_data & v_data(7 downto 6);
+				vga_red <= u_data;
+				vga_green <= y_data;
+				vga_blue <= v_data;
 			else
-				vga_red <= out_red(6 downto 1) & out_red(6 downto 3);
-				vga_green <= out_green(6 downto 1) & out_green(6 downto 3);
-				vga_blue <= out_blue(6 downto 1) & out_blue(6 downto 3);
+				vga_red <= out_red(6 downto 0) & out_red(6 downto 4);
+				vga_green <= out_green(6 downto 0) & out_green(6 downto 4);
+				vga_blue <= out_blue(6 downto 0) & out_blue(6 downto 4);
 			
 			end if;
 		end if;
