@@ -162,9 +162,9 @@ begin
 	begin
 		if (rising_edge(n64_clock)) then
 			if (switches(0) = '1') then -- YUV mode
-				vga_red <= u_data & "00";
-				vga_green <= y_data & "00";
-				vga_blue <= v_data & "00";
+				vga_red <= u_data & u_data(7 downto 6);
+				vga_green <= y_data & y_data(7 downto 6);
+				vga_blue <= v_data & v_data(7 downto 6);
 			else
 				vga_red <= out_red(6 downto 1) & out_red(6 downto 3);
 				vga_green <= out_green(6 downto 1) & out_green(6 downto 3);
