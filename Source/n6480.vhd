@@ -117,8 +117,8 @@ begin
 		
 	-- For making component video
 	yuv_encoder: entity work.rgb2yuv(behavioral) port map (
-		out_red(6 downto 0) & '0', out_green(6 downto 0) & '0', out_blue(6 downto 0) & '0',
-		y_data, u_data, v_data, switches(1));
+		(out_red(6 downto 1) & out_red(6 downto 5)), (out_green(6 downto 1) & out_green(6 downto 5)), (out_blue(6 downto 1) & out_blue(6 downto 5)),
+		y_data, u_data, v_data, switches(0));
 		
 	sync_counters: process(n64_clock)
 	begin
@@ -178,64 +178,62 @@ begin
 	write_buffers: process(n64_clock)
 	begin
 		if (rising_edge(n64_clock)) then
-			if (switches(1) = '0') then
-				if (buffer_sel = '0') then
-					-- Feed pixel data as a vector into the buffer
-					buffer_in_a <= n64_red(6 downto 0) & n64_green(6 downto 0) & n64_blue(6 downto 0);
-					
-					-- Capture only when a new N64 pixel is ready
-					case clock_count is
-						when "00" => buffer_en_a <= '1';
-						when others => buffer_en_a <= '0';
-					end case;
-					
-					-- Scanlines disable
-					--if (switches(0) = '1') then
-					buffer_in_b <= buffer_out_b;
-					--else
-					--	buffer_in_b <= (others => '0');
-					--end if;
-					
-					-- Have it shift out data twice for every one N64 pixel 
-					-- (or once per VGA pixel)
-					if ((n64_px_count > 4 and enable_delay = '1') or (enable_delay = '0'))
-					then
-						if (n64_px_count >= VGA_LINE_LEN) then
-							buffer_en_b <= not clock_count(0);
-							vga_clk <= not vga_osc;
-						else
-							buffer_en_b <= clock_count(0);
-							vga_clk <= vga_osc;
-						end if;
+			if (buffer_sel = '0') then
+				-- Feed pixel data as a vector into the buffer
+				buffer_in_a <= n64_red(6 downto 0) & n64_green(6 downto 0) & n64_blue(6 downto 0);
+				
+				-- Capture only when a new N64 pixel is ready
+				case clock_count is
+					when "00" => buffer_en_a <= '1';
+					when others => buffer_en_a <= '0';
+				end case;
+				
+				-- Scanlines disable
+				--if (switches(0) = '1') then
+				buffer_in_b <= buffer_out_b;
+				--else
+				--	buffer_in_b <= (others => '0');
+				--end if;
+				
+				-- Have it shift out data twice for every one N64 pixel 
+				-- (or once per VGA pixel)
+				if ((n64_px_count > 4 and enable_delay = '1') or (enable_delay = '0'))
+				then
+					if (n64_px_count >= VGA_LINE_LEN) then
+						buffer_en_b <= not clock_count(0);
+						vga_clk <= not vga_osc;
+					else
+						buffer_en_b <= clock_count(0);
+						vga_clk <= vga_osc;
 					end if;
-				else
-					-- Feed pixel data as a vector into the buffer
-					buffer_in_b <= n64_red(6 downto 0) & n64_green(6 downto 0) & n64_blue(6 downto 0);
-					
-					-- Capture only when a new N64 pixel is ready
-					case clock_count is
-						when "00" => buffer_en_b <= '1';
-						when others => buffer_en_b <= '0';
-					end case;
-					
-					-- Scanlines disable
-					--if (switches(0) = '1') then
-						buffer_in_a <= buffer_out_a;
-					--else
-					--	buffer_in_a <= (others => '0');
-					--end if;
-					
-					-- Have it shift out data twice for every one N64 pixel 
-					-- (or once per VGA pixel)
-					if ((n64_px_count > 4 and enable_delay = '1') or (enable_delay = '0'))
-					then
-						if (n64_px_count >= VGA_LINE_LEN) then
-							buffer_en_a <= not clock_count(0);
-							vga_clk <= not vga_osc;
-						else
-							buffer_en_a <= clock_count(0);
-							vga_clk <= vga_osc;
-						end if;
+				end if;
+			else
+				-- Feed pixel data as a vector into the buffer
+				buffer_in_b <= n64_red(6 downto 0) & n64_green(6 downto 0) & n64_blue(6 downto 0);
+				
+				-- Capture only when a new N64 pixel is ready
+				case clock_count is
+					when "00" => buffer_en_b <= '1';
+					when others => buffer_en_b <= '0';
+				end case;
+				
+				-- Scanlines disable
+				--if (switches(0) = '1') then
+					buffer_in_a <= buffer_out_a;
+				--else
+				--	buffer_in_a <= (others => '0');
+				--end if;
+				
+				-- Have it shift out data twice for every one N64 pixel 
+				-- (or once per VGA pixel)
+				if ((n64_px_count > 4 and enable_delay = '1') or (enable_delay = '0'))
+				then
+					if (n64_px_count >= VGA_LINE_LEN) then
+						buffer_en_a <= not clock_count(0);
+						vga_clk <= not vga_osc;
+					else
+						buffer_en_a <= clock_count(0);
+						vga_clk <= vga_osc;
 					end if;
 				end if;
 			end if;
@@ -340,18 +338,22 @@ begin
 	vga_signals_proc: process(n64_clock)
 	begin
 		if (rising_edge(n64_clock)) then
-			if (VGA_HSYNC_MODE = '1') then
-				if (vga_px_count >= VGA_BLANK_START and vga_px_count < VGA_BLANK_END) then
-					vga_blank <= '0';
+			if (switches(1) = '0') then
+				if (VGA_HSYNC_MODE = '1') then
+					if (vga_px_count >= VGA_BLANK_START and vga_px_count < VGA_BLANK_END) then
+						vga_blank <= '0';
+					else
+						vga_blank <= '1';
+					end if;
 				else
-					vga_blank <= '1';
+					if (vga_px_count >= VGA_BLANK_START or vga_px_count < VGA_BLANK_END) then
+						vga_blank <= '0';
+					else
+						vga_blank <= '1';
+					end if;
 				end if;
 			else
-				if (vga_px_count >= VGA_BLANK_START or vga_px_count < VGA_BLANK_END) then
-					vga_blank <= '0';
-				else
-					vga_blank <= '1';
-				end if;
+				vga_blank <= '1';
 			end if;
 			vga_osc <= not vga_osc;
 		end if;
@@ -362,7 +364,13 @@ begin
 	begin
 		if (rising_edge(n64_clock)) then
 			if (switches(0) = '1') then
-				vga_sync <= out_hsync xor out_vsync;
+				if (switches(1) = '0') then
+					-- 480p component c-sync
+					vga_sync <= (out_hsync xor out_vsync);
+				else
+					-- 240p/480i component c-sync
+					vga_sync <= n64_csync_n;
+				end if;
 			else
 				vga_sync <= '0';
 			end if;
