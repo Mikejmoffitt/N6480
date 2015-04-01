@@ -117,7 +117,7 @@ begin
 		
 	-- For making component video
 	yuv_encoder: entity work.rgb2yuv(behavioral) port map (
-		(out_red(6 downto 0) & '0'), (out_green(6 downto 0) & '0'), (out_blue(6 downto 0) & '0'),
+		(out_red(6 downto 1) & out_red(6 downto 5)), (out_green(6 downto 1) & out_green(6 downto 5)), (out_blue(6 downto 1) & out_blue(6 downto 5)),
 		y_data, u_data, v_data, switches(0));
 		
 	sync_counters: process(n64_clock)
@@ -364,7 +364,13 @@ begin
 	begin
 		if (rising_edge(n64_clock)) then
 			if (switches(0) = '1') then
-				vga_sync <= out_hsync xor out_vsync;
+				if (switches(1) = '0') then
+					-- 480p component c-sync
+					vga_sync <= (out_hsync xor out_vsync);
+				else
+					-- 240p/480i component c-sync
+					vga_sync <= n64_csync_n;
+				end if;
 			else
 				vga_sync <= '0';
 			end if;
