@@ -27,13 +27,13 @@ begin
 	make_yuv: process(r, g, b, sw_en)
 	begin
 		if (sw_en = '1') then
-			y <= '0' & (r(7 downto 2) + g(7 downto 1) + b(7 downto 4) + b(7 downto 5) + 16);
-			u <= "00" & (128 + (r(7 downto 2) + r(7 downto 3) + r(7 downto 4)) - (g(7 downto 2) + g(7 downto 3)) - b(7 downto 4));
-			v <= "00" & (128 - r(7 downto 3) - (g(7 downto 2) + g(7 downto 3)) + (b(7 downto 2) + b(7 downto 3) + b(7 downto 4)));
+			y <= (("00" & r(7 downto 2)) + ('0' & g(7 downto 1)) + ("0000" & b(7 downto 4)) + ("00000" & b(7 downto 5)) + 16);
+			u <= (128 + (("00" & r(7 downto 2)) + ("000" & r(7 downto 3)) + ("0000" & r(7 downto 4))) - (("00" & g(7 downto 2)) + ("000" & g(7 downto 3))) - ("0000" & b(7 downto 4)));
+			v <= (128 - ("000" & r(7 downto 3)) - (("00" & g(7 downto 2)) + ("000" & g(7 downto 3))) + (("00" & b(7 downto 2)) + ("000" & b(7 downto 3)) + ("0000" & b(7 downto 4))));
 		else
-			y <= "00000000";
-			u <= "00000000";
-			v <= "00000000";
+			y <= r;
+			u <= g;
+			v <= b;
 		end if;
 	end process;
 end behavioral;
