@@ -1,3 +1,0 @@
-xst -intstyle ise -ifn "/home/moffitt/Development/N6480/Xilinx/rgbdac.xst" -ofn "/home/moffitt/Development/N6480/Xilinx/rgbdac.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx4-cpg196-3 rgbdac.ngc rgbdac.ngd  
-map -intstyle ise -p xc6slx4-cpg196-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o rgbdac_map.ncd rgbdac.ngd rgbdac.pcf 
