@@ -1,5 +1,5 @@
 Flow report for n6480
-Tue Mar 31 20:31:14 2015
+Sat Apr  4 09:40:38 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Tue Mar 31 20:31:10 2015           ;
+; Flow Status                        ; Successful - Sat Apr  4 09:40:35 2015           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; n6480                                           ;
 ; Top-level Entity Name              ; n6480                                           ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/31/2015 20:30:24 ;
+; Start date & time ; 04/04/2015 09:39:50 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; n6480               ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +--------------------------------------------------+---------------------------------------+--------------------+-------------+------------+
 ; Assignment Name                                  ; Value                                 ; Default Value      ; Entity Name ; Section Id ;
 +--------------------------------------------------+---------------------------------------+--------------------+-------------+------------+
-; COMPILER_SIGNATURE_ID                            ; 167834333317.142784822403255          ; --                 ; --          ; --         ;
+; COMPILER_SIGNATURE_ID                            ; 167834333317.142815478901441          ; --                 ; --          ; --         ;
 ; CYCLONEII_OPTIMIZATION_TECHNIQUE                 ; Speed                                 ; Balanced           ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP                           ; 85                                    ; --                 ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP                           ; 0                                     ; --                 ; --          ; --         ;
@@ -97,11 +97,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:24     ; 1.0                     ; 691 MB              ; 00:00:24                           ;
-; Fitter                    ; 00:00:15     ; 1.0                     ; 725 MB              ; 00:00:14                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 556 MB              ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 506 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:43     ; --                      ; --                  ; 00:00:42                           ;
+; Analysis & Synthesis      ; 00:00:24     ; 1.0                     ; 688 MB              ; 00:00:24                           ;
+; Fitter                    ; 00:00:14     ; 1.0                     ; 731 MB              ; 00:00:14                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 556 MB              ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 517 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:42     ; --                      ; --                  ; 00:00:42                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

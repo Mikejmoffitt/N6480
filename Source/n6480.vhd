@@ -366,7 +366,7 @@ begin
 			if (switches(0) = '1') then
 				if (switches(1) = '0') then
 					-- 480p component c-sync
-					vga_sync <= (out_hsync xor out_vsync);
+					vga_sync <= not (out_hsync xor out_vsync);
 				else
 					-- 240p/480i component c-sync
 					vga_sync <= n64_csync_n;

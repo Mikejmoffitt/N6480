@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for n6480
-Tue Mar 31 20:31:14 2015
+Sat Apr  4 09:40:38 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -317,13 +317,13 @@ No paths to report.
 ; 0.716 ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_iim:auto_generated|cntr_fpf:cntr1|safe_q[1] ; linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_iim:auto_generated|altsyncram_ve81:altsyncram2|ram_block3a4~porta_address_reg1 ; n64_clock    ; n64_clock   ; 0.000        ; 0.059      ; 1.009      ;
 ; 0.741 ; n64_pixel:rgb_decoder|blue_final[2]                                                                        ; n64_pixel:rgb_decoder|blue_out[2]                                                                                                             ; n64_clock    ; n64_clock   ; 0.000        ; 0.001      ; 1.008      ;
 ; 0.765 ; n64_pixel:rgb_decoder|cycle_count[0]                                                                       ; n64_pixel:rgb_decoder|cycle_count[1]                                                                                                          ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 1.031      ;
+; 0.773 ; out_hsync                                                                                                  ; vga_sync~reg0                                                                                                                                 ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 1.039      ;
 ; 0.795 ; hsync_time[0]                                                                                              ; hsync_time[0]                                                                                                                                 ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 1.061      ;
 ; 0.795 ; vsync_time[0]                                                                                              ; vsync_time[0]                                                                                                                                 ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 1.061      ;
 ; 0.795 ; n64_px_count[0]                                                                                            ; n64_px_count[0]                                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 1.061      ;
 ; 0.795 ; line_count[0]                                                                                              ; line_count[0]                                                                                                                                 ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 1.061      ;
 ; 0.795 ; vga_px_count[0]                                                                                            ; vga_px_count[0]                                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 1.061      ;
 ; 0.797 ; vga_osc                                                                                                    ; vga_clk~reg0                                                                                                                                  ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 1.063      ;
-; 0.800 ; out_hsync                                                                                                  ; vga_sync~reg0                                                                                                                                 ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 1.066      ;
 ; 0.800 ; out_hsync                                                                                                  ; vga_hsync~reg0                                                                                                                                ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 1.066      ;
 ; 0.803 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_iim:auto_generated|cntr_fpf:cntr1|safe_q[0] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_iim:auto_generated|cntr_fpf:cntr1|safe_q[0]                                    ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 1.069      ;
 ; 0.805 ; hsync_time[1]                                                                                              ; hsync_time[1]                                                                                                                                 ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 1.071      ;
@@ -824,7 +824,6 @@ No paths to report.
 ; 0.359 ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_iim:auto_generated|cntr_fpf:cntr1|safe_q[0] ; linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_iim:auto_generated|cntr_fpf:cntr1|safe_q[0]                                    ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.511      ;
 ; 0.359 ; line_count[1]                                                                                              ; line_count[1]                                                                                                                                 ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.511      ;
 ; 0.359 ; vga_px_count[1]                                                                                            ; vga_px_count[1]                                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.511      ;
-; 0.359 ; out_hsync                                                                                                  ; vga_sync~reg0                                                                                                                                 ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.511      ;
 ; 0.359 ; out_hsync                                                                                                  ; vga_hsync~reg0                                                                                                                                ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.511      ;
 ; 0.360 ; hsync_time[2]                                                                                              ; hsync_time[2]                                                                                                                                 ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.512      ;
 ; 0.360 ; hsync_time[9]                                                                                              ; hsync_time[9]                                                                                                                                 ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.512      ;
@@ -858,6 +857,7 @@ No paths to report.
 ; 0.361 ; line_count[13]                                                                                             ; line_count[13]                                                                                                                                ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.513      ;
 ; 0.361 ; line_count[14]                                                                                             ; line_count[14]                                                                                                                                ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.513      ;
 ; 0.361 ; line_count[7]                                                                                              ; line_count[7]                                                                                                                                 ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; vga_px_count[4]                                                                                            ; vga_px_count[4]                                                                                                                               ; n64_clock    ; n64_clock   ; 0.000        ; 0.000      ; 0.513      ;
 +-------+------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -1297,7 +1297,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Mar 31 20:31:12 2015
+    Info: Processing started: Sat Apr  4 09:40:37 2015
 Info: Command: quartus_sta N6480 -c n6480
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -1345,9 +1345,9 @@ Info (332001): The selected device family is not supported by the report_metasta
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 506 megabytes
-    Info: Processing ended: Tue Mar 31 20:31:14 2015
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 517 megabytes
+    Info: Processing ended: Sat Apr  4 09:40:38 2015
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 
