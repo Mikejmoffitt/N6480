@@ -1,0 +1,54 @@
+
+
+NET "led[3]" LOC = P4;
+NET "led[2]" LOC = N4;
+NET "led[1]" LOC = P3;
+NET "led[0]" LOC = N3;
+INST "n64_clock_BUFGP" LOC = P7;
+NET "n64_clock" LOC = P7;
+NET "n64_dsync_n" LOC = P12;
+NET "n64_data[0]" LOC = N12;
+NET "n64_data[1]" LOC = L14;
+NET "n64_data[2]" LOC = L13;
+NET "n64_data[3]" LOC = K14;
+NET "n64_data[4]" LOC = K13;
+NET "n64_data[5]" LOC = J14;
+NET "n64_data[6]" LOC = J13;
+
+# PlanAhead Generated physical constraints 
+
+NET "vga_blue[0]" LOC = H14;
+NET "vga_blue[1]" LOC = H13;
+NET "vga_blue[2]" LOC = F14;
+NET "vga_blue[3]" LOC = F13;
+NET "vga_blue[4]" LOC = G14;
+NET "vga_blue[5]" LOC = G13;
+NET "vga_blue[6]" LOC = E14;
+NET "vga_blue[7]" LOC = E13;
+NET "vga_blue[8]" LOC = D14;
+NET "vga_blue[9]" LOC = D13;
+NET "vga_green[0]" LOC = L2;
+NET "vga_green[1]" LOC = L1;
+NET "vga_green[2]" LOC = K2;
+NET "vga_green[3]" LOC = K1;
+NET "vga_green[4]" LOC = J2;
+NET "vga_green[5]" LOC = J1;
+NET "vga_green[6]" LOC = G2;
+NET "vga_green[7]" LOC = G1;
+NET "vga_green[8]" LOC = H2;
+NET "vga_green[9]" LOC = H1;
+NET "vga_red[9]" LOC = F2;
+NET "vga_red[8]" LOC = F1;
+NET "vga_red[7]" LOC = E2;
+NET "vga_red[6]" LOC = E1;
+NET "vga_red[5]" LOC = D2;
+NET "vga_red[4]" LOC = D1;
+NET "vga_red[3]" LOC = C1;
+NET "vga_red[2]" LOC = A2;
+NET "vga_red[1]" LOC = B1;
+NET "vga_red[0]" LOC = B3;
+NET "vga_hsync" LOC = P5;
+NET "vga_vsync" LOC = N5;
+NET "vga_clk" LOC = N6;
+NET "vga_blank" LOC = M1;
+NET "vga_sync" LOC = M2;

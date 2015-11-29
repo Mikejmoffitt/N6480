@@ -1,0 +1,1369 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Reading design: n6480.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "n6480.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "n6480"
+Output Format                      : NGC
+Target Device                      : xc6slx4-3-cpg196
+
+---- Source Options
+Top Module Name                    : n6480
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\Julian\Development\N6480\Source\n64_pixel.vhd" into library work
+Parsing entity <n64_pixel>.
+Parsing architecture <behavioral> of entity <n64_pixel>.
+Parsing VHDL file "C:\Users\Julian\Development\N6480\Source\linebuffer.vhd" into library work
+Parsing entity <linebuffer>.
+Parsing architecture <behavioral> of entity <linebuffer>.
+Parsing VHDL file "C:\Users\Julian\Development\N6480\Source\n6480.vhd" into library work
+Parsing entity <n6480>.
+Parsing architecture <behavioral> of entity <n6480>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <n6480> (architecture <behavioral>) from library <work>.
+
+Elaborating entity <n64_pixel> (architecture <behavioral>) from library <work>.
+
+Elaborating entity <linebuffer> (architecture <behavioral>) with generics from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <n6480>.
+    Related source file is "C:\Users\Julian\Development\N6480\Source\n6480.vhd".
+INFO:Xst:3210 - "C:\Users\Julian\Development\N6480\Source\n6480.vhd" line 100: Output port <csync_n_out> of the instance <rgb_decoder> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Julian\Development\N6480\Source\n6480.vhd" line 100: Output port <clamp_n_out> of the instance <rgb_decoder> is unconnected or connected to loadless signal.
+    Register <vga_blank> equivalent to <out_hsync> has been removed
+    Found 16-bit register for signal <hsync_time>.
+    Found 6-bit register for signal <out_red>.
+    Found 6-bit register for signal <out_green>.
+    Found 6-bit register for signal <out_blue>.
+    Found 10-bit register for signal <vga_red>.
+    Found 10-bit register for signal <vga_green>.
+    Found 10-bit register for signal <vga_blue>.
+    Found 18-bit register for signal <buffer_in_a>.
+    Found 1-bit register for signal <buffer_en_a>.
+    Found 18-bit register for signal <buffer_in_b>.
+    Found 1-bit register for signal <buffer_en_b>.
+    Found 1-bit register for signal <vga_clk>.
+    Found 16-bit register for signal <vga_px_count>.
+    Found 16-bit register for signal <n64_px_count>.
+    Found 1-bit register for signal <enable_delay>.
+    Found 1-bit register for signal <buffer_sel>.
+    Found 16-bit register for signal <line_count>.
+    Found 1-bit register for signal <out_vsync>.
+    Found 1-bit register for signal <vga_vsync>.
+    Found 1-bit register for signal <out_hsync>.
+    Found 1-bit register for signal <vga_hsync>.
+    Found 1-bit register for signal <vga_osc>.
+    Found 16-bit register for signal <vsync_time>.
+    Found 16-bit adder for signal <vsync_time[15]_GND_5_o_add_0_OUT> created at line 117.
+    Found 16-bit adder for signal <hsync_time[15]_GND_5_o_add_2_OUT> created at line 123.
+    Found 16-bit adder for signal <vga_px_count[15]_GND_5_o_add_26_OUT> created at line 219.
+    Found 16-bit adder for signal <n64_px_count[15]_GND_5_o_add_33_OUT> created at line 240.
+    Found 16-bit adder for signal <line_count[15]_GND_5_o_add_38_OUT> created at line 249.
+    Found 4x1-bit Read Only RAM for signal <clock_count[1]_GND_5_o_Mux_15_o>
+    Found 16-bit comparator greater for signal <GND_5_o_n64_px_count[15]_LessThan_20_o> created at line 196
+    Found 16-bit comparator lessequal for signal <n0023> created at line 198
+    Found 16-bit comparator greater for signal <n64_px_count[15]_GND_5_o_LessThan_32_o> created at line 231
+    Found 16-bit comparator lessequal for signal <n0063> created at line 260
+    Found 16-bit comparator greater for signal <line_count[15]_GND_5_o_LessThan_46_o> created at line 260
+    Found 16-bit comparator lessequal for signal <n0075> created at line 303
+    Found 16-bit comparator greater for signal <vga_px_count[15]_GND_5_o_LessThan_50_o> created at line 303
+    WARNING:Xst:2404 -  FFs/Latches <vga_sync<0:0>> (without init value) have a constant value of 0 in block <n6480>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred 174 D-type flip-flop(s).
+	inferred   7 Comparator(s).
+	inferred   9 Multiplexer(s).
+Unit <n6480> synthesized.
+
+Synthesizing Unit <n64_pixel>.
+    Related source file is "C:\Users\Julian\Development\N6480\Source\n64_pixel.vhd".
+    Found 7-bit register for signal <red_cap>.
+    Found 7-bit register for signal <green_cap>.
+    Found 7-bit register for signal <blue_cap>.
+    Found 7-bit register for signal <red_final>.
+    Found 7-bit register for signal <green_final>.
+    Found 7-bit register for signal <blue_final>.
+    Found 1-bit register for signal <csync_n_cap>.
+    Found 1-bit register for signal <hsync_n_cap>.
+    Found 1-bit register for signal <clamp_n_cap>.
+    Found 1-bit register for signal <vsync_n_cap>.
+    Found 6-bit register for signal <red_out>.
+    Found 6-bit register for signal <green_out>.
+    Found 6-bit register for signal <blue_out>.
+    Found 1-bit register for signal <csync_n_out>.
+    Found 1-bit register for signal <hsync_n_out>.
+    Found 1-bit register for signal <clamp_n_out>.
+    Found 1-bit register for signal <vsync_n_out>.
+    Found 2-bit register for signal <clock_count>.
+    Found 2-bit register for signal <cycle_count>.
+    Found 2-bit adder for signal <cycle_count[1]_GND_6_o_add_0_OUT> created at line 50.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  72 D-type flip-flop(s).
+Unit <n64_pixel> synthesized.
+
+Synthesizing Unit <linebuffer>.
+    Related source file is "C:\Users\Julian\Development\N6480\Source\linebuffer.vhd".
+        line_len = 773
+        pixel_depth = 18
+    Found 18-bit register for signal <line_buffer<771>>.
+    Found 18-bit register for signal <line_buffer<770>>.
+    Found 18-bit register for signal <line_buffer<769>>.
+    Found 18-bit register for signal <line_buffer<768>>.
+    Found 18-bit register for signal <line_buffer<767>>.
+    Found 18-bit register for signal <line_buffer<766>>.
+    Found 18-bit register for signal <line_buffer<765>>.
+    Found 18-bit register for signal <line_buffer<764>>.
+    Found 18-bit register for signal <line_buffer<763>>.
+    Found 18-bit register for signal <line_buffer<762>>.
+    Found 18-bit register for signal <line_buffer<761>>.
+    Found 18-bit register for signal <line_buffer<760>>.
+    Found 18-bit register for signal <line_buffer<759>>.
+    Found 18-bit register for signal <line_buffer<758>>.
+    Found 18-bit register for signal <line_buffer<757>>.
+    Found 18-bit register for signal <line_buffer<756>>.
+    Found 18-bit register for signal <line_buffer<755>>.
+    Found 18-bit register for signal <line_buffer<754>>.
+    Found 18-bit register for signal <line_buffer<753>>.
+    Found 18-bit register for signal <line_buffer<752>>.
+    Found 18-bit register for signal <line_buffer<751>>.
+    Found 18-bit register for signal <line_buffer<750>>.
+    Found 18-bit register for signal <line_buffer<749>>.
+    Found 18-bit register for signal <line_buffer<748>>.
+    Found 18-bit register for signal <line_buffer<747>>.
+    Found 18-bit register for signal <line_buffer<746>>.
+    Found 18-bit register for signal <line_buffer<745>>.
+    Found 18-bit register for signal <line_buffer<744>>.
+    Found 18-bit register for signal <line_buffer<743>>.
+    Found 18-bit register for signal <line_buffer<742>>.
+    Found 18-bit register for signal <line_buffer<741>>.
+    Found 18-bit register for signal <line_buffer<740>>.
+    Found 18-bit register for signal <line_buffer<739>>.
+    Found 18-bit register for signal <line_buffer<738>>.
+    Found 18-bit register for signal <line_buffer<737>>.
+    Found 18-bit register for signal <line_buffer<736>>.
+    Found 18-bit register for signal <line_buffer<735>>.
+    Found 18-bit register for signal <line_buffer<734>>.
+    Found 18-bit register for signal <line_buffer<733>>.
+    Found 18-bit register for signal <line_buffer<732>>.
+    Found 18-bit register for signal <line_buffer<731>>.
+    Found 18-bit register for signal <line_buffer<730>>.
+    Found 18-bit register for signal <line_buffer<729>>.
+    Found 18-bit register for signal <line_buffer<728>>.
+    Found 18-bit register for signal <line_buffer<727>>.
+    Found 18-bit register for signal <line_buffer<726>>.
+    Found 18-bit register for signal <line_buffer<725>>.
+    Found 18-bit register for signal <line_buffer<724>>.
+    Found 18-bit register for signal <line_buffer<723>>.
+    Found 18-bit register for signal <line_buffer<722>>.
+    Found 18-bit register for signal <line_buffer<721>>.
+    Found 18-bit register for signal <line_buffer<720>>.
+    Found 18-bit register for signal <line_buffer<719>>.
+    Found 18-bit register for signal <line_buffer<718>>.
+    Found 18-bit register for signal <line_buffer<717>>.
+    Found 18-bit register for signal <line_buffer<716>>.
+    Found 18-bit register for signal <line_buffer<715>>.
+    Found 18-bit register for signal <line_buffer<714>>.
+    Found 18-bit register for signal <line_buffer<713>>.
+    Found 18-bit register for signal <line_buffer<712>>.
+    Found 18-bit register for signal <line_buffer<711>>.
+    Found 18-bit register for signal <line_buffer<710>>.
+    Found 18-bit register for signal <line_buffer<709>>.
+    Found 18-bit register for signal <line_buffer<708>>.
+    Found 18-bit register for signal <line_buffer<707>>.
+    Found 18-bit register for signal <line_buffer<706>>.
+    Found 18-bit register for signal <line_buffer<705>>.
+    Found 18-bit register for signal <line_buffer<704>>.
+    Found 18-bit register for signal <line_buffer<703>>.
+    Found 18-bit register for signal <line_buffer<702>>.
+    Found 18-bit register for signal <line_buffer<701>>.
+    Found 18-bit register for signal <line_buffer<700>>.
+    Found 18-bit register for signal <line_buffer<699>>.
+    Found 18-bit register for signal <line_buffer<698>>.
+    Found 18-bit register for signal <line_buffer<697>>.
+    Found 18-bit register for signal <line_buffer<696>>.
+    Found 18-bit register for signal <line_buffer<695>>.
+    Found 18-bit register for signal <line_buffer<694>>.
+    Found 18-bit register for signal <line_buffer<693>>.
+    Found 18-bit register for signal <line_buffer<692>>.
+    Found 18-bit register for signal <line_buffer<691>>.
+    Found 18-bit register for signal <line_buffer<690>>.
+    Found 18-bit register for signal <line_buffer<689>>.
+    Found 18-bit register for signal <line_buffer<688>>.
+    Found 18-bit register for signal <line_buffer<687>>.
+    Found 18-bit register for signal <line_buffer<686>>.
+    Found 18-bit register for signal <line_buffer<685>>.
+    Found 18-bit register for signal <line_buffer<684>>.
+    Found 18-bit register for signal <line_buffer<683>>.
+    Found 18-bit register for signal <line_buffer<682>>.
+    Found 18-bit register for signal <line_buffer<681>>.
+    Found 18-bit register for signal <line_buffer<680>>.
+    Found 18-bit register for signal <line_buffer<679>>.
+    Found 18-bit register for signal <line_buffer<678>>.
+    Found 18-bit register for signal <line_buffer<677>>.
+    Found 18-bit register for signal <line_buffer<676>>.
+    Found 18-bit register for signal <line_buffer<675>>.
+    Found 18-bit register for signal <line_buffer<674>>.
+    Found 18-bit register for signal <line_buffer<673>>.
+    Found 18-bit register for signal <line_buffer<672>>.
+    Found 18-bit register for signal <line_buffer<671>>.
+    Found 18-bit register for signal <line_buffer<670>>.
+    Found 18-bit register for signal <line_buffer<669>>.
+    Found 18-bit register for signal <line_buffer<668>>.
+    Found 18-bit register for signal <line_buffer<667>>.
+    Found 18-bit register for signal <line_buffer<666>>.
+    Found 18-bit register for signal <line_buffer<665>>.
+    Found 18-bit register for signal <line_buffer<664>>.
+    Found 18-bit register for signal <line_buffer<663>>.
+    Found 18-bit register for signal <line_buffer<662>>.
+    Found 18-bit register for signal <line_buffer<661>>.
+    Found 18-bit register for signal <line_buffer<660>>.
+    Found 18-bit register for signal <line_buffer<659>>.
+    Found 18-bit register for signal <line_buffer<658>>.
+    Found 18-bit register for signal <line_buffer<657>>.
+    Found 18-bit register for signal <line_buffer<656>>.
+    Found 18-bit register for signal <line_buffer<655>>.
+    Found 18-bit register for signal <line_buffer<654>>.
+    Found 18-bit register for signal <line_buffer<653>>.
+    Found 18-bit register for signal <line_buffer<652>>.
+    Found 18-bit register for signal <line_buffer<651>>.
+    Found 18-bit register for signal <line_buffer<650>>.
+    Found 18-bit register for signal <line_buffer<649>>.
+    Found 18-bit register for signal <line_buffer<648>>.
+    Found 18-bit register for signal <line_buffer<647>>.
+    Found 18-bit register for signal <line_buffer<646>>.
+    Found 18-bit register for signal <line_buffer<645>>.
+    Found 18-bit register for signal <line_buffer<644>>.
+    Found 18-bit register for signal <line_buffer<643>>.
+    Found 18-bit register for signal <line_buffer<642>>.
+    Found 18-bit register for signal <line_buffer<641>>.
+    Found 18-bit register for signal <line_buffer<640>>.
+    Found 18-bit register for signal <line_buffer<639>>.
+    Found 18-bit register for signal <line_buffer<638>>.
+    Found 18-bit register for signal <line_buffer<637>>.
+    Found 18-bit register for signal <line_buffer<636>>.
+    Found 18-bit register for signal <line_buffer<635>>.
+    Found 18-bit register for signal <line_buffer<634>>.
+    Found 18-bit register for signal <line_buffer<633>>.
+    Found 18-bit register for signal <line_buffer<632>>.
+    Found 18-bit register for signal <line_buffer<631>>.
+    Found 18-bit register for signal <line_buffer<630>>.
+    Found 18-bit register for signal <line_buffer<629>>.
+    Found 18-bit register for signal <line_buffer<628>>.
+    Found 18-bit register for signal <line_buffer<627>>.
+    Found 18-bit register for signal <line_buffer<626>>.
+    Found 18-bit register for signal <line_buffer<625>>.
+    Found 18-bit register for signal <line_buffer<624>>.
+    Found 18-bit register for signal <line_buffer<623>>.
+    Found 18-bit register for signal <line_buffer<622>>.
+    Found 18-bit register for signal <line_buffer<621>>.
+    Found 18-bit register for signal <line_buffer<620>>.
+    Found 18-bit register for signal <line_buffer<619>>.
+    Found 18-bit register for signal <line_buffer<618>>.
+    Found 18-bit register for signal <line_buffer<617>>.
+    Found 18-bit register for signal <line_buffer<616>>.
+    Found 18-bit register for signal <line_buffer<615>>.
+    Found 18-bit register for signal <line_buffer<614>>.
+    Found 18-bit register for signal <line_buffer<613>>.
+    Found 18-bit register for signal <line_buffer<612>>.
+    Found 18-bit register for signal <line_buffer<611>>.
+    Found 18-bit register for signal <line_buffer<610>>.
+    Found 18-bit register for signal <line_buffer<609>>.
+    Found 18-bit register for signal <line_buffer<608>>.
+    Found 18-bit register for signal <line_buffer<607>>.
+    Found 18-bit register for signal <line_buffer<606>>.
+    Found 18-bit register for signal <line_buffer<605>>.
+    Found 18-bit register for signal <line_buffer<604>>.
+    Found 18-bit register for signal <line_buffer<603>>.
+    Found 18-bit register for signal <line_buffer<602>>.
+    Found 18-bit register for signal <line_buffer<601>>.
+    Found 18-bit register for signal <line_buffer<600>>.
+    Found 18-bit register for signal <line_buffer<599>>.
+    Found 18-bit register for signal <line_buffer<598>>.
+    Found 18-bit register for signal <line_buffer<597>>.
+    Found 18-bit register for signal <line_buffer<596>>.
+    Found 18-bit register for signal <line_buffer<595>>.
+    Found 18-bit register for signal <line_buffer<594>>.
+    Found 18-bit register for signal <line_buffer<593>>.
+    Found 18-bit register for signal <line_buffer<592>>.
+    Found 18-bit register for signal <line_buffer<591>>.
+    Found 18-bit register for signal <line_buffer<590>>.
+    Found 18-bit register for signal <line_buffer<589>>.
+    Found 18-bit register for signal <line_buffer<588>>.
+    Found 18-bit register for signal <line_buffer<587>>.
+    Found 18-bit register for signal <line_buffer<586>>.
+    Found 18-bit register for signal <line_buffer<585>>.
+    Found 18-bit register for signal <line_buffer<584>>.
+    Found 18-bit register for signal <line_buffer<583>>.
+    Found 18-bit register for signal <line_buffer<582>>.
+    Found 18-bit register for signal <line_buffer<581>>.
+    Found 18-bit register for signal <line_buffer<580>>.
+    Found 18-bit register for signal <line_buffer<579>>.
+    Found 18-bit register for signal <line_buffer<578>>.
+    Found 18-bit register for signal <line_buffer<577>>.
+    Found 18-bit register for signal <line_buffer<576>>.
+    Found 18-bit register for signal <line_buffer<575>>.
+    Found 18-bit register for signal <line_buffer<574>>.
+    Found 18-bit register for signal <line_buffer<573>>.
+    Found 18-bit register for signal <line_buffer<572>>.
+    Found 18-bit register for signal <line_buffer<571>>.
+    Found 18-bit register for signal <line_buffer<570>>.
+    Found 18-bit register for signal <line_buffer<569>>.
+    Found 18-bit register for signal <line_buffer<568>>.
+    Found 18-bit register for signal <line_buffer<567>>.
+    Found 18-bit register for signal <line_buffer<566>>.
+    Found 18-bit register for signal <line_buffer<565>>.
+    Found 18-bit register for signal <line_buffer<564>>.
+    Found 18-bit register for signal <line_buffer<563>>.
+    Found 18-bit register for signal <line_buffer<562>>.
+    Found 18-bit register for signal <line_buffer<561>>.
+    Found 18-bit register for signal <line_buffer<560>>.
+    Found 18-bit register for signal <line_buffer<559>>.
+    Found 18-bit register for signal <line_buffer<558>>.
+    Found 18-bit register for signal <line_buffer<557>>.
+    Found 18-bit register for signal <line_buffer<556>>.
+    Found 18-bit register for signal <line_buffer<555>>.
+    Found 18-bit register for signal <line_buffer<554>>.
+    Found 18-bit register for signal <line_buffer<553>>.
+    Found 18-bit register for signal <line_buffer<552>>.
+    Found 18-bit register for signal <line_buffer<551>>.
+    Found 18-bit register for signal <line_buffer<550>>.
+    Found 18-bit register for signal <line_buffer<549>>.
+    Found 18-bit register for signal <line_buffer<548>>.
+    Found 18-bit register for signal <line_buffer<547>>.
+    Found 18-bit register for signal <line_buffer<546>>.
+    Found 18-bit register for signal <line_buffer<545>>.
+    Found 18-bit register for signal <line_buffer<544>>.
+    Found 18-bit register for signal <line_buffer<543>>.
+    Found 18-bit register for signal <line_buffer<542>>.
+    Found 18-bit register for signal <line_buffer<541>>.
+    Found 18-bit register for signal <line_buffer<540>>.
+    Found 18-bit register for signal <line_buffer<539>>.
+    Found 18-bit register for signal <line_buffer<538>>.
+    Found 18-bit register for signal <line_buffer<537>>.
+    Found 18-bit register for signal <line_buffer<536>>.
+    Found 18-bit register for signal <line_buffer<535>>.
+    Found 18-bit register for signal <line_buffer<534>>.
+    Found 18-bit register for signal <line_buffer<533>>.
+    Found 18-bit register for signal <line_buffer<532>>.
+    Found 18-bit register for signal <line_buffer<531>>.
+    Found 18-bit register for signal <line_buffer<530>>.
+    Found 18-bit register for signal <line_buffer<529>>.
+    Found 18-bit register for signal <line_buffer<528>>.
+    Found 18-bit register for signal <line_buffer<527>>.
+    Found 18-bit register for signal <line_buffer<526>>.
+    Found 18-bit register for signal <line_buffer<525>>.
+    Found 18-bit register for signal <line_buffer<524>>.
+    Found 18-bit register for signal <line_buffer<523>>.
+    Found 18-bit register for signal <line_buffer<522>>.
+    Found 18-bit register for signal <line_buffer<521>>.
+    Found 18-bit register for signal <line_buffer<520>>.
+    Found 18-bit register for signal <line_buffer<519>>.
+    Found 18-bit register for signal <line_buffer<518>>.
+    Found 18-bit register for signal <line_buffer<517>>.
+    Found 18-bit register for signal <line_buffer<516>>.
+    Found 18-bit register for signal <line_buffer<515>>.
+    Found 18-bit register for signal <line_buffer<514>>.
+    Found 18-bit register for signal <line_buffer<513>>.
+    Found 18-bit register for signal <line_buffer<512>>.
+    Found 18-bit register for signal <line_buffer<511>>.
+    Found 18-bit register for signal <line_buffer<510>>.
+    Found 18-bit register for signal <line_buffer<509>>.
+    Found 18-bit register for signal <line_buffer<508>>.
+    Found 18-bit register for signal <line_buffer<507>>.
+    Found 18-bit register for signal <line_buffer<506>>.
+    Found 18-bit register for signal <line_buffer<505>>.
+    Found 18-bit register for signal <line_buffer<504>>.
+    Found 18-bit register for signal <line_buffer<503>>.
+    Found 18-bit register for signal <line_buffer<502>>.
+    Found 18-bit register for signal <line_buffer<501>>.
+    Found 18-bit register for signal <line_buffer<500>>.
+    Found 18-bit register for signal <line_buffer<499>>.
+    Found 18-bit register for signal <line_buffer<498>>.
+    Found 18-bit register for signal <line_buffer<497>>.
+    Found 18-bit register for signal <line_buffer<496>>.
+    Found 18-bit register for signal <line_buffer<495>>.
+    Found 18-bit register for signal <line_buffer<494>>.
+    Found 18-bit register for signal <line_buffer<493>>.
+    Found 18-bit register for signal <line_buffer<492>>.
+    Found 18-bit register for signal <line_buffer<491>>.
+    Found 18-bit register for signal <line_buffer<490>>.
+    Found 18-bit register for signal <line_buffer<489>>.
+    Found 18-bit register for signal <line_buffer<488>>.
+    Found 18-bit register for signal <line_buffer<487>>.
+    Found 18-bit register for signal <line_buffer<486>>.
+    Found 18-bit register for signal <line_buffer<485>>.
+    Found 18-bit register for signal <line_buffer<484>>.
+    Found 18-bit register for signal <line_buffer<483>>.
+    Found 18-bit register for signal <line_buffer<482>>.
+    Found 18-bit register for signal <line_buffer<481>>.
+    Found 18-bit register for signal <line_buffer<480>>.
+    Found 18-bit register for signal <line_buffer<479>>.
+    Found 18-bit register for signal <line_buffer<478>>.
+    Found 18-bit register for signal <line_buffer<477>>.
+    Found 18-bit register for signal <line_buffer<476>>.
+    Found 18-bit register for signal <line_buffer<475>>.
+    Found 18-bit register for signal <line_buffer<474>>.
+    Found 18-bit register for signal <line_buffer<473>>.
+    Found 18-bit register for signal <line_buffer<472>>.
+    Found 18-bit register for signal <line_buffer<471>>.
+    Found 18-bit register for signal <line_buffer<470>>.
+    Found 18-bit register for signal <line_buffer<469>>.
+    Found 18-bit register for signal <line_buffer<468>>.
+    Found 18-bit register for signal <line_buffer<467>>.
+    Found 18-bit register for signal <line_buffer<466>>.
+    Found 18-bit register for signal <line_buffer<465>>.
+    Found 18-bit register for signal <line_buffer<464>>.
+    Found 18-bit register for signal <line_buffer<463>>.
+    Found 18-bit register for signal <line_buffer<462>>.
+    Found 18-bit register for signal <line_buffer<461>>.
+    Found 18-bit register for signal <line_buffer<460>>.
+    Found 18-bit register for signal <line_buffer<459>>.
+    Found 18-bit register for signal <line_buffer<458>>.
+    Found 18-bit register for signal <line_buffer<457>>.
+    Found 18-bit register for signal <line_buffer<456>>.
+    Found 18-bit register for signal <line_buffer<455>>.
+    Found 18-bit register for signal <line_buffer<454>>.
+    Found 18-bit register for signal <line_buffer<453>>.
+    Found 18-bit register for signal <line_buffer<452>>.
+    Found 18-bit register for signal <line_buffer<451>>.
+    Found 18-bit register for signal <line_buffer<450>>.
+    Found 18-bit register for signal <line_buffer<449>>.
+    Found 18-bit register for signal <line_buffer<448>>.
+    Found 18-bit register for signal <line_buffer<447>>.
+    Found 18-bit register for signal <line_buffer<446>>.
+    Found 18-bit register for signal <line_buffer<445>>.
+    Found 18-bit register for signal <line_buffer<444>>.
+    Found 18-bit register for signal <line_buffer<443>>.
+    Found 18-bit register for signal <line_buffer<442>>.
+    Found 18-bit register for signal <line_buffer<441>>.
+    Found 18-bit register for signal <line_buffer<440>>.
+    Found 18-bit register for signal <line_buffer<439>>.
+    Found 18-bit register for signal <line_buffer<438>>.
+    Found 18-bit register for signal <line_buffer<437>>.
+    Found 18-bit register for signal <line_buffer<436>>.
+    Found 18-bit register for signal <line_buffer<435>>.
+    Found 18-bit register for signal <line_buffer<434>>.
+    Found 18-bit register for signal <line_buffer<433>>.
+    Found 18-bit register for signal <line_buffer<432>>.
+    Found 18-bit register for signal <line_buffer<431>>.
+    Found 18-bit register for signal <line_buffer<430>>.
+    Found 18-bit register for signal <line_buffer<429>>.
+    Found 18-bit register for signal <line_buffer<428>>.
+    Found 18-bit register for signal <line_buffer<427>>.
+    Found 18-bit register for signal <line_buffer<426>>.
+    Found 18-bit register for signal <line_buffer<425>>.
+    Found 18-bit register for signal <line_buffer<424>>.
+    Found 18-bit register for signal <line_buffer<423>>.
+    Found 18-bit register for signal <line_buffer<422>>.
+    Found 18-bit register for signal <line_buffer<421>>.
+    Found 18-bit register for signal <line_buffer<420>>.
+    Found 18-bit register for signal <line_buffer<419>>.
+    Found 18-bit register for signal <line_buffer<418>>.
+    Found 18-bit register for signal <line_buffer<417>>.
+    Found 18-bit register for signal <line_buffer<416>>.
+    Found 18-bit register for signal <line_buffer<415>>.
+    Found 18-bit register for signal <line_buffer<414>>.
+    Found 18-bit register for signal <line_buffer<413>>.
+    Found 18-bit register for signal <line_buffer<412>>.
+    Found 18-bit register for signal <line_buffer<411>>.
+    Found 18-bit register for signal <line_buffer<410>>.
+    Found 18-bit register for signal <line_buffer<409>>.
+    Found 18-bit register for signal <line_buffer<408>>.
+    Found 18-bit register for signal <line_buffer<407>>.
+    Found 18-bit register for signal <line_buffer<406>>.
+    Found 18-bit register for signal <line_buffer<405>>.
+    Found 18-bit register for signal <line_buffer<404>>.
+    Found 18-bit register for signal <line_buffer<403>>.
+    Found 18-bit register for signal <line_buffer<402>>.
+    Found 18-bit register for signal <line_buffer<401>>.
+    Found 18-bit register for signal <line_buffer<400>>.
+    Found 18-bit register for signal <line_buffer<399>>.
+    Found 18-bit register for signal <line_buffer<398>>.
+    Found 18-bit register for signal <line_buffer<397>>.
+    Found 18-bit register for signal <line_buffer<396>>.
+    Found 18-bit register for signal <line_buffer<395>>.
+    Found 18-bit register for signal <line_buffer<394>>.
+    Found 18-bit register for signal <line_buffer<393>>.
+    Found 18-bit register for signal <line_buffer<392>>.
+    Found 18-bit register for signal <line_buffer<391>>.
+    Found 18-bit register for signal <line_buffer<390>>.
+    Found 18-bit register for signal <line_buffer<389>>.
+    Found 18-bit register for signal <line_buffer<388>>.
+    Found 18-bit register for signal <line_buffer<387>>.
+    Found 18-bit register for signal <line_buffer<386>>.
+    Found 18-bit register for signal <line_buffer<385>>.
+    Found 18-bit register for signal <line_buffer<384>>.
+    Found 18-bit register for signal <line_buffer<383>>.
+    Found 18-bit register for signal <line_buffer<382>>.
+    Found 18-bit register for signal <line_buffer<381>>.
+    Found 18-bit register for signal <line_buffer<380>>.
+    Found 18-bit register for signal <line_buffer<379>>.
+    Found 18-bit register for signal <line_buffer<378>>.
+    Found 18-bit register for signal <line_buffer<377>>.
+    Found 18-bit register for signal <line_buffer<376>>.
+    Found 18-bit register for signal <line_buffer<375>>.
+    Found 18-bit register for signal <line_buffer<374>>.
+    Found 18-bit register for signal <line_buffer<373>>.
+    Found 18-bit register for signal <line_buffer<372>>.
+    Found 18-bit register for signal <line_buffer<371>>.
+    Found 18-bit register for signal <line_buffer<370>>.
+    Found 18-bit register for signal <line_buffer<369>>.
+    Found 18-bit register for signal <line_buffer<368>>.
+    Found 18-bit register for signal <line_buffer<367>>.
+    Found 18-bit register for signal <line_buffer<366>>.
+    Found 18-bit register for signal <line_buffer<365>>.
+    Found 18-bit register for signal <line_buffer<364>>.
+    Found 18-bit register for signal <line_buffer<363>>.
+    Found 18-bit register for signal <line_buffer<362>>.
+    Found 18-bit register for signal <line_buffer<361>>.
+    Found 18-bit register for signal <line_buffer<360>>.
+    Found 18-bit register for signal <line_buffer<359>>.
+    Found 18-bit register for signal <line_buffer<358>>.
+    Found 18-bit register for signal <line_buffer<357>>.
+    Found 18-bit register for signal <line_buffer<356>>.
+    Found 18-bit register for signal <line_buffer<355>>.
+    Found 18-bit register for signal <line_buffer<354>>.
+    Found 18-bit register for signal <line_buffer<353>>.
+    Found 18-bit register for signal <line_buffer<352>>.
+    Found 18-bit register for signal <line_buffer<351>>.
+    Found 18-bit register for signal <line_buffer<350>>.
+    Found 18-bit register for signal <line_buffer<349>>.
+    Found 18-bit register for signal <line_buffer<348>>.
+    Found 18-bit register for signal <line_buffer<347>>.
+    Found 18-bit register for signal <line_buffer<346>>.
+    Found 18-bit register for signal <line_buffer<345>>.
+    Found 18-bit register for signal <line_buffer<344>>.
+    Found 18-bit register for signal <line_buffer<343>>.
+    Found 18-bit register for signal <line_buffer<342>>.
+    Found 18-bit register for signal <line_buffer<341>>.
+    Found 18-bit register for signal <line_buffer<340>>.
+    Found 18-bit register for signal <line_buffer<339>>.
+    Found 18-bit register for signal <line_buffer<338>>.
+    Found 18-bit register for signal <line_buffer<337>>.
+    Found 18-bit register for signal <line_buffer<336>>.
+    Found 18-bit register for signal <line_buffer<335>>.
+    Found 18-bit register for signal <line_buffer<334>>.
+    Found 18-bit register for signal <line_buffer<333>>.
+    Found 18-bit register for signal <line_buffer<332>>.
+    Found 18-bit register for signal <line_buffer<331>>.
+    Found 18-bit register for signal <line_buffer<330>>.
+    Found 18-bit register for signal <line_buffer<329>>.
+    Found 18-bit register for signal <line_buffer<328>>.
+    Found 18-bit register for signal <line_buffer<327>>.
+    Found 18-bit register for signal <line_buffer<326>>.
+    Found 18-bit register for signal <line_buffer<325>>.
+    Found 18-bit register for signal <line_buffer<324>>.
+    Found 18-bit register for signal <line_buffer<323>>.
+    Found 18-bit register for signal <line_buffer<322>>.
+    Found 18-bit register for signal <line_buffer<321>>.
+    Found 18-bit register for signal <line_buffer<320>>.
+    Found 18-bit register for signal <line_buffer<319>>.
+    Found 18-bit register for signal <line_buffer<318>>.
+    Found 18-bit register for signal <line_buffer<317>>.
+    Found 18-bit register for signal <line_buffer<316>>.
+    Found 18-bit register for signal <line_buffer<315>>.
+    Found 18-bit register for signal <line_buffer<314>>.
+    Found 18-bit register for signal <line_buffer<313>>.
+    Found 18-bit register for signal <line_buffer<312>>.
+    Found 18-bit register for signal <line_buffer<311>>.
+    Found 18-bit register for signal <line_buffer<310>>.
+    Found 18-bit register for signal <line_buffer<309>>.
+    Found 18-bit register for signal <line_buffer<308>>.
+    Found 18-bit register for signal <line_buffer<307>>.
+    Found 18-bit register for signal <line_buffer<306>>.
+    Found 18-bit register for signal <line_buffer<305>>.
+    Found 18-bit register for signal <line_buffer<304>>.
+    Found 18-bit register for signal <line_buffer<303>>.
+    Found 18-bit register for signal <line_buffer<302>>.
+    Found 18-bit register for signal <line_buffer<301>>.
+    Found 18-bit register for signal <line_buffer<300>>.
+    Found 18-bit register for signal <line_buffer<299>>.
+    Found 18-bit register for signal <line_buffer<298>>.
+    Found 18-bit register for signal <line_buffer<297>>.
+    Found 18-bit register for signal <line_buffer<296>>.
+    Found 18-bit register for signal <line_buffer<295>>.
+    Found 18-bit register for signal <line_buffer<294>>.
+    Found 18-bit register for signal <line_buffer<293>>.
+    Found 18-bit register for signal <line_buffer<292>>.
+    Found 18-bit register for signal <line_buffer<291>>.
+    Found 18-bit register for signal <line_buffer<290>>.
+    Found 18-bit register for signal <line_buffer<289>>.
+    Found 18-bit register for signal <line_buffer<288>>.
+    Found 18-bit register for signal <line_buffer<287>>.
+    Found 18-bit register for signal <line_buffer<286>>.
+    Found 18-bit register for signal <line_buffer<285>>.
+    Found 18-bit register for signal <line_buffer<284>>.
+    Found 18-bit register for signal <line_buffer<283>>.
+    Found 18-bit register for signal <line_buffer<282>>.
+    Found 18-bit register for signal <line_buffer<281>>.
+    Found 18-bit register for signal <line_buffer<280>>.
+    Found 18-bit register for signal <line_buffer<279>>.
+    Found 18-bit register for signal <line_buffer<278>>.
+    Found 18-bit register for signal <line_buffer<277>>.
+    Found 18-bit register for signal <line_buffer<276>>.
+    Found 18-bit register for signal <line_buffer<275>>.
+    Found 18-bit register for signal <line_buffer<274>>.
+    Found 18-bit register for signal <line_buffer<273>>.
+    Found 18-bit register for signal <line_buffer<272>>.
+    Found 18-bit register for signal <line_buffer<271>>.
+    Found 18-bit register for signal <line_buffer<270>>.
+    Found 18-bit register for signal <line_buffer<269>>.
+    Found 18-bit register for signal <line_buffer<268>>.
+    Found 18-bit register for signal <line_buffer<267>>.
+    Found 18-bit register for signal <line_buffer<266>>.
+    Found 18-bit register for signal <line_buffer<265>>.
+    Found 18-bit register for signal <line_buffer<264>>.
+    Found 18-bit register for signal <line_buffer<263>>.
+    Found 18-bit register for signal <line_buffer<262>>.
+    Found 18-bit register for signal <line_buffer<261>>.
+    Found 18-bit register for signal <line_buffer<260>>.
+    Found 18-bit register for signal <line_buffer<259>>.
+    Found 18-bit register for signal <line_buffer<258>>.
+    Found 18-bit register for signal <line_buffer<257>>.
+    Found 18-bit register for signal <line_buffer<256>>.
+    Found 18-bit register for signal <line_buffer<255>>.
+    Found 18-bit register for signal <line_buffer<254>>.
+    Found 18-bit register for signal <line_buffer<253>>.
+    Found 18-bit register for signal <line_buffer<252>>.
+    Found 18-bit register for signal <line_buffer<251>>.
+    Found 18-bit register for signal <line_buffer<250>>.
+    Found 18-bit register for signal <line_buffer<249>>.
+    Found 18-bit register for signal <line_buffer<248>>.
+    Found 18-bit register for signal <line_buffer<247>>.
+    Found 18-bit register for signal <line_buffer<246>>.
+    Found 18-bit register for signal <line_buffer<245>>.
+    Found 18-bit register for signal <line_buffer<244>>.
+    Found 18-bit register for signal <line_buffer<243>>.
+    Found 18-bit register for signal <line_buffer<242>>.
+    Found 18-bit register for signal <line_buffer<241>>.
+    Found 18-bit register for signal <line_buffer<240>>.
+    Found 18-bit register for signal <line_buffer<239>>.
+    Found 18-bit register for signal <line_buffer<238>>.
+    Found 18-bit register for signal <line_buffer<237>>.
+    Found 18-bit register for signal <line_buffer<236>>.
+    Found 18-bit register for signal <line_buffer<235>>.
+    Found 18-bit register for signal <line_buffer<234>>.
+    Found 18-bit register for signal <line_buffer<233>>.
+    Found 18-bit register for signal <line_buffer<232>>.
+    Found 18-bit register for signal <line_buffer<231>>.
+    Found 18-bit register for signal <line_buffer<230>>.
+    Found 18-bit register for signal <line_buffer<229>>.
+    Found 18-bit register for signal <line_buffer<228>>.
+    Found 18-bit register for signal <line_buffer<227>>.
+    Found 18-bit register for signal <line_buffer<226>>.
+    Found 18-bit register for signal <line_buffer<225>>.
+    Found 18-bit register for signal <line_buffer<224>>.
+    Found 18-bit register for signal <line_buffer<223>>.
+    Found 18-bit register for signal <line_buffer<222>>.
+    Found 18-bit register for signal <line_buffer<221>>.
+    Found 18-bit register for signal <line_buffer<220>>.
+    Found 18-bit register for signal <line_buffer<219>>.
+    Found 18-bit register for signal <line_buffer<218>>.
+    Found 18-bit register for signal <line_buffer<217>>.
+    Found 18-bit register for signal <line_buffer<216>>.
+    Found 18-bit register for signal <line_buffer<215>>.
+    Found 18-bit register for signal <line_buffer<214>>.
+    Found 18-bit register for signal <line_buffer<213>>.
+    Found 18-bit register for signal <line_buffer<212>>.
+    Found 18-bit register for signal <line_buffer<211>>.
+    Found 18-bit register for signal <line_buffer<210>>.
+    Found 18-bit register for signal <line_buffer<209>>.
+    Found 18-bit register for signal <line_buffer<208>>.
+    Found 18-bit register for signal <line_buffer<207>>.
+    Found 18-bit register for signal <line_buffer<206>>.
+    Found 18-bit register for signal <line_buffer<205>>.
+    Found 18-bit register for signal <line_buffer<204>>.
+    Found 18-bit register for signal <line_buffer<203>>.
+    Found 18-bit register for signal <line_buffer<202>>.
+    Found 18-bit register for signal <line_buffer<201>>.
+    Found 18-bit register for signal <line_buffer<200>>.
+    Found 18-bit register for signal <line_buffer<199>>.
+    Found 18-bit register for signal <line_buffer<198>>.
+    Found 18-bit register for signal <line_buffer<197>>.
+    Found 18-bit register for signal <line_buffer<196>>.
+    Found 18-bit register for signal <line_buffer<195>>.
+    Found 18-bit register for signal <line_buffer<194>>.
+    Found 18-bit register for signal <line_buffer<193>>.
+    Found 18-bit register for signal <line_buffer<192>>.
+    Found 18-bit register for signal <line_buffer<191>>.
+    Found 18-bit register for signal <line_buffer<190>>.
+    Found 18-bit register for signal <line_buffer<189>>.
+    Found 18-bit register for signal <line_buffer<188>>.
+    Found 18-bit register for signal <line_buffer<187>>.
+    Found 18-bit register for signal <line_buffer<186>>.
+    Found 18-bit register for signal <line_buffer<185>>.
+    Found 18-bit register for signal <line_buffer<184>>.
+    Found 18-bit register for signal <line_buffer<183>>.
+    Found 18-bit register for signal <line_buffer<182>>.
+    Found 18-bit register for signal <line_buffer<181>>.
+    Found 18-bit register for signal <line_buffer<180>>.
+    Found 18-bit register for signal <line_buffer<179>>.
+    Found 18-bit register for signal <line_buffer<178>>.
+    Found 18-bit register for signal <line_buffer<177>>.
+    Found 18-bit register for signal <line_buffer<176>>.
+    Found 18-bit register for signal <line_buffer<175>>.
+    Found 18-bit register for signal <line_buffer<174>>.
+    Found 18-bit register for signal <line_buffer<173>>.
+    Found 18-bit register for signal <line_buffer<172>>.
+    Found 18-bit register for signal <line_buffer<171>>.
+    Found 18-bit register for signal <line_buffer<170>>.
+    Found 18-bit register for signal <line_buffer<169>>.
+    Found 18-bit register for signal <line_buffer<168>>.
+    Found 18-bit register for signal <line_buffer<167>>.
+    Found 18-bit register for signal <line_buffer<166>>.
+    Found 18-bit register for signal <line_buffer<165>>.
+    Found 18-bit register for signal <line_buffer<164>>.
+    Found 18-bit register for signal <line_buffer<163>>.
+    Found 18-bit register for signal <line_buffer<162>>.
+    Found 18-bit register for signal <line_buffer<161>>.
+    Found 18-bit register for signal <line_buffer<160>>.
+    Found 18-bit register for signal <line_buffer<159>>.
+    Found 18-bit register for signal <line_buffer<158>>.
+    Found 18-bit register for signal <line_buffer<157>>.
+    Found 18-bit register for signal <line_buffer<156>>.
+    Found 18-bit register for signal <line_buffer<155>>.
+    Found 18-bit register for signal <line_buffer<154>>.
+    Found 18-bit register for signal <line_buffer<153>>.
+    Found 18-bit register for signal <line_buffer<152>>.
+    Found 18-bit register for signal <line_buffer<151>>.
+    Found 18-bit register for signal <line_buffer<150>>.
+    Found 18-bit register for signal <line_buffer<149>>.
+    Found 18-bit register for signal <line_buffer<148>>.
+    Found 18-bit register for signal <line_buffer<147>>.
+    Found 18-bit register for signal <line_buffer<146>>.
+    Found 18-bit register for signal <line_buffer<145>>.
+    Found 18-bit register for signal <line_buffer<144>>.
+    Found 18-bit register for signal <line_buffer<143>>.
+    Found 18-bit register for signal <line_buffer<142>>.
+    Found 18-bit register for signal <line_buffer<141>>.
+    Found 18-bit register for signal <line_buffer<140>>.
+    Found 18-bit register for signal <line_buffer<139>>.
+    Found 18-bit register for signal <line_buffer<138>>.
+    Found 18-bit register for signal <line_buffer<137>>.
+    Found 18-bit register for signal <line_buffer<136>>.
+    Found 18-bit register for signal <line_buffer<135>>.
+    Found 18-bit register for signal <line_buffer<134>>.
+    Found 18-bit register for signal <line_buffer<133>>.
+    Found 18-bit register for signal <line_buffer<132>>.
+    Found 18-bit register for signal <line_buffer<131>>.
+    Found 18-bit register for signal <line_buffer<130>>.
+    Found 18-bit register for signal <line_buffer<129>>.
+    Found 18-bit register for signal <line_buffer<128>>.
+    Found 18-bit register for signal <line_buffer<127>>.
+    Found 18-bit register for signal <line_buffer<126>>.
+    Found 18-bit register for signal <line_buffer<125>>.
+    Found 18-bit register for signal <line_buffer<124>>.
+    Found 18-bit register for signal <line_buffer<123>>.
+    Found 18-bit register for signal <line_buffer<122>>.
+    Found 18-bit register for signal <line_buffer<121>>.
+    Found 18-bit register for signal <line_buffer<120>>.
+    Found 18-bit register for signal <line_buffer<119>>.
+    Found 18-bit register for signal <line_buffer<118>>.
+    Found 18-bit register for signal <line_buffer<117>>.
+    Found 18-bit register for signal <line_buffer<116>>.
+    Found 18-bit register for signal <line_buffer<115>>.
+    Found 18-bit register for signal <line_buffer<114>>.
+    Found 18-bit register for signal <line_buffer<113>>.
+    Found 18-bit register for signal <line_buffer<112>>.
+    Found 18-bit register for signal <line_buffer<111>>.
+    Found 18-bit register for signal <line_buffer<110>>.
+    Found 18-bit register for signal <line_buffer<109>>.
+    Found 18-bit register for signal <line_buffer<108>>.
+    Found 18-bit register for signal <line_buffer<107>>.
+    Found 18-bit register for signal <line_buffer<106>>.
+    Found 18-bit register for signal <line_buffer<105>>.
+    Found 18-bit register for signal <line_buffer<104>>.
+    Found 18-bit register for signal <line_buffer<103>>.
+    Found 18-bit register for signal <line_buffer<102>>.
+    Found 18-bit register for signal <line_buffer<101>>.
+    Found 18-bit register for signal <line_buffer<100>>.
+    Found 18-bit register for signal <line_buffer<99>>.
+    Found 18-bit register for signal <line_buffer<98>>.
+    Found 18-bit register for signal <line_buffer<97>>.
+    Found 18-bit register for signal <line_buffer<96>>.
+    Found 18-bit register for signal <line_buffer<95>>.
+    Found 18-bit register for signal <line_buffer<94>>.
+    Found 18-bit register for signal <line_buffer<93>>.
+    Found 18-bit register for signal <line_buffer<92>>.
+    Found 18-bit register for signal <line_buffer<91>>.
+    Found 18-bit register for signal <line_buffer<90>>.
+    Found 18-bit register for signal <line_buffer<89>>.
+    Found 18-bit register for signal <line_buffer<88>>.
+    Found 18-bit register for signal <line_buffer<87>>.
+    Found 18-bit register for signal <line_buffer<86>>.
+    Found 18-bit register for signal <line_buffer<85>>.
+    Found 18-bit register for signal <line_buffer<84>>.
+    Found 18-bit register for signal <line_buffer<83>>.
+    Found 18-bit register for signal <line_buffer<82>>.
+    Found 18-bit register for signal <line_buffer<81>>.
+    Found 18-bit register for signal <line_buffer<80>>.
+    Found 18-bit register for signal <line_buffer<79>>.
+    Found 18-bit register for signal <line_buffer<78>>.
+    Found 18-bit register for signal <line_buffer<77>>.
+    Found 18-bit register for signal <line_buffer<76>>.
+    Found 18-bit register for signal <line_buffer<75>>.
+    Found 18-bit register for signal <line_buffer<74>>.
+    Found 18-bit register for signal <line_buffer<73>>.
+    Found 18-bit register for signal <line_buffer<72>>.
+    Found 18-bit register for signal <line_buffer<71>>.
+    Found 18-bit register for signal <line_buffer<70>>.
+    Found 18-bit register for signal <line_buffer<69>>.
+    Found 18-bit register for signal <line_buffer<68>>.
+    Found 18-bit register for signal <line_buffer<67>>.
+    Found 18-bit register for signal <line_buffer<66>>.
+    Found 18-bit register for signal <line_buffer<65>>.
+    Found 18-bit register for signal <line_buffer<64>>.
+    Found 18-bit register for signal <line_buffer<63>>.
+    Found 18-bit register for signal <line_buffer<62>>.
+    Found 18-bit register for signal <line_buffer<61>>.
+    Found 18-bit register for signal <line_buffer<60>>.
+    Found 18-bit register for signal <line_buffer<59>>.
+    Found 18-bit register for signal <line_buffer<58>>.
+    Found 18-bit register for signal <line_buffer<57>>.
+    Found 18-bit register for signal <line_buffer<56>>.
+    Found 18-bit register for signal <line_buffer<55>>.
+    Found 18-bit register for signal <line_buffer<54>>.
+    Found 18-bit register for signal <line_buffer<53>>.
+    Found 18-bit register for signal <line_buffer<52>>.
+    Found 18-bit register for signal <line_buffer<51>>.
+    Found 18-bit register for signal <line_buffer<50>>.
+    Found 18-bit register for signal <line_buffer<49>>.
+    Found 18-bit register for signal <line_buffer<48>>.
+    Found 18-bit register for signal <line_buffer<47>>.
+    Found 18-bit register for signal <line_buffer<46>>.
+    Found 18-bit register for signal <line_buffer<45>>.
+    Found 18-bit register for signal <line_buffer<44>>.
+    Found 18-bit register for signal <line_buffer<43>>.
+    Found 18-bit register for signal <line_buffer<42>>.
+    Found 18-bit register for signal <line_buffer<41>>.
+    Found 18-bit register for signal <line_buffer<40>>.
+    Found 18-bit register for signal <line_buffer<39>>.
+    Found 18-bit register for signal <line_buffer<38>>.
+    Found 18-bit register for signal <line_buffer<37>>.
+    Found 18-bit register for signal <line_buffer<36>>.
+    Found 18-bit register for signal <line_buffer<35>>.
+    Found 18-bit register for signal <line_buffer<34>>.
+    Found 18-bit register for signal <line_buffer<33>>.
+    Found 18-bit register for signal <line_buffer<32>>.
+    Found 18-bit register for signal <line_buffer<31>>.
+    Found 18-bit register for signal <line_buffer<30>>.
+    Found 18-bit register for signal <line_buffer<29>>.
+    Found 18-bit register for signal <line_buffer<28>>.
+    Found 18-bit register for signal <line_buffer<27>>.
+    Found 18-bit register for signal <line_buffer<26>>.
+    Found 18-bit register for signal <line_buffer<25>>.
+    Found 18-bit register for signal <line_buffer<24>>.
+    Found 18-bit register for signal <line_buffer<23>>.
+    Found 18-bit register for signal <line_buffer<22>>.
+    Found 18-bit register for signal <line_buffer<21>>.
+    Found 18-bit register for signal <line_buffer<20>>.
+    Found 18-bit register for signal <line_buffer<19>>.
+    Found 18-bit register for signal <line_buffer<18>>.
+    Found 18-bit register for signal <line_buffer<17>>.
+    Found 18-bit register for signal <line_buffer<16>>.
+    Found 18-bit register for signal <line_buffer<15>>.
+    Found 18-bit register for signal <line_buffer<14>>.
+    Found 18-bit register for signal <line_buffer<13>>.
+    Found 18-bit register for signal <line_buffer<12>>.
+    Found 18-bit register for signal <line_buffer<11>>.
+    Found 18-bit register for signal <line_buffer<10>>.
+    Found 18-bit register for signal <line_buffer<9>>.
+    Found 18-bit register for signal <line_buffer<8>>.
+    Found 18-bit register for signal <line_buffer<7>>.
+    Found 18-bit register for signal <line_buffer<6>>.
+    Found 18-bit register for signal <line_buffer<5>>.
+    Found 18-bit register for signal <line_buffer<4>>.
+    Found 18-bit register for signal <line_buffer<3>>.
+    Found 18-bit register for signal <line_buffer<2>>.
+    Found 18-bit register for signal <line_buffer<1>>.
+    Found 18-bit register for signal <line_buffer<0>>.
+    Found 18-bit register for signal <line_buffer<772>>.
+    Summary:
+	inferred 13914 D-type flip-flop(s).
+Unit <linebuffer> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4x1-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 6
+ 16-bit adder                                          : 5
+ 2-bit adder                                           : 1
+# Registers                                            : 1588
+ 1-bit register                                        : 18
+ 10-bit register                                       : 3
+ 16-bit register                                       : 5
+ 18-bit register                                       : 1548
+ 2-bit register                                        : 2
+ 6-bit register                                        : 6
+ 7-bit register                                        : 6
+# Comparators                                          : 7
+ 16-bit comparator greater                             : 4
+ 16-bit comparator lessequal                           : 3
+# Multiplexers                                         : 9
+ 1-bit 2-to-1 multiplexer                              : 4
+ 18-bit 2-to-1 multiplexer                             : 2
+ 6-bit 2-to-1 multiplexer                              : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2677 - Node <red_cap_0> of sequential type is unconnected in block <rgb_decoder>.
+WARNING:Xst:2677 - Node <green_cap_0> of sequential type is unconnected in block <rgb_decoder>.
+WARNING:Xst:2677 - Node <blue_cap_0> of sequential type is unconnected in block <rgb_decoder>.
+WARNING:Xst:2677 - Node <red_final_0> of sequential type is unconnected in block <rgb_decoder>.
+WARNING:Xst:2677 - Node <green_final_0> of sequential type is unconnected in block <rgb_decoder>.
+WARNING:Xst:2677 - Node <blue_final_0> of sequential type is unconnected in block <rgb_decoder>.
+
+Synthesizing (advanced) Unit <n6480>.
+The following registers are absorbed into counter <vsync_time>: 1 register on signal <vsync_time>.
+The following registers are absorbed into counter <hsync_time>: 1 register on signal <hsync_time>.
+The following registers are absorbed into counter <vga_px_count>: 1 register on signal <vga_px_count>.
+The following registers are absorbed into counter <n64_px_count>: 1 register on signal <n64_px_count>.
+The following registers are absorbed into counter <line_count>: 1 register on signal <line_count>.
+INFO:Xst:3231 - The small RAM <Mram_clock_count[1]_GND_5_o_Mux_15_o> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 1-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <clock_count>   |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <n6480> synthesized (advanced).
+
+Synthesizing (advanced) Unit <n64_pixel>.
+The following registers are absorbed into counter <cycle_count>: 1 register on signal <cycle_count>.
+Unit <n64_pixel> synthesized (advanced).
+WARNING:Xst:2677 - Node <blue_cap_0> of sequential type is unconnected in block <n64_pixel>.
+WARNING:Xst:2677 - Node <red_cap_0> of sequential type is unconnected in block <n64_pixel>.
+WARNING:Xst:2677 - Node <green_cap_0> of sequential type is unconnected in block <n64_pixel>.
+WARNING:Xst:2677 - Node <green_final_0> of sequential type is unconnected in block <n64_pixel>.
+WARNING:Xst:2677 - Node <red_final_0> of sequential type is unconnected in block <n64_pixel>.
+WARNING:Xst:2677 - Node <blue_final_0> of sequential type is unconnected in block <n64_pixel>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4x1-bit single-port distributed Read Only RAM         : 1
+# Counters                                             : 6
+ 16-bit up counter                                     : 5
+ 2-bit up counter                                      : 1
+# Registers                                            : 27986
+ Flip-Flops                                            : 27986
+# Comparators                                          : 7
+ 16-bit comparator greater                             : 4
+ 16-bit comparator lessequal                           : 3
+# Multiplexers                                         : 9
+ 1-bit 2-to-1 multiplexer                              : 4
+ 18-bit 2-to-1 multiplexer                             : 2
+ 6-bit 2-to-1 multiplexer                              : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <vga_blue_0> in Unit <n6480> is equivalent to the following FF/Latch, which will be removed : <vga_blue_6> 
+INFO:Xst:2261 - The FF/Latch <vga_blue_1> in Unit <n6480> is equivalent to the following FF/Latch, which will be removed : <vga_blue_7> 
+INFO:Xst:2261 - The FF/Latch <vga_blue_2> in Unit <n6480> is equivalent to the following FF/Latch, which will be removed : <vga_blue_8> 
+INFO:Xst:2261 - The FF/Latch <vga_blue_3> in Unit <n6480> is equivalent to the following FF/Latch, which will be removed : <vga_blue_9> 
+INFO:Xst:2261 - The FF/Latch <vga_green_0> in Unit <n6480> is equivalent to the following FF/Latch, which will be removed : <vga_green_6> 
+INFO:Xst:2261 - The FF/Latch <vga_green_1> in Unit <n6480> is equivalent to the following FF/Latch, which will be removed : <vga_green_7> 
+INFO:Xst:2261 - The FF/Latch <vga_green_2> in Unit <n6480> is equivalent to the following FF/Latch, which will be removed : <vga_green_8> 
+INFO:Xst:2261 - The FF/Latch <vga_green_3> in Unit <n6480> is equivalent to the following FF/Latch, which will be removed : <vga_green_9> 
+INFO:Xst:2261 - The FF/Latch <vga_red_0> in Unit <n6480> is equivalent to the following FF/Latch, which will be removed : <vga_red_6> 
+INFO:Xst:2261 - The FF/Latch <vga_red_1> in Unit <n6480> is equivalent to the following FF/Latch, which will be removed : <vga_red_7> 
+INFO:Xst:2261 - The FF/Latch <vga_red_2> in Unit <n6480> is equivalent to the following FF/Latch, which will be removed : <vga_red_8> 
+INFO:Xst:2261 - The FF/Latch <vga_red_3> in Unit <n6480> is equivalent to the following FF/Latch, which will be removed : <vga_red_9> 
+
+Optimizing unit <linebuffer> ...
+
+Optimizing unit <n6480> ...
+
+Optimizing unit <n64_pixel> ...
+WARNING:Xst:2677 - Node <rgb_decoder/clamp_n_out> of sequential type is unconnected in block <n6480>.
+WARNING:Xst:2677 - Node <rgb_decoder/csync_n_out> of sequential type is unconnected in block <n6480>.
+WARNING:Xst:2677 - Node <rgb_decoder/clamp_n_cap> of sequential type is unconnected in block <n6480>.
+WARNING:Xst:2677 - Node <rgb_decoder/csync_n_cap> of sequential type is unconnected in block <n6480>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block n6480, actual ratio is 1647.
+Optimizing block <n6480> to meet ratio 100 (+ 5) of 600 slices :
+WARNING:Xst:2254 - Area constraint could not be met for block <n6480>, final ratio is 1647.
+FlipFlop buffer_en_a has been replicated 1 time(s)
+FlipFlop buffer_en_b has been replicated 1 time(s)
+FlipFlop rgb_decoder/vsync_n_out has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <n6480> :
+	Found 773-bit shift register for signal <buffer_b/line_buffer_772_17>.
+	Found 773-bit shift register for signal <buffer_b/line_buffer_772_16>.
+	Found 773-bit shift register for signal <buffer_b/line_buffer_772_15>.
+	Found 773-bit shift register for signal <buffer_b/line_buffer_772_14>.
+	Found 773-bit shift register for signal <buffer_b/line_buffer_772_13>.
+	Found 773-bit shift register for signal <buffer_b/line_buffer_772_12>.
+	Found 773-bit shift register for signal <buffer_b/line_buffer_772_11>.
+	Found 773-bit shift register for signal <buffer_b/line_buffer_772_10>.
+	Found 773-bit shift register for signal <buffer_b/line_buffer_772_9>.
+	Found 773-bit shift register for signal <buffer_b/line_buffer_772_8>.
+	Found 773-bit shift register for signal <buffer_b/line_buffer_772_7>.
+	Found 773-bit shift register for signal <buffer_b/line_buffer_772_6>.
+	Found 773-bit shift register for signal <buffer_b/line_buffer_772_5>.
+	Found 773-bit shift register for signal <buffer_b/line_buffer_772_4>.
+	Found 773-bit shift register for signal <buffer_b/line_buffer_772_3>.
+	Found 773-bit shift register for signal <buffer_b/line_buffer_772_2>.
+	Found 773-bit shift register for signal <buffer_b/line_buffer_772_1>.
+	Found 773-bit shift register for signal <buffer_b/line_buffer_772_0>.
+	Found 773-bit shift register for signal <buffer_a/line_buffer_772_17>.
+	Found 773-bit shift register for signal <buffer_a/line_buffer_772_16>.
+	Found 773-bit shift register for signal <buffer_a/line_buffer_772_15>.
+	Found 773-bit shift register for signal <buffer_a/line_buffer_772_14>.
+	Found 773-bit shift register for signal <buffer_a/line_buffer_772_13>.
+	Found 773-bit shift register for signal <buffer_a/line_buffer_772_12>.
+	Found 773-bit shift register for signal <buffer_a/line_buffer_772_11>.
+	Found 773-bit shift register for signal <buffer_a/line_buffer_772_10>.
+	Found 773-bit shift register for signal <buffer_a/line_buffer_772_9>.
+	Found 773-bit shift register for signal <buffer_a/line_buffer_772_8>.
+	Found 773-bit shift register for signal <buffer_a/line_buffer_772_7>.
+	Found 773-bit shift register for signal <buffer_a/line_buffer_772_6>.
+	Found 773-bit shift register for signal <buffer_a/line_buffer_772_5>.
+	Found 773-bit shift register for signal <buffer_a/line_buffer_772_4>.
+	Found 773-bit shift register for signal <buffer_a/line_buffer_772_3>.
+	Found 773-bit shift register for signal <buffer_a/line_buffer_772_2>.
+	Found 773-bit shift register for signal <buffer_a/line_buffer_772_1>.
+	Found 773-bit shift register for signal <buffer_a/line_buffer_772_0>.
+Unit <n6480> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 228
+ Flip-Flops                                            : 228
+# Shift Registers                                      : 36
+ 773-bit shift register                                : 36
+
+=========================================================================
+WARNING:Xst:2677 - Node <buffer_en_a_1> of sequential type is unconnected in block <n6480>.
+WARNING:Xst:2677 - Node <buffer_en_b_1> of sequential type is unconnected in block <n6480>.
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : n6480.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 384
+#      GND                         : 1
+#      INV                         : 10
+#      LUT1                        : 75
+#      LUT2                        : 6
+#      LUT3                        : 89
+#      LUT4                        : 19
+#      LUT5                        : 4
+#      LUT6                        : 24
+#      MUXCY                       : 75
+#      VCC                         : 1
+#      XORCY                       : 80
+# FlipFlops/Latches                : 262
+#      FD                          : 130
+#      FD_1                        : 24
+#      FDE                         : 36
+#      FDE_1                       : 38
+#      FDR                         : 34
+# Shift Registers                  : 900
+#      SRLC32E                     : 900
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 46
+#      IBUF                        : 7
+#      OBUF                        : 39
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx4cpg196-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             262  out of   4800     5%  
+ Number of Slice LUTs:                 1127  out of   2400    46%  
+    Number used as Logic:               227  out of   2400     9%  
+    Number used as Memory:              900  out of   1200    75%  
+       Number used as SRL:              900
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1242
+   Number with an unused Flip Flop:     980  out of   1242    78%  
+   Number with an unused LUT:           115  out of   1242     9%  
+   Number of fully used LUT-FF pairs:   147  out of   1242    11%  
+   Number of unique control sets:        10
+
+IO Utilization: 
+ Number of IOs:                          48
+ Number of bonded IOBs:                  47  out of    106    44%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+n64_clock                          | BUFGP                  | 1162  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 5.291ns (Maximum Frequency: 188.986MHz)
+   Minimum input arrival time before clock: 3.053ns
+   Maximum output required time after clock: 5.051ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'n64_clock'
+  Clock period: 5.291ns (frequency: 188.986MHz)
+  Total number of paths / destination ports: 3784 / 1248
+-------------------------------------------------------------------------
+Delay:               2.646ns (Levels of Logic = 2)
+  Source:            rgb_decoder/vsync_n_out_1 (FF)
+  Destination:       line_count_0 (FF)
+  Source Clock:      n64_clock falling
+  Destination Clock: n64_clock rising
+
+  Data Path: rgb_decoder/vsync_n_out_1 to line_count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD_1:C->Q             1   0.447   0.684  rgb_decoder/vsync_n_out_1 (rgb_decoder/vsync_n_out_1)
+     LUT6:I4->O           16   0.203   1.005  Mcount_line_count_val (Mcount_line_count_val)
+     LUT4:I3->O            1   0.205   0.000  line_count_0_rstpot1 (line_count_0_rstpot1)
+     FD:D                      0.102          line_count_0
+    ----------------------------------------
+    Total                      2.646ns (0.957ns logic, 1.689ns route)
+                                       (36.2% logic, 63.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'n64_clock'
+  Total number of paths / destination ports: 22 / 22
+-------------------------------------------------------------------------
+Offset:              3.053ns (Levels of Logic = 2)
+  Source:            n64_dsync_n (PAD)
+  Destination:       rgb_decoder/cycle_count_1 (FF)
+  Destination Clock: n64_clock falling
+
+  Data Path: n64_dsync_n to rgb_decoder/cycle_count_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  n64_dsync_n_IBUF (n64_dsync_n_IBUF)
+     INV:I->O              2   0.206   0.616  rgb_decoder/n64_dsync_n_inv1_INV_0 (rgb_decoder/n64_dsync_n_inv)
+     FDR:R                     0.430          rgb_decoder/cycle_count_0
+    ----------------------------------------
+    Total                      3.053ns (1.858ns logic, 1.195ns route)
+                                       (60.9% logic, 39.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'n64_clock'
+  Total number of paths / destination ports: 36 / 36
+-------------------------------------------------------------------------
+Offset:              5.051ns (Levels of Logic = 2)
+  Source:            rgb_decoder/vsync_n_out (FF)
+  Destination:       led<2> (PAD)
+  Source Clock:      n64_clock falling
+
+  Data Path: rgb_decoder/vsync_n_out to led<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD_1:C->Q            29   0.447   1.249  rgb_decoder/vsync_n_out (rgb_decoder/vsync_n_out)
+     INV:I->O              1   0.206   0.579  led<2>1_INV_0 (led_2_OBUF)
+     OBUF:I->O                 2.571          led_2_OBUF (led<2>)
+    ----------------------------------------
+    Total                      5.051ns (3.224ns logic, 1.827ns route)
+                                       (63.8% logic, 36.2% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock n64_clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+n64_clock      |    4.652|    2.646|    2.913|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 28.00 secs
+Total CPU time to Xst completion: 27.33 secs
+ 
+--> 
+
+Total memory usage is 472304 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   20 (   0 filtered)
+Number of infos    :   15 (   0 filtered)
+

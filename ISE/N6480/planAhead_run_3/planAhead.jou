@@ -1,0 +1,155 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Sun Oct 25 21:46:48 2015
+# Process ID: 10952
+# Log file: C:/Users/Julian/Development/N6480/ISE/N6480/planAhead_run_3/planAhead.log
+# Journal file: C:/Users/Julian/Development/N6480/ISE/N6480/planAhead_run_3/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/Julian/Development/N6480/ISE/N6480/pa.fromNetlist.tcl
+set_property package_pin "" [get_ports [list  {vga_blue[9]}]]
+startgroup
+set_property package_pin H14 [get_ports {vga_blue[9]}]
+endgroup
+startgroup
+set_property package_pin H13 [get_ports {vga_blue[8]}]
+endgroup
+save_constraints
+startgroup
+set_property package_pin F14 [get_ports {vga_blue[7]}]
+endgroup
+startgroup
+set_property package_pin F13 [get_ports {vga_blue[6]}]
+endgroup
+startgroup
+set_property package_pin G14 [get_ports {vga_blue[5]}]
+endgroup
+startgroup
+set_property package_pin G13 [get_ports {vga_blue[4]}]
+endgroup
+startgroup
+set_property package_pin E14 [get_ports {vga_blue[3]}]
+endgroup
+startgroup
+set_property package_pin E13 [get_ports {vga_blue[2]}]
+endgroup
+startgroup
+set_property package_pin D13 [get_ports {vga_blue[1]}]
+endgroup
+startgroup
+set_property package_pin C13 [get_ports {vga_blue[0]}]
+endgroup
+startgroup
+set_property package_pin C13 [get_ports {vga_blue[0]}]
+endgroup
+startgroup
+set_property package_pin D13 [get_ports {vga_blue[1]}]
+endgroup
+startgroup
+set_property package_pin C13 [get_ports {vga_blue[0]}]
+endgroup
+startgroup
+set_property package_pin E13 [get_ports {vga_blue[2]}]
+endgroup
+startgroup
+set_property package_pin D14 [get_ports {vga_blue[1]}]
+endgroup
+startgroup
+set_property package_pin D13 [get_ports {vga_blue[0]}]
+endgroup
+save_constraints
+set_property package_pin "" [get_ports [list  {vga_green[9]}]]
+set_property package_pin "" [get_ports [list  {vga_green[8]}]]
+startgroup
+set_property package_pin L2 [get_ports {vga_green[9]}]
+endgroup
+startgroup
+set_property package_pin L1 [get_ports {vga_green[8]}]
+endgroup
+startgroup
+set_property package_pin K2 [get_ports {vga_green[7]}]
+endgroup
+startgroup
+set_property package_pin K1 [get_ports {vga_green[6]}]
+endgroup
+startgroup
+set_property package_pin J2 [get_ports {vga_green[5]}]
+endgroup
+set_property package_pin "" [get_ports [list  {vga_green[3]}]]
+startgroup
+set_property package_pin J1 [get_ports {vga_green[4]}]
+endgroup
+startgroup
+set_property package_pin G2 [get_ports {vga_green[3]}]
+endgroup
+startgroup
+set_property package_pin G1 [get_ports {vga_green[2]}]
+endgroup
+startgroup
+set_property package_pin H2 [get_ports {vga_green[1]}]
+endgroup
+startgroup
+set_property package_pin H1 [get_ports {vga_green[0]}]
+endgroup
+save_constraints
+set_property package_pin "" [get_ports [list  {vga_red[9]}]]
+set_property package_pin "" [get_ports [list  {vga_red[9]}]]
+startgroup
+set_property package_pin L2 [get_ports {vga_green[9]}]
+endgroup
+startgroup
+set_property package_pin F2 [get_ports {vga_red[9]}]
+endgroup
+startgroup
+set_property package_pin F1 [get_ports {vga_red[8]}]
+endgroup
+startgroup
+set_property package_pin E2 [get_ports {vga_red[7]}]
+endgroup
+startgroup
+set_property package_pin E1 [get_ports {vga_red[6]}]
+endgroup
+startgroup
+set_property package_pin D2 [get_ports {vga_red[5]}]
+endgroup
+startgroup
+set_property package_pin D1 [get_ports {vga_red[4]}]
+endgroup
+startgroup
+set_property package_pin C1 [get_ports {vga_red[3]}]
+endgroup
+startgroup
+set_property package_pin B1 [get_ports {vga_red[2]}]
+endgroup
+save_constraints
+startgroup
+set_property package_pin A2 [get_ports {vga_red[1]}]
+endgroup
+startgroup
+set_property package_pin B1 [get_ports {vga_red[2]}]
+endgroup
+startgroup
+set_property package_pin B3 [get_ports {vga_red[0]}]
+endgroup
+save_constraints
+startgroup
+set_property package_pin P5 [get_ports vga_hsync]
+endgroup
+save_constraints
+startgroup
+set_property package_pin N5 [get_ports vga_vsync]
+endgroup
+save_constraints
+startgroup
+set_property package_pin N6 [get_ports vga_clk]
+endgroup
+save_constraints
+startgroup
+set_property package_pin M1 [get_ports vga_blank]
+endgroup
+save_constraints
+startgroup
+set_property package_pin M2 [get_ports vga_sync]
+endgroup
+save_constraints

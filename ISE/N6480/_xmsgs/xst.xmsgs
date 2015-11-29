@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Julian\Development\N6480\Source\n6480.vhd</arg>&quot; line <arg fmt="%s" index="2">100</arg>: Output port &lt;<arg fmt="%s" index="3">csync_n_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">rgb_decoder</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Julian\Development\N6480\Source\n6480.vhd</arg>&quot; line <arg fmt="%s" index="2">100</arg>: Output port &lt;<arg fmt="%s" index="3">clamp_n_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">rgb_decoder</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">vga_sync</arg>&lt;<arg fmt="%d" index="2">0</arg>:<arg fmt="%d" index="3">0</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">n6480</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">red_cap_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">rgb_decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">green_cap_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">rgb_decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">blue_cap_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">rgb_decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">red_final_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">rgb_decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">green_final_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">rgb_decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">blue_final_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">rgb_decoder</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="3231" delta="old" >The small RAM &lt;<arg fmt="%s" index="1">Mram_clock_count[1]_GND_5_o_Mux_15_o</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">blue_cap_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">n64_pixel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">red_cap_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">n64_pixel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">green_cap_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">n64_pixel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">green_final_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">n64_pixel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">red_final_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">n64_pixel</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">blue_final_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">n64_pixel</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">vga_blue_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">n6480</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vga_blue_6&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">vga_blue_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">n6480</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vga_blue_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">vga_blue_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">n6480</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vga_blue_8&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">vga_blue_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">n6480</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vga_blue_9&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">vga_green_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">n6480</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vga_green_6&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">vga_green_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">n6480</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vga_green_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">vga_green_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">n6480</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vga_green_8&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">vga_green_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">n6480</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vga_green_9&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">vga_red_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">n6480</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vga_red_6&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">vga_red_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">n6480</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vga_red_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">vga_red_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">n6480</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vga_red_8&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">vga_red_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">n6480</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vga_red_9&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">rgb_decoder/clamp_n_out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">n6480</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">rgb_decoder/csync_n_out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">n6480</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">rgb_decoder/clamp_n_cap</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">n6480</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">rgb_decoder/csync_n_cap</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">n6480</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2254" delta="new" >Area constraint could not be met for block &lt;<arg fmt="%s" index="1">n6480</arg>&gt;, final ratio is <arg fmt="%i" index="2">1647</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">buffer_en_a_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">n6480</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">buffer_en_b_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">n6480</arg>&gt;.
+</msg>
+
+</messages>
+
