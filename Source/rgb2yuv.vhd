@@ -16,7 +16,7 @@ port (
 	u: out std_logic_vector(9 downto 0); -- AKA Cr
 	v: out std_logic_vector(9 downto 0); -- AKA Cb
 	
-	sw_en: in std_logic -- Active high
+	sw_en_n: in std_logic -- Active low
 	
 	);
 	
@@ -37,15 +37,15 @@ end entity;
 
 architecture behavioral of rgb2yuv is 
 begin
-	make_yuv: process(r, g, b, sw_en)
+	make_yuv: process(r, g, b, sw_en_n)
 	begin
-		if (sw_en = '1') then
+		if (sw_en_n = '0') then
 			y <= ("00" & r(9 downto 2)) + ("00000" & r(9 downto 5)) + ("000000" & r(9 downto 6)) + ("0" & g(9 downto 1)) + ("0000" & g(9 downto 4)) + ("000000" & g(9 downto 6)) + ("000" & b(9 downto 3));
 			u <= 512 + ("0" & r(9 downto 1)) - (("00" & g(9 downto 2)) + ("000" & g(9 downto 3)) + ("00000" & g(9 downto 5)) + ("000000" & g(9 downto 6)))- (("0000" & b(9 downto 4)) + ("000000" & b(9 downto 6)));
 			v <= 512 + ("0" & b(9 downto 1))- (("00" & g(9 downto 2)) + ("0000" & g(9 downto 4)) + ("00000" & g(9 downto 5)))- (("000" & r(9 downto 3)) + ("00000" & r(9 downto 5)) + ("0000000" & r(9)));
 		else
-			y <= r;
-			u <= g;
+			y <= g;
+			u <= r;
 			v <= b;
 		end if;
 	end process;

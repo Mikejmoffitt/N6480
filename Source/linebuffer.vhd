@@ -9,7 +9,7 @@ use ieee.std_logic_1164.all;
 
 entity linebuffer is
 generic (line_len: integer := 774;
-		 pixel_depth: integer := 18);
+		 pixel_depth: integer := 21);
 port (
 	clk: in std_logic; -- A 12MHz clock (use Neo-Geo CPU clock)
 	enable: in std_logic; -- set to allow shifting on each clock, clear to hold

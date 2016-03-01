@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="n6480">
-		<CBX_INST_ENTRY INSTANCE_NAME="|n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0" CBX_FILE_NAME="shift_taps_oim.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0" CBX_FILE_NAME="shift_taps_oim.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0" CBX_FILE_NAME="shift_taps_him.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0" CBX_FILE_NAME="shift_taps_him.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

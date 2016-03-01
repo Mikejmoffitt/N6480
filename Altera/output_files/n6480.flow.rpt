@@ -1,5 +1,5 @@
 Flow report for n6480
-Tue Mar 31 02:34:19 2015
+Mon Feb 29 21:34:43 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,20 +40,20 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Tue Mar 31 02:34:17 2015           ;
+; Flow Status                        ; Successful - Mon Feb 29 21:34:42 2016           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; n6480                                           ;
 ; Top-level Entity Name              ; n6480                                           ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C5T144C8                                     ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 405 / 4,608 ( 9 % )                             ;
-;     Total combinational functions  ; 329 / 4,608 ( 7 % )                             ;
-;     Dedicated logic registers      ; 266 / 4,608 ( 6 % )                             ;
-; Total registers                    ; 266                                             ;
-; Total pins                         ; 46 / 89 ( 52 % )                                ;
+; Total logic elements               ; 469 / 4,608 ( 10 % )                            ;
+;     Total combinational functions  ; 390 / 4,608 ( 8 % )                             ;
+;     Dedicated logic registers      ; 278 / 4,608 ( 6 % )                             ;
+; Total registers                    ; 278                                             ;
+; Total pins                         ; 49 / 89 ( 55 % )                                ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 29,298 / 119,808 ( 24 % )                       ;
+; Total memory bits                  ; 32,382 / 119,808 ( 27 % )                       ;
 ; Embedded Multiplier 9-bit elements ; 0 / 26 ( 0 % )                                  ;
 ; Total PLLs                         ; 0 / 2 ( 0 % )                                   ;
 +------------------------------------+-------------------------------------------------+
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/31/2015 02:33:55 ;
+; Start date & time ; 02/29/2016 21:34:20 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; n6480               ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +--------------------------------------------------+---------------------------------------+--------------------+-------------+------------+
 ; Assignment Name                                  ; Value                                 ; Default Value      ; Entity Name ; Section Id ;
 +--------------------------------------------------+---------------------------------------+--------------------+-------------+------------+
-; COMPILER_SIGNATURE_ID                            ; 119170006620471.142778363508044       ; --                 ; --          ; --         ;
+; COMPILER_SIGNATURE_ID                            ; 106258777060274.145681045907072       ; --                 ; --          ; --         ;
 ; CYCLONEII_OPTIMIZATION_TECHNIQUE                 ; Speed                                 ; Balanced           ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP                           ; 85                                    ; --                 ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP                           ; 0                                     ; --                 ; --          ; --         ;
@@ -97,24 +97,24 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 692 MB              ; 00:00:13                           ;
-; Fitter                    ; 00:00:06     ; 1.0                     ; 645 MB              ; 00:00:05                           ;
-; Assembler                 ; 00:00:00     ; 1.0                     ; 543 MB              ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:00     ; 1.0                     ; 512 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:19     ; --                      ; --                  ; 00:00:20                           ;
+; Analysis & Synthesis      ; 00:00:15     ; 1.0                     ; 574 MB              ; 00:00:15                           ;
+; Fitter                    ; 00:00:05     ; 1.0                     ; 691 MB              ; 00:00:05                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 430 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:00     ; 1.0                     ; 425 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:21     ; --                      ; --                  ; 00:00:22                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                               ;
-+---------------------------+------------------+------------------+------------+----------------+
-; Module Name               ; Machine Hostname ; OS Name          ; OS Version ; Processor type ;
-+---------------------------+------------------+------------------+------------+----------------+
-; Analysis & Synthesis      ; suzu             ; Debian GNU/Linux ; 8          ; x86_64         ;
-; Fitter                    ; suzu             ; Debian GNU/Linux ; 8          ; x86_64         ;
-; Assembler                 ; suzu             ; Debian GNU/Linux ; 8          ; x86_64         ;
-; TimeQuest Timing Analyzer ; suzu             ; Debian GNU/Linux ; 8          ; x86_64         ;
-+---------------------------+------------------+------------------+------------+----------------+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; Suzu             ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; Suzu             ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; Suzu             ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; Suzu             ; Windows 7 ; 6.2        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
 
 
 ------------

@@ -1,5 +1,5 @@
 --lpm_compare CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" DEVICE_FAMILY="Cyclone II" LPM_WIDTH=10 ONE_INPUT_IS_CONSTANT="YES" aeb dataa datab
---VERSION_BEGIN 13.0 cbx_cycloneii 2013:06:12:18:03:33:SJ cbx_lpm_add_sub 2013:06:12:18:03:33:SJ cbx_lpm_compare 2013:06:12:18:03:33:SJ cbx_mgl 2013:06:12:18:33:59:SJ cbx_stratix 2013:06:12:18:03:33:SJ cbx_stratixii 2013:06:12:18:03:33:SJ  VERSION_END
+--VERSION_BEGIN 13.0 cbx_cycloneii 2013:06:12:18:03:43:SJ cbx_lpm_add_sub 2013:06:12:18:03:43:SJ cbx_lpm_compare 2013:06:12:18:03:43:SJ cbx_mgl 2013:06:12:18:05:10:SJ cbx_stratix 2013:06:12:18:03:43:SJ cbx_stratixii 2013:06:12:18:03:43:SJ  VERSION_END
 
 
 -- Copyright (C) 1991-2013 Altera Corporation
