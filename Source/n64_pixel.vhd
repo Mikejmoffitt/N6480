@@ -16,11 +16,15 @@ port (
 	red_out: out std_logic_vector(6 downto 0);
 	green_out: out std_logic_vector(6 downto 0);
 	blue_out: out std_logic_vector(6 downto 0);
+	
 	csync_n_out: out std_logic;
 	hsync_n_out: out std_logic;
 	clamp_n_out: out std_logic;
 	vsync_n_out: out std_logic;
-	clock_count: out std_logic_vector(1 downto 0)
+	clock_count: out std_logic_vector(1 downto 0);
+	
+	sharp_en_n: in std_logic;
+	sharp_odd_n: in std_logic
 );
 end n64_pixel;
 
@@ -29,6 +33,11 @@ architecture behavioral of n64_pixel is
 signal red_cap: std_logic_vector(6 downto 0);
 signal green_cap: std_logic_vector(6 downto 0);
 signal blue_cap: std_logic_vector(6 downto 0);
+
+signal red_store: std_logic_vector(6 downto 0);
+signal green_store: std_logic_vector(6 downto 0);
+signal blue_store: std_logic_vector(6 downto 0);
+
 signal csync_n_cap: std_logic;
 signal hsync_n_cap: std_logic;
 signal clamp_n_cap: std_logic;
@@ -40,10 +49,12 @@ signal blue_final: std_logic_vector(6 downto 0);
 
 signal cycle_count: std_logic_vector(1 downto 0);
 
+signal px_osc: std_logic := '0';
+
 begin
 	cycle_step: process(n64_clock)
 	begin
-		if (rising_edge(n64_clock)) then
+		if (falling_edge(n64_clock)) then
 			if (n64_dsync_n = '0') then
 				cycle_count <= "00";
 			else
@@ -54,7 +65,7 @@ begin
 	
 	cap_data: process(n64_clock)
 	begin
-		if (rising_edge(n64_clock)) then
+		if (falling_edge(n64_clock)) then
 			if (cycle_count = "00") then
 				red_cap <= n64_data;
 			elsif (cycle_count = "01") then
@@ -65,6 +76,31 @@ begin
 				red_final <= red_cap;
 				green_final <= green_cap;
 				blue_final <= blue_cap;
+				
+				-- Toggle odd/even pixel counter, resetting at end of line
+				if (n64_data(1) = '0') then
+					px_osc <= '0';
+				elsif (px_osc = '1') then
+					px_osc <= '0';
+				else
+					px_osc <= '1';
+				end if;
+				
+				-- Sharpening enabled
+				if (sharp_en_n = '0') then
+					-- Only capture on every other pixel, matching the intended column
+					if (sharp_odd_n /= px_osc) then
+						red_store <= red_cap;
+						green_store <= green_cap;
+						blue_store <= blue_cap;
+					end if;
+				end if;
+						
+						
+				red_final <= red_cap;
+				green_final <= green_cap;
+				blue_final <= blue_cap;
+				
 				csync_n_cap <= n64_data(0);
 				hsync_n_cap <= n64_data(1);
 				clamp_n_cap <= n64_data(2);
@@ -75,10 +111,16 @@ begin
 	
 	set_outputs: process(n64_clock)
 	begin
-		if (rising_edge(n64_clock)) then
-			red_out <= red_final;
-			green_out <= green_final;
-			blue_out <= blue_final;
+		if (falling_edge(n64_clock)) then
+			if (sharp_en_n = '0') then
+				red_out <= red_store;
+				green_out <= green_store;
+				blue_out <= blue_store;
+			else
+				red_out <= red_final;
+				green_out <= green_final;
+				blue_out <= blue_final;
+			end if;
 			csync_n_out <= csync_n_cap;
 			hsync_n_out <= hsync_n_cap;
 			clamp_n_out <= clamp_n_cap;

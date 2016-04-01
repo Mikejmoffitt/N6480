@@ -24,17 +24,16 @@ port (
 	
 	led: out std_logic;
 	
-	c_oe_n: out std_logic;
-	c_dir: out std_logic;
-	
 	sw_sdtv_res_n: in std_logic;
-	sw_ypbpr_n: in std_logic
+	sw_ypbpr_n: in std_logic;
+	
+	sw_sharp_en_n: in std_logic;
+	sw_sharp_odd_n: in std_logic
 	);
 end n6480;
 
 architecture behavioral of n6480 is
 
--- For now I am truncating the 7th color bit on the N64. None of the games I've tested so far actually use it. 
 constant N64_PIXEL_LEN: integer := 21;
 constant N64_R_H: integer := (N64_PIXEL_LEN) - 1;
 constant N64_R_L: integer := 2 * (N64_PIXEL_LEN / 3);
@@ -109,7 +108,7 @@ begin
 	-- Values are valid on the rising edge of the first clock out of four.		
 	rgb_decoder: entity work.n64_pixel(behavioral) port map (
 		n64_data, n64_clock, n64_dsync_n, n64_red, n64_green, n64_blue,
-		n64_csync_n, n64_hsync_n, n64_clamp_n, n64_vsync_n, clock_count);
+		n64_csync_n, n64_hsync_n, n64_clamp_n, n64_vsync_n, clock_count, sw_sharp_en_n, sw_sharp_odd_n);
 	
 	-- Both alternating line buffers
 	buffer_a: entity work.linebuffer(behavioral) 
@@ -141,10 +140,6 @@ begin
 			end if;
 		end if;
 	end process;
-	
-	-- Set up buffers as inputs
-	c_dir <= '0';
-	c_oe_n <= '0';
 	
 	select_buffer_output: process(n64_clock)
 	begin
@@ -267,6 +262,7 @@ begin
 	n64_pixel_counter: process(n64_clock)
 	begin
 		if (rising_edge(n64_clock)) then
+	
 			-- End of N64 line - swap buffers, increment line count
 			if (vsync_time = 1) then
 				n64_px_count <= U16_ZERO;
@@ -309,10 +305,9 @@ begin
 			else
 				vga_vsync <= '0'; -- We don't use dedicated VSYNC for RGB15 mode.
 			end if;
+			led <= out_vsync;
 		end if;
 	end process;
-	
-	led <= out_vsync;
 	
 	-- Set VGA Hsync based on VGA line progress
 	vga_hsync_proc: process(n64_clock)
