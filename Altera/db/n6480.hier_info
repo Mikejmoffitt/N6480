@@ -65,6 +65,9 @@ n64_clock => vga_px_count[12].CLK
 n64_clock => vga_px_count[13].CLK
 n64_clock => vga_px_count[14].CLK
 n64_clock => vga_px_count[15].CLK
+n64_clock => sharp_en_n.CLK
+n64_clock => interlace_mode[0].CLK
+n64_clock => interlace_mode[1].CLK
 n64_clock => vga_clk~reg0.CLK
 n64_clock => buffer_en_b.CLK
 n64_clock => buffer_in_b[0].CLK
@@ -291,8 +294,12 @@ sw_ypbpr_n => vga_blue.OUTPUTSELECT
 sw_ypbpr_n => vga_blue.OUTPUTSELECT
 sw_ypbpr_n => vga_blue.OUTPUTSELECT
 sw_ypbpr_n => vga_blue.OUTPUTSELECT
-sw_sharp_en_n => n64_pixel:rgb_decoder.sharp_en_n
-sw_sharp_odd_n => n64_pixel:rgb_decoder.sharp_odd_n
+sw_scanlines_n[0] => write_buffers.IN0
+sw_scanlines_n[0] => write_buffers.IN0
+sw_scanlines_n[0] => write_buffers.IN0
+sw_scanlines_n[1] => write_buffers.IN1
+sw_scanlines_n[1] => write_buffers.IN1
+sw_scanlines_n[1] => write_buffers.IN1
 
 
 |n6480|n64_pixel:rgb_decoder

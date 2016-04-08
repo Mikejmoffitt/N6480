@@ -1,5 +1,5 @@
 Analysis & Synthesis report for n6480
-Fri Apr 01 01:33:44 2016
+Fri Apr 08 00:19:28 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -15,18 +15,19 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. General Register Statistics
- 10. Registers Packed Into Inferred Megafunctions
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Source assignments for linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_him:auto_generated|altsyncram_ue81:altsyncram2
- 13. Source assignments for linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_him:auto_generated|altsyncram_ue81:altsyncram2
- 14. Parameter Settings for User Entity Instance: linebuffer:buffer_a
- 15. Parameter Settings for User Entity Instance: linebuffer:buffer_b
- 16. Parameter Settings for Inferred Entity Instance: linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0
- 17. Parameter Settings for Inferred Entity Instance: linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0
- 18. altshift_taps Parameter Settings by Entity Instance
- 19. Port Connectivity Checks: "n64_pixel:rgb_decoder"
- 20. Elapsed Time Per Partition
- 21. Analysis & Synthesis Messages
+ 10. Inverted Register Statistics
+ 11. Registers Packed Into Inferred Megafunctions
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_him:auto_generated|altsyncram_ue81:altsyncram2
+ 14. Source assignments for linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_him:auto_generated|altsyncram_ue81:altsyncram2
+ 15. Parameter Settings for User Entity Instance: linebuffer:buffer_a
+ 16. Parameter Settings for User Entity Instance: linebuffer:buffer_b
+ 17. Parameter Settings for Inferred Entity Instance: linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0
+ 18. Parameter Settings for Inferred Entity Instance: linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0
+ 19. altshift_taps Parameter Settings by Entity Instance
+ 20. Port Connectivity Checks: "n64_pixel:rgb_decoder"
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
 
 
 
@@ -52,15 +53,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Apr 01 01:33:44 2016           ;
+; Analysis & Synthesis Status        ; Successful - Fri Apr 08 00:19:28 2016           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; n6480                                           ;
 ; Top-level Entity Name              ; n6480                                           ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 537                                             ;
-;     Total combinational functions  ; 436                                             ;
-;     Dedicated logic registers      ; 336                                             ;
-; Total registers                    ; 336                                             ;
+; Total logic elements               ; 521                                             ;
+;     Total combinational functions  ; 449                                             ;
+;     Dedicated logic registers      ; 304                                             ;
+; Total registers                    ; 304                                             ;
 ; Total pins                         ; 49                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 32,382                                          ;
@@ -191,29 +192,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 537       ;
+; Estimated Total logic elements              ; 521       ;
 ;                                             ;           ;
-; Total combinational functions               ; 436       ;
+; Total combinational functions               ; 449       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 57        ;
-;     -- 3 input functions                    ; 204       ;
-;     -- <=2 input functions                  ; 175       ;
+;     -- 4 input functions                    ; 111       ;
+;     -- 3 input functions                    ; 171       ;
+;     -- <=2 input functions                  ; 167       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 197       ;
-;     -- arithmetic mode                      ; 239       ;
+;     -- normal mode                          ; 220       ;
+;     -- arithmetic mode                      ; 229       ;
 ;                                             ;           ;
-; Total registers                             ; 336       ;
-;     -- Dedicated logic registers            ; 336       ;
+; Total registers                             ; 304       ;
+;     -- Dedicated logic registers            ; 304       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 49        ;
 ; Total memory bits                           ; 32382     ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ; Maximum fan-out node                        ; n64_clock ;
-; Maximum fan-out                             ; 378       ;
-; Total fan-out                               ; 2748      ;
-; Average fan-out                             ; 3.18      ;
+; Maximum fan-out                             ; 346       ;
+; Total fan-out                               ; 2832      ;
+; Average fan-out                             ; 3.36      ;
 +---------------------------------------------+-----------+
 
 
@@ -222,7 +223,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                    ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+--------------+
-; |n6480                                    ; 436 (233)         ; 336 (186)    ; 32382       ; 0            ; 0       ; 0         ; 49   ; 0            ; |n6480                                                                                                                 ; work         ;
+; |n6480                                    ; 449 (269)         ; 304 (189)    ; 32382       ; 0            ; 0       ; 0         ; 49   ; 0            ; |n6480                                                                                                                 ; work         ;
 ;    |linebuffer:buffer_a|                  ; 15 (0)            ; 10 (0)       ; 16191       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_a                                                                                             ; work         ;
 ;       |altshift_taps:line_buffer_rtl_0|   ; 15 (0)            ; 10 (0)       ; 16191       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0                                                             ; work         ;
 ;          |shift_taps_him:auto_generated|  ; 15 (0)            ; 10 (0)       ; 16191       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_him:auto_generated                               ; work         ;
@@ -235,7 +236,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;             |altsyncram_ue81:altsyncram2| ; 0 (0)             ; 0 (0)        ; 16191       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_him:auto_generated|altsyncram_ue81:altsyncram2   ; work         ;
 ;             |cntr_fpf:cntr1|              ; 15 (12)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_him:auto_generated|cntr_fpf:cntr1                ; work         ;
 ;                |cmpr_ldc:cmpr5|           ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_him:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5 ; work         ;
-;    |n64_pixel:rgb_decoder|                ; 52 (52)           ; 130 (130)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|n64_pixel:rgb_decoder                                                                                           ; work         ;
+;    |n64_pixel:rgb_decoder|                ; 29 (29)           ; 95 (95)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|n64_pixel:rgb_decoder                                                                                           ; work         ;
 ;    |rgb2yuv:yuv_encoder|                  ; 121 (121)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|rgb2yuv:yuv_encoder                                                                                             ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -256,14 +257,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 336   ;
-; Number of registers using Synchronous Clear  ; 86    ;
-; Number of registers using Synchronous Load   ; 74    ;
+; Total registers                              ; 304   ;
+; Number of registers using Synchronous Clear  ; 111   ;
+; Number of registers using Synchronous Load   ; 86    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 111   ;
+; Number of registers using Clock Enable       ; 108   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; sharp_en_n                             ; 22      ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -276,17 +287,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------+---------------------------------------+------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
-; 3:1                ; 21 bits   ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |n6480|out_red[0]                            ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |n6480|vga_px_count[3]                       ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |n6480|n64_px_count[3]                       ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |n6480|n64_pixel:rgb_decoder|blur_matches[4] ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |n6480|line_count[4]                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 21 bits   ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |n6480|out_red[4]          ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |n6480|vga_px_count[15]    ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |n6480|n64_px_count[11]    ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |n6480|interlace_mode[0]   ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |n6480|buffer_in_b[6]      ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |n6480|buffer_in_a[6]      ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |n6480|line_count[9]       ;
+; 5:1                ; 15 bits   ; 45 LEs        ; 30 LEs               ; 15 LEs                 ; Yes        ; |n6480|buffer_in_a[1]      ;
+; 5:1                ; 15 bits   ; 45 LEs        ; 30 LEs               ; 15 LEs                 ; Yes        ; |n6480|buffer_in_b[1]      ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |n6480|buffer_in_b[5]      ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |n6480|buffer_in_a[19]     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------+
@@ -382,6 +399,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port        ; Type   ; Severity ; Details                                                                             ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 ; clamp_n_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; sharp_odd_n ; Input  ; Info     ; Stuck at VCC                                                                        ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -400,7 +418,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Apr 01 01:33:30 2016
+    Info: Processing started: Fri Apr 08 00:19:14 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off N6480 -c n6480
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /users/moffitt/development/n6480/source/n6480.vhd
@@ -416,9 +434,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12022): Found design unit 1: rgb2yuv-behavioral
     Info (12023): Found entity 1: rgb2yuv
 Info (12127): Elaborating entity "n6480" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at n6480.vhd(71): object "n64_clamp_n" assigned a value but never read
-Warning (10037): Verilog HDL or VHDL warning at n6480.vhd(319): conditional expression evaluates to a constant
-Warning (10037): Verilog HDL or VHDL warning at n6480.vhd(344): conditional expression evaluates to a constant
+Warning (10036): Verilog HDL or VHDL warning at n6480.vhd(70): object "n64_clamp_n" assigned a value but never read
+Warning (10037): Verilog HDL or VHDL warning at n6480.vhd(348): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at n6480.vhd(373): conditional expression evaluates to a constant
 Info (12129): Elaborating entity "n64_pixel" using architecture "A:behavioral" for hierarchy "n64_pixel:rgb_decoder"
 Info (12129): Elaborating entity "linebuffer" using architecture "A:behavioral" for hierarchy "linebuffer:buffer_a"
 Info (12129): Elaborating entity "rgb2yuv" using architecture "A:behavioral" for hierarchy "rgb2yuv:yuv_encoder"
@@ -446,14 +464,14 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_ldc
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 629 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 612 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 36 output pins
-    Info (21061): Implemented 538 logic cells
+    Info (21061): Implemented 521 logic cells
     Info (21064): Implemented 42 RAM segments
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 588 megabytes
-    Info: Processing ended: Fri Apr 01 01:33:44 2016
+    Info: Peak virtual memory: 595 megabytes
+    Info: Processing ended: Fri Apr 08 00:19:28 2016
     Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:14
 

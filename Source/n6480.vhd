@@ -27,8 +27,7 @@ port (
 	sw_sdtv_res_n: in std_logic;
 	sw_ypbpr_n: in std_logic;
 	
-	sw_sharp_en_n: in std_logic;
-	sw_sharp_odd_n: in std_logic
+	sw_scanlines_n: in std_logic_vector(1 downto 0)
 	);
 end n6480;
 
@@ -89,6 +88,8 @@ signal hsync_time: std_logic_vector(15 downto 0) := U16_ZERO;
 
 signal enable_delay: std_logic := '0'; -- When 1, delay the line by 8 clocks for interlace mode
 
+signal interlace_mode: std_logic_vector(1 downto 0) := "00";
+
 -- For assigning from the buffers
 signal out_red: std_logic_vector(6 downto 0);
 signal out_green: std_logic_vector(6 downto 0);
@@ -103,12 +104,14 @@ signal y_data: std_logic_vector(9 downto 0);
 signal u_data: std_logic_vector(9 downto 0);
 signal v_data: std_logic_vector(9 downto 0);
 
+signal sharp_en_n: std_logic := '1';
+
 begin
 	-- Used to deserialize the N64 pixel bus into values for a pixel.
 	-- Values are valid on the rising edge of the first clock out of four.		
 	rgb_decoder: entity work.n64_pixel(behavioral) port map (
 		n64_data, n64_clock, n64_dsync_n, n64_red, n64_green, n64_blue,
-		n64_csync_n, n64_hsync_n, n64_clamp_n, n64_vsync_n, clock_count, sw_sharp_en_n, sw_sharp_odd_n);
+		n64_csync_n, n64_hsync_n, n64_clamp_n, n64_vsync_n, clock_count, sharp_en_n, '1');
 	
 	-- Both alternating line buffers
 	buffer_a: entity work.linebuffer(behavioral) 
@@ -188,16 +191,20 @@ begin
 				
 				-- Capture only when a new N64 pixel is ready
 				case clock_count is
-					when "00" => buffer_en_a <= '1';
+					when "10" => buffer_en_a <= '1';
 					when others => buffer_en_a <= '0';
 				end case;
 				
 				-- Scanlines disable
-				--if (switches(0) = '1') then
-				buffer_in_b <= buffer_out_b;
-				--else
-				--	buffer_in_b <= (others => '0');
-				--end if;
+				if (sw_scanlines_n(0) = '1' and sw_scanlines_n(1) = '1') then
+					buffer_in_b <= buffer_out_b;
+				elsif (sw_scanlines_n(0) = '0' and sw_scanlines_n(1) = '1') then
+					buffer_in_b <= '0' & buffer_out_b(20 downto 15) & '0' & buffer_out_b(13 downto 8) & '0' & buffer_out_b(6 downto 1);
+				elsif (sw_scanlines_n(1) = '0' and sw_scanlines_n(0) = '1') then
+					buffer_in_b <= "00" & buffer_out_b(20 downto 16) & "00" & buffer_out_b(13 downto 9) & "00" & buffer_out_b(6 downto 2);
+				else
+					buffer_in_b <= (others => '0');
+				end if;
 				
 				-- Have it shift out data twice for every one N64 pixel 
 				-- (or once per VGA pixel)
@@ -217,16 +224,20 @@ begin
 				
 				-- Capture only when a new N64 pixel is ready
 				case clock_count is
-					when "00" => buffer_en_b <= '1';
+					when "10" => buffer_en_b <= '1';
 					when others => buffer_en_b <= '0';
 				end case;
 				
 				-- Scanlines disable
-				--if (switches(0) = '1') then
+				if (sw_scanlines_n(0) = '1' and sw_scanlines_n(1) = '1') then
 					buffer_in_a <= buffer_out_a;
-				--else
-				--	buffer_in_a <= (others => '0');
-				--end if;
+				elsif (sw_scanlines_n(0) = '0' and sw_scanlines_n(1) = '1') then
+					buffer_in_a <= '0' & buffer_out_a(20 downto 15) & '0' & buffer_out_a(13 downto 8) & '0' & buffer_out_a(6 downto 1);
+				elsif (sw_scanlines_n(1) = '0' and sw_scanlines_n(0) = '1') then
+					buffer_in_a <= "00" & buffer_out_a(20 downto 16) & "00" & buffer_out_a(13 downto 9) & "00" & buffer_out_a(6 downto 2);
+				else
+					buffer_in_a <= (others => '0');
+				end if;
 				
 				-- Have it shift out data twice for every one N64 pixel 
 				-- (or once per VGA pixel)
@@ -240,6 +251,26 @@ begin
 						vga_clk <= vga_osc;
 					end if;
 				end if;
+			end if;
+		end if;
+	end process;
+	
+	-- 480i mode detector
+	detect_interlacing: process(n64_clock)
+	begin
+		if (rising_edge(n64_clock)) then
+			if (vsync_time = 1) then
+				if (enable_delay = '1') then
+					interlace_mode <= "11";
+				elsif (interlace_mode /= "00") then
+					interlace_mode <= interlace_mode - 1;
+				end if;
+			end if;
+			
+			if (interlace_mode /= "00") then
+				sharp_en_n <= '1';
+			else
+				sharp_en_n <= '0';
 			end if;
 		end if;
 	end process;
