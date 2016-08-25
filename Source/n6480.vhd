@@ -27,6 +27,9 @@ port (
 	sw_sdtv_res_n: in std_logic;
 	sw_ypbpr_n: in std_logic;
 	
+	sw_sharp_en_n: in std_logic;
+	sw_sharp_odd_n: in std_logic;
+	
 	sw_scanlines_n: in std_logic_vector(1 downto 0)
 	);
 end n6480;
@@ -111,7 +114,7 @@ begin
 	-- Values are valid on the rising edge of the first clock out of four.		
 	rgb_decoder: entity work.n64_pixel(behavioral) port map (
 		n64_data, n64_clock, n64_dsync_n, n64_red, n64_green, n64_blue,
-		n64_csync_n, n64_hsync_n, n64_clamp_n, n64_vsync_n, clock_count, sharp_en_n, '1');
+		n64_csync_n, n64_hsync_n, n64_clamp_n, n64_vsync_n, clock_count, sharp_en_n or sw_sharp_en_n, sw_sharp_odd_n);
 	
 	-- Both alternating line buffers
 	buffer_a: entity work.linebuffer(behavioral) 

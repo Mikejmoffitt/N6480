@@ -1,5 +1,5 @@
 Analysis & Synthesis report for n6480
-Fri Apr 08 00:19:28 2016
+Wed Aug 24 22:50:41 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -53,16 +53,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Apr 08 00:19:28 2016           ;
+; Analysis & Synthesis Status        ; Successful - Wed Aug 24 22:50:41 2016           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; n6480                                           ;
 ; Top-level Entity Name              ; n6480                                           ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 521                                             ;
-;     Total combinational functions  ; 449                                             ;
+; Total logic elements               ; 522                                             ;
+;     Total combinational functions  ; 450                                             ;
 ;     Dedicated logic registers      ; 304                                             ;
 ; Total registers                    ; 304                                             ;
-; Total pins                         ; 49                                              ;
+; Total pins                         ; 51                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 32,382                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -192,29 +192,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 521       ;
+; Estimated Total logic elements              ; 522       ;
 ;                                             ;           ;
-; Total combinational functions               ; 449       ;
+; Total combinational functions               ; 450       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 111       ;
-;     -- 3 input functions                    ; 171       ;
+;     -- 4 input functions                    ; 132       ;
+;     -- 3 input functions                    ; 151       ;
 ;     -- <=2 input functions                  ; 167       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 220       ;
+;     -- normal mode                          ; 221       ;
 ;     -- arithmetic mode                      ; 229       ;
 ;                                             ;           ;
 ; Total registers                             ; 304       ;
 ;     -- Dedicated logic registers            ; 304       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 49        ;
+; I/O pins                                    ; 51        ;
 ; Total memory bits                           ; 32382     ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ; Maximum fan-out node                        ; n64_clock ;
 ; Maximum fan-out                             ; 346       ;
-; Total fan-out                               ; 2832      ;
-; Average fan-out                             ; 3.36      ;
+; Total fan-out                               ; 2856      ;
+; Average fan-out                             ; 3.37      ;
 +---------------------------------------------+-----------+
 
 
@@ -223,7 +223,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                    ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+--------------+
-; |n6480                                    ; 449 (269)         ; 304 (189)    ; 32382       ; 0            ; 0       ; 0         ; 49   ; 0            ; |n6480                                                                                                                 ; work         ;
+; |n6480                                    ; 450 (269)         ; 304 (189)    ; 32382       ; 0            ; 0       ; 0         ; 51   ; 0            ; |n6480                                                                                                                 ; work         ;
 ;    |linebuffer:buffer_a|                  ; 15 (0)            ; 10 (0)       ; 16191       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_a                                                                                             ; work         ;
 ;       |altshift_taps:line_buffer_rtl_0|   ; 15 (0)            ; 10 (0)       ; 16191       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0                                                             ; work         ;
 ;          |shift_taps_him:auto_generated|  ; 15 (0)            ; 10 (0)       ; 16191       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_him:auto_generated                               ; work         ;
@@ -236,7 +236,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;             |altsyncram_ue81:altsyncram2| ; 0 (0)             ; 0 (0)        ; 16191       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_him:auto_generated|altsyncram_ue81:altsyncram2   ; work         ;
 ;             |cntr_fpf:cntr1|              ; 15 (12)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_him:auto_generated|cntr_fpf:cntr1                ; work         ;
 ;                |cmpr_ldc:cmpr5|           ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_b|altshift_taps:line_buffer_rtl_0|shift_taps_him:auto_generated|cntr_fpf:cntr1|cmpr_ldc:cmpr5 ; work         ;
-;    |n64_pixel:rgb_decoder|                ; 29 (29)           ; 95 (95)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|n64_pixel:rgb_decoder                                                                                           ; work         ;
+;    |n64_pixel:rgb_decoder|                ; 30 (30)           ; 95 (95)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|n64_pixel:rgb_decoder                                                                                           ; work         ;
 ;    |rgb2yuv:yuv_encoder|                  ; 121 (121)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|rgb2yuv:yuv_encoder                                                                                             ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -399,7 +399,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port        ; Type   ; Severity ; Details                                                                             ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 ; clamp_n_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; sharp_odd_n ; Input  ; Info     ; Stuck at VCC                                                                        ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -418,7 +417,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Apr 08 00:19:14 2016
+    Info: Processing started: Wed Aug 24 22:50:26 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off N6480 -c n6480
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /users/moffitt/development/n6480/source/n6480.vhd
@@ -434,9 +433,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12022): Found design unit 1: rgb2yuv-behavioral
     Info (12023): Found entity 1: rgb2yuv
 Info (12127): Elaborating entity "n6480" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at n6480.vhd(70): object "n64_clamp_n" assigned a value but never read
-Warning (10037): Verilog HDL or VHDL warning at n6480.vhd(348): conditional expression evaluates to a constant
-Warning (10037): Verilog HDL or VHDL warning at n6480.vhd(373): conditional expression evaluates to a constant
+Warning (10036): Verilog HDL or VHDL warning at n6480.vhd(73): object "n64_clamp_n" assigned a value but never read
+Warning (10037): Verilog HDL or VHDL warning at n6480.vhd(351): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at n6480.vhd(376): conditional expression evaluates to a constant
 Info (12129): Elaborating entity "n64_pixel" using architecture "A:behavioral" for hierarchy "n64_pixel:rgb_decoder"
 Info (12129): Elaborating entity "linebuffer" using architecture "A:behavioral" for hierarchy "linebuffer:buffer_a"
 Info (12129): Elaborating entity "rgb2yuv" using architecture "A:behavioral" for hierarchy "rgb2yuv:yuv_encoder"
@@ -464,15 +463,15 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_ldc
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 612 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 13 input pins
+Info (21057): Implemented 615 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 15 input pins
     Info (21059): Implemented 36 output pins
-    Info (21061): Implemented 521 logic cells
+    Info (21061): Implemented 522 logic cells
     Info (21064): Implemented 42 RAM segments
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 595 megabytes
-    Info: Processing ended: Fri Apr 08 00:19:28 2016
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:14
+    Info: Peak virtual memory: 585 megabytes
+    Info: Processing ended: Wed Aug 24 22:50:41 2016
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:15
 
 

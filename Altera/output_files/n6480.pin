@@ -121,8 +121,8 @@ VCCIO4                       : 54        : power  :                   : 3.3V    
 RESERVED_INPUT               : 55        :        :                   :         : 4         :                
 GND                          : 56        : gnd    :                   :         :           :                
 RESERVED_INPUT               : 57        :        :                   :         : 4         :                
-RESERVED_INPUT               : 58        :        :                   :         : 4         :                
-RESERVED_INPUT               : 59        :        :                   :         : 4         :                
+sw_sharp_en_n                : 58        : input  : 3.3-V LVTTL       :         : 4         : Y              
+sw_sharp_odd_n               : 59        : input  : 3.3-V LVTTL       :         : 4         : Y              
 n64_data[6]                  : 60        : input  : 3.3-V LVTTL       :         : 4         : Y              
 GND                          : 61        : gnd    :                   :         :           :                
 VCCINT                       : 62        : power  :                   : 1.2V    :           :                
