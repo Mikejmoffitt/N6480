@@ -123,18 +123,18 @@ GND                          : 56        : gnd    :                   :         
 RESERVED_INPUT               : 57        :        :                   :         : 4         :                
 RESERVED_INPUT               : 58        :        :                   :         : 4         :                
 RESERVED_INPUT               : 59        :        :                   :         : 4         :                
-n64_data[6]                  : 60        : input  : 3.3-V LVTTL       :         : 4         : Y              
+n64_data[0]                  : 60        : input  : 3.3-V LVTTL       :         : 4         : Y              
 GND                          : 61        : gnd    :                   :         :           :                
 VCCINT                       : 62        : power  :                   : 1.2V    :           :                
 RESERVED_INPUT               : 63        :        :                   :         : 4         :                
 RESERVED_INPUT               : 64        :        :                   :         : 4         :                
-n64_data[5]                  : 65        : input  : 3.3-V LVTTL       :         : 4         : Y              
+n64_data[1]                  : 65        : input  : 3.3-V LVTTL       :         : 4         : Y              
 VCCIO4                       : 66        : power  :                   : 3.3V    : 4         :                
-n64_data[4]                  : 67        : input  : 3.3-V LVTTL       :         : 4         : Y              
+n64_data[2]                  : 67        : input  : 3.3-V LVTTL       :         : 4         : Y              
 GND                          : 68        : gnd    :                   :         :           :                
 n64_data[3]                  : 69        : input  : 3.3-V LVTTL       :         : 4         : Y              
-n64_data[2]                  : 70        : input  : 3.3-V LVTTL       :         : 4         : Y              
-n64_data[1]                  : 71        : input  : 3.3-V LVTTL       :         : 4         : Y              
+n64_data[4]                  : 70        : input  : 3.3-V LVTTL       :         : 4         : Y              
+n64_data[5]                  : 71        : input  : 3.3-V LVTTL       :         : 4         : Y              
 RESERVED_INPUT               : 72        :        :                   :         : 4         :                
 vga_vsync                    : 73        : output : 3.3-V LVTTL       :         : 3         : Y              
 vga_hsync                    : 74        : output : 3.3-V LVTTL       :         : 3         : Y              
@@ -151,7 +151,7 @@ MSEL1                        : 84        :        :                   :         
 MSEL0                        : 85        :        :                   :         : 3         :                
 vga_blue[6]                  : 86        : output : 3.3-V LVTTL       :         : 3         : Y              
 vga_blue[5]                  : 87        : output : 3.3-V LVTTL       :         : 3         : Y              
-n64_data[0]                  : 88        : input  : 3.3-V LVTTL       :         : 3         : Y              
+n64_data[6]                  : 88        : input  : 3.3-V LVTTL       :         : 3         : Y              
 n64_dsync_n                  : 89        : input  : 3.3-V LVTTL       :         : 3         : Y              
 n64_clock                    : 90        : input  : 3.3-V LVTTL       :         : 3         : Y              
 GND+                         : 91        :        :                   :         : 3         :                
