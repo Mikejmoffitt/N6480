@@ -54,7 +54,7 @@ signal px_osc: std_logic := '0';
 begin
 	cycle_step: process(n64_clock)
 	begin
-		if (falling_edge(n64_clock)) then
+		if (rising_edge(n64_clock)) then
 			if (n64_dsync_n = '0') then
 				cycle_count <= "00";
 			else
@@ -65,7 +65,7 @@ begin
 	
 	cap_data: process(n64_clock)
 	begin
-		if (falling_edge(n64_clock)) then
+		if (rising_edge(n64_clock)) then
 			if (cycle_count = "00") then
 				red_cap <= n64_data;
 			elsif (cycle_count = "01") then
@@ -111,7 +111,7 @@ begin
 	
 	set_outputs: process(n64_clock)
 	begin
-		if (falling_edge(n64_clock)) then
+		if (rising_edge(n64_clock)) then
 			if (sharp_en_n = '0') then
 				red_out <= red_store;
 				green_out <= green_store;
