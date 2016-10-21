@@ -52,7 +52,6 @@ constant NUM_LINES: integer := 262;
 
 -- Mode 0 is for when Hsync goes beyond one line
 constant VGA_HSYNC_LEN: integer := 96;
-constant VGA_HSYNC_MODE: std_logic := '0'; -- Sets the comparison type for the start and end values
 constant VGA_HSYNC_START: integer := VGA_LINE_LEN - 30;
 constant VGA_HSYNC_END: integer := 162;
 constant VGA_BLANK_START: integer := VGA_LINE_LEN - 30;
@@ -78,6 +77,7 @@ signal buffer_out_b: std_logic_vector((N64_PIXEL_LEN - 1) downto 0);
 signal buffer_en_a: std_logic;
 signal buffer_en_b: std_logic;
 signal buffer_sel: std_logic; -- 0 for buffer A, 1 for buffer B (capture)
+
 -- Synchronization information
 signal n64_px_count: std_logic_vector(15 downto 0) := U16_ZERO;
 signal vga_px_count: std_logic_vector(15 downto 0) := U16_ZERO;
@@ -105,6 +105,8 @@ signal u_data: std_logic_vector(9 downto 0);
 signal v_data: std_logic_vector(9 downto 0);
 
 signal sharp_en_n: std_logic := '1';
+
+signal vsync_latch: std_logic := '0';
 
 begin
 	-- Used to deserialize the N64 pixel bus into values for a pixel.
@@ -279,7 +281,7 @@ begin
 	vga_pixel_counter: process(n64_clock)
 	begin
 		if (rising_edge(n64_clock)) then
-			if (n64_vsync_n = '0') then
+			if (n64_vsync_n = '0' and vsync_time = 0) then
 				vga_px_count <= U16_ZERO;
 			elsif (vga_px_count = VGA_LINE_LEN - 1) then
 				vga_px_count <= U16_ZERO;
@@ -345,18 +347,10 @@ begin
 	begin	
 		if (rising_edge(n64_clock)) then
 			if (sw_sdtv_res_n = '1') then
-				if (VGA_HSYNC_MODE = '1') then
-					if (vga_px_count >= VGA_HSYNC_START and vga_px_count < VGA_HSYNC_END) then
-						out_hsync <= '0';
-					else
-						out_hsync <= '1';
-					end if;
+				if (vga_px_count >= VGA_HSYNC_START or vga_px_count < VGA_HSYNC_END) then
+					out_hsync <= '0';
 				else
-					if (vga_px_count >= VGA_HSYNC_START or vga_px_count < VGA_HSYNC_END) then
-						out_hsync <= '0';
-					else
-						out_hsync <= '1';
-					end if;
+					out_hsync <= '1';
 				end if;
 				vga_hsync <= out_hsync;
 			else
@@ -370,18 +364,10 @@ begin
 	begin
 		if (rising_edge(n64_clock)) then
 			if (sw_sdtv_res_n = '1') then
-				if (VGA_HSYNC_MODE = '1') then
-					if (vga_px_count >= VGA_BLANK_START and vga_px_count < VGA_BLANK_END) then
-						vga_blank <= '0';
-					else
-						vga_blank <= '1';
-					end if;
+				if (vga_px_count >= VGA_BLANK_START or vga_px_count < VGA_BLANK_END) then
+					vga_blank <= '0';
 				else
-					if (vga_px_count >= VGA_BLANK_START or vga_px_count < VGA_BLANK_END) then
-						vga_blank <= '0';
-					else
-						vga_blank <= '1';
-					end if;
+					vga_blank <= '1';
 				end if;
 			else
 				vga_blank <= '1';
