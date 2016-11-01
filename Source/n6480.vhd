@@ -24,13 +24,14 @@ port (
 	
 	led: out std_logic;
 	
-	sw_sdtv_res_n: in std_logic;
 	sw_ypbpr_n: in std_logic;
-	
+	sw_scanlines_n: in std_logic_vector(1 downto 0);
+	sw_sdtv_res_n: in std_logic;
 	sw_sharp_en_n: in std_logic;
 	sw_sharp_odd_n: in std_logic;
+	sw_sog_force_n: in std_logic;
+	sw_vga_csync_n: in std_logic
 	
-	sw_scanlines_n: in std_logic_vector(1 downto 0)
 	);
 end n6480;
 
@@ -355,7 +356,12 @@ begin
 				else
 					out_hsync <= '1';
 				end if;
-				vga_hsync <= out_hsync;
+				-- If the user wants csync even in 480p, give it
+				if (sw_vga_csync_n = '1') then
+					vga_hsync <= out_hsync;
+				else
+					vga_hsync <= not (out_hsync xor out_vsync);
+				end if;
 			else
 				vga_hsync <= n64_csync_n; -- Put Composite Sync on the HSYNC line for RGB15 output
 			end if;
@@ -379,11 +385,11 @@ begin
 		end if;
 	end process;
 	
-	-- Do composite sync on green if YUV mode is enabled
-	yuv_proc: process(n64_clock)
+	-- Adding C-Sync to the green channel
+	composite_sync_proc: process(n64_clock)
 	begin
 		if (rising_edge(n64_clock)) then
-			if (sw_ypbpr_n = '0') then
+			if (sw_ypbpr_n = '0' or sw_sog_force_n = '0') then
 				if (sw_sdtv_res_n = '1') then
 					-- 480p component c-sync
 					vga_sync <= not (out_hsync xor out_vsync);

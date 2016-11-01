@@ -1,5 +1,5 @@
 Analysis & Synthesis report for n6480
-Wed Aug 24 22:50:41 2016
+Tue Nov 01 00:32:09 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -53,16 +53,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Aug 24 22:50:41 2016           ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 01 00:32:09 2016           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; n6480                                           ;
 ; Top-level Entity Name              ; n6480                                           ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 522                                             ;
-;     Total combinational functions  ; 450                                             ;
+; Total logic elements               ; 525                                             ;
+;     Total combinational functions  ; 453                                             ;
 ;     Dedicated logic registers      ; 304                                             ;
 ; Total registers                    ; 304                                             ;
-; Total pins                         ; 51                                              ;
+; Total pins                         ; 53                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 32,382                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -161,30 +161,30 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 4      ;
+; Number detected on machine ; 8      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                            ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                        ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------+---------+
-; ../Source/n6480.vhd              ; yes             ; User VHDL File               ; C:/Users/Moffitt/Development/N6480/Source/n6480.vhd                 ;         ;
-; ../Source/n64_pixel.vhd          ; yes             ; User VHDL File               ; C:/Users/Moffitt/Development/N6480/Source/n64_pixel.vhd             ;         ;
-; ../Source/linebuffer.vhd         ; yes             ; User VHDL File               ; C:/Users/Moffitt/Development/N6480/Source/linebuffer.vhd            ;         ;
-; ../Source/rgb2yuv.vhd            ; yes             ; User VHDL File               ; C:/Users/Moffitt/Development/N6480/Source/rgb2yuv.vhd               ;         ;
-; altshift_taps.tdf                ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift_taps.tdf ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc      ;         ;
-; lpm_counter.inc                  ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_counter.inc   ;         ;
-; lpm_compare.inc                  ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.inc   ;         ;
-; lpm_constant.inc                 ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.inc  ;         ;
-; db/shift_taps_him.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Moffitt/Development/N6480/Altera/db/shift_taps_him.tdf     ;         ;
-; db/altsyncram_ue81.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Moffitt/Development/N6480/Altera/db/altsyncram_ue81.tdf    ;         ;
-; db/cntr_fpf.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Moffitt/Development/N6480/Altera/db/cntr_fpf.tdf           ;         ;
-; db/cmpr_ldc.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Moffitt/Development/N6480/Altera/db/cmpr_ldc.tdf           ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                 ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                             ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
+; ../Source/n6480.vhd              ; yes             ; User VHDL File               ; C:/Users/Michael Moffitt/Development/N6480/Source/n6480.vhd              ;         ;
+; ../Source/n64_pixel.vhd          ; yes             ; User VHDL File               ; C:/Users/Michael Moffitt/Development/N6480/Source/n64_pixel.vhd          ;         ;
+; ../Source/linebuffer.vhd         ; yes             ; User VHDL File               ; C:/Users/Michael Moffitt/Development/N6480/Source/linebuffer.vhd         ;         ;
+; ../Source/rgb2yuv.vhd            ; yes             ; User VHDL File               ; C:/Users/Michael Moffitt/Development/N6480/Source/rgb2yuv.vhd            ;         ;
+; altshift_taps.tdf                ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift_taps.tdf      ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc           ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_counter.inc        ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.inc        ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.inc       ;         ;
+; db/shift_taps_him.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Michael Moffitt/Development/N6480/Altera/db/shift_taps_him.tdf  ;         ;
+; db/altsyncram_ue81.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Michael Moffitt/Development/N6480/Altera/db/altsyncram_ue81.tdf ;         ;
+; db/cntr_fpf.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Michael Moffitt/Development/N6480/Altera/db/cntr_fpf.tdf        ;         ;
+; db/cmpr_ldc.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Michael Moffitt/Development/N6480/Altera/db/cmpr_ldc.tdf        ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -192,28 +192,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 522       ;
+; Estimated Total logic elements              ; 525       ;
 ;                                             ;           ;
-; Total combinational functions               ; 450       ;
+; Total combinational functions               ; 453       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 132       ;
-;     -- 3 input functions                    ; 151       ;
-;     -- <=2 input functions                  ; 167       ;
+;     -- 4 input functions                    ; 135       ;
+;     -- 3 input functions                    ; 152       ;
+;     -- <=2 input functions                  ; 166       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 221       ;
+;     -- normal mode                          ; 224       ;
 ;     -- arithmetic mode                      ; 229       ;
 ;                                             ;           ;
 ; Total registers                             ; 304       ;
 ;     -- Dedicated logic registers            ; 304       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 51        ;
+; I/O pins                                    ; 53        ;
 ; Total memory bits                           ; 32382     ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ; Maximum fan-out node                        ; n64_clock ;
 ; Maximum fan-out                             ; 346       ;
-; Total fan-out                               ; 2856      ;
+; Total fan-out                               ; 2868      ;
 ; Average fan-out                             ; 3.37      ;
 +---------------------------------------------+-----------+
 
@@ -223,7 +223,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                    ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+--------------+
-; |n6480                                    ; 450 (269)         ; 304 (189)    ; 32382       ; 0            ; 0       ; 0         ; 51   ; 0            ; |n6480                                                                                                                 ; work         ;
+; |n6480                                    ; 453 (272)         ; 304 (189)    ; 32382       ; 0            ; 0       ; 0         ; 53   ; 0            ; |n6480                                                                                                                 ; work         ;
 ;    |linebuffer:buffer_a|                  ; 15 (0)            ; 10 (0)       ; 16191       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_a                                                                                             ; work         ;
 ;       |altshift_taps:line_buffer_rtl_0|   ; 15 (0)            ; 10 (0)       ; 16191       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0                                                             ; work         ;
 ;          |shift_taps_him:auto_generated|  ; 15 (0)            ; 10 (0)       ; 16191       ; 0            ; 0       ; 0         ; 0    ; 0            ; |n6480|linebuffer:buffer_a|altshift_taps:line_buffer_rtl_0|shift_taps_him:auto_generated                               ; work         ;
@@ -258,7 +258,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 304   ;
-; Number of registers using Synchronous Clear  ; 111   ;
+; Number of registers using Synchronous Clear  ; 110   ;
 ; Number of registers using Synchronous Load   ; 86    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -292,17 +292,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 21 bits   ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |n6480|out_red[4]          ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |n6480|vga_px_count[15]    ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |n6480|n64_px_count[11]    ;
+; 3:1                ; 21 bits   ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |n6480|out_green[6]        ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |n6480|vga_px_count[9]     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |n6480|n64_px_count[4]     ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |n6480|interlace_mode[0]   ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |n6480|buffer_in_b[6]      ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |n6480|buffer_in_a[6]      ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |n6480|line_count[9]       ;
-; 5:1                ; 15 bits   ; 45 LEs        ; 30 LEs               ; 15 LEs                 ; Yes        ; |n6480|buffer_in_a[1]      ;
-; 5:1                ; 15 bits   ; 45 LEs        ; 30 LEs               ; 15 LEs                 ; Yes        ; |n6480|buffer_in_b[1]      ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |n6480|buffer_in_b[5]      ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |n6480|buffer_in_a[19]     ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |n6480|buffer_in_a[13]     ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |n6480|line_count[6]       ;
+; 5:1                ; 15 bits   ; 45 LEs        ; 30 LEs               ; 15 LEs                 ; Yes        ; |n6480|buffer_in_a[11]     ;
+; 5:1                ; 15 bits   ; 45 LEs        ; 30 LEs               ; 15 LEs                 ; Yes        ; |n6480|buffer_in_b[18]     ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |n6480|buffer_in_b[19]     ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |n6480|buffer_in_a[5]      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -407,7 +407,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:11     ;
+; Top            ; 00:00:12     ;
 +----------------+--------------+
 
 
@@ -417,25 +417,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Aug 24 22:50:26 2016
+    Info: Processing started: Tue Nov 01 00:31:54 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off N6480 -c n6480
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 2 design units, including 1 entities, in source file /users/moffitt/development/n6480/source/n6480.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/michael moffitt/development/n6480/source/n6480.vhd
     Info (12022): Found design unit 1: n6480-behavioral
     Info (12023): Found entity 1: n6480
-Info (12021): Found 2 design units, including 1 entities, in source file /users/moffitt/development/n6480/source/n64_pixel.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/michael moffitt/development/n6480/source/n64_pixel.vhd
     Info (12022): Found design unit 1: n64_pixel-behavioral
     Info (12023): Found entity 1: n64_pixel
-Info (12021): Found 2 design units, including 1 entities, in source file /users/moffitt/development/n6480/source/linebuffer.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/michael moffitt/development/n6480/source/linebuffer.vhd
     Info (12022): Found design unit 1: linebuffer-behavioral
     Info (12023): Found entity 1: linebuffer
-Info (12021): Found 2 design units, including 1 entities, in source file /users/moffitt/development/n6480/source/rgb2yuv.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/michael moffitt/development/n6480/source/rgb2yuv.vhd
     Info (12022): Found design unit 1: rgb2yuv-behavioral
     Info (12023): Found entity 1: rgb2yuv
 Info (12127): Elaborating entity "n6480" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at n6480.vhd(73): object "n64_clamp_n" assigned a value but never read
-Warning (10037): Verilog HDL or VHDL warning at n6480.vhd(351): conditional expression evaluates to a constant
-Warning (10037): Verilog HDL or VHDL warning at n6480.vhd(376): conditional expression evaluates to a constant
 Info (12129): Elaborating entity "n64_pixel" using architecture "A:behavioral" for hierarchy "n64_pixel:rgb_decoder"
 Info (12129): Elaborating entity "linebuffer" using architecture "A:behavioral" for hierarchy "linebuffer:buffer_a"
 Info (12129): Elaborating entity "rgb2yuv" using architecture "A:behavioral" for hierarchy "rgb2yuv:yuv_encoder"
@@ -463,14 +461,14 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_ldc
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 615 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 15 input pins
+Info (21057): Implemented 620 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 17 input pins
     Info (21059): Implemented 36 output pins
-    Info (21061): Implemented 522 logic cells
+    Info (21061): Implemented 525 logic cells
     Info (21064): Implemented 42 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 585 megabytes
-    Info: Processing ended: Wed Aug 24 22:50:41 2016
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 548 megabytes
+    Info: Processing ended: Tue Nov 01 00:32:09 2016
     Info: Elapsed time: 00:00:15
     Info: Total CPU time (on all processors): 00:00:15
 

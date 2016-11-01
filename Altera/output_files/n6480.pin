@@ -64,15 +64,15 @@ CHIP  "n6480"  ASSIGNED TO AN: EP2C5T144C8
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
-~ASDO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 1         : input  : 3.3-V LVTTL       :         : 1         : N              
-~nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 2         : input  : 3.3-V LVTTL       :         : 1         : N              
-RESERVED_INPUT               : 3         :        :                   :         : 1         :                
-sw_ypbpr_n                   : 4         : input  : 3.3-V LVTTL       :         : 1         : Y              
+~ASDO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 1         : input  : 3.3-V LVCMOS      :         : 1         : N              
+~nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 2         : input  : 3.3-V LVCMOS      :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 3         :        :                   :         : 1         :                
+sw_ypbpr_n                   : 4         : input  : 3.3-V LVCMOS      :         : 1         : Y              
 VCCIO1                       : 5         : power  :                   : 3.3V    : 1         :                
 GND                          : 6         : gnd    :                   :         :           :                
-sw_scanlines_n[1]            : 7         : input  : 3.3-V LVTTL       :         : 1         : Y              
-sw_scanlines_n[0]            : 8         : input  : 3.3-V LVTTL       :         : 1         : Y              
-sw_sdtv_res_n                : 9         : input  : 3.3-V LVTTL       :         : 1         : Y              
+sw_scanlines_n[1]            : 7         : input  : 3.3-V LVCMOS      :         : 1         : Y              
+sw_scanlines_n[0]            : 8         : input  : 3.3-V LVCMOS      :         : 1         : Y              
+sw_sdtv_res_n                : 9         : input  : 3.3-V LVCMOS      :         : 1         : Y              
 TDO                          : 10        : output :                   :         : 1         :                
 TMS                          : 11        : input  :                   :         : 1         :                
 TCK                          : 12        : input  :                   :         : 1         :                
@@ -87,15 +87,15 @@ nCONFIG                      : 20        :        :                   :         
 GND+                         : 21        :        :                   :         : 1         :                
 GND+                         : 22        :        :                   :         : 1         :                
 VCCIO1                       : 23        : power  :                   : 3.3V    : 1         :                
-RESERVED_INPUT               : 24        :        :                   :         : 1         :                
-RESERVED_INPUT               : 25        :        :                   :         : 1         :                
-RESERVED_INPUT               : 26        :        :                   :         : 1         :                
-RESERVED_INPUT               : 27        :        :                   :         : 1         :                
-RESERVED_INPUT               : 28        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 24        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 25        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 26        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 27        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 28        :        :                   :         : 1         :                
 VCCIO1                       : 29        : power  :                   : 3.3V    : 1         :                
-led                          : 30        : output : 3.3-V LVTTL       :         : 1         : Y              
-RESERVED_INPUT               : 31        :        :                   :         : 1         :                
-RESERVED_INPUT               : 32        :        :                   :         : 1         :                
+led                          : 30        : output : 3.3-V LVCMOS      :         : 1         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 31        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 32        :        :                   :         : 1         :                
 GND                          : 33        : gnd    :                   :         :           :                
 GND_PLL1                     : 34        : gnd    :                   :         :           :                
 VCCD_PLL1                    : 35        : power  :                   : 1.2V    :           :                
@@ -103,71 +103,71 @@ GND_PLL1                     : 36        : gnd    :                   :         
 VCCA_PLL1                    : 37        : power  :                   : 1.2V    :           :                
 GNDA_PLL1                    : 38        : gnd    :                   :         :           :                
 GND                          : 39        : gnd    :                   :         :           :                
-RESERVED_INPUT               : 40        :        :                   :         : 4         :                
-RESERVED_INPUT               : 41        :        :                   :         : 4         :                
-RESERVED_INPUT               : 42        :        :                   :         : 4         :                
-RESERVED_INPUT               : 43        :        :                   :         : 4         :                
-RESERVED_INPUT               : 44        :        :                   :         : 4         :                
-RESERVED_INPUT               : 45        :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 40        :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 41        :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 42        :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 43        :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 44        :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 45        :        :                   :         : 4         :                
 VCCIO4                       : 46        : power  :                   : 3.3V    : 4         :                
-RESERVED_INPUT               : 47        :        :                   :         : 4         :                
-RESERVED_INPUT               : 48        :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 47        :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 48        :        :                   :         : 4         :                
 GND                          : 49        : gnd    :                   :         :           :                
 VCCINT                       : 50        : power  :                   : 1.2V    :           :                
-RESERVED_INPUT               : 51        :        :                   :         : 4         :                
-RESERVED_INPUT               : 52        :        :                   :         : 4         :                
-RESERVED_INPUT               : 53        :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 51        :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 52        :        :                   :         : 4         :                
+sw_vga_csync_n               : 53        : input  : 3.3-V LVCMOS      :         : 4         : N              
 VCCIO4                       : 54        : power  :                   : 3.3V    : 4         :                
-RESERVED_INPUT               : 55        :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 55        :        :                   :         : 4         :                
 GND                          : 56        : gnd    :                   :         :           :                
-RESERVED_INPUT               : 57        :        :                   :         : 4         :                
-sw_sharp_en_n                : 58        : input  : 3.3-V LVTTL       :         : 4         : Y              
-sw_sharp_odd_n               : 59        : input  : 3.3-V LVTTL       :         : 4         : Y              
-n64_data[6]                  : 60        : input  : 3.3-V LVTTL       :         : 4         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 57        :        :                   :         : 4         :                
+sw_sharp_en_n                : 58        : input  : 3.3-V LVCMOS      :         : 4         : Y              
+sw_sharp_odd_n               : 59        : input  : 3.3-V LVCMOS      :         : 4         : Y              
+n64_data[6]                  : 60        : input  : 3.3-V LVCMOS      :         : 4         : Y              
 GND                          : 61        : gnd    :                   :         :           :                
 VCCINT                       : 62        : power  :                   : 1.2V    :           :                
-RESERVED_INPUT               : 63        :        :                   :         : 4         :                
-RESERVED_INPUT               : 64        :        :                   :         : 4         :                
-n64_data[5]                  : 65        : input  : 3.3-V LVTTL       :         : 4         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 63        :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 64        :        :                   :         : 4         :                
+n64_data[5]                  : 65        : input  : 3.3-V LVCMOS      :         : 4         : Y              
 VCCIO4                       : 66        : power  :                   : 3.3V    : 4         :                
-n64_data[4]                  : 67        : input  : 3.3-V LVTTL       :         : 4         : Y              
+n64_data[4]                  : 67        : input  : 3.3-V LVCMOS      :         : 4         : Y              
 GND                          : 68        : gnd    :                   :         :           :                
-n64_data[3]                  : 69        : input  : 3.3-V LVTTL       :         : 4         : Y              
-n64_data[2]                  : 70        : input  : 3.3-V LVTTL       :         : 4         : Y              
-n64_data[1]                  : 71        : input  : 3.3-V LVTTL       :         : 4         : Y              
-RESERVED_INPUT               : 72        :        :                   :         : 4         :                
-vga_vsync                    : 73        : output : 3.3-V LVTTL       :         : 3         : Y              
-vga_hsync                    : 74        : output : 3.3-V LVTTL       :         : 3         : Y              
-vga_clk                      : 75        : output : 3.3-V LVTTL       :         : 3         : Y              
-~LVDS41p/nCEO~               : 76        : output : 3.3-V LVTTL       :         : 3         : N              
+n64_data[3]                  : 69        : input  : 3.3-V LVCMOS      :         : 4         : Y              
+n64_data[2]                  : 70        : input  : 3.3-V LVCMOS      :         : 4         : Y              
+n64_data[1]                  : 71        : input  : 3.3-V LVCMOS      :         : 4         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 72        :        :                   :         : 4         :                
+vga_vsync                    : 73        : output : 3.3-V LVCMOS      :         : 3         : Y              
+vga_hsync                    : 74        : output : 3.3-V LVCMOS      :         : 3         : Y              
+vga_clk                      : 75        : output : 3.3-V LVCMOS      :         : 3         : Y              
+~LVDS41p/nCEO~               : 76        : output : 3.3-V LVCMOS      :         : 3         : N              
 VCCIO3                       : 77        : power  :                   : 3.3V    : 3         :                
 GND                          : 78        : gnd    :                   :         :           :                
-vga_blue[9]                  : 79        : output : 3.3-V LVTTL       :         : 3         : Y              
-vga_blue[8]                  : 80        : output : 3.3-V LVTTL       :         : 3         : Y              
-vga_blue[7]                  : 81        : output : 3.3-V LVTTL       :         : 3         : Y              
+vga_blue[9]                  : 79        : output : 3.3-V LVCMOS      :         : 3         : Y              
+vga_blue[8]                  : 80        : output : 3.3-V LVCMOS      :         : 3         : Y              
+vga_blue[7]                  : 81        : output : 3.3-V LVCMOS      :         : 3         : Y              
 nSTATUS                      : 82        :        :                   :         : 3         :                
 CONF_DONE                    : 83        :        :                   :         : 3         :                
 MSEL1                        : 84        :        :                   :         : 3         :                
 MSEL0                        : 85        :        :                   :         : 3         :                
-vga_blue[6]                  : 86        : output : 3.3-V LVTTL       :         : 3         : Y              
-vga_blue[5]                  : 87        : output : 3.3-V LVTTL       :         : 3         : Y              
-n64_data[0]                  : 88        : input  : 3.3-V LVTTL       :         : 3         : Y              
-n64_dsync_n                  : 89        : input  : 3.3-V LVTTL       :         : 3         : Y              
-n64_clock                    : 90        : input  : 3.3-V LVTTL       :         : 3         : Y              
+vga_blue[6]                  : 86        : output : 3.3-V LVCMOS      :         : 3         : Y              
+vga_blue[5]                  : 87        : output : 3.3-V LVCMOS      :         : 3         : Y              
+n64_data[0]                  : 88        : input  : 3.3-V LVCMOS      :         : 3         : Y              
+n64_dsync_n                  : 89        : input  : 3.3-V LVCMOS      :         : 3         : Y              
+n64_clock                    : 90        : input  : 3.3-V LVCMOS      :         : 3         : Y              
 GND+                         : 91        :        :                   :         : 3         :                
-vga_blue[4]                  : 92        : output : 3.3-V LVTTL       :         : 3         : Y              
-vga_blue[3]                  : 93        : output : 3.3-V LVTTL       :         : 3         : Y              
-vga_blue[2]                  : 94        : output : 3.3-V LVTTL       :         : 3         : Y              
+vga_blue[4]                  : 92        : output : 3.3-V LVCMOS      :         : 3         : Y              
+vga_blue[3]                  : 93        : output : 3.3-V LVCMOS      :         : 3         : Y              
+vga_blue[2]                  : 94        : output : 3.3-V LVCMOS      :         : 3         : Y              
 VCCIO3                       : 95        : power  :                   : 3.3V    : 3         :                
-vga_blue[1]                  : 96        : output : 3.3-V LVTTL       :         : 3         : Y              
-vga_blue[0]                  : 97        : output : 3.3-V LVTTL       :         : 3         : Y              
+vga_blue[1]                  : 96        : output : 3.3-V LVCMOS      :         : 3         : Y              
+vga_blue[0]                  : 97        : output : 3.3-V LVCMOS      :         : 3         : Y              
 GND                          : 98        : gnd    :                   :         :           :                
-vga_sync                     : 99        : output : 3.3-V LVTTL       :         : 3         : Y              
-vga_blank                    : 100       : output : 3.3-V LVTTL       :         : 3         : Y              
-vga_green[9]                 : 101       : output : 3.3-V LVTTL       :         : 3         : Y              
+vga_sync                     : 99        : output : 3.3-V LVCMOS      :         : 3         : Y              
+vga_blank                    : 100       : output : 3.3-V LVCMOS      :         : 3         : Y              
+vga_green[9]                 : 101       : output : 3.3-V LVCMOS      :         : 3         : Y              
 VCCIO3                       : 102       : power  :                   : 3.3V    : 3         :                
-vga_green[8]                 : 103       : output : 3.3-V LVTTL       :         : 3         : Y              
-vga_green[7]                 : 104       : output : 3.3-V LVTTL       :         : 3         : Y              
+vga_green[8]                 : 103       : output : 3.3-V LVCMOS      :         : 3         : Y              
+vga_green[7]                 : 104       : output : 3.3-V LVCMOS      :         : 3         : Y              
 GND                          : 105       : gnd    :                   :         :           :                
 GND_PLL2                     : 106       : gnd    :                   :         :           :                
 VCCD_PLL2                    : 107       : power  :                   : 1.2V    :           :                
@@ -175,36 +175,36 @@ GND_PLL2                     : 108       : gnd    :                   :         
 VCCA_PLL2                    : 109       : power  :                   : 1.2V    :           :                
 GNDA_PLL2                    : 110       : gnd    :                   :         :           :                
 GND                          : 111       : gnd    :                   :         :           :                
-vga_green[6]                 : 112       : output : 3.3-V LVTTL       :         : 2         : Y              
-vga_green[5]                 : 113       : output : 3.3-V LVTTL       :         : 2         : Y              
-vga_green[4]                 : 114       : output : 3.3-V LVTTL       :         : 2         : Y              
-vga_green[3]                 : 115       : output : 3.3-V LVTTL       :         : 2         : Y              
+vga_green[6]                 : 112       : output : 3.3-V LVCMOS      :         : 2         : Y              
+vga_green[5]                 : 113       : output : 3.3-V LVCMOS      :         : 2         : Y              
+vga_green[4]                 : 114       : output : 3.3-V LVCMOS      :         : 2         : Y              
+vga_green[3]                 : 115       : output : 3.3-V LVCMOS      :         : 2         : Y              
 VCCIO2                       : 116       : power  :                   : 3.3V    : 2         :                
 GND                          : 117       : gnd    :                   :         :           :                
-vga_green[2]                 : 118       : output : 3.3-V LVTTL       :         : 2         : Y              
-vga_green[1]                 : 119       : output : 3.3-V LVTTL       :         : 2         : Y              
-vga_green[0]                 : 120       : output : 3.3-V LVTTL       :         : 2         : Y              
-vga_red[9]                   : 121       : output : 3.3-V LVTTL       :         : 2         : Y              
-vga_red[8]                   : 122       : output : 3.3-V LVTTL       :         : 2         : Y              
+vga_green[2]                 : 118       : output : 3.3-V LVCMOS      :         : 2         : Y              
+vga_green[1]                 : 119       : output : 3.3-V LVCMOS      :         : 2         : Y              
+vga_green[0]                 : 120       : output : 3.3-V LVCMOS      :         : 2         : Y              
+vga_red[9]                   : 121       : output : 3.3-V LVCMOS      :         : 2         : Y              
+vga_red[8]                   : 122       : output : 3.3-V LVCMOS      :         : 2         : Y              
 GND                          : 123       : gnd    :                   :         :           :                
 VCCINT                       : 124       : power  :                   : 1.2V    :           :                
-vga_red[7]                   : 125       : output : 3.3-V LVTTL       :         : 2         : Y              
-vga_red[6]                   : 126       : output : 3.3-V LVTTL       :         : 2         : Y              
+vga_red[7]                   : 125       : output : 3.3-V LVCMOS      :         : 2         : Y              
+vga_red[6]                   : 126       : output : 3.3-V LVCMOS      :         : 2         : Y              
 VCCIO2                       : 127       : power  :                   : 3.3V    : 2         :                
 GND                          : 128       : gnd    :                   :         :           :                
-vga_red[5]                   : 129       : output : 3.3-V LVTTL       :         : 2         : Y              
+vga_red[5]                   : 129       : output : 3.3-V LVCMOS      :         : 2         : Y              
 GND                          : 130       : gnd    :                   :         :           :                
 VCCINT                       : 131       : power  :                   : 1.2V    :           :                
-RESERVED_INPUT               : 132       :        :                   :         : 2         :                
-vga_red[4]                   : 133       : output : 3.3-V LVTTL       :         : 2         : Y              
-vga_red[3]                   : 134       : output : 3.3-V LVTTL       :         : 2         : Y              
-vga_red[2]                   : 135       : output : 3.3-V LVTTL       :         : 2         : Y              
-vga_red[1]                   : 136       : output : 3.3-V LVTTL       :         : 2         : Y              
-vga_red[0]                   : 137       : output : 3.3-V LVTTL       :         : 2         : Y              
+sw_sog_force_n               : 132       : input  : 3.3-V LVCMOS      :         : 2         : N              
+vga_red[4]                   : 133       : output : 3.3-V LVCMOS      :         : 2         : Y              
+vga_red[3]                   : 134       : output : 3.3-V LVCMOS      :         : 2         : Y              
+vga_red[2]                   : 135       : output : 3.3-V LVCMOS      :         : 2         : Y              
+vga_red[1]                   : 136       : output : 3.3-V LVCMOS      :         : 2         : Y              
+vga_red[0]                   : 137       : output : 3.3-V LVCMOS      :         : 2         : Y              
 VCCIO2                       : 138       : power  :                   : 3.3V    : 2         :                
-RESERVED_INPUT               : 139       :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 139       :        :                   :         : 2         :                
 GND                          : 140       : gnd    :                   :         :           :                
-RESERVED_INPUT               : 141       :        :                   :         : 2         :                
-RESERVED_INPUT               : 142       :        :                   :         : 2         :                
-RESERVED_INPUT               : 143       :        :                   :         : 2         :                
-RESERVED_INPUT               : 144       :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 141       :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 142       :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 143       :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 144       :        :                   :         : 2         :                

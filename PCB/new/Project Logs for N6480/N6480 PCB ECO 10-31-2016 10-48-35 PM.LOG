@@ -1,0 +1,12 @@
+Removed Pin From Net: NetName=VGA_HS Pin=P4-4
+Removed Pin From Net: NetName=VGA_VS Pin=P4-5
+Added Component: Designator=R14(J1-0603)
+Added Component: Designator=R15(J1-0603)
+Added Pin To Net: NetName=VGA_HS Pin=R14-1
+Added Pin To Net: NetName=VGA_VS Pin=R15-1
+Added Pin To Net: NetName=NetP4_4 Pin=P4-4
+Added Pin To Net: NetName=NetP4_4 Pin=R14-2
+Added Net: Name=NetP4_4
+Added Pin To Net: NetName=NetP4_5 Pin=P4-5
+Added Pin To Net: NetName=NetP4_5 Pin=R15-2
+Added Net: Name=NetP4_5

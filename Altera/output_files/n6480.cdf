@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EPCS4) Path("C:/Users/Moffitt/Development/N6480/Altera/output_files/") File("n6480.pof") MfrSpec(OpMask(3) Child_OpMask(1 3));
+		Device PartName(EPCS4) Path("C:/Users/Michael Moffitt/Development/N6480/Altera/output_files/") File("n6480.pof") MfrSpec(OpMask(3) Child_OpMask(1 3));
 
 ChainEnd;
 

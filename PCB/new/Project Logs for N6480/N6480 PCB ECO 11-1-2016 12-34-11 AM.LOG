@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=/SW_YPBPR Pin=U1-4
+Removed Pin From Net: NetName=/SW_SCAN1 Pin=U1-7
+Removed Pin From Net: NetName=/SW_SCAN0 Pin=U1-8
+Removed Pin From Net: NetName=/SW_15KHZ Pin=U1-9
+Removed Pin From Net: NetName=/SW_SHARP_EN Pin=U1-24
+Removed Pin From Net: NetName=/SW_SHARP_COL Pin=U1-25
+Removed Pin From Net: NetName=/SW_SOG Pin=U1-26
+Removed Pin From Net: NetName=/SW_VGA_CSYNC Pin=U1-27
+Added Pin To Net: NetName=/SW_YPBPR Pin=U1-40
+Added Pin To Net: NetName=/SW_SCAN1 Pin=U1-41
+Added Pin To Net: NetName=/SW_SCAN0 Pin=U1-42
+Added Pin To Net: NetName=/SW_15KHZ Pin=U1-43
+Added Pin To Net: NetName=/SW_SHARP_EN Pin=U1-44
+Added Pin To Net: NetName=/SW_SHARP_COL Pin=U1-45
+Added Pin To Net: NetName=/SW_SOG Pin=U1-47
+Added Pin To Net: NetName=/SW_VGA_CSYNC Pin=U1-48

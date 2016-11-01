@@ -1,0 +1,4 @@
+Change Net Name : Old Net Name=NetLED1_1 New Net Name=NetPWR_1
+Change Net Name : Old Net Name=NetLED2_1 New Net Name=NetACT_1
+Added Pin To Net: NetName=D6 Pin=U1-60
+Added Net: Name=D6
