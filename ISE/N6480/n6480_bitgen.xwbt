@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=C:\Users\Julian\Development\N6480\ISE\N6480\n6480.ncd
-OUTFILE=C:\Users\Julian\Development\N6480\ISE\N6480\n6480.bit
-FAMILY=Spartan6
-PART=xc6slx4-3cpg196
-WORKINGDIR=C:\Users\Julian\Development\N6480\ISE\N6480
-LICENSE=WebPack
-USER_INFO=210836052_0_0_553
