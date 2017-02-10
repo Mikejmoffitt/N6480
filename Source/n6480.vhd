@@ -218,10 +218,10 @@ begin
 				then
 					if (n64_px_count >= VGA_LINE_LEN) then
 						buffer_en_b <= not clock_count(0);
-						vga_clk <= not vga_osc;
+						vga_clk <= vga_osc;
 					else
 						buffer_en_b <= clock_count(0);
-						vga_clk <= vga_osc;
+						vga_clk <= not vga_osc;
 					end if;
 				end if;
 			else
@@ -251,10 +251,10 @@ begin
 				then
 					if (n64_px_count >= VGA_LINE_LEN) then
 						buffer_en_a <= not clock_count(0);
-						vga_clk <= not vga_osc;
+						vga_clk <= vga_osc;
 					else
 						buffer_en_a <= clock_count(0);
-						vga_clk <= vga_osc;
+						vga_clk <= not vga_osc;
 					end if;
 				end if;
 			end if;
@@ -342,7 +342,7 @@ begin
 			else
 				vga_vsync <= '0'; -- We don't use dedicated VSYNC for RGB15 mode.
 			end if;
-			led <= out_vsync;
+			led <= not out_vsync;
 		end if;
 	end process;
 	

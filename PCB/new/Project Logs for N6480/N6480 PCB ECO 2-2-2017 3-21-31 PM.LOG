@@ -1,0 +1,32 @@
+Removed Pin From Net: NetName=VCC5.0 Pin=C12-2
+Removed Pin From Net: NetName=VCC5.0 Pin=C13-2
+Removed Pin From Net: NetName=VCC5.0 Pin=C45-2
+Removed Pin From Net: NetName=VCC5.0 Pin=C46-2
+Added Component: Designator=R16(J1-0603)
+Added Component: Designator=R17(J1-0603)
+Added Component: Designator=R18(J1-0603)
+Added Component: Designator=R19(J1-0603)
+Added Component: Designator=R20(J1-0603)
+Added Component: Designator=R21(J1-0603)
+Added Component: Designator=R22(J1-0603)
+Added Component: Designator=R23(J1-0603)
+Added Pin To Net: NetName=VCC3.3 Pin=C12-2
+Added Pin To Net: NetName=VCC3.3 Pin=C13-2
+Added Pin To Net: NetName=VCC3.3 Pin=C45-2
+Added Pin To Net: NetName=VCC3.3 Pin=C46-2
+Added Pin To Net: NetName=/SW_YPBPR Pin=R16-1
+Added Pin To Net: NetName=VCC3.3 Pin=R16-2
+Added Pin To Net: NetName=/SW_SCAN1 Pin=R17-1
+Added Pin To Net: NetName=VCC3.3 Pin=R17-2
+Added Pin To Net: NetName=/SW_SCAN0 Pin=R18-1
+Added Pin To Net: NetName=VCC3.3 Pin=R18-2
+Added Pin To Net: NetName=/SW_15KHZ Pin=R19-1
+Added Pin To Net: NetName=VCC3.3 Pin=R19-2
+Added Pin To Net: NetName=/SW_SHARP_EN Pin=R20-1
+Added Pin To Net: NetName=VCC3.3 Pin=R20-2
+Added Pin To Net: NetName=/SW_SHARP_COL Pin=R21-1
+Added Pin To Net: NetName=VCC3.3 Pin=R21-2
+Added Pin To Net: NetName=/SW_SOG Pin=R22-1
+Added Pin To Net: NetName=VCC3.3 Pin=R22-2
+Added Pin To Net: NetName=/SW_VGA_CSYNC Pin=R23-1
+Added Pin To Net: NetName=VCC3.3 Pin=R23-2
