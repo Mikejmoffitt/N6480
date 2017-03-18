@@ -108,7 +108,7 @@ signal y_data: std_logic_vector(9 downto 0);
 signal u_data: std_logic_vector(9 downto 0);
 signal v_data: std_logic_vector(9 downto 0);
 
-signal sharp_en_n: std_logic := '1';
+signal sharp_en_n: std_logic := '0';
 
 signal vsync_latch: std_logic := '0';
 
@@ -117,7 +117,7 @@ begin
 	-- Values are valid on the rising edge of the first clock out of four.		
 	rgb_decoder: entity work.n64_pixel(behavioral) port map (
 		n64_data, n64_clock, n64_dsync_n, n64_red, n64_green, n64_blue,
-		n64_csync_n, n64_hsync_n, n64_clamp_n, n64_vsync_n, clock_count, sharp_en_n or sw_sharp_en_n, sw_sharp_odd_n);
+		n64_csync_n, n64_hsync_n, n64_clamp_n, n64_vsync_n, clock_count, sharp_en_n or (not sw_sharp_en_n), sw_sharp_odd_n);
 	
 	-- Both alternating line buffers
 	buffer_a: entity work.linebuffer(behavioral) 
