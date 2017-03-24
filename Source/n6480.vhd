@@ -45,6 +45,8 @@ constant N64_G_L: integer := (N64_PIXEL_LEN / 3);
 constant N64_B_H: integer := (N64_PIXEL_LEN / 3) - 1;
 constant N64_B_L: integer := 0;
 
+constant LINE_REPEAT_DELAY: integer := 4;
+
 -- What a weird number!
 constant N64_PIXELS_PER_LINE: integer := 774;
 
@@ -56,12 +58,12 @@ constant NUM_LINES: integer := 262;
 
 -- Mode 0 is for when Hsync goes beyond one line
 constant VGA_HSYNC_LEN: integer := 96;
-constant VGA_HSYNC_START: integer := VGA_LINE_LEN - 30;
-constant VGA_HSYNC_END: integer := 162;
+constant VGA_HSYNC_START: integer := VGA_LINE_LEN - 10;
+constant VGA_HSYNC_END: integer := 62;
 constant VGA_BLANK_START: integer := VGA_LINE_LEN - 30;
 constant VGA_BLANK_END: integer := 162;
 constant VGA_VSYNC_START: integer := 1;
-constant VGA_VSYNC_END: integer := 3;
+constant VGA_VSYNC_END: integer := 5;
 constant U16_ZERO: std_logic_vector(15 downto 0) := "0000000000000000";
 
 -- Deserialized pixel data, ready to read
@@ -89,10 +91,17 @@ signal line_count: std_logic_vector(15 downto 0) := U16_ZERO;
 signal clock_count: std_logic_vector(1 downto 0) := "00";
 signal vsync_time: std_logic_vector(15 downto 0) := U16_ZERO;
 signal hsync_time: std_logic_vector(15 downto 0) := U16_ZERO;
+signal vga_line_count: std_logic_vector(15 downto 0) := U16_ZERO;
 
 signal enable_delay: std_logic := '0'; -- When 1, delay the line by 8 clocks for interlace mode
+signal enable_delay_prev: std_logic := '0'; -- used for interlace detection.
 
+-- If nonzero, we're in 480i mode.
 signal interlace_mode: std_logic_vector(1 downto 0) := "00";
+signal even_frame: std_logic := '0';
+
+constant INTERLACE_V_DELAY: integer := 0;
+constant INTERLACE_POLARITY: std_logic := '0';
 
 -- For assigning from the buffers
 signal out_red: std_logic_vector(6 downto 0);
@@ -104,13 +113,15 @@ signal vga_osc: std_logic := '0';
 signal out_vsync: std_logic;
 signal out_hsync: std_logic;
 
+-- VSync is only allowed to transition during blanking.
+signal vsync_latch: std_logic;
+
 signal y_data: std_logic_vector(9 downto 0);
 signal u_data: std_logic_vector(9 downto 0);
 signal v_data: std_logic_vector(9 downto 0);
 
 signal sharp_en_n: std_logic := '0';
 
-signal vsync_latch: std_logic := '0';
 
 begin
 	-- Used to deserialize the N64 pixel bus into values for a pixel.
@@ -214,7 +225,7 @@ begin
 				
 				-- Have it shift out data twice for every one N64 pixel 
 				-- (or once per VGA pixel)
-				if ((n64_px_count > 4 and enable_delay = '1') or (enable_delay = '0'))
+				if ((n64_px_count > LINE_REPEAT_DELAY and enable_delay = '1') or (enable_delay = '0'))
 				then
 					if (n64_px_count >= VGA_LINE_LEN) then
 						buffer_en_b <= not clock_count(0);
@@ -247,7 +258,7 @@ begin
 				
 				-- Have it shift out data twice for every one N64 pixel 
 				-- (or once per VGA pixel)
-				if ((n64_px_count > 4 and enable_delay = '1') or (enable_delay = '0'))
+				if ((n64_px_count > LINE_REPEAT_DELAY and enable_delay = '1') or (enable_delay = '0'))
 				then
 					if (n64_px_count >= VGA_LINE_LEN) then
 						buffer_en_a <= not clock_count(0);
@@ -266,10 +277,12 @@ begin
 	begin
 		if (rising_edge(n64_clock)) then
 			if (vsync_time = 1) then
-				if (enable_delay = '1') then
+				if (enable_delay /= enable_delay_prev) then
 					interlace_mode <= "11";
+					even_frame <= '0';
 				elsif (interlace_mode /= "00") then
 					interlace_mode <= interlace_mode - 1;
+					even_frame <= '1';
 				end if;
 			end if;
 			
@@ -303,6 +316,8 @@ begin
 			-- End of N64 line - swap buffers, increment line count
 			if (vsync_time = 1) then
 				n64_px_count <= U16_ZERO;
+				
+				enable_delay_prev <= enable_delay;
 				if (n64_px_count < N64_LINE_LEN - 8) then
 					enable_delay <= '1';
 				else
@@ -333,11 +348,20 @@ begin
 	begin
 		if (rising_edge(n64_clock)) then
 			if (sw_sdtv_res_n = '1') then
-				if (line_count >= VGA_VSYNC_START and line_count < VGA_VSYNC_END) then
-					out_vsync <= '0';
+				if (even_frame = INTERLACE_POLARITY) then
+					if (vga_line_count >= VGA_VSYNC_START and vga_line_count < VGA_VSYNC_END) then
+						out_vsync <= '0';
+					else
+						out_vsync <= '1';
+					end if;
 				else
-					out_vsync <= '1';
+					if (vga_line_count >= VGA_VSYNC_START+INTERLACE_V_DELAY and vga_line_count < VGA_VSYNC_END+INTERLACE_V_DELAY) then
+						out_vsync <= '0';
+					else
+						out_vsync <= '1';
+					end if;
 				end if;
+				
 				vga_vsync <= out_vsync;
 			else
 				vga_vsync <= '0'; -- We don't use dedicated VSYNC for RGB15 mode.
@@ -346,12 +370,24 @@ begin
 		end if;
 	end process;
 	
+	-- Count VGA lines
+	vga_linecount: process(n64_clock)
+	begin
+		if (rising_edge(n64_clock)) then
+			if (vga_px_count = VGA_HSYNC_START) then
+				vga_line_count <= vga_line_count + 1;
+			elsif (n64_vsync_n = '0') then
+				vga_line_count <= U16_ZERO;
+			end if;
+		end if;
+	end process;
+	
 	-- Set VGA Hsync based on VGA line progress
 	vga_hsync_proc: process(n64_clock)
 	begin	
 		if (rising_edge(n64_clock)) then
 			if (sw_sdtv_res_n = '1') then
-				if (vga_px_count >= VGA_HSYNC_START or vga_px_count < VGA_HSYNC_END) then
+				if (vga_px_count >= VGA_HSYNC_START  or vga_px_count < VGA_HSYNC_END) then
 					out_hsync <= '0';
 				else
 					out_hsync <= '1';
