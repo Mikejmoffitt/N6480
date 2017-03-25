@@ -146,7 +146,7 @@ begin
 		
 	sync_counters: process(n64_clock)
 	begin
-		if (rising_edge(n64_clock)) then
+		if (falling_edge(n64_clock)) then
 			if (n64_vsync_n = '0') then
 				vsync_time <= vsync_time + 1;
 			else
@@ -163,7 +163,7 @@ begin
 	
 	select_buffer_output: process(n64_clock)
 	begin
-		if (rising_edge(n64_clock)) then
+		if (falling_edge(n64_clock)) then
 			if (sw_sdtv_res_n = '1') then
 				if (buffer_sel = '1') then
 					out_red <= buffer_out_a(N64_R_H downto N64_R_L);
@@ -184,7 +184,7 @@ begin
 	
 	vga_assign_outputs: process(n64_clock)
 	begin
-		if (rising_edge(n64_clock)) then
+		if (falling_edge(n64_clock)) then
 			if (sw_ypbpr_n = '0') then -- YUV mode
 				vga_red <= u_data;
 				vga_green <= y_data;
@@ -201,7 +201,7 @@ begin
 	-- Capture pixels into the active buffer when clock_count is "00".
 	write_buffers: process(n64_clock)
 	begin
-		if (rising_edge(n64_clock)) then
+		if (falling_edge(n64_clock)) then
 			if (buffer_sel = '0') then
 				-- Feed pixel data as a vector into the buffer
 				buffer_in_a <= n64_red(6 downto 0) & n64_green(6 downto 0) & n64_blue(6 downto 0);
@@ -275,7 +275,7 @@ begin
 	-- 480i mode detector
 	detect_interlacing: process(n64_clock)
 	begin
-		if (rising_edge(n64_clock)) then
+		if (falling_edge(n64_clock)) then
 			if (vsync_time = 1) then
 				if (enable_delay /= enable_delay_prev) then
 					interlace_mode <= "11";
@@ -297,7 +297,7 @@ begin
 	-- Count progress across a VGA line
 	vga_pixel_counter: process(n64_clock)
 	begin
-		if (rising_edge(n64_clock)) then
+		if (falling_edge(n64_clock)) then
 			if (n64_vsync_n = '0' and vsync_time = 0) then
 				vga_px_count <= U16_ZERO;
 			elsif (vga_px_count = VGA_LINE_LEN - 1) then
@@ -311,7 +311,7 @@ begin
 	-- Count progress across an N64 line (generates line count too)
 	n64_pixel_counter: process(n64_clock)
 	begin
-		if (rising_edge(n64_clock)) then
+		if (falling_edge(n64_clock)) then
 	
 			-- End of N64 line - swap buffers, increment line count
 			if (vsync_time = 1) then
@@ -346,7 +346,7 @@ begin
 	-- Set VGA Vsync based on line progress (VGA sync should be active 2 lines of 480 lines)
 	vga_vsync_proc: process(n64_clock)
 	begin
-		if (rising_edge(n64_clock)) then
+		if (falling_edge(n64_clock)) then
 			if (sw_sdtv_res_n = '1') then
 				if (even_frame = INTERLACE_POLARITY) then
 					if (vga_line_count >= VGA_VSYNC_START and vga_line_count < VGA_VSYNC_END) then
@@ -373,7 +373,7 @@ begin
 	-- Count VGA lines
 	vga_linecount: process(n64_clock)
 	begin
-		if (rising_edge(n64_clock)) then
+		if (falling_edge(n64_clock)) then
 			if (vga_px_count = VGA_HSYNC_START) then
 				vga_line_count <= vga_line_count + 1;
 			elsif (n64_vsync_n = '0') then
@@ -385,7 +385,7 @@ begin
 	-- Set VGA Hsync based on VGA line progress
 	vga_hsync_proc: process(n64_clock)
 	begin	
-		if (rising_edge(n64_clock)) then
+		if (falling_edge(n64_clock)) then
 			if (sw_sdtv_res_n = '1') then
 				if (vga_px_count >= VGA_HSYNC_START  or vga_px_count < VGA_HSYNC_END) then
 					out_hsync <= '0';
@@ -407,7 +407,7 @@ begin
 	-- Blank and vga clock outputs
 	vga_signals_proc: process(n64_clock)
 	begin
-		if (rising_edge(n64_clock)) then
+		if (falling_edge(n64_clock)) then
 			if (sw_sdtv_res_n = '1') then
 				if (vga_px_count >= VGA_BLANK_START or vga_px_count < VGA_BLANK_END) then
 					vga_blank <= '0';
@@ -424,7 +424,7 @@ begin
 	-- Adding C-Sync to the green channel
 	composite_sync_proc: process(n64_clock)
 	begin
-		if (rising_edge(n64_clock)) then
+		if (falling_edge(n64_clock)) then
 			if (sw_ypbpr_n = '0' or sw_sog_force_n = '0') then
 				if (sw_sdtv_res_n = '1') then
 					-- 480p component c-sync
