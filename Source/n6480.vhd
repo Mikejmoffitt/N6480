@@ -229,10 +229,10 @@ begin
 				then
 					if (n64_px_count >= VGA_LINE_LEN) then
 						buffer_en_b <= not clock_count(0);
-						vga_clk <= vga_osc;
+						--vga_clk <= vga_osc;
 					else
 						buffer_en_b <= clock_count(0);
-						vga_clk <= not vga_osc;
+						--vga_clk <= not vga_osc;
 					end if;
 				end if;
 			else
@@ -262,11 +262,26 @@ begin
 				then
 					if (n64_px_count >= VGA_LINE_LEN) then
 						buffer_en_a <= not clock_count(0);
-						vga_clk <= vga_osc;
+						--vga_clk <= vga_osc;
 					else
 						buffer_en_a <= clock_count(0);
-						vga_clk <= not vga_osc;
+						--vga_clk <= not vga_osc;
 					end if;
+				end if;
+			end if;
+		end if;
+	end process;
+	
+	-- Clock the DAC out of phase with setting its inputs
+	clock_dac: process(n64_clock)
+	begin
+		if (rising_edge(n64_clock)) then
+			if ((n64_px_count > LINE_REPEAT_DELAY and enable_delay = '1') or (enable_delay = '0'))
+			then
+				if (n64_px_count >= VGA_LINE_LEN) then
+					vga_clk <= vga_osc;
+				else
+					vga_clk <= not vga_osc;
 				end if;
 			end if;
 		end if;

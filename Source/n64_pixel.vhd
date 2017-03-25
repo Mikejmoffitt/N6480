@@ -74,12 +74,12 @@ signal mix_b: std_logic_vector(7 downto 0);
 signal cmp_b: std_logic_vector(7 downto 0);
 
 constant DEBLUR_DETECT_THRESH: integer := 5;
-constant DEBLUR_CUTOFF: integer := 32;
+constant DEBLUR_CUTOFF: std_logic_vector(7 downto 0) := X"18";
 
 signal deblur_even_invalid: std_logic := '0';
 signal deblur_odd_invalid: std_logic := '0';
-signal deblur_even_kill_counter: std_logic_vector(2 downto 0) := "000";
-signal deblur_odd_kill_counter: std_logic_vector(2 downto 0) := "000";
+signal deblur_even_kill_counter: std_logic_vector(3 downto 0) := "0000";
+signal deblur_odd_kill_counter: std_logic_vector(3 downto 0) := "0000";
 signal deblur_kill: std_logic := '0';
 signal deblur_select_odd: std_logic := '0';
 
@@ -151,16 +151,16 @@ begin
 			-- Decrement kill counter at start of vsync
 			vsync_n_prev <= vsync_n_cap;
 			if (deblur_even_invalid = '1') then
-				deblur_even_kill_counter <= "111";
+				deblur_even_kill_counter <= "1111";
 			elsif (vsync_n_prev /= vsync_n_cap and vsync_n_cap = '0') then
-				if (deblur_even_kill_counter /= "000") then
+				if (deblur_even_kill_counter /= "0000") then
 					deblur_even_kill_counter <= deblur_even_kill_counter - 1;
 				end if;
 			end if;
 			if (deblur_odd_invalid = '1') then
-				deblur_odd_kill_counter <= "111";
+				deblur_odd_kill_counter <= "1111";
 			elsif (vsync_n_prev /= vsync_n_cap and vsync_n_cap = '0') then
-				if (deblur_odd_kill_counter /= "000") then
+				if (deblur_odd_kill_counter /= "0000") then
 					deblur_odd_kill_counter <= deblur_odd_kill_counter - 1;
 				end if;
 			end if;
@@ -181,24 +181,6 @@ begin
 				
 				-- Filter out noise in black border data that pops up a lot
 				-- in a select few games
-				if (mix_r < DEBLUR_CUTOFF) then
-					mix_r <= (others => '0');
-				end if;
-				if (cmp_r < DEBLUR_CUTOFF) then
-					cmp_r <= (others => '0');
-				end if;
-				if (mix_g < DEBLUR_CUTOFF) then
-					mix_g <= (others => '0');
-				end if;
-				if (cmp_g < DEBLUR_CUTOFF) then
-					cmp_g <= (others => '0');
-				end if;
-				if (mix_b < DEBLUR_CUTOFF) then
-					mix_b <= (others => '0');
-				end if;
-				if (cmp_b < DEBLUR_CUTOFF) then
-					cmp_b <= (others => '0');
-				end if;
 			elsif (cycle_count = CYCLE_10_BLUE) then
 				red_prev <= red_final;	
 				green_prev <= green_final;	
@@ -207,6 +189,7 @@ begin
 				-- If we are on a "definitely valid pixel boundary"...
 					-- If the current pixel + the second-to-last pixel is NOT the last pixel...
 				if (x_pixel_count > 96 and vsync_n_cap = '1' and hsync_n_cap = '1' and clamp_n_cap = '1'
+					and (mix_r > DEBLUR_CUTOFF) and (mix_g > DEBLUR_CUTOFF) and (mix_b > DEBLUR_CUTOFF) 
 					and not (mix_r > cmp_r - DEBLUR_DETECT_THRESH or mix_r < cmp_r + DEBLUR_DETECT_THRESH)
 					and not (mix_g > cmp_g - DEBLUR_DETECT_THRESH or mix_g < cmp_g + DEBLUR_DETECT_THRESH)
 					and not (mix_b > cmp_b - DEBLUR_DETECT_THRESH or mix_b < cmp_b + DEBLUR_DETECT_THRESH)) then
@@ -225,8 +208,8 @@ begin
 			end if;
 			
 			-- Select phase based on heuristics
-			if (deblur_even_kill_counter /= "000") then
-				if (deblur_odd_kill_counter /= "000") then
+			if (deblur_even_kill_counter /= "0000") then
+				if (deblur_odd_kill_counter /= "0000") then
 					deblur_kill <= '1';
 				else
 					deblur_kill <= '0';
