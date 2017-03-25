@@ -1,0 +1,74 @@
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+
+# Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+# File: C:\Users\Michael Moffitt\Development\N6480\N6480_pinout.csv
+# Generated on: Sat Mar 25 03:01:45 2017
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus II software.
+
+To,Direction,Location,I/O Bank,VREF Group,Fitter Location,I/O Standard,Reserved,Current Strength,Differential Pair
+led,Output,PIN_30,1,B1_N1,PIN_30,,,,
+n64_clock,Input,PIN_90,3,B3_N0,PIN_90,,,,
+n64_data[6],Input,PIN_60,4,B4_N0,PIN_60,,,,
+n64_data[5],Input,PIN_65,4,B4_N0,PIN_65,,,,
+n64_data[4],Input,PIN_67,4,B4_N0,PIN_67,,,,
+n64_data[3],Input,PIN_69,4,B4_N0,PIN_69,,,,
+n64_data[2],Input,PIN_70,4,B4_N0,PIN_70,,,,
+n64_data[1],Input,PIN_71,4,B4_N0,PIN_71,,,,
+n64_data[0],Input,PIN_88,3,B3_N1,PIN_88,,,,
+n64_dsync_n,Input,PIN_89,3,B3_N1,PIN_89,,,,
+sw_scanlines_n[1],Input,PIN_41,4,B4_N1,PIN_41,,,,
+sw_scanlines_n[0],Input,PIN_42,4,B4_N1,PIN_42,,,,
+sw_sdtv_res_n,Input,PIN_43,4,B4_N1,PIN_43,,,,
+sw_sharp_en_n,Input,PIN_44,4,B4_N1,PIN_44,,,,
+sw_sharp_odd_n,Input,PIN_45,4,B4_N1,PIN_45,,,,
+sw_sog_force_n,Input,PIN_47,4,B4_N1,PIN_47,,,,
+sw_vga_csync_n,Input,PIN_48,4,B4_N1,PIN_48,,,,
+sw_ypbpr_n,Input,PIN_40,4,B4_N1,PIN_40,,,,
+vga_blank,Output,PIN_100,3,B3_N0,PIN_100,,,,
+vga_blue[9],Output,PIN_79,3,B3_N1,PIN_79,,,,
+vga_blue[8],Output,PIN_80,3,B3_N1,PIN_80,,,,
+vga_blue[7],Output,PIN_81,3,B3_N1,PIN_81,,,,
+vga_blue[6],Output,PIN_86,3,B3_N1,PIN_86,,,,
+vga_blue[5],Output,PIN_87,3,B3_N1,PIN_87,,,,
+vga_blue[4],Output,PIN_92,3,B3_N0,PIN_92,,,,
+vga_blue[3],Output,PIN_93,3,B3_N0,PIN_93,,,,
+vga_blue[2],Output,PIN_94,3,B3_N0,PIN_94,,,,
+vga_blue[1],Output,PIN_96,3,B3_N0,PIN_96,,,,
+vga_blue[0],Output,PIN_97,3,B3_N0,PIN_97,,,,
+vga_clk,Output,PIN_75,3,B3_N1,PIN_75,,,,
+vga_green[9],Output,PIN_101,3,B3_N0,PIN_101,,,,
+vga_green[8],Output,PIN_103,3,B3_N0,PIN_103,,,,
+vga_green[7],Output,PIN_104,3,B3_N0,PIN_104,,,,
+vga_green[6],Output,PIN_112,2,B2_N0,PIN_112,,,,
+vga_green[5],Output,PIN_113,2,B2_N0,PIN_113,,,,
+vga_green[4],Output,PIN_114,2,B2_N0,PIN_114,,,,
+vga_green[3],Output,PIN_115,2,B2_N0,PIN_115,,,,
+vga_green[2],Output,PIN_118,2,B2_N0,PIN_118,,,,
+vga_green[1],Output,PIN_119,2,B2_N0,PIN_119,,,,
+vga_green[0],Output,PIN_120,2,B2_N0,PIN_120,,,,
+vga_hsync,Output,PIN_74,3,B3_N1,PIN_74,,,,
+vga_red[9],Output,PIN_121,2,B2_N0,PIN_121,,,,
+vga_red[8],Output,PIN_122,2,B2_N0,PIN_122,,,,
+vga_red[7],Output,PIN_125,2,B2_N0,PIN_125,,,,
+vga_red[6],Output,PIN_126,2,B2_N0,PIN_126,,,,
+vga_red[5],Output,PIN_129,2,B2_N1,PIN_129,,,,
+vga_red[4],Output,PIN_133,2,B2_N1,PIN_133,,,,
+vga_red[3],Output,PIN_134,2,B2_N1,PIN_134,,,,
+vga_red[2],Output,PIN_135,2,B2_N1,PIN_135,,,,
+vga_red[1],Output,PIN_136,2,B2_N1,PIN_136,,,,
+vga_red[0],Output,PIN_137,2,B2_N1,PIN_137,,,,
+vga_sync,Output,PIN_99,3,B3_N0,PIN_99,,,,
+vga_vsync,Output,PIN_73,3,B3_N1,PIN_73,,,,
